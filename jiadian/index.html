@@ -4,7 +4,9 @@
 	<meta charset="UTF-8">
 	<!-- <meta name="viewport" content="width=1200"/>	 -->
 	<title>家电链</title>
+	<link rel="stylesheet" href="css/swiper.min.css">
 	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 	<!-- 容器 -->
@@ -62,7 +64,7 @@
 						<img src="img/homepage/fl.png" alt="">
 						<span>商品分类</span>
 					</a>
-					<!-- 分类面板 -->
+					<!-- 左侧分类面板 -->
 					<div class="classify-panel">
 						<div class="classify-panel-item">
 							<p>
@@ -128,12 +130,102 @@
 		<!-- 内容区域 -->
 		<div class="content-area">
 			<div class="tab-content">
-				<div class="login-news"></div>
-			
+				<!-- 轮播图部分 -->
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide swiper-no-swiping">11111</div>
+						<div class="swiper-slide swiper-no-swiping">2222</div>
+						<div class="swiper-slide swiper-no-swiping">33333</div>
+					</div>
+					<!-- 分页器 -->
+					<div class="swiper-pagination"></div>
+					<!-- 导航按钮 -->
+					<div class="swiper-button-prev" id="swiper-button-prev"></div>
+					<div class="swiper-button-next" id="swiper-button-next"></div>				
+				</div>
+
+				<!-- 右侧登陆注册招标部分 -->
+				<div class="login-news">
+					<div class="no-login">
+						<img src="img/homepage/font_1.png" alt="">
+						<div class="login-register">
+							<a href="#">登陆</a>
+							<a href="#">注册</a>
+						</div>
+					</div>	
+					<div>
+						<ul class="announcement">
+							<li class="announcement-logo"><img src="img/homepage/laba.png" alt="">招标公告</li>
+							<li class="announcement-more"><a href="#">>更多</a></li>
+						</ul>
+						<ul class="tab-list">
+							<li>
+								<span class="tab-title">> 广东新明珠陶瓷集团有限公司</span>
+								<span class="tab-time">04-10</span>
+							</li>
+							<li>
+								<span class="tab-title">> 广东新明珠陶瓷集团有限公司</span>
+								<span class="tab-time">04-10</span>
+							</li>
+							<li>
+								<span class="tab-title">> 广东新明珠陶瓷集团有限公司</span>
+								<span class="tab-time">04-10</span>
+							</li>
+							<li>
+								<span class="tab-title">> 广东新明珠陶瓷集团有限公司</span>
+								<span class="tab-time">04-10</span>
+							</li>
+
+						</ul>
+						<div class="tender-btn">
+							发布招标
+						</div>
+					</div>			
+				</div>
+
 			</div>
 		</div>
-
-
+		<!-- 商品内容区域 -->
+		<div class="goods-content">
+			<div class="width1200">
+				<div class="goods-top">
+					<p>购买家电</p>
+					<p>
+						<a href="#">最新上线</a>
+						<span>/</span>
+						<a href="#">电器</a>
+						<span>/</span>
+						<a href="#">电器</a>
+					</p>
+				</div>
+			</div>
+		</div>
 	</div>
+	<script src="js/swiper.min.js"></script>
 </body>
+<script>
+	var mySwiper = new Swiper ('.swiper-container', {
+		direction: 'horizontal',
+		loop: true,
+		autoplay: {
+			delay: 3000,
+			stopOnLastSlide: false,
+			disableOnInteraction: false,//用户操作轮播后,继续自动播放
+		},
+
+
+		// 如果需要分页器
+		pagination: {
+			  el: '.swiper-pagination',
+		},
+
+		// 如果需要前进后退按钮
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+
+	})    
+</script>
+<script src="js/index.js"></script>
 </html>
