@@ -98,7 +98,6 @@ gulp.task('watch', [], function(cb) {
 
 });
 
-
 // 开始执行
 gulp.task('default', function(cb) {
     runSequence('clean', 'minjs', 'watch', cb);
