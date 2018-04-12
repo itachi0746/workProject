@@ -4,6 +4,9 @@ html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, l
   margin: 0;
   padding: 0; }
 
+body {
+  font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif,"宋体"; }
+
 fieldset, img {
   border: 0; }
 
@@ -20,7 +23,7 @@ ul, ol {
 input {
   padding-top: 0;
   padding-bottom: 0;
-  font-family: "SimSun", "宋体"; }
+  font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif,"宋体"; }
 
 input::-moz-focus-inner {
   border: 0;
@@ -54,6 +57,18 @@ html, body, #main {
 #main {
   /*background: red;*/
   min-width: 1200px; }
+
+.p20 {
+  padding: 20px; }
+
+.mt20 {
+  margin-top: 20px; }
+
+.fs12 {
+  font-size: 12px; }
+
+.tr {
+  text-align: right; }
 
 /*=============首页======================*/
 #jdl-header, .topLeft > li > a, .topRight > li > a {
@@ -542,7 +557,10 @@ html, body, #main {
   height: 350px;
   border-top: 1px solid #eee;
   background-color: #fff;
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .product-item {
   width: 320px;
@@ -563,6 +581,9 @@ html, body, #main {
 .font-black {
   color: black; }
 
+.font-blue {
+  color: #3a7dda; }
+
 .tr-space {
   color: #fff;
   font-size: 12px;
@@ -576,7 +597,7 @@ html, body, #main {
   text-overflow: ellipsis;
   overflow: hidden;
   display: inline-block;
-  width: 170px; }
+  width: 145px; }
 
 .product-item-prize {
   color: #ff8140;
@@ -586,9 +607,25 @@ html, body, #main {
 .floor-two {
   overflow: hidden; }
 
+.button-mini {
+  padding: 3px 5px;
+  font-size: 12px;
+  border-radius: 1px;
+  color: #fff;
+  background-color: #ff8140;
+  border-color: #ff8140; }
+
+.button-mini:hover, .buy-btn:hover {
+  background: #ff945d; }
+
 .floor-two .floor-right {
-  width: 640px;
-  background: blue; }
+  width: 640px; }
+.floor-two .f2-tb-tr2 {
+  padding-top: 20px; }
+.floor-two .gh-btn {
+  text-align: right; }
+.floor-two .product-item {
+  white-space: nowrap; }
 .floor-two .require-add {
   float: left;
   width: 320px;
@@ -597,7 +634,7 @@ html, body, #main {
   border-right: 1px solid #eee;
   border-bottom: 1px solid #eee;
   background-color: #fff;
-  padding: 20px 8px;
+  padding: 20px 8px 0px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -622,6 +659,10 @@ html, body, #main {
   height: 100%;
   vertical-align: bottom;
   position: relative; }
+.floor-two .require-add .font {
+  font-size: 13px;
+  margin-top: 15px;
+  color: #8c8a8a; }
 
 .input_error {
   border-color: #ff4949; }
@@ -644,5 +685,146 @@ html, body, #main {
   position: absolute;
   top: 100%;
   left: 0; }
+
+.buy-btn {
+  text-align: center;
+  margin-top: 10px;
+  color: #fff;
+  background-color: #ff8140;
+  border: 1px solid #ff8140;
+  padding: 5px 12px;
+  border-radius: 3px; }
+
+.f2-td {
+  text-align: right; }
+
+.floor-three .floor-title span:nth-of-type(2) {
+  font-size: 13px;
+  margin: 0px 20px 0px 260px; }
+.floor-three .floor-title span:nth-of-type(3) {
+  font-size: 13px;
+  margin: 0px 20px 0px 125px; }
+.floor-three .floor-title a {
+  color: #706f6f;
+  font-weight: bold;
+  font-size: 13px; }
+.floor-three .f3-chart {
+  width: 400px;
+  height: 300px;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+.floor-three .f3-chart-title {
+  padding: 20px 20px 0 20px; }
+.floor-three .f3-chart-title span:nth-child(1) {
+  color: #ff8140;
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+  padding: 0 3px;
+  margin-right: 5px;
+  border: 1px solid #ff8140;
+  border-radius: 3px; }
+.floor-three .f3-chart-title-font {
+  color: #666;
+  font-weight: bold;
+  font-size: 13px; }
+.floor-three .f3-polar {
+  width: 400px;
+  height: 230px;
+  background: blue; }
+.floor-three .jdl-table tbody tr td, .floor-three .jdl-table tbody tr th, .floor-three .jdl-table tbody tr tr {
+  border: 1px solid #e5f0ff;
+  vertical-align: middle; }
+
+.jdl-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  color: #666;
+  text-align: center; }
+
+.jdl-table th.thead {
+  color: #666;
+  background-color: #f4f8ff;
+  word-wrap: break-word; }
+
+.tl {
+  text-align: left; }
+
+.f3-chart-desc {
+  float: left;
+  color: #666;
+  font-size: 12px;
+  width: 360px;
+  height: 200px;
+  white-space: pre-wrap;
+  overflow: hidden; }
+
+.f3-chart-desc p {
+  white-space: normal;
+  text-indent: 2em;
+  line-height: 20px; }
+
+.f4-chart, .f4-chart-l, .f4-chart-r {
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.f4-chart-l {
+  width: 730px;
+  height: 340px;
+  font-size: 15px;
+  padding: 45px 25px; }
+
+.f4-chart-r {
+  width: 470px;
+  height: 340px;
+  font-size: 15px;
+  padding: 20px; }
+
+.f4-chart-l table tbody tr {
+  border-bottom: 1px solid #dddddd;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.f4-chart-l table tbody td, .f4-chart-l table tbody th {
+  padding: 10px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.f4-chart-l th {
+  font-weight: bold; }
+
+#pr20 {
+  padding-right: 40px; }
+
+.f4-chart-l table tbody td .f4-chart-l-prize {
+  color: #ff8140;
+  font-weight: bold;
+  font-size: 21px; }
+
+.jdl-table .tr {
+  text-align: right; }
+
+.f4-buy-btn {
+  color: white;
+  padding: 1px 3px;
+  background: #ff8140;
+  margin-left: 20px; }
+
+.f4-chart-r-tag {
+  font-weight: bold; }
+
+.f4-chart-r-tag a {
+  color: #ff8140; }
 
 /*# sourceMappingURL=index.css.map */
