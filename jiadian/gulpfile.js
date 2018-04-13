@@ -25,7 +25,7 @@
 var config = {
     src: "src",
     dest: "dist"
-}
+};
 
 var gulp        = require('gulp'),
 	clean        = require('gulp-clean'),
