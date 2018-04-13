@@ -808,7 +808,7 @@ html, body, #main {
 .f4-chart-l th {
   font-weight: bold; }
 
-#pr20 {
+.pr20 {
   padding-right: 40px; }
 
 .f4-chart-l table tbody td .f4-chart-l-prize {
@@ -1099,6 +1099,11 @@ html, body, #main {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+#r_ewm {
+  background: #ff8140;
+  border-right: #ff8140;
+  border-left: #ff8140; }
 
 .r-ewm:before {
   content: "";
