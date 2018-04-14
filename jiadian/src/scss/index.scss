@@ -251,7 +251,7 @@ $fontColor: #8c8a8a;
   color: #666;
   text-align: center;
 }
-.content-area {
+.index-content {
   background-color: rgb(246, 246, 246);
 }
 .classify-panel {
@@ -1163,15 +1163,7 @@ $fontColor: #8c8a8a;
   line-height: 38px;
   @include box-sizing(border-box);
 }
-//.r-ewm {
-//  position: fixed;
-//  top: 308px;
-//  right: 220px;
-//  width: 142px;
-//  height: 164px;
-//  z-index: 999;
-//  background: white;
-//}
+
 .r-ewm {
   width: 142px;
   height: 164px;

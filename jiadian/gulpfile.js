@@ -156,11 +156,11 @@ gulp.task('minhtml', [], function(cb) {
 gulp.task('transCss',function() {
 	return gulp.src(config.src+'/**/*.min.css')
 		.pipe(gulp.dest(config.dest))
-})
+});
 gulp.task('transJs',function() {
 	return gulp.src(config.src+'/**/*.min.js')
 		.pipe(gulp.dest(config.dest))
-})
+});
 
 // 监听JS文件变改，即时调用任务执行JS增量打包
 gulp.task('watch', [], function(cb) {
