@@ -63,6 +63,7 @@ gulp.task('browser', function() {
             // 定义服务器根目录
             server: {
                 baseDir: "./dist"
+                
             }
         }
     );
@@ -94,7 +95,7 @@ gulp.task('sassToCss', function(cb){
     pump([
         gulp.src(config.src+'/scss/*.scss'),
         sass(),
-        gulp.dest(config.src+'/css/')
+        gulp.dest(config.src+'/css/'),
     ])
   });
 // 编译,合并,重命名,加前缀,压缩
