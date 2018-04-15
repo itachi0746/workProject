@@ -42,6 +42,8 @@ var gulp        = require('gulp'),
     postcss 	= require('gulp-postcss'),
     pngquant    = require('imagemin-pngquant'),
     cache       = require('gulp-cache'),
+    sass       = require('gulp-sass'),
+    concat       = require('gulp-concat'),
     browserSync  = require('browser-sync').create();
 
 // 清理目标目录
@@ -56,11 +58,11 @@ gulp.task('browser', function() {
     browserSync.init(
         // 浏览器会监控以下目录，当以下目录中文件发生变化时，会同步更新
         [
-            "./src/css/*.css"
+            "./dist/css/*.css", "./dist/*.html",
         ], {
             // 定义服务器根目录
             server: {
-                baseDir: "./src"
+                baseDir: "./dist"
             }
         }
     );
@@ -87,10 +89,20 @@ gulp.task('minImage', function () {
         })))
         .pipe(gulp.dest(config.dest+'/img'));
 });
-// 压缩css,加前缀,重命名
+// 编译sass
+gulp.task('sassToCss', function(cb){
+    pump([
+        gulp.src(config.src+'/scss/*.scss'),
+        sass(),
+        gulp.dest(config.src+'/css/')
+    ])
+  });
+// 编译,合并,重命名,加前缀,压缩
 gulp.task('mincss', [], function(cb) {
     pump([
-        gulp.src([config.src+'/**/*.css','!'+config.src+'/**/*.min.css']),
+        gulp.src([config.src + '/scss/*.scss', '!' + config.src + '/**/*.min.css']),
+        sass(),
+        concat('index.css'),  //合并后的文件名
         rename({suffix: '.min'}),
         changed(config.dest, { extension: '.css'}),
         sourcemaps.init(),
@@ -103,16 +115,35 @@ gulp.task('mincss', [], function(cb) {
             //保留所有特殊前缀 当你用autoprefixer生成的浏览器前缀，如果不加这个参数，有可能将会删除你的部分前缀        	
         ),
         sourcemaps.write('.'),
-        gulp.dest(config.dest)
+        gulp.dest(config.dest + '/css/')
     ], cb
     )
 });
+// gulp.task('mincss', [], function(cb) {
+//     pump([
+//         gulp.src([config.src+'/**/*.css','!'+config.src+'/**/*.min.css']),
+//         rename({suffix: '.min'}),
+//         changed(config.dest, { extension: '.css'}),
+//         sourcemaps.init(),
+//         postcss( autoprefixer({
+//             browsers: ['last 2 versions'],
+//             cascade: true
+//         }) ),
+//         minifyCss(
+//             {keepSpecialComments: '*'}
+//             //保留所有特殊前缀 当你用autoprefixer生成的浏览器前缀，如果不加这个参数，有可能将会删除你的部分前缀        	
+//         ),
+//         sourcemaps.write('.'),
+//         gulp.dest(config.dest)
+//     ], cb
+//     )
+// });
 
  // 执行JS压缩
 gulp.task('minjs', [], function(cb) {
     pump([
         // 获取原目录下所有的js文件
-        gulp.src([config.src + "/**/*.js",'!'+config.src+'/**/*.min.js']),
+        gulp.src([config.src + "/**/*.js", '!' + config.src +'/**/*.min.js']),
         // 执行更名操作
         rename({ suffix: '.min' }),
         // 每次打包时，只打包内容发生改变的文件
@@ -153,23 +184,25 @@ gulp.task('minhtml', [], function(cb) {
 
 });
 // 搬运已压缩的css,js
-gulp.task('transCss',function() {
-	return gulp.src(config.src+'/**/*.min.css')
-		.pipe(gulp.dest(config.dest))
-});
+
 gulp.task('transJs',function() {
 	return gulp.src(config.src+'/**/*.min.js')
-		.pipe(gulp.dest(config.dest))
+        .pipe(gulp.dest(config.dest))
+});
+gulp.task('transCss',function() {
+	return gulp.src(config.src+'/**/*.min.css')
+        .pipe(gulp.dest(config.dest))
 });
 
-// 监听JS文件变改，即时调用任务执行JS增量打包
+// 监听文件变改，即时调用任务执行增量打包
 gulp.task('watch', [], function(cb) {
-    gulp.watch(config.src + "/**/*.css", ['mincss']);
-    gulp.watch(config.src + "/**/*.js", ['minjs']);
+    gulp.watch(config.src + "/scss/*.scss", ['mincss']);
+    gulp.watch(config.src + "/js/*.js", ['minjs']);
     gulp.watch(config.src + "/*.html", ['minhtml']);
+    gulp.watch(config.src + "/img/*.{png,jpg,gif,ico}", ['minImage']);
 });
 
 // 开始执行
 gulp.task('default', function(cb) {
-    runSequence('clean','transCss','transJs', 'minjs','mincss', 'minhtml', 'watch', cb);
+    runSequence('clean', 'minImage', 'transJs', 'transCss', 'minjs', 'mincss', 'minhtml','browser','watch', cb);
 });
