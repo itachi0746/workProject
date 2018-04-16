@@ -1,5 +1,4 @@
 @import "index";
-
 //=================交易大厅=====================
 .trade-hall {
   background-color: #eee;
@@ -10,12 +9,23 @@
 .overH {
   overflow: hidden;
 }
+.orange {
+  color: $mainColor;
+}
+.mt10 {
+  margin-top:10px;
+}
+.mt80 {
+  margin-top:80px;
+}
+
 .trade-hall  {
   .hall-bg {
     height: 680px;
     //background: blue;
     color: white;
     background: url(../img/hall_bg.png) no-repeat 50%;
+    
   }
   .hall-bg {
     .width1200 {
@@ -225,32 +235,56 @@
       }
     }
   }
-  .trade-f2 {
+  .trade-f2,.trade-f3 {
     .trade-f2-content {
       width: 958px;
       height: 350px;
       border-top: 2px solid #116cb3;
       background-color: #fff;
     }
-    .trade-f2-content ul {
+    .trade-f2-content ul,.trade-f3-content ul {
       width: 100%;
       overflow: hidden;
-    }
-    .trade-f2-content ul li {
-      float: left;
-      width: 33.3%;
-      padding: 10px 0 0 10px;
+      padding: 8px 0 0 12px;
       @include box-sizing(border-box);
     }
-    .trade-f2-content {
-      .trade-f2-detail {
+    .trade-f2-content ul li,.trade-f3-content ul li {
+      float: left;
+      width: 33.3%;
+      padding: 0 10px 10px 0 ;
+      @include box-sizing(border-box);
+    }
+    .trade-f2-content,.trade-f3-content {
+      .trade-f2-detail,.trade-f3-detail {
         height: 100px;
         padding: 5px 20px 0 10px;
         background-color: #f8f8f8;
       }
-      .trade-f2-detail {
-
+      .trade-f2-detail,.trade-f3-detail {
+        p:nth-child(1) a {
+          font-size: 18px;
+        }
+        p:nth-child(2) span {
+          font-size: 12px;
+        }
+        p:nth-child(3) span {
+          font-size: 14px;
+        }
+        .attr-btns {
+          color: #999;
+          padding: 0 8px;
+          height: 20px;
+          line-height: 17px;
+          border: 1px solid #d3d3d3;
+          border-radius: 3px;
+        }
       }
+    }
+    .trade-f3-content {
+      width: 958px;
+      height: 350px;
+      border-top: 2px solid #1da664;
+      background-color: #fff;
     }
   }
 }

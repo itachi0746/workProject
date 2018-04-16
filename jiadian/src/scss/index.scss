@@ -1088,6 +1088,7 @@ html,body,#main {
   background-color: #fff;
   border: solid 1px #dfdfdf;
   border-radius: 2px;
+  display: none;
 }
 .r-menu table td {
   width: 67px;
@@ -1109,7 +1110,7 @@ html,body,#main {
   padding: 15px;
   text-align: center;
   @include box-sizing(border-box);
-  //display: none;
+  display: none;
 }
 #r_ewm {
   background: #ff8140;
