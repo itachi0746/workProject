@@ -393,14 +393,14 @@ html, body, #main {
 
 /*重定义切换按钮尺寸和上下居中位置*/
 .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
-  background-image: url(../img/homepage/btn_next.png);
+  background-image: url(../img/btn_next.png);
   background-color: rgba(0, 0, 0, 0.5);
   background-size: 18px 25px;
   right: 0; }
 
 /*更换背景图片、尺寸，增加背景颜色，设置透明度，*/
 .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
-  background-image: url(../img/homepage/btn_next.png);
+  background-image: url(../img/btn_next.png);
   background-size: 18px 22px;
   background-color: rgba(0, 0, 0, 0.5);
   transform: rotate(180deg);
@@ -623,16 +623,12 @@ html, body, #main {
 
 .floor-two .floor-right {
   width: 640px; }
-
 .floor-two .f2-tb-tr2 {
   padding-top: 20px; }
-
 .floor-two .gh-btn {
   text-align: right; }
-
 .floor-two .product-item {
   white-space: nowrap; }
-
 .floor-two .require-add {
   float: left;
   width: 320px;
@@ -645,7 +641,6 @@ html, body, #main {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-
 .floor-two .require-add .require-tag {
   display: inline-block;
   text-align: center;
@@ -657,19 +652,16 @@ html, body, #main {
   background-color: #fef5ee;
   border-radius: 2px;
   margin: 0 5px; }
-
 .floor-two .require-add .text-container {
   margin: 20px 10px;
   width: 276px;
   height: 180px; }
-
 .floor-two .require-add .el-textarea {
   display: inline-block;
   width: 100%;
   height: 100%;
   vertical-align: bottom;
   position: relative; }
-
 .floor-two .require-add .font {
   font-size: 13px;
   margin-top: 15px;
@@ -712,16 +704,13 @@ html, body, #main {
 .floor-three .floor-title span:nth-of-type(2) {
   font-size: 13px;
   margin: 0px 20px 0px 260px; }
-
 .floor-three .floor-title span:nth-of-type(3) {
   font-size: 13px;
   margin: 0px 20px 0px 125px; }
-
 .floor-three .floor-title a {
   color: #706f6f;
   font-weight: bold;
   font-size: 13px; }
-
 .floor-three .f3-chart {
   width: 400px;
   height: 300px;
@@ -731,10 +720,8 @@ html, body, #main {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
-
 .floor-three .f3-chart-title {
   padding: 20px 20px 0 20px; }
-
 .floor-three .f3-chart-title span:nth-child(1) {
   color: #ff8140;
   font-size: 12px;
@@ -744,17 +731,14 @@ html, body, #main {
   margin-right: 5px;
   border: 1px solid #ff8140;
   border-radius: 3px; }
-
 .floor-three .f3-chart-title-font {
   color: #666;
   font-weight: bold;
   font-size: 13px; }
-
 .floor-three .f3-polar {
   width: 400px;
   height: 230px;
   background: blue; }
-
 .floor-three .jdl-table tbody tr td, .floor-three .jdl-table tbody tr th, .floor-three .jdl-table tbody tr tr {
   border: 1px solid #e5f0ff;
   vertical-align: middle; }
@@ -976,32 +960,25 @@ html, body, #main {
   color: #fff;
   float: left;
   position: relative; }
-
 .footer-title li img {
   position: absolute; }
-
 .footer-title .width1000 li:nth-child(1) img {
   top: 9px;
   left: 20px; }
-
 .footer-title .width1000 li:nth-child(2) img {
   top: 9px;
   left: 18px; }
-
 .footer-title .width1000 li:nth-child(3) img {
   top: 5px;
   left: 28px; }
-
 .footer-title .width1000 li:nth-child(4) img {
   top: 8px;
   left: 25px; }
-
 .footer-title li p:nth-of-type(1) {
   font-size: 16px;
   position: absolute;
   top: 5px;
   left: 70px; }
-
 .footer-title li p:nth-of-type(2) {
   font-size: 12px;
   position: absolute;
@@ -1028,19 +1005,15 @@ html, body, #main {
   float: left;
   width: 25%;
   table-layout: fixed; }
-
 .help-list tr:nth-child(1) {
   margin-bottom: 20px;
   display: inline-block;
   color: #000000; }
-
 .help-list th {
   font-size: 14px;
   font-weight: bold; }
-
 .help-list td {
   font-size: 12px; }
-
 .help-list a {
   color: #8c8a8a; }
 
@@ -1049,7 +1022,6 @@ html, body, #main {
   font-size: 12px;
   text-align: center;
   color: #232323; }
-
 .footer-help .ewm.fl p {
   margin-top: 5px; }
 
@@ -1060,7 +1032,6 @@ html, body, #main {
 .footer-info p, .footer-info a {
   color: #8c8a8a;
   font-size: 12px; }
-
 .footer-info p {
   text-align: center; }
 
@@ -1146,8 +1117,9 @@ html, body, #main {
 
 .r-ewm img {
   width: 100%; }
-
 .r-ewm p {
   font-size: 12px;
   margin-top: 10px;
   color: #8c8a8a; }
+
+/*# sourceMappingURL=index.css.map */

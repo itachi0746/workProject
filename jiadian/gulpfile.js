@@ -1,26 +1,3 @@
-// let gulp = require('gulp'),
-//     // sass = require('gulp-ruby-sass'),
-//     autoprefixer = require('gulp-autoprefixer'),
-//     minifycss = require('gulp-clean-css'),
-//     // jshint = require('gulp-jshint'),
-//     // uglify = require('gulp-uglify'),
-//     // imagemin = require('gulp-imagemin'),
-//     rename = require('gulp-rename'),
-//     // concat = require('gulp-concat'),
-//     notify = require('gulp-notify');
-//     // cache = require('gulp-cache'),
-//     // del = require('del');
-
-// gulp.task('styles', function() {
-//   return gulp.src('src/css/*.css')
-//     // .pipe(sass({ style: 'expanded' }))
-//     // .pipe(autoprefixer('last 2 version', 'ie 8'))
-//     // .pipe(gulp.dest('dist/css/'))
-//     .pipe(rename({suffix: '.min'}))
-//     .pipe(cleanCSS())
-//     .pipe(gulp.dest('dist/css/'))
-//     .pipe(notify({ message: 'Styles task complete' }));
-// });
 
 var config = {
     src: "src",
@@ -58,7 +35,7 @@ gulp.task('browser', function() {
     browserSync.init(
         // 浏览器会监控以下目录，当以下目录中文件发生变化时，会同步更新
         [
-            "./dist/css/*.css", "./dist/*.html",
+            "./dist/css/*.css", "./dist/trade.html"
         ], {
             // 定义服务器根目录
             server: {
@@ -95,13 +72,13 @@ gulp.task('sassToCss', function(cb){
     pump([
         gulp.src(config.src+'/scss/*.scss'),
         sass(),
-        gulp.dest(config.src+'/css/'),
+        gulp.dest(config.src+'/css/')
     ])
   });
 // 编译,合并,重命名,加前缀,压缩
 gulp.task('mincss', [], function(cb) {
     pump([
-        gulp.src([config.src + '/scss/*.scss', '!' + config.src + '/**/*.min.css']),
+        gulp.src([config.src + '/scss/trade.scss', '!' + config.src + '/**/*.min.css']),
         sass(),
         concat('index.css'),  //合并后的文件名
         rename({suffix: '.min'}),
@@ -197,7 +174,7 @@ gulp.task('transCss',function() {
 
 // 监听文件变改，即时调用任务执行增量打包
 gulp.task('watch', [], function(cb) {
-    gulp.watch(config.src + "/scss/*.scss", ['mincss']);
+    gulp.watch(config.src + "/scss/trade.scss", ['mincss']);
     gulp.watch(config.src + "/js/*.js", ['minjs']);
     gulp.watch(config.src + "/*.html", ['minhtml']);
     gulp.watch(config.src + "/img/*.{png,jpg,gif,ico}", ['minImage']);
@@ -205,5 +182,5 @@ gulp.task('watch', [], function(cb) {
 
 // 开始执行
 gulp.task('default', function(cb) {
-    runSequence('clean', 'minImage', 'transJs', 'transCss', 'minjs', 'mincss', 'minhtml','browser','watch', cb);
+    runSequence('clean', 'minImage', 'transJs', 'transCss', 'minjs', 'mincss', 'minhtml','watch', cb);
 });
