@@ -1,5 +1,7 @@
-@import "index";
-
+@charset "utf-8";
+@import "../css/$reset";
+@import "../css/$mixin";
+@import "../css/$style";
 //=================交易大厅=====================
 .trade-hall {
   background-color: #eee;

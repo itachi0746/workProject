@@ -10,15 +10,6 @@ $fontColor: #8c8a8a;
 @mixin fontSize ($size) {
   font-size: $size;
 }
-@mixin marginTop ($top) {
-  margin-top: $top;
-}
-@mixin paddingTop ($top) {
-  padding-top: $top;
-}
-@mixin textAlign ($align) {
-  text-align: $align;
-}
 @mixin _table () {
   color: #8c8a8a;
   width: 100%;

@@ -87,9 +87,9 @@ gulp.task('sassToCss', function(cb){
 // 编译,合并,重命名,加前缀,压缩
 gulp.task('mincss', [], function(cb) {
     pump([
-        gulp.src(config.src + '/scss/service.scss'),
+        gulp.src(config.src + '/scss/*.scss'),
         sass(),
-        concat('index.css'),  //合并后的文件名
+        // concat('index.css'),  //合并后的文件名
         // rename({suffix: '.min'}),
         changed(config.dest, { extension: '.css'}),
         sourcemaps.init(),
@@ -154,16 +154,16 @@ gulp.task('minhtml', [], function(cb) {
         // 每次打包时，只打包内容发生改变的文件
         changed(config.dest, { extension:'.html' }),
         // 执行html压缩
-        htmlmin({
-            removeComments: true,               // 清除HTML注释
-            collapseWhitespace: true,           // 压缩空格
-            collapseBooleanAttributes: true,    // 省略布尔属性的值 <input checked="true"/> => <input checked>
-            removeEmptyAttributes: true,        // 删除所有空格作属性值 <input id=""> => <input>
-            removeScriptTypeAttributes: true,   // 删除<script>的type="text/javascript"
-            removeStyleLinkTypeAttributes: true,// 删除<style>和<link>的type="text/css"
-            minifyJS: true,                     // 压缩页面JS
-            minifyCSS: true                     // 压缩页面CSS
-        }),
+        // htmlmin({
+        //     removeComments: true,               // 清除HTML注释
+        //     collapseWhitespace: true,           // 压缩空格
+        //     collapseBooleanAttributes: true,    // 省略布尔属性的值 <input checked="true"/> => <input checked>
+        //     removeEmptyAttributes: true,        // 删除所有空格作属性值 <input id=""> => <input>
+        //     removeScriptTypeAttributes: true,   // 删除<script>的type="text/javascript"
+        //     removeStyleLinkTypeAttributes: true,// 删除<style>和<link>的type="text/css"
+        //     minifyJS: true,                     // 压缩页面JS
+        //     minifyCSS: true                     // 压缩页面CSS
+        // }),
         // 输出至目标目录
         gulp.dest(config.dest)
 
@@ -186,5 +186,5 @@ gulp.task('watch', [], function(cb) {
 
 // 开始执行
 gulp.task('default', function(cb) {
-    runSequence('clean', 'minImage', 'transLibs', 'minjs', 'mincss', 'minhtml','browser', 'watch', cb);
+    runSequence('clean', 'minImage', 'transLibs', 'minjs', 'mincss', 'minhtml', 'watch', cb);
 });
