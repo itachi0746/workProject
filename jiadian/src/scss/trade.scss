@@ -1,23 +1,25 @@
 @import "index";
+
 //=================交易大厅=====================
 .trade-hall {
   background-color: #eee;
+  padding-bottom: 95px;
 }
-.width700 {
-  width: 700px;
-}
-.overH {
-  overflow: hidden;
-}
-.orange {
-  color: $mainColor;
-}
-.mt10 {
-  margin-top:10px;
-}
-.mt80 {
-  margin-top:80px;
-}
+// .width700 {
+//   width: 700px;
+// }
+// .overH {
+//   overflow: hidden;
+// }
+// .orange {
+//   color: $mainColor;
+// }
+// .mt10 {
+//   margin-top:10px;
+// }
+// .mt80 {
+//   margin-top:80px;
+// }
 
 .trade-hall  {
   .hall-bg {
@@ -285,6 +287,55 @@
       height: 350px;
       border-top: 2px solid #1da664;
       background-color: #fff;
+    }
+  }
+  .trade-f4 {
+    .trade-f4-content-l {
+      width: 590px;
+      height: 350px;
+      border-top: 2px solid #c33b00;
+      background-color: #fff;
+      @include box-sizing(border-box);
+    }
+    .trade-f4-content-l ul,.trade-f4-content-r ul {
+      width: 100%;
+      overflow: hidden;
+    }
+    .trade-f4-content-l ul li {
+      color: #999;
+      float: left;
+      width: 50%;
+      height: 174px;
+      padding: 45px 41px;
+      text-align: center;
+      border-right: 1px solid #f0f0f0;
+      border-bottom: 1px solid #f0f0f0;
+      @include box-sizing(border-box);
+    }
+    .trade-f4-btn {
+      margin: 15px 14px 0;
+      border: 1px solid $fontColor;
+    }
+    .trade-f4-btn a {
+      color: $fontColor;
+    }
+    .trade-f4-content-r {
+      width: 369px;
+      height: 350px;
+      border-top: 2px solid #c33b00;
+      background-color: #fff;
+      @include box-sizing(border-box);
+
+    }
+    .trade-f4-content-r ul li {
+      color: $fontColor;
+      float: left;
+      width: 100%;
+      height: 50px;
+      line-height: 48px;
+      padding: 0 10px;
+      border-bottom: 1px solid #f0f0f0;
+      @include box-sizing(border-box);
     }
   }
 }

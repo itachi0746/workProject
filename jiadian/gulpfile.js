@@ -49,7 +49,7 @@ gulp.task('browser', function () {
         files: ['**'],  // 修改HTML也刷新
         server: {
             baseDir: './dev',  // 设置服务器的根目录
-            index: 'trade.html' // 指定默认打开的文件
+            index: 'service.html' // 指定默认打开的文件
         },
         port: 8050  // 指定访问服务器的端口号
     });
@@ -87,7 +87,7 @@ gulp.task('sassToCss', function(cb){
 // 编译,合并,重命名,加前缀,压缩
 gulp.task('mincss', [], function(cb) {
     pump([
-        gulp.src(config.src + '/scss/trade.scss'),
+        gulp.src(config.src + '/scss/service.scss'),
         sass(),
         concat('index.css'),  //合并后的文件名
         // rename({suffix: '.min'}),
@@ -170,12 +170,7 @@ gulp.task('minhtml', [], function(cb) {
     ], cb);
 
 });
-// 搬运已压缩的css,js
-
-// gulp.task('transJs',function() {
-// 	return gulp.src(config.src+'/**/*.min.js')
-//         .pipe(gulp.dest(config.dest))
-// });
+// 搬运插件
 gulp.task('transLibs',function() {
 	return gulp.src(config.src+'/libs/*.*')
         .pipe(gulp.dest(config.dest+'/libs/'))
@@ -183,7 +178,7 @@ gulp.task('transLibs',function() {
 
 // 监听文件变改，即时调用任务执行增量打包
 gulp.task('watch', [], function(cb) {
-    gulp.watch(config.src + "/scss/trade.scss", ['mincss']);
+    gulp.watch(config.src + "/scss/*.scss", ['mincss']);
     gulp.watch(config.src + "/js/*.js", ['minjs']);
     gulp.watch(config.src + "/*.html", ['minhtml']);
     gulp.watch(config.src + "/img/*.{png,jpg,gif,ico}", ['minImage']);
@@ -191,5 +186,5 @@ gulp.task('watch', [], function(cb) {
 
 // 开始执行
 gulp.task('default', function(cb) {
-    runSequence('clean', 'minImage', 'transLibs', 'minjs', 'mincss', 'minhtml', 'browser', 'watch', cb);
+    runSequence('clean', 'minImage', 'transLibs', 'minjs', 'mincss', 'minhtml','browser', 'watch', cb);
 });

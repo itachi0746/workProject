@@ -10,7 +10,7 @@ html,body,#main {
   /*background: red;*/
   min-width: 1200px;
 }
-//=====sass=====================
+//=========mixstyle=================
 
 .p20 {
   padding: 20px;
@@ -26,6 +26,24 @@ html,body,#main {
 }
 .tr {
   text-align: right;
+}
+.width700 {
+  width: 700px;
+}
+.overH {
+  overflow: hidden;
+}
+.orange {
+  color: $mainColor;
+}
+.mt10 {
+  margin-top:10px;
+}
+.mt80 {
+  margin-top:80px;
+}
+.mt5 {
+  margin-top: 5px;
 }
 /*=============首页======================*/
 #jdl-header, .topLeft>li>a, .topRight>li>a {
@@ -1139,3 +1157,4 @@ html,body,#main {
     color: $fontColor;
   }
 }
+
