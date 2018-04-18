@@ -10,11 +10,21 @@ $fontColor: #8c8a8a;
 @mixin fontSize ($size) {
   font-size: $size;
 }
-@mixin _table () {
+
+%table {
   color: #8c8a8a;
   width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
 }
+%fl {
+  float: left;
+}
 
+%fr {
+  float: right;
+}
+
+$lte7:false; 
+%clearfix { @if $lte7 { *zoom: 1; } &:before, &:after { content: ""; display: table; font: 0/0 a; } &:after { clear: both; } }
 //==============================================

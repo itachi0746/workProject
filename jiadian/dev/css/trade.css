@@ -50,13 +50,11 @@ a {
   text-decoration: none;
   color: #666666; }
 
-._clearfix {
-  zoom: 1; }
+.fl {
+  float: left; }
 
-._clearfix:after {
-  content: "";
-  display: block;
-  clear: both; }
+.fr {
+  float: right; }
 
 html, body, #main {
   width: 100%; }
@@ -119,12 +117,6 @@ html, body, #main {
 .width1210 {
   width: 1210px;
   margin: 0 auto; }
-
-.fl {
-  float: left; }
-
-.fr {
-  float: right; }
 
 .fontBlack {
   color: black; }

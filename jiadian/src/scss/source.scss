@@ -2,10 +2,14 @@
 @import "../css/$reset";
 @import "../css/$mixin";
 @import "../css/$style";
+
 .source-purchase {
     padding-bottom: 60px;
 }
 .source-purchase {
+    ._clearfix {
+        @extend %clearfix;
+    }
 
   .source-banner {
         width: 850px;

@@ -50,12 +50,18 @@ a {
   text-decoration: none;
   color: #666666; }
 
-._clearfix {
-  zoom: 1; }
+.fl {
+  float: left; }
 
-._clearfix:after {
+.fr {
+  float: right; }
+
+.source-purchase ._clearfix:before, .source-purchase ._clearfix:after {
   content: "";
-  display: block;
+  display: table;
+  font: 0/0 a; }
+
+.source-purchase ._clearfix:after {
   clear: both; }
 
 html, body, #main {
@@ -119,12 +125,6 @@ html, body, #main {
 .width1210 {
   width: 1210px;
   margin: 0 auto; }
-
-.fl {
-  float: left; }
-
-.fr {
-  float: right; }
 
 .fontBlack {
   color: black; }

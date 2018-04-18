@@ -221,7 +221,7 @@
       background-color: #fff;
     }
     .trade-f1-table {
-      @include _table();
+      @extend table;
     }
     .trade-f1-table {
       tr:nth-child(1) {

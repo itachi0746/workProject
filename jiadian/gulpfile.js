@@ -49,7 +49,7 @@ gulp.task('browser', function () {
         files: ['**'],  // 修改HTML也刷新
         server: {
             baseDir: './dev',  // 设置服务器的根目录
-            index: 'dataCenter.html' // 指定默认打开的文件
+            index: 'source.html' // 指定默认打开的文件
         },
         port: 8050  // 指定访问服务器的端口号
     });
@@ -130,7 +130,7 @@ gulp.task('mincss', [], function(cb) {
 gulp.task('minjs', [], function(cb) {
     pump([
         // 获取原目录下所有的js文件
-        gulp.src([config.src + "/**/*.js", '!' + config.src +'/**/*.min.js']),
+        gulp.src(config.src + "/**/*.js"),
         // 执行更名操作
         // rename({ suffix: '.min' }),
         // 每次打包时，只打包内容发生改变的文件
