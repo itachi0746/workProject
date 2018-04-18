@@ -49,7 +49,7 @@ gulp.task('browser', function () {
         files: ['**'],  // 修改HTML也刷新
         server: {
             baseDir: './dev',  // 设置服务器的根目录
-            index: 'service.html' // 指定默认打开的文件
+            index: 'dataCenter.html' // 指定默认打开的文件
         },
         port: 8050  // 指定访问服务器的端口号
     });
@@ -178,7 +178,7 @@ gulp.task('transLibs',function() {
 
 // 监听文件变改，即时调用任务执行增量打包
 gulp.task('watch', [], function(cb) {
-    gulp.watch(config.src + "/scss/*.scss", ['mincss']);
+    gulp.watch([config.src + "/scss/*.scss",config.src + '/css/*.scss'], ['mincss']);
     gulp.watch(config.src + "/js/*.js", ['minjs']);
     gulp.watch(config.src + "/*.html", ['minhtml']);
     gulp.watch(config.src + "/img/*.{png,jpg,gif,ico}", ['minImage']);
@@ -186,5 +186,5 @@ gulp.task('watch', [], function(cb) {
 
 // 开始执行
 gulp.task('default', function(cb) {
-    runSequence('clean', 'minImage', 'transLibs', 'minjs', 'mincss', 'minhtml', 'watch', cb);
+    runSequence('clean', 'minImage', 'transLibs', 'minjs', 'mincss', 'minhtml','browser', 'watch', cb);
 });

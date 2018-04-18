@@ -1,0 +1,25 @@
+@charset "utf-8";
+@import "../css/$reset";
+@import "../css/$mixin";
+@import "../css/$style";
+
+.data-center {
+    .banner {
+        width: 100%;
+        // height: 410px;
+        height: 410px;
+        position: relative;
+        background-image: url(../img/dc_banner.png);
+        background-size: cover;
+        background-position: 50%;
+        background-repeat: no-repeat;
+    }
+    .data-center-menu {
+        width: 280px;
+        float: left;
+        margin-top: -1px;
+        border-left: none;
+        border-right: 1px solid #e0e0e0;
+        min-height: 500px;
+    }
+}

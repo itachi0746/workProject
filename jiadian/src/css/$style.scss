@@ -25,6 +25,7 @@ html,body,#main {
 .width700 {
   width: 700px;
 }
+
 .overH {
   overflow: hidden;
 }
@@ -40,6 +41,21 @@ html,body,#main {
 .mt5 {
   margin-top: 5px;
 }
+.mt65 {
+  margin-top: 65px;
+}
+.mt60 {
+  margin-top: 60px;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.ml45 {
+  margin-left: 45px;
+}
+.mr40 {
+  margin-right: 40px;
+}
 .width1200 {
   width: 1200px;
   margin:0 auto;
@@ -53,6 +69,13 @@ html,body,#main {
 }
 .fr {
   float: right;
+}
+.fontBlack {
+  color: black;
+}
+.prize-style {
+  color: #ff8140;
+  font-size: 22px;
 }
 // ======================头部=====================
 #jdl-header, .topLeft>li>a, .topRight>li>a {

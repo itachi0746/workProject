@@ -2,4 +2,228 @@
 @import "../css/$reset";
 @import "../css/$mixin";
 @import "../css/$style";
+.source-purchase {
+    padding-bottom: 60px;
+}
+.source-purchase {
 
+  .source-banner {
+        width: 850px;
+        height: 345px;
+        background: lightblue;
+    }  
+
+    .news-list {
+        margin-left: 10px;
+        width: 340px;
+    }
+    .news-list ul,.news-list li {
+        @include box-sizing(border-box);
+    }
+    .news-tab {
+        border-top: 2px solid $mainColor;
+        width: 100%;
+        color: #b8b8b8;
+        font-size: 18px;
+    }
+    .news-tab li {
+        width: 50%;
+        height: 40px;
+        line-height: 40px;
+        float: left;
+        // font-weight: bold;
+        text-align: center;
+        cursor: pointer;
+        background-color: #eee;
+    }
+    .news-tab li:nth-child(1) {
+        background-color: #fff;
+        color: $mainColor;
+    }
+    .news-item {
+        width: 100%;
+        height: 160px;
+        padding: 0 20px;
+        margin-bottom: 50px;
+    }
+    .news-item li {
+        height: 32px;
+        line-height: 32px;
+        font-size: 12px;
+        color: #666666;
+        cursor: pointer;
+    }
+    .news-item li:hover {
+        color: $mainColor;
+    }
+    .news-list-link {
+        width: 100%;
+        height: 45px;
+        font-size: 14px;
+        line-height: 45px;
+        text-align: center;
+        border: 1px solid #c1c1c1;
+        color: #c1c1c1;
+        @include box-sizing(border-box);
+    }
+    .source-chart-title {
+        width: 100%;
+        border-bottom: 2px solid $mainColor;
+        color: $mainColor;
+        font-size: 18px;
+        font-weight: bold;
+        padding-left: 25px;
+        @include box-sizing(border-box);
+    }
+    .source-chart-title2 {
+        @extend .source-chart-title;
+        border: none;
+    }
+    .source-chart-l {
+        width: 737px;
+    }
+    .source-chart-r {
+        width: 1200px - 737px;
+        height: 100%;
+    }
+    .source-chart-l ul {
+        width: 100%;
+        overflow: hidden;
+        color: #aaa;
+        font-size: 14px;
+        padding: 0 23px 0 30px;
+        @include box-sizing(border-box);
+    }
+    .source-chart-l ul li {
+        border-bottom: 1px dashed #aaa;
+        float: left;
+        width: 100%;
+        height: 41px;
+        @include box-sizing(border-box);
+    }
+    .source-chart-l ul li span {
+        display: inline-block;
+        @include box-sizing(border-box);
+        height: 40px;
+        line-height: 40px;
+    }
+    .source-chart-l ul li span:nth-child(1) {
+        width: 90px;
+    }
+    .source-chart-l ul li span:nth-child(2),.source-chart-l ul li span:nth-child(3) {
+        width: 140px;
+    }
+    .source-chart-l ul li span:nth-child(4) {
+        width: 180px;
+    }
+    .source-chart-l ul li span:nth-child(5) {
+        width: auto;
+    }
+    .source-chart-r-tag {
+        font-weight: bold;
+        font-size: 14px;
+    }
+    .source-chart-r-tag {
+        .ml10 {
+            margin-left: 10px;
+        }
+    }
+    .triangle-down {
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 8px solid $mainColor;
+      }
+    .triangle-down-p {
+        position: relative;
+        top:15px;
+        margin-left: 20px;
+    }
+    .source-chart-r-tag > span {
+        color: #737373;
+    }
+    .source-chart-r-tag > a {
+        padding-right: 17px;
+    }
+    .source-banner2 {
+        width: 100%;
+        height: 120px;
+        background-color: lightblue;
+    }
+    .source-chart-container-s {
+        width: 600px;
+        border-top: 2px solid $mainColor;
+        @include box-sizing(border-box);
+        padding-left: 30px;
+    }
+    .source-chart-container-s2 {
+        @extend .source-chart-container-s;
+        width: 600px - 37px;
+        padding: 0;
+        margin-left: 30px;
+    }
+    .source-chart-container-s li,.source-chart-container-s2 li {
+        height: 41px;
+        width: 100%;
+        line-height: 40px;
+        color: $fontColor;
+        border-bottom: 1px dashed #aaa;
+        @include box-sizing(border-box);
+    }
+    .tag-zy {
+        background: #ff8140;
+        font-size: 14px;
+        color: #fff2ed;
+        padding: 0px 3px;
+        border-radius: 3px;
+        border: 1px solid #ff8140;
+    }
+    .source-chart-container-s-list span:nth-child(1) {
+        display: inline-block;
+        width: 140px;
+    }
+    .source-chart-container-s-list span:nth-child(2) {
+        display: inline-block;
+        width: 140px;
+    }
+    .source-chart-container-s-list span:nth-child(3) {
+        display: inline-block;
+        width: 140px;
+    }
+    .source-chart-container-s-list span:nth-child(4) {
+        display: inline-block;
+        width: 70px;
+    }
+    .source-chart-container-s-list span:nth-child(5) {
+        display: inline-block;
+        width: auto;
+    }
+    .source-chart-container-s2-list span:nth-child(1) {
+        display: inline-block;
+        width: 140px;
+    }
+    .source-chart-container-s2-list span:nth-child(2) {
+        display: inline-block;
+        width: 250px;
+    }
+    .source-chart-container-s2-list span:nth-child(3) {
+        display: inline-block;
+        width: 90px;
+    }
+    .source-chart-container-s2-list span:nth-child(4) {
+        display: inline-block;
+        width: auto;
+    }
+
+    .source-chart-container-s-list>.fontBlack,
+    .source-chart-container-s2-list>.fontBlack {
+        font-weight: bold;
+    }
+    .source-chart-img {
+        margin-left: 30px;
+        width: 560px;
+        height: 250px;
+        background-color: lightblue;
+    }
+}
