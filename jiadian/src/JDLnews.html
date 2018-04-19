@@ -5,8 +5,9 @@
 	<link rel="shortcut icon" href="#" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>数据中心-家电链</title>
-	<link rel="stylesheet" href="css/dataCenter.css">
+    <title>服务中心-家电链</title>
+    <link rel="stylesheet" href="libs/swiper.min.css">
+	<link rel="stylesheet" href="css/index.css">
 
 </head>
 <body>
@@ -127,70 +128,13 @@
 				</div>
 			</div>
 				
-        </div>
-        <!-- 数据中心内容页 -->
-        <div class="data-center overH">
-            <div class="banner"></div>
-            <div class="width1200 overH">
-				<div class="data-center-menu">
-					<div class="type-table-tree">
-						<!-- =========================== -->
-						<!-- 一级菜单 -->
-						<div class="data-center-menu1">
-							<span><i class="bottom-arrow"></i></span>
-							<span>行业数据</span>
-						</div>
-						<!-- 插入的二级菜单 -->
-						<ul class="data-center-menu2 fs14">
-							<li>
-								<span><i class="bottom-arrow"></i></span>
-								<span>全球家链数据</span>
-							</li>
-							<!-- 插入的三级菜单 -->
-							<ul class="data-center-menu3 fs14">
-								<li>
-									<span class="menu3-icon"></span>
-									<span>国际电器产量</span>
-								</li>
-								<li>
-									<span class="menu3-icon"></span>
-									<span>国际电器产量</span>
-								</li>
-								<li>
-									<span class="menu3-icon"></span>
-									<span>国际电器产量</span>
-								</li>
-								<li>
-									<span class="menu3-icon"></span>
-									<span>国际电器产量</span>
-								</li>
-							</ul>
-							<li>
-								<span><i class="bottom-arrow"></i></span>
-								<span>全球家链数据</span>
-							</li>
-							<li>
-								<span><i class="bottom-arrow"></i></span>
-								<span>全球家链数据</span>
-							</li>
-						</ul>
-						<!-- ============================- -->
-						<div class="data-center-menu1">
-							<span><i class="bottom-arrow"></i></span>
-							<span>家电链指数</span>
-						</div>
-						<!-- ============================- -->
-						<div class="data-center-menu1">
-							<span><i class="bottom-arrow"></i></span>
-							<span>电器中位数</span>
-						</div>
-					</div>
-				</div>
-                <div class="data-center-body fl">
-					111111111
-				</div>
-            </div>
-        </div>
+		</div>
+		<!-- 家电链新闻资讯页 -->
+		<div class="news-index-content overH">
+            
+
+			<!-- TODO -->
+		</div>
 		
 		<!--网页底部信息-->
 		<div class="footer">
@@ -325,10 +269,61 @@
 			</div>
 
 		</div>
+		<div class="r-menu">
+			<table>
+				<tbody>
+				<tr>
+					<td>
+						<a class=""><img src="img/r_menu_1.png" alt=""></a>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a class=""><img src="img/r_menu_2.png" alt=""></a>
+					</td>
+				</tr>
+				<tr>
+					<td id="r_ewm">
+						<a class=""><img src="img/r_menu_3.png" alt=""></a>
+					</td>
+				</tr>
+				<tr>
+					<td style="border-bottom: none;">
+						<a class=""><img src="img/r_menu_4.png" alt=""></a>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="r-ewm">
+			<img src="img/jdl_ewm.png" alt="">
+			<p>扫一扫关注微信</p>
+		</div>
 	</div>
+	<script src="libs/swiper.min.js"></script>
 
 </body>
 <script src="libs/jquery-3.3.1.min.js"></script>
-<script src="js/dataCenter.js"></script>
+<script>
+	var mySwiper = new Swiper ('.swiper-container', {
+		direction: 'horizontal',
+		loop: true,
+		autoplay: {
+			delay: 3000,
+			stopOnLastSlide: false,
+			disableOnInteraction: false//用户操作轮播后,继续自动播放
+		},
+		// 如果需要分页器
+		pagination: {
+			  el: '.swiper-pagination'
+		},
+		// 如果需要前进后退按钮
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev'
+		}
+	})    
+</script>
+<!-- <script src="js/index.js"></script> -->
 
 </html>

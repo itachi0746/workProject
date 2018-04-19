@@ -50,12 +50,6 @@ a {
   text-decoration: none;
   color: #666666; }
 
-.fl {
-  float: left; }
-
-.fr {
-  float: right; }
-
 html, body, #main {
   width: 100%; }
 
@@ -117,6 +111,12 @@ html, body, #main {
 .width1210 {
   width: 1210px;
   margin: 0 auto; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
 
 .fontBlack {
   color: black; }
@@ -596,6 +596,35 @@ html, body, #main {
   font-size: 12px;
   margin-top: 10px;
   color: #8c8a8a; }
+
+.bottom-arrow:before {
+  content: "";
+  border: 8px solid #999;
+  border-bottom: none;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  position: relative;
+  top: 18px;
+  left: 12px; }
+
+.bottom-arrow:after {
+  content: "";
+  border: 8px solid #fff;
+  border-bottom: none;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  position: relative;
+  top: 16px;
+  left: -4px; }
+
+.right-arrow:before {
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 9px solid #666;
+  border-bottom: 5px solid transparent; }
 
 /*===============swiper轮播图设置=================*/
 .swiper-container {

@@ -49,7 +49,7 @@ gulp.task('browser', function () {
         files: ['**'],  // 修改HTML也刷新
         server: {
             baseDir: './dev',  // 设置服务器的根目录
-            index: 'source.html' // 指定默认打开的文件
+            index: 'JDLnews.html' // 指定默认打开的文件
         },
         port: 8050  // 指定访问服务器的端口号
     });

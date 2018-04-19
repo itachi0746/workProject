@@ -9,7 +9,7 @@
         // height: 410px;
         height: 410px;
         position: relative;
-        background-image: url(../img/dc_banner.png);
+        background-image: url(../img/data_banner.png);
         background-size: cover;
         background-position: 50%;
         background-repeat: no-repeat;
@@ -20,6 +20,98 @@
         margin-top: -1px;
         border-left: none;
         border-right: 1px solid #e0e0e0;
-        min-height: 500px;
+        min-height: 400px;
+        @include box-sizing(border-box);
+    }
+    .width1200 {
+        margin-top: 35px;
+        margin-bottom: 65px;
+        border: 1px solid rgb(224, 224, 224);
+    }
+    .type-table-tree {
+        width: 100%;
+        overflow: hidden;
+        color: #666;
+    }
+    .data-center-menu1 {
+        cursor: pointer;
+        font-size: 18px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #f9f9f9;
+        margin-bottom: 15px;
+        border-top: 1px solid rgb(224, 224, 224);
+        border-bottom: 1px solid rgb(224, 224, 224);
+    }
+    .data-center-menu2 li:nth-last-child(1) {
+        margin-bottom: 10px;
+    }
+    .data-center-menu2,.data-center-menu3 {
+        display: block;
+    }
+    
+    .data-center-menu2 {
+        li {
+            height: 30px;
+            line-height: 30px;
+            border-bottom: 1px solid rgb(224, 224, 224);
+            @include box-sizing(border-box);
+            cursor: pointer;
+        }
+        .bottom-arrow {
+            padding-right: 5px;
+            padding-left: 4px;
+        }
+        .bottom-arrow:before {  
+            content:"";  
+            border:6px solid #999;  
+            border-bottom:none;  
+            border-right-color:transparent;  
+            border-left-color:transparent;  
+            position:relative;  
+            top:14px;  
+            left:12px;  
+          }
+        .bottom-arrow:after {  
+            content:"";  
+            border:6px solid #fff;  
+            border-bottom:none;  
+            border-right-color:transparent;  
+            border-left-color:transparent;  
+            position:relative;  
+            top:12px;  
+            left:0;  
+          }  
+        .data-center-menu3 {
+            li {
+                height: 25px;
+                line-height: 25px;
+                cursor: pointer;
+                padding-left: 38px;
+                border: none;
+                margin: 0;
+            }
+            .menu3-icon {
+                width: 10px;
+                height: 10px;
+                display: inline-block;
+                margin-right: 5px;
+                border-radius: 50%;
+                background-color: #ddd;
+            }
+        }
+    }
+    .data-center-body {
+        width: 1200px - 280px;
+        float: left;
+        @include box-sizing(border-box);
+        // border: 1px solid #e0e0e0;
+        // margin-left: -1px;
+        // margin-top: -1px;
+        padding: 20px 50px;
+        // border-right: none;
+        // margin-bottom: -1px;
+        min-height: 400px;
+        // border-bottom: none;
     }
 }

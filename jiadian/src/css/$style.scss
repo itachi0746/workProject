@@ -560,6 +560,7 @@ html,body,#main {
   border-left: #ff8140;
 }
 
+// ========带箭头的对话框==============
 .r-ewm:before {
   content: "";
   position: absolute;
@@ -581,4 +582,34 @@ html,body,#main {
     color: $fontColor;
   }
 }
-
+// ===========空心下箭头=============
+.bottom-arrow:before{  
+  content:"";  
+  border:8px solid #999;  
+  border-bottom:none;  
+  border-right-color:transparent;  
+  border-left-color:transparent;  
+  position:relative;  
+  top:18px;  
+  left:12px;  
+}
+.bottom-arrow:after{  
+  content:"";  
+  border:8px solid #fff;  
+  border-bottom:none;  
+  border-right-color:transparent;  
+  border-left-color:transparent;  
+  position:relative;  
+  top:16px;  
+  left:-4px;  
+}  
+// ===========实心右箭头=============
+.right-arrow:before {
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 9px solid $color666;
+  border-bottom: 5px solid transparent;
+}

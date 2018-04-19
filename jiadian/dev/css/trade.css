@@ -43,18 +43,12 @@ input[type="text"], input[type="password"], textarea {
 textarea {
   resize: none; }
 
-table {
+table, .trade-hall .trade-f1 .trade-f1-table {
   border-collapse: collapse; }
 
 a {
   text-decoration: none;
   color: #666666; }
-
-.fl {
-  float: left; }
-
-.fr {
-  float: right; }
 
 html, body, #main {
   width: 100%; }
@@ -117,6 +111,12 @@ html, body, #main {
 .width1210 {
   width: 1210px;
   margin: 0 auto; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
 
 .fontBlack {
   color: black; }
@@ -469,7 +469,7 @@ html, body, #main {
   color: #666666;
   width: 1000px; }
 
-.help-list table {
+.help-list table, .help-list .trade-hall .trade-f1 .trade-f1-table, .trade-hall .trade-f1 .help-list .trade-f1-table {
   float: left;
   width: 25%;
   table-layout: fixed; }
@@ -528,7 +528,7 @@ html, body, #main {
   border: solid 1px #dfdfdf;
   border-radius: 2px; }
 
-.floor-menu table td {
+.floor-menu table td, .floor-menu .trade-hall .trade-f1 .trade-f1-table td, .trade-hall .trade-f1 .floor-menu .trade-f1-table td {
   width: 65px;
   border-bottom: solid 1px #dfdfdf;
   height: 38px;
@@ -550,7 +550,7 @@ html, body, #main {
   border-radius: 2px;
   display: none; }
 
-.r-menu table td {
+.r-menu table td, .r-menu .trade-hall .trade-f1 .trade-f1-table td, .trade-hall .trade-f1 .r-menu .trade-f1-table td {
   width: 67px;
   border-bottom: solid 1px #dfdfdf;
   height: 73px;
@@ -596,6 +596,35 @@ html, body, #main {
   font-size: 12px;
   margin-top: 10px;
   color: #8c8a8a; }
+
+.bottom-arrow:before {
+  content: "";
+  border: 8px solid #999;
+  border-bottom: none;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  position: relative;
+  top: 18px;
+  left: 12px; }
+
+.bottom-arrow:after {
+  content: "";
+  border: 8px solid #fff;
+  border-bottom: none;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  position: relative;
+  top: 16px;
+  left: -4px; }
+
+.right-arrow:before {
+  display: inline-block;
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 9px solid #666;
+  border-bottom: 5px solid transparent; }
 
 .trade-hall {
   background-color: #eee;
@@ -783,12 +812,6 @@ html, body, #main {
   height: 350px;
   border-top: 2px solid #36b9f1;
   background-color: #fff; }
-
-.trade-hall .trade-f1 .trade-f1-table {
-  color: #8c8a8a;
-  width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse; }
 
 .trade-hall .trade-f1 .trade-f1-table tr:nth-child(1) {
   border-bottom: none;
