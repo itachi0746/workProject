@@ -624,105 +624,111 @@ html, body, #main {
   border-left: 9px solid #666;
   border-bottom: 5px solid transparent; }
 
-.data-center .banner {
+/*===============swiper轮播图设置=================*/
+.swiper-container {
   width: 100%;
-  height: 410px;
-  position: relative;
-  background-image: url(../img/data_banner.png);
-  background-size: cover;
-  background-position: 50%;
-  background-repeat: no-repeat; }
+  height: 100%;
+  cursor: pointer; }
 
-.data-center .data-center-menu {
-  width: 280px;
-  float: left;
-  margin-top: -1px;
-  border-left: none;
-  border-right: 1px solid #e0e0e0;
-  min-height: 400px;
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0px 10px; }
+
+/*小圆点的样式*/
+.swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #666; }
+
+/*前进后退按钮的样式*/
+.swiper-button-next, .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  margin: -50px 0px;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s; }
+
+/*重定义切换按钮尺寸和上下居中位置*/
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+  background-image: url(../img/btn_next.png);
+  background-color: rgba(0, 0, 0, 0.5);
+  background-size: 18px 25px;
+  right: 0; }
+
+/*更换背景图片、尺寸，增加背景颜色，设置透明度，*/
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+  background-image: url(../img/btn_next.png);
+  background-size: 18px 22px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  left: 0; }
+
+/*更换背景图片、尺寸，增加背景颜色，设置透明度，*/
+.swiper-button-next:hover {
+  background-color: rgba(0, 0, 0, 0.7); }
+
+/*//触发后变色*/
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.7); }
+
+/*触发后变色*/
+.zjr-content .width1200 {
+  margin-top: 40px; }
+
+.zjr-content .zjr-content-tag {
+  width: 100%;
+  height: 350px;
+  overflow: hidden; }
+
+.zjr-content .zjr-content-tag ul {
+  width: 960px;
+  height: 100%;
+  padding: 65px 0px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-.data-center .width1200 {
-  margin-top: 35px;
-  margin-bottom: 65px;
-  border: 1px solid #e0e0e0; }
-
-.data-center .type-table-tree {
-  width: 100%;
-  overflow: hidden;
-  color: #666; }
-
-.data-center .data-center-menu1 {
-  cursor: pointer;
-  font-size: 18px;
-  height: 40px;
-  line-height: 40px;
-  background-color: #f9f9f9;
-  margin-bottom: 15px;
-  border-top: 1px solid #e0e0e0;
-  border-bottom: 1px solid #e0e0e0; }
-
-.data-center .data-center-menu2 li:nth-last-child(1) {
-  margin-bottom: 10px; }
-
-.data-center .data-center-menu2, .data-center .data-center-menu3 {
-  display: block; }
-
-.data-center .data-center-menu2 li {
-  height: 30px;
-  line-height: 30px;
-  border-bottom: 1px solid #e0e0e0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  cursor: pointer; }
-
-.data-center .data-center-menu2 .bottom-arrow {
-  padding-right: 5px;
-  padding-left: 4px; }
-
-.data-center .data-center-menu2 .bottom-arrow:before {
-  content: "";
-  border: 6px solid #999;
-  border-bottom: none;
-  border-right-color: transparent;
-  border-left-color: transparent;
-  position: relative;
-  top: 14px;
-  left: 12px; }
-
-.data-center .data-center-menu2 .bottom-arrow:after {
-  content: "";
-  border: 6px solid #fff;
-  border-bottom: none;
-  border-right-color: transparent;
-  border-left-color: transparent;
-  position: relative;
-  top: 12px;
-  left: 0; }
-
-.data-center .data-center-menu2 .data-center-menu3 li {
-  height: 25px;
-  line-height: 25px;
-  cursor: pointer;
-  padding-left: 38px;
-  border: none;
-  margin: 0; }
-
-.data-center .data-center-menu2 .data-center-menu3 .menu3-icon {
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-  margin-right: 5px;
-  border-radius: 50%;
-  background-color: #ddd; }
-
-.data-center .data-center-body {
-  width: 920px;
+.zjr-content .zjr-content-tag ul li {
   float: left;
+  width: 25%;
+  text-align: center;
+  height: 160px;
+  border-right: 2px solid #ddd;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 20px 50px;
-  min-height: 400px; }
+  box-sizing: border-box; }
 
-/*# sourceMappingURL=dataCenter.css.map */
+.zjr-content .zjr-content-tag ul li p {
+  font-size: 24px;
+  color: #209ce4; }
+
+.zjr-content .zjr-content-tag .last-li {
+  border: none; }
+
+.zjr-content .zjr-content-tag .last-li img {
+  width: 90px; }
+
+.zjr-content .zjr-content-tag ul > p {
+  float: left;
+  width: 25%;
+  font-size: 12px;
+  text-align: center;
+  padding: 0 40px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.zjr-content .zjr-content-title {
+  width: 100%;
+  height: 120px;
+  background-color: lightgreen; }
+
+.zjr-content .zjr-content-process {
+  width: 100%;
+  height: 200px;
+  background-color: lightpink; }
+
+.zjr-content .ph {
+  width: 240px;
+  height: 100%;
+  background-color: lightblue; }
+
+/*# sourceMappingURL=zjr.css.map */

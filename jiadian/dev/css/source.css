@@ -272,7 +272,6 @@ html, body, #main {
   width: 220px;
   height: 455px;
   position: absolute;
-  display: none;
   top: 40px;
   color: white;
   font-size: 17px;
@@ -555,8 +554,7 @@ html, body, #main {
   z-index: 999;
   background-color: #fff;
   border: solid 1px #dfdfdf;
-  border-radius: 2px;
-  display: none; }
+  border-radius: 2px; }
 
 .r-menu table td {
   width: 67px;
@@ -578,8 +576,7 @@ html, body, #main {
   padding: 15px;
   text-align: center;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  display: none; }
+  box-sizing: border-box; }
 
 #r_ewm {
   background: #ff8140;
@@ -625,9 +622,10 @@ html, body, #main {
   top: 16px;
   left: -4px; }
 
-.right-arrow:before {
+.right-arrow {
   display: inline-block;
-  content: "";
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   width: 0;
   height: 0;
   border-top: 5px solid transparent;

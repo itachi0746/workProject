@@ -226,7 +226,7 @@ html,body,#main {
   width: 220px;
   height: 455px;
   position: absolute;
-  display: none;
+  // display: none;
   top: 40px;
   color: white;
   font-size: 17px;
@@ -530,7 +530,7 @@ html,body,#main {
   background-color: #fff;
   border: solid 1px #dfdfdf;
   border-radius: 2px;
-  display: none;
+  // display: none;
 }
 .r-menu table td {
   width: 67px;
@@ -552,7 +552,7 @@ html,body,#main {
   padding: 15px;
   text-align: center;
   @include box-sizing(border-box);
-  display: none;
+  // display: none;
 }
 #r_ewm {
   background: #ff8140;
@@ -604,9 +604,10 @@ html,body,#main {
   left:-4px;  
 }  
 // ===========实心右箭头=============
-.right-arrow:before {
+.right-arrow {
   display: inline-block;
-  content: "";
+  @include box-sizing(border-box);
+  // content: "";
   width: 0;
   height: 0;
   border-top: 5px solid transparent;

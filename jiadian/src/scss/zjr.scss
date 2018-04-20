@@ -1,0 +1,93 @@
+@charset "utf-8";
+@import "../css/$reset";
+@import "../css/$mixin";
+@import "../css/$style";
+
+
+/*===============swiper轮播图设置=================*/
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+  }
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0px 10px;
+}
+  /*小圆点的样式*/
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: #666;
+}
+  /*前进后退按钮的样式*/
+.swiper-button-next, .swiper-button-prev{width: 40px;height: 40px;margin: -50px 0px;border-radius: 50%;opacity: 0;transition: all 0.5s;}  /*重定义切换按钮尺寸和上下居中位置*/
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {background-image: url(../img/btn_next.png);background-color: rgba(0,0,0,0.5);background-size: 18px 25px;right: 0;} /*更换背景图片、尺寸，增加背景颜色，设置透明度，*/
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{background-image: url(../img/btn_next.png);background-size:18px 22px;background-color: rgba(0,0,0,0.5);;transform: rotate(180deg);left: 0;} /*更换背景图片、尺寸，增加背景颜色，设置透明度，*/
+  
+.swiper-button-next:hover{background-color: rgba(0,0,0,0.7);} /*//触发后变色*/
+.swiper-button-prev:hover{background-color: rgba(0,0,0,0.7);} /*触发后变色*/
+  
+// ==========================================
+  
+// =============找金融(家链通)================
+
+.zjr-content {
+    .width1200 {
+        margin-top: 40px;
+    }
+    .zjr-content-tag {
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        // background-color: lightblue;
+    }
+    .zjr-content-tag {
+        ul {
+            width: 1200px - 240px;
+            height: 100%;
+            padding: 65px 0px;
+            @include box-sizing(border-box);
+        }
+        ul li {
+            float: left;
+            width: 25%;
+            text-align: center;
+            height: 160px;
+            border-right: 2px solid #ddd;
+            @include box-sizing(border-box);
+        }
+        ul li p {
+            font-size: 24px;
+            color: #209ce4;
+        }
+        .last-li {
+            border: none;
+        }
+        .last-li img {
+            width: 90px;
+        }
+        ul>p {
+            float: left;
+            width: 25%;
+            font-size: 12px;
+            text-align: center;
+            padding: 0 40px;
+            @include box-sizing(border-box);
+        }
+
+    }
+    .zjr-content-title {
+        width: 100%;
+        height: 120px;
+        background-color: lightgreen;
+    }
+    .zjr-content-process {
+        width: 100%;
+        height: 200px;
+        background-color: lightpink;
+    }
+    .ph {
+        @include ph(240px,100%);
+    }
+
+
+}

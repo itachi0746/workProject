@@ -26,7 +26,23 @@ $color666: #666;
   float: right;
 }
 
-@mixin orange-border-container
+@mixin orange-border-container($width,$padding) {
+  border-top: 2px solid $mainColor;
+  padding: $padding;
+  width: $width;
+}
+// 占位置用的容器
+@mixin ph($width,$height) {
+  width: $width;
+  height: $height;
+  background-color: lightblue;
+}
+// 文本溢出省略显示:
+%text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
 $lte7:false; 
 %clearfix { @if $lte7 { *zoom: 1; } &:before, &:after { content: ""; display: table; font: 0/0 a; } &:after { clear: both; } }
