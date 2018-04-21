@@ -36,9 +36,11 @@ select, input, textarea {
   font-size: 12px;
   margin: 0; }
 
-input[type="text"], input[type="password"], textarea {
-  outline-style: none;
-  -webkit-appearance: none; }
+input {
+  outline: none;
+  color: #6d6d6d;
+  -webkit-tap-highlight-color: transparent;
+  /* 点击去除高亮的颜色*/ }
 
 textarea {
   resize: none; }
@@ -264,6 +266,7 @@ html, body, #main {
   width: 220px;
   height: 455px;
   position: absolute;
+  display: none;
   top: 40px;
   color: white;
   font-size: 17px;

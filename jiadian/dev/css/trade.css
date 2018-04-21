@@ -36,19 +36,27 @@ select, input, textarea {
   font-size: 12px;
   margin: 0; }
 
-input[type="text"], input[type="password"], textarea {
-  outline-style: none;
-  -webkit-appearance: none; }
+input {
+  outline: none;
+  color: #6d6d6d;
+  -webkit-tap-highlight-color: transparent;
+  /* 点击去除高亮的颜色*/ }
 
 textarea {
   resize: none; }
 
-table, .trade-hall .trade-f1 .trade-f1-table {
+table {
   border-collapse: collapse; }
 
 a {
   text-decoration: none;
   color: #666666; }
+
+.trade-hall .trade-f1 .trade-f1-table {
+  color: #8c8a8a;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse; }
 
 html, body, #main {
   width: 100%; }
@@ -264,6 +272,7 @@ html, body, #main {
   width: 220px;
   height: 455px;
   position: absolute;
+  display: none;
   top: 40px;
   color: white;
   font-size: 17px;
@@ -468,7 +477,7 @@ html, body, #main {
   color: #666666;
   width: 1000px; }
 
-.help-list table, .help-list .trade-hall .trade-f1 .trade-f1-table, .trade-hall .trade-f1 .help-list .trade-f1-table {
+.help-list table {
   float: left;
   width: 25%;
   table-layout: fixed; }
@@ -527,7 +536,7 @@ html, body, #main {
   border: solid 1px #dfdfdf;
   border-radius: 2px; }
 
-.floor-menu table td, .floor-menu .trade-hall .trade-f1 .trade-f1-table td, .trade-hall .trade-f1 .floor-menu .trade-f1-table td {
+.floor-menu table td {
   width: 65px;
   border-bottom: solid 1px #dfdfdf;
   height: 38px;
@@ -548,7 +557,7 @@ html, body, #main {
   border: solid 1px #dfdfdf;
   border-radius: 2px; }
 
-.r-menu table td, .r-menu .trade-hall .trade-f1 .trade-f1-table td, .trade-hall .trade-f1 .r-menu .trade-f1-table td {
+.r-menu table td {
   width: 67px;
   border-bottom: solid 1px #dfdfdf;
   height: 73px;
@@ -809,15 +818,23 @@ html, body, #main {
   width: 958px;
   height: 350px;
   border-top: 2px solid #36b9f1;
-  background-color: #fff; }
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.trade-hall .trade-f1 tr {
+  border-bottom: 1px solid #f0f0f0; }
 
 .trade-hall .trade-f1 .trade-f1-table tr:nth-child(1) {
   border-bottom: none;
   background-color: #fafafa;
   color: black; }
 
+.trade-hall .trade-f1 .trade-f1-table tr:nth-last-child(1) {
+  border-bottom: none; }
+
 .trade-hall .trade-f1 .trade-f1-table tr td {
-  height: 48px;
+  height: 49px;
   padding: 0 35px; }
 
 .trade-hall .trade-f1 .trade-f1-table tr, .trade-hall .trade-f1 .trade-f1-table td {
@@ -828,7 +845,9 @@ html, body, #main {
   width: 958px;
   height: 350px;
   border-top: 2px solid #116cb3;
-  background-color: #fff; }
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .trade-hall .trade-f2 .trade-f2-content ul, .trade-hall .trade-f2 .trade-f3-content ul, .trade-hall .trade-f3 .trade-f2-content ul, .trade-hall .trade-f3 .trade-f3-content ul {
   width: 100%;
@@ -870,7 +889,9 @@ html, body, #main {
   width: 958px;
   height: 350px;
   border-top: 2px solid #1da664;
-  background-color: #fff; }
+  background-color: #fff;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .trade-hall .trade-f4 .trade-f4-content-l {
   width: 590px;

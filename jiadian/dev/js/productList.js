@@ -1,0 +1,3 @@
+console.log('22222');
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiIiwic291cmNlcyI6WyJqcy9wcm9kdWN0TGlzdC5qcyJdLCJzb3VyY2VzQ29udGVudCI6WyJjb25zb2xlLmxvZygnMjIyMjInKTtcclxuIl0sImZpbGUiOiJqcy9wcm9kdWN0TGlzdC5qcyJ9

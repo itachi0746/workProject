@@ -219,9 +219,13 @@
       height: 350px;
       border-top: 2px solid #36b9f1;
       background-color: #fff;
+      @include box-sizing(border-box);
+    }
+    tr {
+      border-bottom: 1px solid #f0f0f0;
     }
     .trade-f1-table {
-      @extend table;
+      @extend %table;
     }
     .trade-f1-table {
       tr:nth-child(1) {
@@ -229,14 +233,17 @@
         background-color: #fafafa;
         color: black;
       }
+      tr:nth-last-child(1) {
+        border-bottom: none;
+      }
       tr td {
-        height: 48px;
-        //line-height: 1;
+        height: 49px;
         padding: 0 35px;
       }
       tr,td {
         @include box-sizing(border-box);
       }
+
     }
   }
   .trade-f2,.trade-f3 {
@@ -245,6 +252,8 @@
       height: 350px;
       border-top: 2px solid #116cb3;
       background-color: #fff;
+      @include box-sizing(border-box);
+
     }
     .trade-f2-content ul,.trade-f3-content ul {
       width: 100%;
@@ -289,6 +298,7 @@
       height: 350px;
       border-top: 2px solid #1da664;
       background-color: #fff;
+      @include box-sizing(border-box);
     }
   }
   .trade-f4 {

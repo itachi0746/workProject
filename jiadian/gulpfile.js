@@ -1,7 +1,9 @@
 
 var config = {
     src: "src",
-    dest: "dev"
+    dest: "dev",
+    // 二级页面的路径
+    tlp: '/tlp'     
 };
 
 var gulp        = require('gulp'),
@@ -50,7 +52,7 @@ gulp.task('browser', function () {
         files: ['**'],  // 修改HTML也刷新
         server: {
             baseDir: './dev',  // 设置服务器的根目录
-            index: 'zjr.html' // 指定默认打开的文件
+            index: 'productList.html' // 指定默认打开的文件
         },
         port: 8050  // 指定访问服务器的端口号
     });

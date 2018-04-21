@@ -627,104 +627,106 @@ html, body, #main {
   border-left: 9px solid #666;
   border-bottom: 5px solid transparent; }
 
-/*===============swiper轮播图设置=================*/
-.swiper-container {
-  width: 100%;
-  height: 100%;
-  cursor: pointer; }
+.productList-content {
+  font-size: 12px;
+  color: #666; }
 
-.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0px 10px; }
+.productList-content a {
+  color: #666; }
 
-/*小圆点的样式*/
-.swiper-pagination-bullet-active {
-  opacity: 1;
-  background: #666; }
+.productList-content .productList-content-category {
+  padding: 20px 0 30px; }
 
-/*前进后退按钮的样式*/
-.swiper-button-next, .swiper-button-prev {
-  width: 40px;
-  height: 40px;
-  margin: -50px 0px;
-  border-radius: 50%;
-  opacity: 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s; }
-
-/*重定义切换按钮尺寸和上下居中位置*/
-.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
-  background-image: url(../img/btn_next.png);
-  background-color: rgba(0, 0, 0, 0.5);
-  background-size: 18px 25px;
-  right: 0; }
-
-/*更换背景图片、尺寸，增加背景颜色，设置透明度，*/
-.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
-  background-image: url(../img/btn_next.png);
-  background-size: 18px 22px;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  left: 0; }
-
-/*更换背景图片、尺寸，增加背景颜色，设置透明度，*/
-.swiper-button-next:hover {
-  background-color: rgba(0, 0, 0, 0.7); }
-
-/*//触发后变色*/
-.swiper-button-prev:hover {
-  background-color: rgba(0, 0, 0, 0.7); }
-
-/*触发后变色*/
-.servive-c-content {
-  margin-top: 80px;
-  margin-bottom: 60px; }
-
-.servive-c-ad {
-  width: 100%;
-  height: 120px;
-  background: blue; }
-
-.servive-c-content > .width1200 .servive-c-content-list {
-  margin-bottom: 38px; }
-
-.servive-c-content-list {
-  width: 100%; }
-
-.servive-c-content-list-item {
-  width: 360px;
-  height: 460px;
-  position: relative; }
-
-.servive-c-content-list-item p:nth-of-type(1) {
-  color: #000;
-  text-align: center;
-  font-size: 24px;
-  margin: 30px 0; }
-
-.servive-c-content-list-item p:nth-of-type(2) {
-  color: #8c8a8a;
+.productList-content .productList-content-category span {
   font-size: 14px;
-  text-indent: 2em; }
+  color: #666;
+  padding-right: 8px; }
 
-.servive-c-content-list .servive-c-content-list-item:nth-child(2) {
-  margin: 0 60px; }
-
-.servive-c-content-list .servive-c-content-list-item-hover {
-  position: absolute;
+.productList-content .productList-content-filter-top {
+  background-color: #eee;
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5); }
+  height: 35px;
+  line-height: 35px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede; }
 
-.servive-c-content-list .servive-c-content-list-item-hover p:nth-child(1) {
-  color: #fff;
-  font-size: 30px;
-  margin-top: 75px; }
+.productList-content .productList-content-filter-top span:nth-child(1) {
+  color: red;
+  padding-left: 10px; }
 
-.servive-c-content-list .servive-c-content-list-item-hover p:nth-child(2) {
-  color: #fff;
-  font-size: 14px; }
+.productList-content .productList-content-filter-top span:nth-child(2) {
+  font-weight: bold;
+  padding: 0 14px; }
 
-/*# sourceMappingURL=service.css.map */
+.productList-content .productList-content-filter-brands {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 6px 35px 10px 10px;
+  overflow: hidden;
+  border-bottom: 1px solid #dedede; }
+
+.productList-content .brands-font {
+  width: 110px;
+  height: 98px; }
+
+.productList-content .productList-content-filter-brands ul {
+  width: 1045px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-top: 1px solid #dedede;
+  border-left: 1px solid #dedede; }
+
+.productList-content .productList-content-filter-brands ul li {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 116px;
+  height: 50px;
+  float: left;
+  border-right: 1px solid #dedede;
+  border-bottom: 1px solid #dedede; }
+
+.productList-content .filter-container {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  border-bottom: 1px solid #dedede;
+  float: left; }
+
+.productList-content .filter-container span {
+  padding-right: 45px; }
+
+.productList-content .filter-container span:nth-child(1) {
+  padding-left: 10px;
+  padding-right: 75px; }
+
+.productList-content .filter-container input {
+  width: 40px;
+  height: 20px; }
+
+.productList-content .filter-container button {
+  position: relative;
+  top: 2px;
+  left: 2px; }
+
+.productList-content .collapse-btn-container {
+  width: 100%;
+  height: 58px; }
+
+.productList-content .collapse-btn {
+  width: 85px;
+  height: 27px;
+  border: 1px solid #dedede;
+  border-top: 1px solid white;
+  top: -1px;
+  left: 650px;
+  position: relative;
+  z-index: 2; }
+
+.productList-content .productList-content-filter {
+  position: relative;
+  z-index: 1; }
+
+/*# sourceMappingURL=productList.css.map */
