@@ -72,6 +72,11 @@
     ul li:hover {
         color: $mainColor;
     }
+    ul li:hover .right-arrow {
+        border-top: 5px solid transparent;
+        border-left: 9px solid $mainColor;
+        border-bottom: 5px solid transparent;
+    }
     .quotes {
         position: relative;
 

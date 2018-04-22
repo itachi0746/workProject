@@ -702,6 +702,11 @@ html, body, #main {
 .news-index-content ul li:hover {
   color: #ff8140; }
 
+.news-index-content ul li:hover .right-arrow {
+  border-top: 5px solid transparent;
+  border-left: 9px solid #ff8140;
+  border-bottom: 5px solid transparent; }
+
 .news-index-content .quotes {
   position: relative;
   width: 340px;
