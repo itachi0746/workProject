@@ -3,12 +3,12 @@
 @import "../css/$mixin";
 @import "../css/$style";
 
-// =============购物车========================
+// =============购物车=======================
 
 .shoppingCar-content {
     margin-top: 35px;
     margin-bottom: 25px;
-    color: #7a7a7a;
+    color: #333;
     font-size: 12px;
 }
 .shoppingCar-content  {
@@ -61,10 +61,19 @@
     .shoppingCar-item {
         @include box-sizing(border-box);
         width: 100%;
-        padding-left: 6px;
-        padding-right: 12px;
+        padding: 16px 20px;
         margin-bottom: 25px;
         border: 1px solid #ddd;
+        background-color: #fcfcfc;
+    }
+
+    .shoppingCar-item img {
+        border: 1px solid #ddd;
+        margin: 0 10px 0 10px;
+    }
+    .shoppingCar-item>input,.shoppingCar-item>span {
+        position: relative;
+        top: -30px;
     }
     .shoppingCar-submit {
         @include box-sizing(border-box);
@@ -91,5 +100,53 @@
         font-size: 24px;
         color: white;
         letter-spacing: 10px;
+    }
+    .num-btn {
+        display: inline-block;
+        width: 77px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        @include box-sizing(border-box);
+        position: relative;
+        top: -17px;
+    }
+    .num-btn span,.num-btn input {
+        float: left;
+        width: 25%;
+        height: 100%;
+        @include box-sizing(border-box);
+    }
+    .num-btn span:nth-child(1),.num-btn span:nth-child(3) {
+        border: 1px solid #ddd;
+        cursor: pointer;
+    }
+    .num-btn span:nth-child(1) {
+        border-right: none;
+    }
+    .num-btn span:nth-child(3) {
+        border-left: none;
+    }
+    .num-btn input:nth-child(2) {
+        border: 1px solid rgb(129, 128, 128);
+        width: 50%;
+        text-align: center;
+    }
+    .item-name {
+        display: inline-block;
+        width: 235px;
+    }
+    .item-type {
+        display: inline-block;
+        width: 265px;
+    }
+    .item-prize {
+        display: inline-block;
+        width: 104px;
+    }
+    .fontRed {
+        padding-left: 57px;
+        width: 176px;
+        display: inline-block;
     }
 }

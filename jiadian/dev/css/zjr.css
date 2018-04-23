@@ -123,6 +123,9 @@ html, body, #main {
 .fontBlack {
   color: black; }
 
+.fontRed {
+  color: red; }
+
 .prize-style {
   color: #ff8140;
   font-size: 22px; }
