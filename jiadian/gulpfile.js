@@ -52,7 +52,7 @@ gulp.task('browser', function () {
         files: ['**'],  // 修改HTML也刷新
         server: {
             baseDir: './dev',  // 设置服务器的根目录
-            index: 'productList.html' // 指定默认打开的文件
+            index: 'shoppingCar.html' // 指定默认打开的文件
         },
         port: 8050  // 指定访问服务器的端口号
     });
@@ -187,11 +187,11 @@ gulp.task('watch', [], function(cb) {
     var imgWatcher = gulp.watch(config.src + "/img/*.{png,jpg,gif,ico}", ['minImage']);
 
     // 监听文件删除事件,图片同步删除~~
-    imgWatcher.on('change', function(event) {
-        if(event.type === 'deleted') {
-            del(config.dest + path.basename(event.path, [png,jpg,gif,ico]), [png,jpg,gif,ico]);
-        }
-    });
+    // imgWatcher.on('change', function(event) {
+    //     if(event.type === 'deleted') {
+    //         del(config.dest + event.path.basename(event.path, [png,jpg,gif,ico]), [png,jpg,gif,ico]);
+    //     }
+    // });
 });
 
 // 开始执行

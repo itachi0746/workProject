@@ -703,14 +703,13 @@ html, body, #main {
   color: black; }
 
 .goods-list {
-  width: 100%;
-  height: 385px; }
+  width: 100%; }
 
 .goods-list > .goods-item {
   width: 230px;
   height: 385px;
   background: white;
-  margin: 0 5px 10px;
+  margin: 0 5px;
   text-align: left;
   border: 1px solid #ddd;
   /*margin: 0px 11px 10px 0px;*/ }
@@ -749,7 +748,9 @@ html, body, #main {
 .item-tag {
   width: 100%;
   height: 55px;
-  padding: 15px 10px; }
+  padding: 15px 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .item-tag > span {
   margin-right: 5px; }
