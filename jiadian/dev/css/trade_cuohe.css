@@ -641,6 +641,9 @@ html, body, #main {
 .category-info a {
   color: #666; }
 
+.cuohe-content {
+  margin-bottom: 50px; }
+
 .cuohe-content .cuohe-box {
   width: 900px;
   color: #666;
@@ -654,5 +657,59 @@ html, body, #main {
   box-sizing: border-box;
   padding: 20px 15px;
   font-size: 16px; }
+
+.cuohe-content .cuohe-progress ul {
+  width: 770px;
+  height: 100%; }
+
+.cuohe-content .cuohe-progress li {
+  float: left;
+  width: 130px;
+  height: 100%;
+  text-align: center;
+  border: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.cuohe-content .cuohe-progress li:nth-child(2n) {
+  width: 30px;
+  border: none; }
+
+.cuohe-content .cuohe-progress li:nth-child(2n) img {
+  margin-top: 60px; }
+
+.cuohe-content .cuohe-progress > span {
+  padding: 55px 18px;
+  display: inline-block; }
+
+.cuohe-content .cuohe-inquire {
+  width: 100%;
+  height: 50px;
+  background-color: lightblue;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.cuohe-content .cuohe-product-info {
+  height: 260px;
+  width: 100%;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: lightgray; }
+
+.cuohe-content .cuohe-pagination {
+  width: 100%;
+  height: 30px;
+  background-color: pink; }
+
+.cuohe-content .cuohe-back {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 70px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #555; }
 
 /*# sourceMappingURL=trade_cuohe.css.map */
