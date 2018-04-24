@@ -380,12 +380,13 @@
 				<!-- 分页 -->
 				<div class="productList-pagination">
 					<span class="fl">共 100 条&nbsp;</span>
-					<datalist id="itemlist">
-						<option value="10条/页"></option>
-						<option value="20条/页"></option>
-						<option value="30条/页"></option>
-					</datalist>	
-					<input class="fl" type="text" list="itemlist" value="" />
+					<form action="" class="fl">
+						<select name="itemNum">
+							<option value="10">10条/页</option>
+							<option value="20">20条/页</option>
+							<option value="30">30条/页</option>
+						</select>
+					</form>
 					<ul>
 						<li>&lt;</li>
 						<li>1</li>

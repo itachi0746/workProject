@@ -1,0 +1,21 @@
+@charset "utf-8";
+@import "../css/$reset";
+@import "../css/$mixin";
+@import "../css/$style";
+
+// ============撮合交易页================
+.cuohe-content {
+    .cuohe-box {
+        width: 900px;
+        color: #666;
+        border: 1px solid #ddd;
+    }
+    .cuohe-progress {
+        width: 100%;
+        height: 175px;
+        border-bottom: 1px solid #ddd;
+        @include box-sizing(border-box);
+        padding: 20px 15px;
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,133 @@
+@charset "utf-8";
+@import "../css/$reset";
+@import "../css/$mixin";
+@import "../css/$style";
+
+// ============竞价交易页===============
+.trade-content {
+    margin-bottom: 20px;
+}
+.trade-content {
+    .productList-content-category {
+        padding-bottom: 10px;
+    }
+    .trade-main {
+        overflow: hidden;
+        height: 530px;
+        width: 100%;
+    }
+    .trade-goods-img {
+        width: 380px;
+        @include box-sizing(border-box);
+        height: 100%;
+        padding-bottom: 45px;
+    }
+    .trade-goods-info {
+        width: 1040px - 380px;
+        @include box-sizing(border-box);
+        height: 100%;
+        padding: 0 10px 145px 20px;
+    }
+    .trade-goods-more {
+        width: 150px;
+        @include box-sizing(border-box);
+        height: 100%;
+        border: 1px solid #ddd;
+        margin-right: 10px;
+    }
+    .trade-goods-more>p {
+        margin-bottom: 25px;
+    }
+    .trade-goods-more li {
+        height: 142px;
+        width: 100%;
+        margin-top: 8px;
+        text-align: center;
+    }
+    .trade-goods-more li p {
+        font-size: 12px;
+        color: black;
+        padding-top: 5px;
+    }
+    .trade-goods-more div.tac img {
+        cursor: pointer;
+    }
+    .trade-goods-img-box {
+        height: 380px;
+        @include box-sizing(border-box);
+        width: 100%;
+        border: 12px solid #eee;
+    }
+    .trade-goods-img ul {
+        overflow: hidden;
+        width: 100%;
+        height: 90px;
+        background-color: #666;
+    }
+    .trade-goods-img li {
+        float: left;
+        width: 25%;
+        height: 100%;
+        background-color: lightblue;
+    }
+    .trade-goods-info p {
+        color: #000;
+        font-size: 24px;   
+        margin-bottom: 10px; 
+    }
+    .trade-goods-info table {
+        width: 100%;
+        border: 1px solid #ddd;
+        border-bottom: none;
+        border-right: none;
+
+    }
+    .trade-goods-info td {
+        height: 45px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+        border-top: none;
+        border-left: none;
+    }
+    .trade-goods-info .tdstyle {
+        width: 188px;
+        background-color: #f7faff;
+        text-align: right;
+        padding-right: 20px;
+    }
+    .pl10 {
+        padding-left: 10px;
+    }
+    .fs30 {
+        font-size: 30px;
+    }
+    .trade-bottom {
+        width: 100%;
+        color: #666;
+        font-size: 0px;  // 去除inline-block的间隔
+        border-bottom: 1px solid #ff8140;
+    }
+    .trade-bottom span {
+        font-size: 24px;
+        padding: 10px 17px;
+        @include box-sizing(border-box);
+        height: 50px;
+        text-align: center;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .trade-bottom-info {
+        width: 100%;
+        padding-top: 42px; 
+        padding-bottom: 42px; 
+        color: #666;
+        font-size: 14px;
+    }
+    .trade-bottom-info p {
+        padding-bottom: 20px;
+    }
+    .isActive {
+        color: white;
+        background-color: $mainColor;
+    }
+}

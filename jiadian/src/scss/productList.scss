@@ -14,16 +14,16 @@
     a {
         color: $color666;
     }
-    .productList-content-category {
-        padding: 20px 0 30px;
-    }
-    .productList-content-category {
-        span {
-            font-size: 14px;
-            color: $color666;
-            padding-right: 8px; 
-        }
-    }
+    // .productList-content-category {
+    //     padding: 20px 0 30px;
+    // }
+    // .productList-content-category {
+    //     span {
+    //         font-size: 14px;
+    //         color: $color666;
+    //         padding-right: 8px; 
+    //     }
+    // }
     .productList-content-filter-top {
         background-color: #eee;
         width: 100%;
@@ -223,9 +223,11 @@
             input {
                 padding-left: 10px;
             }
-            input:nth-of-type(1) {
+            select {
                 width: 96px;
-                height: 21px;
+                height: 25px;
+                color: #666;
+                margin-top: -4px;
             }
             ul {
                 @include box-sizing(border-box);

@@ -1,0 +1,140 @@
+@charset "utf-8";
+@import "../css/$reset";
+@import "../css/$mixin";
+@import "../css/$style";
+
+// ==============委托交易================
+.weituo-top {
+    margin-bottom: 10px;
+}
+.fileinput-button {
+    position: relative;
+}
+.fileinput-button input {
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    position: relative;
+    z-index: 99;
+
+}
+.fileinput-button span {
+    display: inline-block;
+    width: 115px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 1px solid #ddd;
+    position: absolute;
+    left: 136px;
+    top: 0px;
+}
+#wetuoneirong {
+    height: 60px;
+}
+.weituo-content {
+   .weituo-top {
+        width: 100%;
+        height: 70px;
+        line-height: 70px;
+        background-color: $mainColor;
+        color: white;
+        font-size: 16px;
+    } 
+    .weituo-top a {
+        color: white;
+        padding-left: 50px;
+    }
+    .lp8 {
+        letter-spacing: 8px;
+    }
+    .weituo-nav {
+        width: 200px;
+        font-size: 14px;
+        margin-right: 10px;
+        @include box-sizing(border-box);
+    }
+    .weituo-nav ul {
+        width: 100%;
+    }
+    .weituo-nav ul li {
+        padding-right: 10px;
+        width: 100%;
+        height: 50px;
+        @include box-sizing(border-box);
+        margin-bottom: 5px;
+        padding: 15px 10px 10px 20px;
+        border: 1px solid #ddd;
+        border-bottom: 5px solid $mainColor;
+    }
+    .weituo-nav .right-arrow {
+        border-left-color: #ddd;
+    }
+    .weituo-form {
+        width: 1200px - 210px;
+        height: 500px;
+        @include box-sizing(border-box);
+        border: 1px solid #ddd;
+        padding: 15px;
+    }
+    .form-title {
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+    }
+    .form-title span {
+        display: inline-block;
+        @include box-sizing(border-box);
+        width: 195px;
+        font-size: 24px;
+        color: $mainColor;
+        padding-right: 50px;
+        padding-bottom: 10px;
+        border-bottom: 5px solid $mainColor;
+    }
+    .form-info {
+        width: 100%;
+        padding-left: 285px;
+        padding-top: 15px;
+        font-size: 14px;
+        color: #333;
+        @include box-sizing(border-box);
+    }
+    .form-info p {
+        margin-bottom: 20px;
+    }
+    .form-info p:nth-last-of-type(1),
+    .form-info p:nth-last-of-type(2) {
+        padding-left: 136px;
+    } 
+    .form-info label {
+        width: 120px;
+        text-align: right;
+        display: inline-block;
+        padding: 3px 6px;
+        position: relative;
+        top: 3px;
+        vertical-align: top;
+    }
+    .form-info input {
+        width: 285px;
+        height: 30px;
+        font-size: 14px;
+        border: 1px solid #ddd;
+    }
+    .form-info input[type="file"] {
+        width: 115px;
+        height: 40px;
+        cursor: pointer;
+
+    }
+    .operating-btn a {
+        display: inline-block;
+        width: 95px;
+        height: 28px;
+        background-color: $mainColor;
+        margin-right: 10px;
+        color: white;
+        text-align: center;
+        line-height: 28px;
+        cursor: pointer;
+    }
+}

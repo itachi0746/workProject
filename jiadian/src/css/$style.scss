@@ -617,3 +617,17 @@ html,body,#main {
   border-left: 9px solid $color666;
   border-bottom: 5px solid transparent;
 }
+// =============顶部分类==============
+.category-info {
+  padding: 20px 0 30px;
+}
+.category-info {
+  span {
+      font-size: 14px;
+      color: $color666;
+      padding-right: 8px; 
+  }
+  a {
+    color: $color666;
+  }
+}

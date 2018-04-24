@@ -630,6 +630,17 @@ html, body, #main {
   border-left: 9px solid #666;
   border-bottom: 5px solid transparent; }
 
+.category-info {
+  padding: 20px 0 30px; }
+
+.category-info span {
+  font-size: 14px;
+  color: #666;
+  padding-right: 8px; }
+
+.category-info a {
+  color: #666; }
+
 /*===============swiper轮播图设置=================*/
 .swiper-container {
   width: 100%;

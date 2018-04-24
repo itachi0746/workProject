@@ -641,140 +641,133 @@ html, body, #main {
 .category-info a {
   color: #666; }
 
-/*===============swiper轮播图设置=================*/
-.swiper-container {
-  width: 100%;
-  height: 100%;
-  cursor: pointer; }
-
-.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0px 10px; }
-
-/*小圆点的样式*/
-.swiper-pagination-bullet-active {
-  opacity: 1;
-  background: #666; }
-
-/*前进后退按钮的样式*/
-.swiper-button-next, .swiper-button-prev {
-  width: 40px;
-  height: 40px;
-  margin: -50px 0px;
-  border-radius: 50%;
-  opacity: 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s; }
-
-/*重定义切换按钮尺寸和上下居中位置*/
-.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
-  background-image: url(../img/btn_next.png);
-  background-color: rgba(0, 0, 0, 0.5);
-  background-size: 18px 25px;
-  right: 0; }
-
-/*更换背景图片、尺寸，增加背景颜色，设置透明度，*/
-.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
-  background-image: url(../img/btn_next.png);
-  background-size: 18px 22px;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  left: 0; }
-
-/*更换背景图片、尺寸，增加背景颜色，设置透明度，*/
-.swiper-button-next:hover {
-  background-color: rgba(0, 0, 0, 0.7); }
-
-/*//触发后变色*/
-.swiper-button-prev:hover {
-  background-color: rgba(0, 0, 0, 0.7); }
-
-/*触发后变色*/
-.zjr-content {
+.trade-content {
   margin-bottom: 20px; }
 
-.zjr-content .width1200 {
-  margin-top: 40px; }
+.trade-content .productList-content-category {
+  padding-bottom: 10px; }
 
-.zjr-content .zjr-content-tag {
-  width: 100%;
-  height: 350px;
-  overflow: hidden; }
+.trade-content .trade-main {
+  overflow: hidden;
+  height: 530px;
+  width: 100%; }
 
-.zjr-content .zjr-content-tag ul {
-  width: 960px;
+.trade-content .trade-goods-img {
+  width: 380px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
   height: 100%;
-  padding: 65px 0px;
+  padding-bottom: 45px; }
+
+.trade-content .trade-goods-info {
+  width: 660px;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  height: 100%;
+  padding: 0 10px 145px 20px; }
 
-.zjr-content .zjr-content-tag ul li {
-  float: left;
-  width: 25%;
-  text-align: center;
-  height: 160px;
-  border-right: 2px solid #ddd;
+.trade-content .trade-goods-more {
+  width: 150px;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  height: 100%;
+  border: 1px solid #ddd;
+  margin-right: 10px; }
 
-.zjr-content .zjr-content-tag ul li p {
-  font-size: 24px;
-  color: #209ce4; }
+.trade-content .trade-goods-more > p {
+  margin-bottom: 25px; }
 
-.zjr-content .zjr-content-tag .last-li {
-  border: none; }
+.trade-content .trade-goods-more li {
+  height: 142px;
+  width: 100%;
+  margin-top: 8px;
+  text-align: center; }
 
-.zjr-content .zjr-content-tag .last-li img {
-  width: 90px; }
-
-.zjr-content .zjr-content-tag ul > p {
-  float: left;
-  width: 25%;
+.trade-content .trade-goods-more li p {
   font-size: 12px;
-  text-align: center;
-  padding: 0 40px;
+  color: black;
+  padding-top: 5px; }
+
+.trade-content .trade-goods-more div.tac img {
+  cursor: pointer; }
+
+.trade-content .trade-goods-img-box {
+  height: 380px;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.zjr-content .zjr-content-title {
+  box-sizing: border-box;
   width: 100%;
-  height: 120px;
-  line-height: 120px;
-  text-align: center;
-  font-size: 30px;
-  color: #666; }
+  border: 12px solid #eee; }
 
-.zjr-content .zjr-content-process {
+.trade-content .trade-goods-img ul {
+  overflow: hidden;
   width: 100%;
-  height: 200px;
-  padding: 30px 20px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  height: 90px;
+  background-color: #666; }
 
-.zjr-content .ph {
-  width: 240px;
+.trade-content .trade-goods-img li {
+  float: left;
+  width: 25%;
   height: 100%;
   background-color: lightblue; }
 
-.zjr-content .zjr-content-process ul {
-  overflow: hidden;
+.trade-content .trade-goods-info p {
+  color: #000;
+  font-size: 24px;
+  margin-bottom: 10px; }
+
+.trade-content .trade-goods-info table {
   width: 100%;
-  height: 100%; }
+  border: 1px solid #ddd;
+  border-bottom: none;
+  border-right: none; }
 
-.zjr-content .zjr-content-process ul li {
-  width: 105.45455px;
-  float: left;
-  height: 100%;
+.trade-content .trade-goods-info td {
+  height: 45px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-left: none; }
+
+.trade-content .trade-goods-info .tdstyle {
+  width: 188px;
+  background-color: #f7faff;
+  text-align: right;
+  padding-right: 20px; }
+
+.trade-content .pl10 {
+  padding-left: 10px; }
+
+.trade-content .fs30 {
+  font-size: 30px; }
+
+.trade-content .trade-bottom {
+  width: 100%;
+  color: #666;
+  font-size: 0px;
+  border-bottom: 1px solid #ff8140; }
+
+.trade-content .trade-bottom span {
+  font-size: 24px;
+  padding: 10px 17px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 50px;
   text-align: center;
-  position: relative;
-  color: #666; }
+  display: inline-block;
+  cursor: pointer; }
 
-.zjr-content .zjr-content-process ul li p {
-  position: absolute;
-  bottom: 0;
-  left: 20px; }
+.trade-content .trade-bottom-info {
+  width: 100%;
+  padding-top: 42px;
+  padding-bottom: 42px;
+  color: #666;
+  font-size: 14px; }
 
-.zjr-content .zjr-content-process ul li:nth-child(2n) img {
-  margin-top: 25px; }
+.trade-content .trade-bottom-info p {
+  padding-bottom: 20px; }
 
-/*# sourceMappingURL=zjr.css.map */
+.trade-content .isActive {
+  color: white;
+  background-color: #ff8140; }
+
+/*# sourceMappingURL=jingjia-jicai.css.map */
