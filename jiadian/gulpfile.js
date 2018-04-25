@@ -51,8 +51,8 @@ gulp.task('browser', function () {
     browserSync.init({
         files: ['**'],  // 修改HTML也刷新
         server: {
-            baseDir: './dev',  // 设置服务器的根目录
-            index: 'serviceCenterContent.html' // 指定默认打开的文件
+            baseDir: './src',  // 设置服务器的根目录
+            index: 'JDLnewsContent.html' // 指定默认打开的文件
         },
         port: 8050  // 指定访问服务器的端口号
     });
@@ -105,7 +105,7 @@ gulp.task('mincss', [], function(cb) {
         //     //保留所有特殊前缀 当你用autoprefixer生成的浏览器前缀，如果不加这个参数，有可能将会删除你的部分前缀        	
         // ),
         sourcemaps.write('.'),
-        gulp.dest(config.dest + '/css/')
+        gulp.dest(config.src + '/css/')
     ], cb
     )
 });
@@ -181,10 +181,10 @@ gulp.task('transLibs',function() {
 
 // 监听文件变改，即时调用任务执行增量打包
 gulp.task('watch', [], function(cb) {
-    gulp.watch([config.src + "/scss/*.scss",config.src + '/css/*.scss'], ['mincss']);
-    gulp.watch(config.src + "/js/*.js", ['minjs']);
-    gulp.watch(config.src + "/*.html", ['minhtml']);
-    var imgWatcher = gulp.watch(config.src + "/img/*.{png,jpg,gif,ico}", ['minImage']);
+    gulp.watch([config.src + "/scss/*.scss",config.src + '/styles/*.scss'], ['mincss']);
+    // gulp.watch(config.src + "/js/*.js", ['minjs']);
+    // gulp.watch(config.src + "/*.html", ['minhtml']);
+    // var imgWatcher = gulp.watch(config.src + "/img/*.{png,jpg,gif,ico}", ['minImage']);
 
     // 监听文件删除事件,图片同步删除~~
     // imgWatcher.on('change', function(event) {
@@ -194,7 +194,12 @@ gulp.task('watch', [], function(cb) {
     // });
 });
 
-// 开始执行
+// 开始执行全部
+// gulp.task('default', function(cb) {
+//     runSequence('clean', 'minImage', 'transLibs', 'minjs', 'mincss', 'minhtml','browser', 'watch', cb);
+// });
+
+// 只执行编译sass
 gulp.task('default', function(cb) {
-    runSequence('clean', 'minImage', 'transLibs', 'minjs', 'mincss', 'minhtml','browser', 'watch', cb);
+    runSequence('mincss','browser', 'watch', cb);
 });
