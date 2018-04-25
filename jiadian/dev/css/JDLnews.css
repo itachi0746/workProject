@@ -646,6 +646,12 @@ html, body, #main {
 .category-info a {
   color: #666; }
 
+.span-btn {
+  padding: 6px 11px;
+  background-color: #ff8140;
+  color: #fff;
+  text-align: center; }
+
 .orange-box, .orange-box2, .orange-box3, .orange-box4, .orange-box5 {
   border-top: 2px solid #ff8140;
   padding: 13px 15px;

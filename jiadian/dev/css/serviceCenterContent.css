@@ -641,104 +641,123 @@ html, body, #main {
 .category-info a {
   color: #666; }
 
-/*===============swiper轮播图设置=================*/
-.swiper-container {
-  width: 100%;
-  height: 100%;
-  cursor: pointer; }
+.span-btn {
+  padding: 6px 11px;
+  background-color: #ff8140;
+  color: #fff;
+  text-align: center; }
 
-.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0px 10px; }
-
-/*小圆点的样式*/
-.swiper-pagination-bullet-active {
-  opacity: 1;
-  background: #666; }
-
-/*前进后退按钮的样式*/
-.swiper-button-next, .swiper-button-prev {
-  width: 40px;
-  height: 40px;
-  margin: -50px 0px;
-  border-radius: 50%;
-  opacity: 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s; }
-
-/*重定义切换按钮尺寸和上下居中位置*/
-.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
-  background-image: url(../img/btn_next.png);
-  background-color: rgba(0, 0, 0, 0.5);
-  background-size: 18px 25px;
-  right: 0; }
-
-/*更换背景图片、尺寸，增加背景颜色，设置透明度，*/
-.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
-  background-image: url(../img/btn_next.png);
-  background-size: 18px 22px;
-  background-color: rgba(0, 0, 0, 0.5);
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  left: 0; }
-
-/*更换背景图片、尺寸，增加背景颜色，设置透明度，*/
-.swiper-button-next:hover {
-  background-color: rgba(0, 0, 0, 0.7); }
-
-/*//触发后变色*/
-.swiper-button-prev:hover {
-  background-color: rgba(0, 0, 0, 0.7); }
-
-/*触发后变色*/
-.servive-c-content {
-  margin-top: 80px;
+.serviceCenterContent-content {
+  border-top: 4px solid #ff8140;
   margin-bottom: 60px; }
 
-.servive-c-ad {
+.question-lv2 {
   width: 100%;
-  height: 120px;
-  background: blue; }
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 17px;
+  font-size: 12px; }
 
-.servive-c-content > .width1200 .servive-c-content-list {
-  margin-bottom: 38px; }
+.span-radio {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #666;
+  margin-bottom: 2px; }
 
-.servive-c-content-list {
-  width: 100%; }
+.serviceCenterContent-content .category-info {
+  padding-bottom: 20px; }
 
-.servive-c-content-list-item {
-  width: 360px;
-  height: 460px;
-  position: relative; }
+.serviceCenterContent-content .category-info span {
+  padding-right: 0px; }
 
-.servive-c-content-list-item p:nth-of-type(1) {
-  color: #000;
+.serviceCenterContent-content .question-tree {
+  min-height: 450px;
+  width: 315px;
+  float: left;
+  margin-right: 22px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.serviceCenterContent-content .question-asw {
+  width: 863px;
+  height: 480px;
+  border: 1px solid #eee;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.serviceCenterContent-content .question-tree-title {
+  width: 100%;
+  height: 50px;
+  background-color: #ff8140;
   text-align: center;
-  font-size: 24px;
-  margin: 30px 0; }
+  line-height: 50px;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 10px; }
 
-.servive-c-content-list-item p:nth-of-type(2) {
-  color: #8c8a8a;
-  font-size: 14px;
-  text-indent: 2em; }
+.serviceCenterContent-content .question-tree ul {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  color: #666; }
 
-.servive-c-content-list .servive-c-content-list-item:nth-child(2) {
-  margin: 0 60px; }
-
-.servive-c-content-list .servive-c-content-list-item-hover {
-  position: absolute;
+.serviceCenterContent-content .question-tree li {
   width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.5); }
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-left: none;
+  border-right: none;
+  height: 42px;
+  margin-top: -1px;
+  padding: 10px; }
 
-.servive-c-content-list .servive-c-content-list-item-hover p:nth-child(1) {
-  color: #fff;
-  font-size: 30px;
-  margin-top: 75px; }
+.serviceCenterContent-content .question-tree li img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  margin-right: 5px; }
 
-.servive-c-content-list .servive-c-content-list-item-hover p:nth-child(2) {
-  color: #fff;
+.serviceCenterContent-content .question-asw-top {
+  width: 100%;
+  height: 50px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #eee;
+  padding: 15px 20px;
+  color: #666;
   font-size: 14px; }
 
-/*# sourceMappingURL=service.css.map */
+.serviceCenterContent-content .question-asw-box {
+  padding: 40px 58px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #333; }
+
+.serviceCenterContent-content .question-asw-box p {
+  font-size: 18px;
+  margin-bottom: 20px; }
+
+.serviceCenterContent-content .question-asw-info {
+  border-top: 1px solid #eee; }
+
+.serviceCenterContent-content .question-asw-info p:nth-child(1) {
+  color: #000;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 30px; }
+
+.serviceCenterContent-content .question-asw-info p:nth-child(2) {
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 30px; }
+
+.serviceCenterContent-content .question-asw-info p:nth-child(3),
+.serviceCenterContent-content .question-asw-info p:nth-child(4) {
+  color: #666;
+  font-size: 14px; }
+
+/*# sourceMappingURL=serviceCenterContent.css.map */

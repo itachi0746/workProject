@@ -1,0 +1,72 @@
+@charset "utf-8";
+@import "../css/$reset";
+@import "../css/$mixin";
+@import "../css/$style";
+
+// ============服务中心首页================
+.serviceCenterIndex-content {
+    margin-bottom: 80px;
+}
+.fs24 {
+    font-size: 24px;
+}
+.serviceCenterIndex-content {
+    .serviceCenterIndex-banner {
+        width: 100%;
+        height: 360px;
+        background: url(../img/sci_banner.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-top: 4px solid $mainColor;
+        @include box-sizing(border-box);
+        padding-top: 115px;
+        padding-left: 200px;
+    }
+    .serviceCenterIndex-banner ul {
+        width: 100%;
+        color: #fff;
+    }
+    .serviceCenterIndex-banner li {
+        width: 33%;
+        height: 100px;
+
+    }
+    .serviceCenterIndex-banner li img {
+        margin-top: -37px;
+    }
+    .serviceCenterIndex-banner li p {
+        display: inline-block;
+        text-align: center;
+        font-size: 14px;
+        position: relative;
+        top: 5px;
+        left: 10px;
+    }
+    .serviceCenterIndex-title {
+        height: 100px;
+        line-height: 100px;
+        text-align: center;
+        font-size: 30px;
+    }
+    .serviceCenterIndex-content {
+        width: 100%;
+        height: 270px;
+        background-color: #f4f4f4;
+    }
+    .serviceCenterIndex-content .width1200 {
+        @include box-sizing(border-box);
+        padding-top: 30px;
+    }
+    .serviceCenterIndex-content a {
+        float: left;
+        width: 32%;
+        @include box-sizing(border-box);
+        height: 70px;
+        line-height: 70px;
+        background-color: #fff;
+        padding-left: 15px;
+        margin-bottom: 15px;
+        margin-left: 15px;
+    }
+}

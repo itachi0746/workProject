@@ -641,10 +641,16 @@ html, body, #main {
 .category-info a {
   color: #666; }
 
+.span-btn {
+  padding: 6px 11px;
+  background-color: #ff8140;
+  color: #fff;
+  text-align: center; }
+
 .trade-content {
   margin-bottom: 20px; }
 
-.trade-content .productList-content-category {
+.trade-content .category-info {
   padding-bottom: 10px; }
 
 .trade-content .trade-main {

@@ -647,6 +647,12 @@ html, body, #main {
 .category-info a {
   color: #666; }
 
+.span-btn {
+  padding: 6px 11px;
+  background-color: #ff8140;
+  color: #fff;
+  text-align: center; }
+
 .trade-hall {
   background-color: #eee;
   padding-bottom: 95px; }
