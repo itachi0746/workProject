@@ -739,6 +739,10 @@ html, body, #main {
 .mc-nav .right-arrow {
   border-left-color: #ddd; }
 
+.isActive {
+  color: white;
+  background-color: #ff8140; }
+
 .hot-news {
   padding: 6px 7px;
   background-color: #ff8140; }

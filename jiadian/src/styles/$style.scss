@@ -732,3 +732,8 @@ html,body,#main {
 .mc-nav .right-arrow {
   border-left-color: #ddd;
 }
+// =============当前按钮样式==============
+.isActive {
+    color: white;
+    background-color: $mainColor;
+}

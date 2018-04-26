@@ -747,6 +747,10 @@ html, body, #main {
 .mc-nav .right-arrow {
   border-left-color: #ddd; }
 
+.isActive {
+  color: white;
+  background-color: #ff8140; }
+
 .source-purchase {
   padding-bottom: 60px; }
 

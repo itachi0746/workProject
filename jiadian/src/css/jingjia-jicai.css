@@ -739,6 +739,10 @@ html, body, #main {
 .mc-nav .right-arrow {
   border-left-color: #ddd; }
 
+.isActive {
+  color: white;
+  background-color: #ff8140; }
+
 .trade-content {
   margin-bottom: 20px; }
 
@@ -863,9 +867,5 @@ html, body, #main {
 
 .trade-content .trade-bottom-info p {
   padding-bottom: 20px; }
-
-.trade-content .isActive {
-  color: white;
-  background-color: #ff8140; }
 
 /*# sourceMappingURL=jingjia-jicai.css.map */
