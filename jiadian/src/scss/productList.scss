@@ -209,46 +209,46 @@
         border-radius: 1px;
         /*box-sizing: border-box;*/
       }
-      .productList-pagination {
-          margin-top: 25px;
-          font-size: 14px;
-          @include box-sizing(border-box);
-          padding-left: 340px;
-          height: 25px;
-          line-height: 25px;
-          width: 100%;
-          margin-bottom: 40px;
-      }
-      .productList-pagination {
-            input {
-                padding-left: 10px;
-            }
-            select {
-                width: 96px;
-                height: 25px;
-                color: #666;
-                margin-top: -4px;
-            }
-            ul {
-                @include box-sizing(border-box);
-                float: left;
-                width: 140px;
-                height: 100%;
-                margin-left: 10px;
-            }
+    //   .productList-pagination {
+    //       margin-top: 25px;
+    //       font-size: 14px;
+    //       @include box-sizing(border-box);
+    //       padding-left: 340px;
+    //       height: 25px;
+    //       line-height: 25px;
+    //       width: 100%;
+    //       margin-bottom: 40px;
+    //   }
+    //   .productList-pagination {
+    //         input {
+    //             padding-left: 10px;
+    //         }
+    //         select {
+    //             width: 96px;
+    //             height: 25px;
+    //             color: #666;
+    //             margin-top: -4px;
+    //         }
+    //         ul {
+    //             @include box-sizing(border-box);
+    //             float: left;
+    //             width: 140px;
+    //             height: 100%;
+    //             margin-left: 10px;
+    //         }
 
-            li,.pageNum {
-                float: left;
-                width: 28px;
-                border: 1px solid #dedede;
-                padding: 0 4px;
-                background: #fff;
-                height: 25px;
-                line-height: 25px;
-                text-align: center;
-                cursor: pointer;
-                @include box-sizing(border-box);
+    //         li,.pageNum {
+    //             float: left;
+    //             width: 28px;
+    //             border: 1px solid #dedede;
+    //             padding: 0 4px;
+    //             background: #fff;
+    //             height: 25px;
+    //             line-height: 25px;
+    //             text-align: center;
+    //             cursor: pointer;
+    //             @include box-sizing(border-box);
 
-            }
-      }
+    //         }
+    //   }
 }

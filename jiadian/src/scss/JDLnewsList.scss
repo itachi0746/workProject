@@ -1,0 +1,167 @@
+@charset "utf-8";
+@import "../styles/$reset";
+@import "../styles/$mixin";
+@import "../styles/$style";
+
+// =================家电链新闻列表内容页==============
+.hot-news {
+    padding: 6px 7px;
+    background-color: $mainColor;
+}
+.JDLnewsList-content {
+    margin-bottom: 45px;
+}
+.JDLnewsList-content {
+    .category-info span {
+        padding-right: 0;
+    }
+    .JDLnewsList-top {
+        width: 100%;
+        height: 500px;
+        margin-bottom: 10px;
+    }
+    .JDLnewsList {
+        width: 100%;
+        height: 430px;
+        margin-bottom: 40px;
+    }
+    .JDLnewsList-top-b {
+        width: 938px;
+        height: 100%;
+        border: 1px solid #bbb;
+        padding-right: 50px;
+        @include box-sizing(border-box);
+    }
+    .JDLnewsList-top-s {
+        width: 885px;
+        height: 320px;
+        border-right: 1px solid #bbb;
+        border-bottom: 1px solid #bbb;
+        padding: 25px 0 25px 22px;
+        @include box-sizing(border-box);
+    }
+    .JDLnewsList-top-s2 {
+        @include box-sizing(border-box);
+        height: 100%;
+        width: 862px - 358px;
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+    .JDLnewsList-top-s2>p {
+        font-size: 16px;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 18px;
+    }
+    .JDLnewsList-top-s3 {
+        border-top: 1px solid #ddd;
+    }
+    .JDLnewsList-top-s3 p {
+        font-size: 14px;
+        color: #333;
+        text-indent: 1em;
+        margin-top: 20px;
+        line-height: 23px;
+    }
+    .JDLnewsList-top-s4 {
+        @include box-sizing(border-box);
+        width: 885px;
+        height: 498px - 320px;
+        padding: 70px 35px 25px 5px;
+        color: #333;
+        font-size: 14px;
+        position: relative;
+    }
+    .JDLnewsList-top-s4>p:nth-child(1) {
+        font-size: 20px;
+        color: #000;
+        margin-bottom: 15px;
+    }
+    .JDLnewsList-date {
+        width: 100px;
+        height: 83px;
+        position: absolute;
+        right: 35px;
+        top: 70px;
+    }
+    .JDLnewsList-date-l {
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        color: #000;
+    }
+    .JDLnewsList-date-l span:nth-child(1) {
+        font-size: 50px;
+    }
+    .JDLnewsList-date-l span:nth-of-type(2) {
+        position: relative;
+        font-size: 14px;
+        top: -8px;
+    }
+    .JDLnewsList-date>img {
+        position: absolute;
+        right: 0;
+        top: 25px;
+    }
+    .JDLnewsList-top-b2 {
+        width: 1200px - 938px - 20px;
+        height: 500px;
+        @include box-sizing(border-box);
+        border: 1px solid #bbb;
+        margin-left: 20px;
+        padding-top: 35px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 14px;
+        color: #000;
+        
+    }
+    .JDLnewsList-top-b2>p:nth-child(1) {
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .JDLnewsList-top-b2>p:nth-child(2) {
+        width: 40px;
+        border: 2px solid $mainColor;
+        margin-top: 5px;
+        margin-bottom: 40px;
+    }
+    .JDLnewsList-top-b2 li {
+        margin-bottom: 28px;
+    }
+    .JDLnewsList li {
+        height: 215px;
+        width: 100%;
+        @include box-sizing(border-box);
+        border: 1px solid #bbb;
+        padding: 20px 28px;
+    }
+    .JDLnewsList .container {
+        @include ph(270px,163px);
+    }
+    .JDLnewsList-item {
+        width: 1142px - 270px;
+        height: 100%;
+        @include box-sizing(border-box);
+        padding-top: 10px;
+        padding-left: 38px;
+        font-size: 14px;
+        color: #666;
+        position: relative;
+    }
+    .JDLnewsList-item p:nth-child(1) {
+        font-size: 16px;
+        color: #000;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .JDLnewsList-item .JDLnewsList-date {
+        right: 0px;
+        top: 40px;
+    }
+    // .JDLnewsList-pagination {
+    //     width: 100%;
+    //     height: 28px;
+    //     background-color: lightblue;
+    // }
+}

@@ -4,9 +4,9 @@
 @import "../styles/$style";
 
 // ==============委托交易================
-.weituo-top {
-    margin-bottom: 10px;
-}
+// .weituo-top {
+//     margin-bottom: 10px;
+// }
 .fileinput-button {
     position: relative;
 }
@@ -32,43 +32,43 @@
     height: 60px;
 }
 .weituo-content {
-   .weituo-top {
-        width: 100%;
-        height: 70px;
-        line-height: 70px;
-        background-color: $mainColor;
-        color: white;
-        font-size: 16px;
-    } 
-    .weituo-top a {
-        color: white;
-        padding-left: 50px;
-    }
-    .lp8 {
-        letter-spacing: 8px;
-    }
-    .weituo-nav {
-        width: 200px;
-        font-size: 14px;
-        margin-right: 10px;
-        @include box-sizing(border-box);
-    }
-    .weituo-nav ul {
-        width: 100%;
-    }
-    .weituo-nav ul li {
-        padding-right: 10px;
-        width: 100%;
-        height: 50px;
-        @include box-sizing(border-box);
-        margin-bottom: 5px;
-        padding: 15px 10px 10px 20px;
-        border: 1px solid #ddd;
-        border-bottom: 5px solid $mainColor;
-    }
-    .weituo-nav .right-arrow {
-        border-left-color: #ddd;
-    }
+//    .weituo-top {
+//         width: 100%;
+//         height: 70px;
+//         line-height: 70px;
+//         background-color: $mainColor;
+//         color: white;
+//         font-size: 16px;
+//     } 
+    // .weituo-top a {
+    //     color: white;
+    //     padding-left: 50px;
+    // }
+    // .lp8 {
+    //     letter-spacing: 8px;
+    // }
+    // .weituo-nav {
+    //     width: 200px;
+    //     font-size: 14px;
+    //     margin-right: 10px;
+    //     @include box-sizing(border-box);
+    // }
+    // .weituo-nav ul {
+    //     width: 100%;
+    // }
+    // .weituo-nav ul li {
+    //     padding-right: 10px;
+    //     width: 100%;
+    //     height: 50px;
+    //     @include box-sizing(border-box);
+    //     margin-bottom: 5px;
+    //     padding: 15px 10px 10px 20px;
+    //     border: 1px solid #ddd;
+    //     border-bottom: 5px solid $mainColor;
+    // }
+    // .weituo-nav .right-arrow {
+    //     border-left-color: #ddd;
+    // }
     .weituo-form {
         width: 1200px - 210px;
         height: 500px;

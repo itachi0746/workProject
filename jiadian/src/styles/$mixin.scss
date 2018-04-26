@@ -1,6 +1,5 @@
 @charset "utf-8";
 
-$mainColor: #ff8140;
 $fontColor: #8c8a8a;
 $color666:#666;
 @mixin box-sizing ($sizing) {
@@ -43,6 +42,21 @@ $color666:#666;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+@mixin btn($padding,$fontsize,$color:white,$backgroundColor:#ff8140,$border:none,$cursor:pointer) {
+  padding: $padding;
+  font-size: $fontsize;
+  color: $color;
+  background-color: $backgroundColor;
+  cursor: $cursor;
+  border: $border;
+}
+@mixin font-border-bottom($padding-bottom,$fontsize,$color:#ff8140,$border-bottom:3px solid #ff8140) {
+  padding-bottom: $padding-bottom;
+  font-size: $fontsize;
+  color: $color;
+  border-bottom: $border-bottom;
+}
+$mainColor: #ff8140;
 
 $lte7:false; 
 %clearfix { @if $lte7 { *zoom: 1; } &:before, &:after { content: ""; display: table; font: 0/0 a; } &:after { clear: both; } }

@@ -4,3 +4,59 @@
 @import "../styles/$style";
 
 // =================家电链新闻资讯内容页==============
+.pl50 {
+    padding-left: 50px;
+}
+.JDLnewsContent-content {
+    margin-bottom: 60px;
+}
+.JDLnewsContent-content {
+    .category-info span {
+        padding-right: 0;
+    }
+    .JDLnewsContent-box {
+        width: 100%;
+        margin-bottom: 95px;
+        // height: 515px;
+    }
+    .JDLnewsContent-l {
+        width: 880px;
+        height: 100%;
+        padding: 50px 20px;
+        font-size: 14px;
+        color: #4d4d4d;
+        @include box-sizing(border-box);
+        border: 1px solid #bbb;
+        margin-right: 27px;
+    }
+    .JDLnewsContent-r {
+        width: 1200px - 27px - 880px;
+        height: 435px;
+        background-color: lightblue;
+    }
+    .JDLnewsContent-l p:nth-child(2) {
+        color: #888787;
+        font-size: 14px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .JDLnewsContent-main {
+        border-top: 1px solid #bbb;
+    }
+    .JDLnewsContent-main p:nth-child(1),
+    .JDLnewsContent-main p:nth-child(3) {
+        line-height: 30px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    .JDLnewsContent-main p:nth-child(2) {
+        font-size: 18px;
+        color: #4d4d4d;
+        margin: 0;
+    }
+    .JDLnewsContent-btm {
+        width: 100%;
+        height: 130px;
+        background-color: lightblue;
+    }
+}
