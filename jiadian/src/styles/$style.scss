@@ -734,6 +734,21 @@ html,body,#main {
 }
 // =============当前按钮样式==============
 .isActive {
-    color: white;
-    background-color: $mainColor;
+    color: white!important;
+    background-color: $mainColor!important;
+}
+// ================底部友情链接=================
+.f-link {
+  padding: 15px 0 10px;
+}
+.f-link * {
+  color: #666666;
+  font-size: 14px;
+}
+.f-link .width1200 a:hover {
+  color: $mainColor;
+  text-decoration: underline;
+}
+.f-link .width1200 a {
+  margin-right: 20px;
 }

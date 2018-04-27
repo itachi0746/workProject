@@ -1,0 +1,59 @@
+@charset "utf-8";
+@import "../styles/$reset";
+@import "../styles/$mixin";
+@import "../styles/$style";
+
+
+/*===============联系我们=================*/
+.contactUs-banner {
+    width: 100%;
+    height: 365px;
+    background: url(../img/contact_banner.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-top: 4px solid #ff8140;
+}
+.contactUs-menu {
+    width: 100%;
+    height: 110px;
+    padding-top: 60px;
+    border-bottom: 2px solid $mainColor;
+    @include box-sizing(border-box);
+}
+.contactUs-menu span {
+    font-size: 24px;
+    color: #000;
+    padding-left: 40px;
+}
+.contactUs-menu .orange {
+    color: $mainColor;
+}
+.contactUs-info {
+    width: 100%;
+    height: 570px;
+    padding-top: 38px;
+    padding-bottom: 100px;
+    color: #333;
+    @include box-sizing(border-box);
+
+}
+.contactUs-info-l {
+    width: 523px;
+    height: 100%;
+    font-size: 14px;
+    @include box-sizing(border-box);
+    padding-right: 60px;
+}
+.contactUs-info-title {
+    font-size: 20px;
+    margin-bottom: 13px;
+}
+.contactUs-info-r {
+    width: 1200px - 523px;
+    height: 100%;
+    @include box-sizing(border-box);
+    padding-top: 40px;
+    padding-left: 15px;
+
+}

@@ -887,6 +887,7 @@
 .f5-item-s-two:hover {
   @include borderColor(#000);
 }
+// ==================合作伙伴=====================
 .partner {
   background: #eee;
   padding-bottom: 35px;
@@ -917,20 +918,7 @@
 .partner-logo-r {
   width: 80%;
 }
-.f-link {
-  padding: 15px 0 10px;
-}
-.f-link * {
-  color: #666666;
-  font-size: 14px;
-}
-.f-link .width1200 a:hover {
-  color: $mainColor;
-  text-decoration: underline;
-}
-.f-link .width1200 a {
-  margin-right: 20px;
-}
+
 // ==================页脚, 楼层导航, 右侧菜单=====================
 // .footer-title {
 //   width: 100%;

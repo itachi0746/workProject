@@ -745,8 +745,22 @@ html, body, #main {
   border-left-color: #ddd; }
 
 .isActive {
-  color: white;
-  background-color: #ff8140; }
+  color: white !important;
+  background-color: #ff8140 !important; }
+
+.f-link {
+  padding: 15px 0 10px; }
+
+.f-link * {
+  color: #666666;
+  font-size: 14px; }
+
+.f-link .width1200 a:hover {
+  color: #ff8140;
+  text-decoration: underline; }
+
+.f-link .width1200 a {
+  margin-right: 20px; }
 
 .orange-box, .orange-box2, .orange-box3, .orange-box4, .orange-box5 {
   border-top: 2px solid #ff8140;
@@ -907,19 +921,5 @@ html, body, #main {
 .news-index-content .orange-box4 ul li:nth-child(2n) {
   padding-right: 0;
   padding-left: 51px; }
-
-.f-link {
-  padding: 15px 0 10px; }
-
-.f-link * {
-  color: #666666;
-  font-size: 14px; }
-
-.f-link .width1200 a:hover {
-  color: #ff8140;
-  text-decoration: underline; }
-
-.f-link .width1200 a {
-  margin-right: 20px; }
 
 /*# sourceMappingURL=JDLnews.css.map */

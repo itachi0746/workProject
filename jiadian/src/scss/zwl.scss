@@ -1,0 +1,185 @@
+@charset "utf-8";
+@import "../styles/$reset";
+@import "../styles/$mixin";
+@import "../styles/$style";
+
+
+/*===============找物流=================*/
+/*===============swiper轮播图设置=================*/
+.swiper-container {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+margin: 0px 10px;
+}
+/*小圆点的样式*/
+.swiper-pagination-bullet-active {
+opacity: 1;
+background: #666;
+}
+/*前进后退按钮的样式*/
+.swiper-button-next, .swiper-button-prev{width: 40px;height: 40px;margin: -50px 0px;border-radius: 50%;opacity: 0;transition: all 0.5s;}  /*重定义切换按钮尺寸和上下居中位置*/
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {background-image: url(../img/btn_next.png);background-color: rgba(0,0,0,0.5);background-size: 18px 25px;right: 0;} /*更换背景图片、尺寸，增加背景颜色，设置透明度，*/
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next{background-image: url(../img/btn_next.png);background-size:18px 22px;background-color: rgba(0,0,0,0.5);;transform: rotate(180deg);left: 0;} /*更换背景图片、尺寸，增加背景颜色，设置透明度，*/
+
+.swiper-button-next:hover{background-color: rgba(0,0,0,0.7);} /*//触发后变色*/
+.swiper-button-prev:hover{background-color: rgba(0,0,0,0.7);} /*触发后变色*/
+  
+  // ==========================================
+.zwl-content {
+    .mt50 {
+        margin-top: 50px;
+    }
+    .zwl-info {
+        width: 100%;
+        height: 186px;
+        font-size: 14px;
+        color: #666;
+    }
+    .zwl-info-l {
+        width: 720px;
+        height: 100%;
+        margin-right: 10px;
+    }
+    .zwl-info-r {
+        width: 1200px - 730px;
+        height: 100%;
+    }
+    .zwl-function {
+        width: 100%;
+        height: 390px;
+        padding: 65px 50px 100px;
+        @include box-sizing(border-box);
+    }
+    .zwl-function ul {
+        width: 100%;
+        margin-top: 35px;
+    }
+    .zwl-function li {
+        width: 180px;
+        height: 140px;
+        margin-right: 4px;
+        @include box-sizing(border-box);
+        text-align: center;
+    }
+    .zwl-function li p:nth-child(2) {
+        font-size: 16px;color: #666;
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    .zwl-function li p:nth-child(3) {
+        font-size: 12px;color: #888;
+    }
+    .zwl-function li:nth-last-child(1) {
+        margin-right: 0;
+    }
+    .zwl-mid {
+        width: 100%;
+        height: 87px;
+        background: url(../img/zwl_mid.png) no-repeat;
+        background-size: 100% 100%;
+
+    }
+    .zwl-introduce {
+        @include box-sizing(border-box);
+        height: 240px;
+        width: 100%;
+        padding-top: 80px;
+    }
+    .zwl-info-l span,
+    .zwl-info-r span {
+        @include btn(8px 24px,18px,$mainColor,#fff);
+        display: inline-block;
+        font-weight: bold;
+    }
+    .zwl-info-l i,
+    .zwl-info-r i {
+        width: 10px;
+        height: 6px;
+        display: inline-block;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-bottom: 2px;
+        background-image: url(../img/zwl_arrow.png)
+    }
+    .zwl-info-l table,
+    .zwl-info-r table {
+        width: 100%;
+        border-top: 3px solid $mainColor;
+    }
+    .zwl-info-l table tr,
+    .zwl-info-r table tr {
+        border-bottom: 1px solid #ddd;
+    }
+    .zwl-info-l table tr:nth-child(1),
+    .zwl-info-r table tr:nth-child(1) {
+        border: 1px solid #ddd;
+        border-top: none;
+        background-color: #f8f8f8;
+    }
+    .zwl-info-l table td{
+        height: 39px;
+        text-align: center;
+    }
+    .zwl-info-r table td {
+        height: 39px;
+        text-align: left;
+    }
+    .zwl-info-r table td:nth-child(1) {
+        padding-left: 7px;
+    }
+    .zwl-info-r table td:nth-child(2) {
+        width: 100px;
+    }
+    .zwl-function>p,
+    .zwl-introduce>p {
+        color: #000;
+        font-size: 20px;
+        text-align: center;
+    }
+    .zwl-function>p>span,
+    .zwl-introduce>p>span {
+        border: 1px solid $mainColor;
+        width: 80px;
+        display: inline-block;
+    }
+    .zwl-introduce>p:nth-child(3) {
+        font-size: 14px;
+        color: #666;
+        text-align: left;
+        text-indent: 2em;
+        margin-top: 20px;
+    }
+}
+.partner {
+    background: #eee;
+    padding-bottom: 35px;
+  }
+  .partner-title {
+    color: black;
+    font-size: 30px;
+    //font-weight: bold;
+    text-align: center;
+    background: #eee;
+    padding: 10px 0px;
+  }
+  .partner-logo {
+    width: 100%;
+    background: #eee;
+    overflow: hidden;
+  }
+  .partner-logo-r.fl li {
+    float: left;
+    width: 25%;
+    //margin-right: 1px;
+    margin-bottom: 1px;
+    @include box-sizing(border-box);
+  }
+  .partner-logo-r.fl li img {
+    width: 239px;
+  }
+  .partner-logo-r {
+    width: 80%;
+  }
