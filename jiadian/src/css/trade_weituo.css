@@ -212,7 +212,6 @@ html, body, #main {
   background: #ff8140;
   margin: 43.5px 0;
   text-align: center;
-  cursor: pointer;
   color: white;
   font-size: 14px;
   border-radius: 2px; }
@@ -278,7 +277,6 @@ html, body, #main {
   width: 220px;
   height: 455px;
   position: absolute;
-  display: none;
   top: 40px;
   color: white;
   font-size: 17px;
@@ -756,6 +754,17 @@ html, body, #main {
 
 .f-link .width1200 a {
   margin-right: 20px; }
+
+.rgt-btm {
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-top: 30px; }
+
+.rgt-btm p:nth-child(1) span {
+  padding-right: 25px; }
 
 .fileinput-button {
   position: relative; }

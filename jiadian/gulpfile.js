@@ -51,8 +51,8 @@ gulp.task('browser', function () {
     browserSync.init({
         files: ['**'],  // 修改HTML也刷新
         server: {
-            baseDir: './src',  // 设置服务器的根目录
-            index: 'register.html' // 指定默认打开的文件
+            baseDir: './dev',  // 设置服务器的根目录
+            index: 'pdtDetail.html' // 指定默认打开的文件
         },
         port: 8050  // 指定访问服务器的端口号
     });
@@ -105,7 +105,7 @@ gulp.task('mincss', [], function(cb) {
         //     //保留所有特殊前缀 当你用autoprefixer生成的浏览器前缀，如果不加这个参数，有可能将会删除你的部分前缀        	
         // ),
         sourcemaps.write('.'),
-        gulp.dest(config.src + '/css/')
+        gulp.dest(config.dest + '/css/')
     ], cb
     )
 });
@@ -195,11 +195,11 @@ gulp.task('watch', [], function(cb) {
 });
 
 // 开始执行全部
-// gulp.task('default', function(cb) {
-//     runSequence('clean', 'minImage', 'transLibs', 'minjs', 'mincss', 'minhtml','browser', 'watch', cb);
-// });
+gulp.task('default', function(cb) {
+    runSequence('clean', 'minImage', 'transLibs', 'minjs', 'mincss', 'minhtml','browser', 'watch', cb);
+});
 
 // 只执行编译sass
-gulp.task('default', function(cb) {
-    runSequence('mincss','browser', 'watch', cb);
-});
+// gulp.task('default', function(cb) {
+//     runSequence('mincss','browser', 'watch', cb);
+// });
