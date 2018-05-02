@@ -83,10 +83,18 @@ section {
   height: 637px;
   background-color: lightblue; }
 
-@media screen and (min-width: 576px) {
+@media (max-width: 768px) {
   .icon-bar {
     width: 16px;
     height: 1px;
-    background-color: #fff; } }
+    background-color: #fff;
+    margin-top: 4px; } }
+
+@media (max-width: 768px) {
+  .navbar-toggler {
+    margin: 0;
+    padding: 0 4px;
+    height: 25px;
+    width: 25px; } }
 
 /*# sourceMappingURL=index.css.map */

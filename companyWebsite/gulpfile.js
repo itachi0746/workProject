@@ -31,7 +31,7 @@ gulp.task('clean', function(cb) {
     pump([
         gulp.src(config.dest),
         clean()
-    ], cb)
+    ], cb);
 });
 // 同步更新浏览器
 // gulp.task('browser', function() {
@@ -85,7 +85,7 @@ gulp.task('sassToCss', function(cb){
         gulp.src(config.src+'/scss/*.scss'),
         sass(),
         gulp.dest(config.src+'/css/')
-    ])
+    ]);
   });
 // 编译,合并,重命名,加前缀,压缩
 gulp.task('mincss', [], function(cb) {
@@ -94,7 +94,7 @@ gulp.task('mincss', [], function(cb) {
         sass(),
         // concat('index.css'),  //合并后的文件名
         // rename({suffix: '.min'}),
-        changed(config.dest, { extension: '.css'}),
+        changed(config.src, { extension: '.css'}),
         sourcemaps.init(),
         postcss( autoprefixer({
             browsers: ['last 2 versions'],
@@ -107,7 +107,7 @@ gulp.task('mincss', [], function(cb) {
         sourcemaps.write('.'),
         gulp.dest(config.src + '/css/')
     ], cb
-    )
+    );
 });
 // gulp.task('mincss', [], function(cb) {
 //     pump([
@@ -176,7 +176,7 @@ gulp.task('minhtml', [], function(cb) {
 // 搬运插件
 gulp.task('transLibs',function() {
 	return gulp.src(config.src+'/libs/*.*')
-        .pipe(gulp.dest(config.dest+'/libs/'))
+        .pipe(gulp.dest(config.dest+'/libs/'));
 });
 
 // 监听文件变改，即时调用任务执行增量打包
