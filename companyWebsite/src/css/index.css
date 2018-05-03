@@ -82,8 +82,7 @@ section {
   text-align: center; }
 
 .box {
-  padding-top: 60px;
-  padding-bottom: 60px; }
+  padding-top: 60px; }
 
 .mt55 {
   margin-top: 55px; }
@@ -179,7 +178,8 @@ section {
 
 .history {
   position: relative;
-  margin: 30px 0 100px; }
+  margin-top: 30px;
+  margin-bottom: 60px; }
 
 .history .history-l, .history .history-r {
   width: 41%;
@@ -188,33 +188,63 @@ section {
 .history img {
   width: 17%; }
 
-.history .info {
+.history h5 {
+  color: #42aeef;
+  font-size: 20px; }
+
+.history .history-l .info {
   position: absolute;
   left: 0;
   color: #666;
   width: 40%; }
 
-.history .info-1 {
+.history .history-l h5, .history .history-l p {
+  text-align: right; }
+
+.history .history-l .info-1 {
   top: 17%;
   padding-right: 10px; }
 
-.history .info-2 {
+.history .history-l .info-2 {
   top: 41%;
   padding-right: 10px; }
 
-.history .info-3 {
+.history .history-l .info-3 {
   top: 65%;
   padding-right: 10px; }
 
-.history .info-4 {
+.history .history-l .info-4 {
   top: 89%;
   padding-right: 10px; }
 
-.history h5 {
-  color: #42aeef;
-  font-size: 20px; }
+.history .history-r .info {
+  position: absolute;
+  right: 0;
+  color: #666;
+  width: 40%; }
 
-.history .history-l h5, .history .history-l p {
-  text-align: right; }
+.history .history-r h5, .history .history-r p {
+  text-align: left; }
+
+.history .history-r .info-1 {
+  top: 4%;
+  padding-left: 10px; }
+
+.history .history-r .info-2 {
+  top: 28%;
+  padding-left: 10px; }
+
+.history .history-r .info-3 {
+  top: 52%;
+  padding-left: 10px; }
+
+.history .history-r .info-4 {
+  top: 76%;
+  padding-left: 10px; }
+
+.ctf {
+  height: 290px;
+  background-color: lightblue;
+  margin-bottom: 130px; }
 
 /*# sourceMappingURL=index.css.map */
