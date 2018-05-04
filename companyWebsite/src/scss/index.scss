@@ -1,10 +1,13 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 @import "../styles/reset.scss";
 @import "../styles/mixin.scss";
 
 // =============================================
 .oh {
 	overflow: hidden;
+}
+.a {
+    color:#fff;
 }
 .color-black {
 	color: #000;
@@ -24,6 +27,9 @@
 }
 .mt55 {
 	margin-top: 55px;
+}
+.mt40 {
+	margin-top: 40px;
 }
 .mb15 {
 	margin-bottom: 15px;
@@ -152,7 +158,7 @@
 .history {
 	position: relative;
 	margin-top: 30px;
-	margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 .history {
 	.history-l,.history-r {
@@ -161,7 +167,7 @@
 	}
 	img {
 		width: 17%;
-	}
+	}@import "file1.css";
 
 
 	h5 {
@@ -230,4 +236,136 @@
 	height: 290px;
 	background-color: lightblue;
 	margin-bottom: 130px;
+}
+
+// ===========服务范围=============
+.f-icon {
+    width: 95px;
+    height: 95px;
+    float: left;
+    display: inline-block;
+    margin-right: 10px;
+}
+.f-icon1 {
+    background: url(../img/sa1.png) center no-repeat;
+}
+.f-icon2 {
+    background: url(../img/sa2.png) center no-repeat;
+}
+.f-icon3 {
+    background: url(../img/sa3.png) center no-repeat;
+}
+.f-icon4 {
+    background: url(../img/sa4.png) center no-repeat;
+}
+.f-icon5 {
+    background: url(../img/sa5.png) center no-repeat;
+}
+.f-icon6 {
+    background: url(../img/sa6.png) center no-repeat;
+}
+.f-icon7 {
+    background: url(../img/sa7.png) center no-repeat;
+}
+.f-icon8 {
+    background: url(../img/sa8.png) center no-repeat;
+}
+.f-icon9 {
+    background: url(../img/sa9.png) center no-repeat;
+}
+/*.features {
+    margin-bottom: 50px;
+}*/
+.features {
+    h4 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 24px;
+    }
+    h5 {
+        line-height:23px;
+        font-weight: 400;
+
+    }
+    div {
+        margin-bottom: 40px;
+    }
+}
+
+// ===========我们的产品=============
+.OurProducts {
+    margin-top: 40px;
+
+}
+.OurProducts {
+    .img-responsive {
+        margin-bottom: 10px;
+    }
+    button {
+        background-color: #c7defb;
+        border: 1px solid #2972d8;
+        padding: 18px 50px;
+        margin-top: 50px;
+    }
+}
+// ===========合作伙伴=============
+.p-item {
+    border: 1px solid #ddd;
+    padding: 60px 40px 50px;
+    margin-bottom: 40px;
+}
+.p-item {
+    .media {
+        position: relative;
+    }
+    .media {
+        span {
+            white-space: nowrap;
+            font-size: 12px;
+        }
+        .wxFont {
+            position: relative;
+            left: 5px;
+
+        }
+    }
+    .media-body {
+        font-size: 14px;
+
+    }
+    .media-heading {
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: 600;
+    }
+}
+// ===========客户列表=============
+.c-item {
+    border: 1px solid #ddd;
+    padding: 20px 15px;
+    margin-bottom: 35px;
+}
+.c-item {
+    p {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    .c-item-img {
+        width: 80%;
+        margin: 10px auto;
+        
+    }
+}
+// ===========页脚=============
+
+.footer {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #fff;
+    background: #212831;
+}
+.footer {
+    a {
+        color:#fff;
+    }
 }
