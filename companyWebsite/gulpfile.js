@@ -1,7 +1,9 @@
 
 var config = {
-    src: "src",
-    dest: "dev"
+    src: "src/Content/Company2",  // 文件资源css,js等
+    server: "src",  // 服务器根目录
+    target: "View/index.html",  // 要监视(执行)的html文件
+    dest: "dev"  // 生产环境文件夹
 };
 
 // 一次安装
@@ -51,11 +53,12 @@ gulp.task('browser', function () {
     browserSync.init({
         files: ['**'],  // 修改HTML也刷新
         server: {
-            baseDir: './src',  // 设置服务器的根目录
-            index: 'index.html' // 指定默认打开的文件
+            baseDir: config.server,  // 设置服务器的根目录
+            index: config.target // 指定默认打开的文件
         },
         port: 8050  // 指定访问服务器的端口号
     });
+    
 });
 // 压缩图片
 // gulp.task('minImage', function (cb) {
