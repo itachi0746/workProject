@@ -8,6 +8,7 @@
     <title>致力打造中国自己的小微企业社交化集成管理平台(互联天下，从此接入，广州接入信息科技有限公司)</title>
     <link rel="shortcut icon" href="#" />
     <link rel="stylesheet" href="../Content/Company2/libs/bootstrap.css">
+    <link rel="stylesheet" href="../Content/Company2/libs/font-awesome.min.css">
     <link rel="stylesheet" href="../Content/Company2/css/index.css">
     
 </head>
@@ -34,28 +35,28 @@
                     <!-- <a class="navbar-brand" href="#">联系我们</a>        -->
                 </div>
 
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <div class="collapse navbar-collapse bg-primary" id="collapsibleNavbar">
                     <ul class="nav navbar-nav">
                         <li>
                             <a href="#" class="nav-link activeItem">首页</a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link">关于我们</a>
+                            <a href="#aboutUs" class="nav-link">关于我们</a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link">产品</a>
+                            <a href="#OurProducts" class="nav-link">产品</a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link">服务范围</a>
+                            <a href="#serviceArea" class="nav-link">服务范围</a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link">客户列表</a>
+                            <a href="#customer" class="nav-link">客户列表</a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link">合作伙伴</a>
+                            <a href="#partner" class="nav-link">合作伙伴</a>
                         </li>
                         <li>
-                            <a href="#" class="nav-link">资质荣誉</a>
+                            <a href="#ctf" class="nav-link">资质荣誉</a>
                         </li>
                         <li class="nav-item oh">
                             <a class="navbar-brand" href="#">联系我们</a>
@@ -67,7 +68,7 @@
         </nav>
     </header>
     <!-- 轮播图 -->
-    <div class="banner">
+    <div class="banner" id="top">
         <div id="myCarousel" class="carousel slide">
             <!-- 轮播（Carousel）指标 -->
             <ol class="carousel-indicators">
@@ -96,11 +97,15 @@
                 </div>
             </div>
             <!-- 轮播（Carousel）导航 -->
-            <!-- <a class="carousel-control left" href="#myCarousel"
-                data-slide="prev"> <span _ngcontent-c3="" aria-hidden="true" class="glyphicon glyphicon-chevron-right"></span></a>
-            <a class="carousel-control right" href="#myCarousel"
-                data-slide="next">&rsaquo;</a> -->
-        </div>
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="icon-chevron-left icon-2x" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="icon-chevron-right icon-2x" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
     </div>
     <!-- 功能tag -->
     <div class="cfun container-fluid bg-primary">
@@ -127,7 +132,7 @@
             </div>
         </div>
     </div>
-    <section class="box">
+    <section class="box" id="aboutUs">
         <div class="container">
             <h2 class="color-black text-center">
                 <i class="blue-line"></i>
@@ -186,11 +191,44 @@
             </div>
         </div>
     </section>
-    <div class="ctf">
-        <div class="container">22</div>
-        <!-- TODO -->
+    <!-- 证书部分 -->
+    <div class="ctf" id="ctf">
+
+                <!-- TODO -->
+        <div class="container">
+            
+            <i class="icon-angle-left icon-3x"></i>
+            <i class="icon-angle-right icon-3x"></i>
+            <div class="row">
+                <div class="col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths">
+                    <div class="ctf-item">
+                        <img class="img-responsive" src="../Content/Company2/img/ctf_1.png" alt="荣誉证书">
+                    </div>
+                </div>
+                <div class="col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths">
+                    <div class="ctf-item">
+                        <img class="img-responsive" src="../Content/Company2/img/ctf_1.png" alt="荣誉证书">
+                    </div>
+                </div>
+                <div class="col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths">
+                    <div class="ctf-item">
+                        <img class="img-responsive" src="../Content/Company2/img/ctf_1.png" alt="荣誉证书">
+                    </div>
+                </div>
+                <div class="col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths">
+                    <div class="ctf-item">
+                        <img class="img-responsive" src="../Content/Company2/img/ctf_1.png" alt="荣誉证书">
+                    </div>
+                </div>
+                <div class="col-lg-5ths col-md-5ths col-sm-5ths col-xs-5ths">
+                    <div class="ctf-item">
+                        <img class="img-responsive" src="../Content/Company2/img/ctf_1.png" alt="荣誉证书">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <section class="box">
+    <section class="box" id="serviceArea">
         <div class="container">
             <h2 class="color-black text-center">
                 <i class="blue-line"></i>
@@ -288,8 +326,7 @@
             </div>
         </div>
     </section>
-    @*=======我们的产品==============*@
-    <section class="box">
+    <section class="box" id="OurProducts">
         <div class="container">
             <h2 class="color-black text-center">
                 <i class="blue-line"></i>
@@ -330,7 +367,7 @@
             </div>
         </div>
     </section>
-    <section class="box">
+    <section class="box" id="partner">
         <div class="container">
             <h2 class="color-black text-center">
                 <i class="blue-line"></i>
@@ -437,7 +474,7 @@
             </div>
         </div>
     </section>
-    <section class="box">
+    <section class="box" id="customer">
         <div class="container">
             <h2 class="color-black text-center">
                 <i class="blue-line"></i>
@@ -622,7 +659,7 @@
             <div class="row">
                 <div class="col-sm-2">
                     <img src="../Content/Company2/img/lianxiwomenerweima.png" style="width :100%;padding:10% " />
-                    <p style="text-align:center;">企商云惠公众号</p>
+                    <p class="text-center">企商云惠公众号</p>
                 </div>
                 <div class="col-sm-5" style="padding:30px">
                     <div style="border-right:1px solid #8b8989">
@@ -653,6 +690,21 @@
             </div>
         </div>
     </footer>
+    <!-- 右侧二维码 -->
+    <div class="ewm">
+        <div class="btn-group-vertical btn-group-lg">
+            <button type="button" class="btn b1 btn-default activeItem" data-toggle="popover"
+                    data-container="body" data-placement="auto left" data-trigger="hover focus">
+                <img src="../Content/Company2/img/ewm_1.png" alt="">
+            </button>
+            <button type="button" class="btn btn-default">
+                <img src="../Content/Company2/img/ewm_2.png" alt="">
+            </button>
+            <button type="button" class="btn btn-default">
+                <a href="#top" class="back-to-top"><img src="../Content/Company2/img/ewm_3.png" alt=""></a>
+            </button>
+        </div>
+    </div>
 
     <script src="../Content/Company2/libs/jquery-3.3.1.min.js"></script>
     <script src="../Content/Company2/libs/bootstrap.js"></script>
