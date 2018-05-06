@@ -131,10 +131,24 @@ section {
   border-bottom: 3px solid #ff6a00 !important;
   color: #ff6a00 !important; }
 
+nav.navbar {
+  position: fixed;
+  top: 30px;
+  left: 0;
+  z-index: 999;
+  width: 100%; }
+
+@media (max-width: 768px) {
+  nav.navbar {
+    width: auto; } }
+
 .navbar {
   border-top: 1px solid white;
   border-bottom: 1px solid white;
   border-color: rgba(255, 255, 255, 0.1); }
+
+.navbar-collapse {
+  padding: 0; }
 
 .navbar .nav-link {
   color: #fff;
@@ -150,14 +164,23 @@ section {
   background-color: transparent !important; }
 
 .navbar-brand {
-  height: 56px;
-  width: 150px;
-  text-align: center;
   padding: 20px 0 15px;
   font-size: 16px;
-  color: #fff;
-  line-height: 29px;
-  background-color: #2f77d0; }
+  text-align: center;
+  color: #fff; }
+
+@media (max-width: 768px) {
+  .navbar-brand {
+    padding: 15px 0 13px 0 !important;
+    width: 120px;
+    line-height: inherit; } }
+
+@media (min-width: 768px) {
+  .navbar-brand {
+    height: 56px;
+    width: 150px;
+    line-height: 29px;
+    background-color: #2f77d0; } }
 
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -201,7 +224,10 @@ section {
     font-size: 1em; }
   .carousel-indicators li {
     width: 7px;
-    height: 7px; } }
+    height: 7px; }
+  nav {
+    position: relative;
+    top: -30px; } }
 
 @media (min-width: 768px) {
   .navbar-nav > li.nav-item {
@@ -211,11 +237,11 @@ section {
   .navbar-nav {
     width: 100%; } }
 
-@media (max-width: 1000px) {
+@media (min-width: 1000px) {
   .navbar .nav-link {
     width: 100px; } }
 
-@media (max-width: 860px) {
+@media (min-width: 860px) {
   .navbar .nav-link {
     width: 80px; } }
 
@@ -227,7 +253,9 @@ section {
 
 @media (max-width: 768px) {
   .icon-bar {
-    background-color: #ff6a00; } }
+    background-color: #ff6a00; }
+  .navbar-nav {
+    margin: 0; } }
 
 @media (min-width: 1553px) {
   .cfun .col-sm-2 {
@@ -467,7 +495,12 @@ section {
 .ewm {
   position: fixed;
   right: 50px;
-  top: 50%; }
+  top: 50%;
+  margin-top: -100px; }
+
+@media (max-width: 768px) {
+  .ewm {
+    right: 0px; } }
 
 .ewm .btn-group-vertical button {
   border-radius: 0 !important;
