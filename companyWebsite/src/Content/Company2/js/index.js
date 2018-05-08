@@ -49,7 +49,7 @@ $(function() {
                     $(navLi[this.index]).addClass('activeItem-m');
                 }
             });
-        };
+        }
         // navItem.on('click',function() {
         //     navList.toggleClass('db');
         //     for (var k = 0; k < navLi.length; k++) {
@@ -63,14 +63,14 @@ $(function() {
         // 导航的首页加个active类
         $(navLi[0]).addClass('activeItem');
     }
-})
+});
 // 右侧菜单的hover要显示的内容
 function k_content() {
-    var data = $("<p><img class='ewm_i1' src='../Content/Company2/img/ewm_4.png'><span>广州市天河区黄埔大道中277号203</span></p><br><p><img src='../Content/Company2/img/ewm_5.png'><span>手机: +86-13929914698</span></p><br><p><img src='../Content/Company2/img/ewm_6.png'><span>邮件: service@jierutek.com</span></p>")
+    var data = $("<p><img class='ewm_i1' src='../Content/Company2/img/ewm_4.png'><span>广州市天河区黄埔大道中277号203</span></p><br><p><img src='../Content/Company2/img/ewm_5.png'><span>手机: +86-13929914698</span></p><br><p><img src='../Content/Company2/img/ewm_6.png'><span>邮件: service@jierutek.com</span></p>");
     return data;
 }
 function k_content2() {
-    var data = $("<img class='' src='../Content/Company2/img/lianxiwomenerweima.png'>")
+    var data = $("<img class='' src='../Content/Company2/img/lianxiwomenerweima.png'>");
     return data;
 }
 
@@ -81,7 +81,7 @@ var navList = $('.navbar-collapse');
 navBtn.on('click',function () { 
     // console.log(111);
     navList.toggleClass('db');
- })
+ });
 
 
 var ctfBtn = $('.btn.icon-btn');
@@ -114,7 +114,7 @@ ctfBtn.on('click',function() {
 
         }
     }
-})
+});
 ctfBtn2.on('click',function() {
     
     if(dis>= 0) {
@@ -133,7 +133,7 @@ ctfBtn2.on('click',function() {
 
         }
     }
-})
+});
 
 // 证书的点击跳转
 var ctfOne = ctfGroup.children();
@@ -142,10 +142,10 @@ for(var i=0;i<ctfOne.length;i++) {
 
     $(ctfOne[i]).on('click',function() {
         window.location = './View/honer.html';
-    })
+    });
     $(ctfTwo[i]).on('click',function() {
         window.location = './View/honer.html';
-    })
+    });
 }
 
 
@@ -162,7 +162,7 @@ function honerPage() {
             console.log(222222222);
             honerList.css('display','none');
             ctfBig.css('display','block');
-        })
+        });
     };
     // ctfBig.on('click',function() {
     //     ctfBig.css('display','none');
@@ -170,7 +170,6 @@ function honerPage() {
     // });
 
     var honerBtn = $('.honer button');
-    var honerList = $('.ctf-list');
     // console.log(honerList);
     for(var j=0;j<honerBtn.length;j++) {
         // 这个自定义属性不用转对象
@@ -184,6 +183,6 @@ function honerPage() {
             // console.log(this);
             $(honerList[this.index]).css('display','block');
 
-		})
+		});
 	}
 }
