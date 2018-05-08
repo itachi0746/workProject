@@ -158,7 +158,7 @@ header {
 }
 
 .cfun {
-	background-color: rgba(41,114,216,0.4);
+	background-color: rgba(41,114,216,0.6);
 	color: #fff;
 }
 @media (min-width: 768px) {
@@ -179,14 +179,12 @@ header {
 		bottom: 60px;
 	}
 	header {
-
 		.navbar {
 			position: absolute;
 			top: 30px;
 			left: 0;
 		}
 	}
-
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -263,6 +261,9 @@ header {
 			width: 80px;	
 		}
 	}
+	.ctf-mask p {
+		font-size: 12px;
+	}
 }
 // 屏幕缩小, 选项卡缩小宽度
 @media (min-width: 1000px) {
@@ -270,6 +271,9 @@ header {
 		.nav-link {
 			width: 100px;	
 		}
+	}
+	.ctf-mask p {
+		font-size: 14px;
 	}
 }
 
@@ -306,12 +310,19 @@ header {
 		padding-right: 6px;
 		padding-left: 6px;
 	}
-	#ctf-main {
+	.ctf-main {
 		width: 95%;
 		margin: 0 auto;
+
 	}
 }
-// ===导航下的字=============
+.ctf-main {
+	height: 100%;
+	width: 50%;
+	float: left;
+}
+
+// ==========导航下的字=============
 @media (min-width: 1553px) {
 	.cfun {
 		.col-sm-2 {
@@ -484,61 +495,129 @@ header {
 .ctf {
 	// margin: 0;
 	margin-bottom: 130px;
-	
+}
+.rowWp {
+	width: 200%;
+	position: relative;
+	left: 0;
+	-o-transition: all .3s ease;
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
 }
 .ctf {
 	.row {
 		margin: 0;
 	}
 	.container {
+		// overflow-x: hidden;
 		position: relative;
-
 	}
+	.vw {
+		overflow: hidden;
+		width: 100%;
+	}
+
 	.ctf-item {
+
+		position: relative;
+		left: 0;
 		// width: 225px;height: 300px;
 		border: 1px solid #ddd;
-		margin-bottom: 10px;
+		// margin-bottom: 10px;
 		padding: 5px;
+		cursor: pointer;
 		// background: url(../img/ctf_1.png) center no-repeat;
 	}
 	// .ctf-item img {
 	// 	// margin: 5px;
 	// }
-	.icon-angle-left {
+	.icon-btn {
 		color: #c1c1c1;
 		padding: 33px 10px 33px 8px;
 		background-color: #eee;
 		position: absolute;
 		top: 50%;
-		right: 100%;
+		right: 99%;
 		margin-top: -7%;
 	}
-	.icon-angle-right {
+	.icon-btn2 {
 		color: #c1c1c1;
 		padding: 33px 8px 33px 10px;
 		background-color: #eee;
 		position: absolute;
 		top: 50%;
-		left: 100%;
+		left: 99%;
 		margin-top: -7%;
 	}
 	@media ( max-width : 768px) {
-		.icon-angle-right {
-			left: 93%;
+		.icon-btn2 {
+			left: 95%;
 		}
-		.icon-angle-left {
-			right: 93%;
+		.icon-btn {
+			right: 95%;
 		}
-		.icon-angle-right,.icon-angle-left {
+		.icon-btn2,.icon-btn {
 			font-size: 1em;
-			padding: 13px 4px 13px 6px;
+			padding: 8px 2px 8px 2px;
 
 		}
-		
 	}
-	
-	
 }
+// 蒙层
+.ctf-mask {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	font-size: 12px;
+	background-color: rgba(41,114,216,0.6);
+	display: none;
+}
+.ctf-mask p {
+	position: absolute;
+	width: 100%;
+	height: 20px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+.ctf-mask img {
+	position: absolute;
+	top: 12%;
+	left: 39%;
+	margin-bottom: 20px;
+}
+.ctf-mask div {
+	width: 245px;
+	text-indent: 2em;
+	margin: 100px auto;
+}
+// .op-box button {
+// 	position: absolute;
+// 	bottom: 27%;
+// 	left: 30%;
+// 	color: #ff6a00;
+// 	padding: 18px 35px;
+// 	font-size: 14px;
+// }
+// .op-box button:hover {
+// 	border: 1px solid #ff6a00;
+// 	color: #fff;
+// 	background-color: #ff6a00;
+// }
+.ctf-item:hover .ctf-mask,
+.op-box:hover .ctf-mask {
+	display: block;
+}
+// .icon-btn:hover,
+// .icon-btn2:hover {
+// 	color: #8a8989;
+// 	background-color: rgb(207, 207, 207);
+// }
 @media ( max-width : 768px) {
 	.ctf {
 		margin-bottom: 50px;		
@@ -615,12 +694,15 @@ header {
     .img-responsive {
         margin-bottom: 10px;
     }
-    button {
+    .op-more {
         background-color: #c7defb;
         border: 1px solid #2972d8;
         padding: 18px 50px;
         margin-top: 50px;
-    }
+	}
+	.op-box {
+		position: relative;
+	}
 }
 // ===========合作伙伴=============
 .p-item {

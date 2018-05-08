@@ -230,7 +230,7 @@ header {
   position: relative; }
 
 .cfun {
-  background-color: rgba(41, 114, 216, 0.4);
+  background-color: rgba(41, 114, 216, 0.6);
   color: #fff; }
 
 @media (min-width: 768px) {
@@ -309,11 +309,15 @@ header {
 
 @media (min-width: 860px) {
   .nav .nav-link {
-    width: 80px; } }
+    width: 80px; }
+  .ctf-mask p {
+    font-size: 12px; } }
 
 @media (min-width: 1000px) {
   .nav .nav-link {
-    width: 100px; } }
+    width: 100px; }
+  .ctf-mask p {
+    font-size: 14px; } }
 
 .navbar-nav > li > a.navbar-brand {
   line-height: 29px; }
@@ -338,9 +342,14 @@ header {
   .col-xs-5ths, .col-sm-5ths, .col-md-5ths, .col-lg-5ths {
     padding-right: 6px;
     padding-left: 6px; }
-  #ctf-main {
+  .ctf-main {
     width: 95%;
     margin: 0 auto; } }
+
+.ctf-main {
+  height: 100%;
+  width: 50%;
+  float: left; }
 
 @media (min-width: 1553px) {
   .cfun .col-sm-2 {
@@ -468,43 +477,92 @@ header {
 .ctf {
   margin-bottom: 130px; }
 
+.rowWp {
+  width: 200%;
+  position: relative;
+  left: 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease; }
+
 .ctf .row {
   margin: 0; }
 
 .ctf .container {
   position: relative; }
 
-.ctf .ctf-item {
-  border: 1px solid #ddd;
-  margin-bottom: 10px;
-  padding: 5px; }
+.ctf .vw {
+  overflow: hidden;
+  width: 100%; }
 
-.ctf .icon-angle-left {
+.ctf .ctf-item {
+  position: relative;
+  left: 0;
+  border: 1px solid #ddd;
+  padding: 5px;
+  cursor: pointer; }
+
+.ctf .icon-btn {
   color: #c1c1c1;
   padding: 33px 10px 33px 8px;
   background-color: #eee;
   position: absolute;
   top: 50%;
-  right: 100%;
+  right: 99%;
   margin-top: -7%; }
 
-.ctf .icon-angle-right {
+.ctf .icon-btn2 {
   color: #c1c1c1;
   padding: 33px 8px 33px 10px;
   background-color: #eee;
   position: absolute;
   top: 50%;
-  left: 100%;
+  left: 99%;
   margin-top: -7%; }
 
 @media (max-width: 768px) {
-  .ctf .icon-angle-right {
-    left: 93%; }
-  .ctf .icon-angle-left {
-    right: 93%; }
-  .ctf .icon-angle-right, .ctf .icon-angle-left {
+  .ctf .icon-btn2 {
+    left: 95%; }
+  .ctf .icon-btn {
+    right: 95%; }
+  .ctf .icon-btn2, .ctf .icon-btn {
     font-size: 1em;
-    padding: 13px 4px 13px 6px; } }
+    padding: 8px 2px 8px 2px; } }
+
+.ctf-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-size: 12px;
+  background-color: rgba(41, 114, 216, 0.6);
+  display: none; }
+
+.ctf-mask p {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto; }
+
+.ctf-mask img {
+  position: absolute;
+  top: 12%;
+  left: 39%;
+  margin-bottom: 20px; }
+
+.ctf-mask div {
+  width: 245px;
+  text-indent: 2em;
+  margin: 100px auto; }
+
+.ctf-item:hover .ctf-mask,
+.op-box:hover .ctf-mask {
+  display: block; }
 
 @media (max-width: 768px) {
   .ctf {
@@ -570,11 +628,14 @@ header {
 .OurProducts .img-responsive {
   margin-bottom: 10px; }
 
-.OurProducts button {
+.OurProducts .op-more {
   background-color: #c7defb;
   border: 1px solid #2972d8;
   padding: 18px 50px;
   margin-top: 50px; }
+
+.OurProducts .op-box {
+  position: relative; }
 
 .p-item {
   border: 1px solid #ddd;
