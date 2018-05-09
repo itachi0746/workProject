@@ -16,7 +16,7 @@ $(function () {
             return k_content2();
         }
     });
-    honerPage();
+    honerPart();
 }
 );
 
@@ -25,7 +25,15 @@ var W = $(window).width();
 var navLi = $('.nav-link');
 var navItem = $('.nav-item');
 var _vw = $('.vw');
+
+// 导航栏-资质荣誉
+var linkH = $('[href="#honer"]');
+// 不是资质荣誉的部分
+var notHoner = $('section.box');
+// 资质荣誉的部分
+var isHoner = $('#honer');
 // console.log(W);
+
 $(function() {
     // 如果小屏, 证书部分删除两个
 
@@ -43,26 +51,88 @@ $(function() {
             $(navLi[i]).on('click',function() {
                 // console.log(navLi[i]);
                 // navItem.removeClass('activeItem-m');
+                // 导航栏消失
                 navList.toggleClass('db');
                 for(var j=0;j<navLi.length;j++) {
                     $(navLi[j]).removeClass('activeItem-m');
                     $(navLi[this.index]).addClass('activeItem-m');
+                };
+
+                if(this.index===6) {
+                    // 导航栏-资质荣誉的点击,其他消失,只显示资质荣誉部分
+                    for(var k=0;k<notHoner.length;k++) {
+                        $(notHoner[k]).css('display','none');
+                    };
+                    isHoner.css('display','block');
+                } else {
+                    // 其他的点击
+                    for(var k=0;k<notHoner.length;k++) {
+                        $(notHoner[k]).css('display','block');
+                    };
+                    isHoner.css('display','none');  
                 }
             });
         }
-        // navItem.on('click',function() {
-        //     navList.toggleClass('db');
-        //     for (var k = 0; k < navLi.length; k++) {
-        //         $(navLi[k]).removeClass('activeItem-m');
-        //         navItem.addClass('activeItem-m');
-        //     }
-        // })
+
     }
     // 如果是电脑
     else {
         // 导航的首页加个active类
         $(navLi[0]).addClass('activeItem');
+
+        // for(var j=0;j<navLi.length;j++) {
+        //     $(navLi[j]).hover(
+        //         function () {  
+        //             this.addClass('nav-link-hover');
+        //         },
+        //         function () {  
+        //             this.removeClass('nav-link-hover');
+        //         }
+        //     )
+        // };
+
+        for(var i=0;i<navLi.length;i++) {
+            navLi[i].index = i;
+
+            // 导航的hover事件
+            $(navLi[i]).hover(
+                function () {  
+                    $(this).addClass('nav-link-hover');
+                },
+                function () {  
+                    $(this).removeClass('nav-link-hover');
+                }
+            )
+
+            $(navLi[i]).on('click',function() {
+
+
+                if(this.index===6) {
+                    // 导航栏-资质荣誉的点击,其他消失,只显示资质荣誉部分
+                    for(var k=0;k<notHoner.length;k++) {
+                        $(notHoner[k]).css('display','none');
+                    };
+                    isHoner.css('display','block');
+                } else {
+                    // 其他的点击
+                    for(var k=0;k<notHoner.length;k++) {
+                        $(notHoner[k]).css('display','block');
+                    };
+                    isHoner.css('display','none');  
+                }
+            });
+        };
     }
+
+
+    // 导航栏-资质荣誉的点击
+    linkH.on('click',function () {  
+        
+        for(var k=0;k<notHoner.length;k++) {
+            $(notHoner[k]).css('display','none');
+        };
+        isHoner.css('display','block');
+    })
 });
 // 右侧菜单的hover要显示的内容
 function k_content() {
@@ -135,33 +205,62 @@ ctfBtn2.on('click',function() {
     }
 });
 
-// 证书的点击跳转
+// 证书的点击
 var ctfOne = ctfGroup.children();
 var ctfTwo = ctfGroup2.children();
+// 证书特写
+var ctfBig = $('.ctf-big');
+
 for(var i=0;i<ctfOne.length;i++) {
 
+    ctfOne[i].index = i;
     $(ctfOne[i]).on('click',function() {
-        window.location = './View/honer.html';
+        // 小图src
+        var _targetSrc = $(ctfOne[this.index]).find('.img-responsive').get(0).src;
+        // 大图src
+        // var _targetBigSrc = ctfBig.find('.img-responsive').get(0).src;
+        // 其他消失,只显示资质荣誉部分
+        for(var k=0;k<notHoner.length;k++) {
+            $(notHoner[k]).css('display','none');
+        };
+        isHoner.css('display','block');    
+        // TODO 改变图片地址, 改为大图的地址..
+        ctfBig.find('.img-responsive').get(0).src = _targetSrc;
+
+        ctfBig.css('display','block');
     });
-    $(ctfTwo[i]).on('click',function() {
-        window.location = './View/honer.html';
-    });
+
+//     ctfTwo[i].index = i;
+//     $(ctfTwo[i]).on('click',function() {
+//         window.location = './View/honer.html';
+//     });
 }
 
 
-// console.log(ctfList);
 
-function honerPage() {
+function honerPart() {
+    var ctfListWp =  $('.ctf-list-wp');
     var honerList = $('.ctf-list');
     var ctfBig = $('.row.ctf-big');
     var ctfList = honerList.children();
     console.log(ctfList);
     // 点击放大证书
     for(var i=0;i<ctfList.length;i++) {
-        $(ctfList).on('click',function() {
-            console.log(222222222);
+        ctfList[i].index = i;
+        console.log(ctfList.length);
+        
+        $(ctfList[i]).on('click',function() {
+
             honerList.css('display','none');
+            // 小图src
+            var _targetSrc = $(ctfList[this.index]).find('.img-responsive').get(0).src;
+            // 大图src
+            // var _targetBigSrc = ctfBig.find('.img-responsive').get(0).src;
+            ctfBig.find('.img-responsive').get(0).src = _targetSrc;
+
             ctfBig.css('display','block');
+            console.log(this.index);
+            
         });
     };
     // ctfBig.on('click',function() {
@@ -176,12 +275,22 @@ function honerPage() {
         honerBtn[j].index = j;
         // console.log()
 		$(honerBtn[j]).on('click', function() {
-            
+            // 按钮颜色
+            for(var z=0;z<notHoner.length;z++) {
+                $(honerBtn[z]).css({'color':'#2f77d0','background':'#fff'})
+            };
+            $(this).css({'color':'#fff','background':'#2f77d0'});
+
+            // 隐藏大图
+            ctfBig.css('display','none');
+            // 显示证书列表
+            ctfListWp.css('display','block');
+
             for(var k=0;k<honerList.length;k++) {
                 $(honerList[k]).css('display','none');
             }
-            // console.log(this);
             $(honerList[this.index]).css('display','block');
+            // console.log(honerList[this.index]);
 
 		});
 	}

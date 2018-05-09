@@ -119,11 +119,11 @@ nav.navbar {
 		border-bottom: 3px solid transparent;
 
 	}
-}
-.nav-link:hover {
-	border-bottom: 3px solid #ff6a00;
-	color: #ff6a00;
-	background-color: transparent!important;
+	.nav-link-hover {
+		border-bottom: 3px solid #ff6a00;
+		color: #ff6a00;
+		background-color: transparent!important;
+	}
 }
 .navbar-brand {
 	  padding: 20px 0 15px;
@@ -143,7 +143,7 @@ nav.navbar {
 @media (max-width: 768px) {
 	.navbar-brand {
 		padding: 15px 0 13px 10px!important;
-		width: 120px;
+		width: 100%;
 		line-height: inherit;
 		color: #000;
 		text-align: left;
@@ -284,6 +284,11 @@ header {
 	width: 100%;
 	// margin-top: -30px;
 }
+.ctf-main {
+	height: 100%;
+	width: 50%;
+	float: left;
+}
 
 @media (max-width: 768px) {
 	// 导航按钮的颜色
@@ -310,16 +315,11 @@ header {
 		padding-right: 6px;
 		padding-left: 6px;
 	}
-	.ctf-main {
-		width: 95%;
-		margin: 0 auto;
+	// .ctf-main {
+	// 	width: 47%;
+	// 	margin: 0 auto;
 
-	}
-}
-.ctf-main {
-	height: 100%;
-	width: 50%;
-	float: left;
+	// }
 }
 
 // ==========导航下的字=============
@@ -495,6 +495,7 @@ header {
 .ctf {
 	// margin: 0;
 	margin-bottom: 130px;
+	padding-top: 0;
 }
 .rowWp {
 	width: 200%;
@@ -536,6 +537,7 @@ header {
 		padding: 33px 10px 33px 8px;
 		background-color: #eee;
 		position: absolute;
+		z-index: 999;
 		top: 50%;
 		right: 99%;
 		margin-top: -7%;
@@ -545,21 +547,26 @@ header {
 		padding: 33px 8px 33px 10px;
 		background-color: #eee;
 		position: absolute;
+		z-index: 999;
 		top: 50%;
 		left: 99%;
 		margin-top: -7%;
 	}
 	@media ( max-width : 768px) {
 		.icon-btn2 {
-			left: 95%;
+			left: 94%;
 		}
 		.icon-btn {
-			right: 95%;
+			right: 94%;
 		}
 		.icon-btn2,.icon-btn {
 			font-size: 1em;
 			padding: 8px 2px 8px 2px;
 
+		}
+		.vw {
+			width: 96%;
+			margin: 0 auto;
 		}
 	}
 }
@@ -572,7 +579,7 @@ header {
 	height: 100%;
 	color: #fff;
 	font-size: 12px;
-	background-color: rgba(41,114,216,0.6);
+	background-color: rgba(41,114,216,0.8);
 	display: none;
 }
 .ctf-mask p {
@@ -587,14 +594,14 @@ header {
 }
 .ctf-mask img {
 	position: absolute;
-	top: 12%;
+	top: 25%;
 	left: 39%;
 	margin-bottom: 20px;
 }
 .ctf-mask div {
 	width: 245px;
 	text-indent: 2em;
-	margin: 100px auto;
+	margin: 150px auto;
 }
 // .op-box button {
 // 	position: absolute;
@@ -692,7 +699,8 @@ header {
 }
 .OurProducts {
     .img-responsive {
-        margin-bottom: 10px;
+		margin-bottom: 10px;
+
     }
     .op-more {
         background-color: #c7defb;
@@ -707,7 +715,7 @@ header {
 // ===========合作伙伴=============
 .p-item {
     border: 1px solid #ddd;
-    padding: 60px 40px 50px;
+    padding: 60px 25px 50px;
     margin-bottom: 40px;
 }
 .p-item {
@@ -715,9 +723,10 @@ header {
         position: relative;
     }
     .media {
-        span {
+        .media-object-name {
             white-space: nowrap;
-            font-size: 12px;
+			font-size: 12px;
+			padding-left: 20px;
         }
         .wxFont {
             position: relative;
@@ -732,8 +741,16 @@ header {
     .media-heading {
         font-size: 20px;
         margin-bottom: 10px;
-        font-weight: 600;
-    }
+		font-weight: 600;
+		white-space: nowrap;
+	}
+	@media (max-width: 768px) {
+	    .media-heading {
+			font-size: 17px;
+
+		}	
+		
+	}
 }
 // ===========客户列表=============
 .c-item {
@@ -864,6 +881,7 @@ header {
 // ===============资质荣誉==============
 .honer {
 	padding: 40px 0;
+	display: none;
 }
 .mt25 {
 	margin-top: 25px;
@@ -883,10 +901,17 @@ header {
 		background-color: $main-color;
 		color: #fff;
 	}
+	@media (max-width: 768px) {
+		button {
+			font-size: 12px;
+			padding-left: 1px;
+			padding-right: 1px;
+		}
+	}
 
 }
-.ctf-list {
-	// display: none;
+.ctf-list-wp {
+	display: none;
 }
 .ctf-list {
 	div {
@@ -894,7 +919,7 @@ header {
 	}
 }
 .ctf-big {
-	display: none;
+	display: block;
 }
 .ctf-big {
 	p {
