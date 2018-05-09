@@ -1,9 +1,11 @@
 
 var config = {
-    src: "src/Content/Company2",  // 文件资源css,js,image等
-    server: "src",  // 服务器根目录
-    target: "View/index.html",  // 要监视(执行)的html文件
-    dest: "dev"  // 生产环境文件夹
+  src: "src/Content/Company2", // 文件资源css,js,image等
+  srcView: "src/View/Company2", // 文件资源html等
+  server: "src", // 服务器根目录
+  target: "View/index.html", // 要监视(执行)的html文件
+  dest: "dev/Content/Company2", // 生产环境文件夹
+  destView: "dev/View/Company2" // 生产环境文件夹
 };
 
 // 一次安装
@@ -97,19 +99,20 @@ gulp.task('mincss', [], function(cb) {
         gulp.src(config.src + '/scss/*.scss'),
         sass(),
         // concat('index.css'),  //合并后的文件名
-        // rename({suffix: '.min'}),
+        rename({suffix: '.min'}),
         changed(config.src, { extension: '.css'}),
         sourcemaps.init(),
         postcss( autoprefixer({
+            // 兼容主流浏览器的最新两个版本
             browsers: ['last 2 versions'],
             cascade: true
         }) ),
-        // minifyCss(
-        //     {keepSpecialComments: '*'}
-        //     //保留所有特殊前缀 当你用autoprefixer生成的浏览器前缀，如果不加这个参数，有可能将会删除你的部分前缀        	
-        // ),
+        minifyCss(
+            {keepSpecialComments: '*'}
+            //保留所有特殊前缀 当你用autoprefixer生成的浏览器前缀，如果不加这个参数，有可能将会删除你的部分前缀        	
+        ),
         sourcemaps.write('.'),
-        gulp.dest(config.src + '/css/')
+        gulp.dest(config.dest + '/css/')
     ], cb
     );
 });
@@ -137,19 +140,19 @@ gulp.task('mincss', [], function(cb) {
 gulp.task('minjs', [], function(cb) {
     pump([
         // 获取原目录下所有的js文件
-        gulp.src(config.src + "/**/*.js"),
+        gulp.src(config.src + "/js/*.js"),
         // 执行更名操作
-        // rename({ suffix: '.min' }),
+        rename({ suffix: '.min' }),
         // 每次打包时，只打包内容发生改变的文件
         changed(config.dest, { extension:'.js' }),
         // 生成sourcemap，需要配合后面的sourcemaps.write()
         sourcemaps.init(),
         // 执行JS压缩
-        // uglify(),
+        uglify(),
         // 生成sourcemap
         sourcemaps.write(),
         // 输出至目标目录
-        gulp.dest(config.dest)
+        gulp.dest(config.dest + '/js/')
     ], cb);
 });
 // 压缩HTML
@@ -157,22 +160,22 @@ gulp.task('minhtml', [], function(cb) {
 
     pump([
         // 获取原目录下所有的html文件
-        gulp.src(config.src + "/*.html"),
+        gulp.src(config.srcView + "/*.html"),
         // 每次打包时，只打包内容发生改变的文件
         changed(config.dest, { extension:'.html' }),
         // 执行html压缩
-        // htmlmin({
-        //     removeComments: true,               // 清除HTML注释
-        //     collapseWhitespace: true,           // 压缩空格
-        //     collapseBooleanAttributes: true,    // 省略布尔属性的值 <input checked="true"/> => <input checked>
-        //     removeEmptyAttributes: true,        // 删除所有空格作属性值 <input id=""> => <input>
-        //     removeScriptTypeAttributes: true,   // 删除<script>的type="text/javascript"
-        //     removeStyleLinkTypeAttributes: true,// 删除<style>和<link>的type="text/css"
-        //     minifyJS: true,                     // 压缩页面JS
-        //     minifyCSS: true                     // 压缩页面CSS
-        // }),
+        htmlmin({
+            removeComments: true,               // 清除HTML注释
+            collapseWhitespace: true,           // 压缩空格
+            collapseBooleanAttributes: true,    // 省略布尔属性的值 <input checked="true"/> => <input checked>
+            removeEmptyAttributes: true,        // 删除所有空格作属性值 <input id=""> => <input>
+            removeScriptTypeAttributes: true,   // 删除<script>的type="text/javascript"
+            removeStyleLinkTypeAttributes: true,// 删除<style>和<link>的type="text/css"
+            minifyJS: true,                     // 压缩页面JS
+            minifyCSS: true                     // 压缩页面CSS
+        }),
         // 输出至目标目录
-        gulp.dest(config.dest)
+        gulp.dest(config.destView)
 
     ], cb);
 
@@ -181,6 +184,10 @@ gulp.task('minhtml', [], function(cb) {
 gulp.task('transLibs',function() {
 	return gulp.src(config.src+'/libs/*.*')
         .pipe(gulp.dest(config.dest+'/libs/'));
+});
+gulp.task('transFont',function() {
+	return gulp.src(config.src+'/font/*.*')
+        .pipe(gulp.dest(config.dest+'/font/'));
 });
 
 // 监听文件变改，即时调用任务执行增量打包
@@ -198,12 +205,12 @@ gulp.task('watch', [], function(cb) {
     // });
 });
 
-// 开始执行全部
-// gulp.task('default', function(cb) {
-//     runSequence('clean', 'minImage', 'transLibs', 'minjs', 'mincss', 'minhtml','browser', 'watch', cb);
-// });
-
-// 只执行编译sass
+// 开始打包全部文件
 gulp.task('default', function(cb) {
-    runSequence('mincss','browser', 'watch', cb);
+    runSequence('clean', 'minImage', 'transLibs', 'transFont', 'minjs', 'mincss', 'minhtml', cb);
 });
+
+// 只执行编译sass和同步浏览器
+// gulp.task('default', function(cb) {
+//     runSequence('mincss','browser', 'watch', cb);
+// });

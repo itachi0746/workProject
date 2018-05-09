@@ -787,6 +787,7 @@ header {
 
 .ewm {
 	position: fixed;
+	z-index: 9999;
 	right: 50px;
 	top: 50%;
 	margin-top: -100px;
@@ -901,7 +902,7 @@ header {
 		background-color: $main-color;
 		color: #fff;
 	}
-	@media (max-width: 768px) {
+	@media (max-width: 992px) {
 		button {
 			font-size: 12px;
 			padding-left: 1px;
