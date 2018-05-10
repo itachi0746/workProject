@@ -229,22 +229,9 @@ nav.navbar {
 header {
   position: relative; }
 
-.gxMargin {
-  margin: 38px 0; }
-
-@media (min-width: 992px) {
-  .gxMargin {
-    margin: 53px 0; } }
-
-@media (min-width: 1200px) {
-  .gxMargin {
-    margin: 66px 0; } }
-
 .cfun {
   background-color: rgba(41, 114, 216, 0.6);
-  color: #fff;
-  height: 60px;
-  padding-top: 10px; }
+  color: #fff; }
 
 @media (min-width: 768px) {
   .navbar-brand {
@@ -510,8 +497,7 @@ header {
   left: 0;
   border: 1px solid #ddd;
   padding: 5px;
-  cursor: pointer;
-  background-color: #bdcee7; }
+  cursor: pointer; }
 
 .ctf .icon-btn {
   color: #c1c1c1;
@@ -657,12 +643,7 @@ header {
 .p-item {
   border: 1px solid #ddd;
   padding: 60px 25px 50px;
-  margin-bottom: 40px;
-  height: 164px; }
-
-@media (min-width: 768px) and (max-width: 1200px) {
-  .p-item {
-    padding: 60px 8px 50px; } }
+  margin-bottom: 40px; }
 
 .p-item .media {
   position: relative; }
@@ -680,20 +661,19 @@ header {
   font-size: 14px; }
 
 .p-item .media-heading {
-  font-size: 17px;
+  font-size: 20px;
   margin-bottom: 10px;
   font-weight: 600;
   white-space: nowrap; }
 
-@media (min-width: 1200px) {
+@media (max-width: 768px) {
   .p-item .media-heading {
-    font-size: 20px; } }
+    font-size: 17px; } }
 
 .c-item {
   border: 1px solid #ddd;
   padding: 20px 15px;
-  margin-bottom: 35px;
-  height: 200px; }
+  margin-bottom: 35px; }
 
 .c-item p {
   font-size: 14px;

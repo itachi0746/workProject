@@ -19,7 +19,8 @@ $(function () {
     honerPart();
 }
 );
-
+// 获取header高度
+var headerH = $('header').height();
 // 获取屏幕宽度
 var W = $(window).width();
 var navLi = $('.nav-link');
@@ -49,6 +50,7 @@ $(function() {
             navLi[i].index = i;
 
             $(navLi[i]).on('click',function() {
+                honerList.css('display','none');
                 // console.log(navLi[i]);
                 // navItem.removeClass('activeItem-m');
                 // 导航栏消失
@@ -105,7 +107,6 @@ $(function() {
             )
 
             $(navLi[i]).on('click',function() {
-
 
                 if(this.index===6) {
                     // 导航栏-资质荣誉的点击,其他消失,只显示资质荣誉部分
@@ -217,6 +218,10 @@ for(var i=0;i<ctfOne.length;i++) {
     $(ctfOne[i]).on('click',function() {
         // 小图src
         var _targetSrc = $(ctfOne[this.index]).find('.img-responsive').get(0).src;
+        // 文字
+        var temp = $(ctfOne[this.index]).find('p').html();
+        ctfBig.find('p').html(temp);
+
         // 大图src
         // var _targetBigSrc = ctfBig.find('.img-responsive').get(0).src;
         // 其他消失,只显示资质荣誉部分
@@ -224,10 +229,10 @@ for(var i=0;i<ctfOne.length;i++) {
             $(notHoner[k]).css('display','none');
         };
         isHoner.css('display','block');    
-        // TODO 改变图片地址, 改为大图的地址..
         ctfBig.find('.img-responsive').get(0).src = _targetSrc;
 
         ctfBig.css('display','block');
+        window.scrollTo(0,headerH);
     });
 
 //     ctfTwo[i].index = i;
@@ -235,39 +240,83 @@ for(var i=0;i<ctfOne.length;i++) {
 //         window.location = './View/honer.html';
 //     });
 }
+for(var i=0;i<ctfTwo.length;i++) {
 
+    ctfTwo[i].index = i;
+    $(ctfTwo[i]).on('click',function() {
+        // 小图src
+        var _targetSrc = $(ctfTwo[this.index]).find('.img-responsive').get(0).src;
+        // 文字
+        var temp = $(ctfTwo[this.index]).find('p').html();
+        ctfBig.find('p').html(temp);
 
+        // 大图src
+        // var _targetBigSrc = ctfBig.find('.img-responsive').get(0).src;
+        // 其他消失,只显示资质荣誉部分
+        for(var k=0;k<notHoner.length;k++) {
+            $(notHoner[k]).css('display','none');
+        };
+        isHoner.css('display','block');    
+        ctfBig.find('.img-responsive').get(0).src = _targetSrc;
+
+        ctfBig.css('display','block');
+        window.scrollTo(0,headerH);
+    });
+
+//     ctfTwo[i].index = i;
+//     $(ctfTwo[i]).on('click',function() {
+//         window.location = './View/honer.html';
+//     });
+}
+var ctfZlList = ['程序分布式运行方法、装置及系统','分布式系统的资源操作方法及装置、分布式系统'];
+
+var ctfRzList = ['接入信息义齿管理系统','伊社制造业企业资源管理系统','企商云惠鲜花批发与花店管理云平台','企商云惠客户关系管理云平台',
+                '企商云惠微信商城云平台','企商云惠餐饮管理云平台','企商云惠微信俱乐部云平台','接入信息工程项目管理系统','伊社餐厅管理系统',
+                '接入信息月饼管理系统'];
+
+var ctfGxList = ['高新技术企业','高新技术企业'];
+
+var honerList = $('.ctf-list');
+// var ctfBig = $('.row.ctf-big');
 
 function honerPart() {
     var ctfListWp =  $('.ctf-list-wp');
-    var honerList = $('.ctf-list');
-    var ctfBig = $('.row.ctf-big');
     var ctfList = honerList.children();
-    console.log(ctfList);
-    // 点击放大证书
-    for(var i=0;i<ctfList.length;i++) {
-        ctfList[i].index = i;
-        console.log(ctfList.length);
+
+    var ctfZl = $('#ctf-zl').children();
+    var ctfRz = $('#ctf-rz').children();
+    var ctfGx = $('#ctf-gx').children();
+
+    // console.log(ctfList);
+    // ========点击放大证书=================
+    biggerCtf(ctfZl,ctfZlList);
+    biggerCtf(ctfRz,ctfRzList);
+    biggerCtf(ctfGx,ctfGxList);
+    // for(var i=0;i<ctfZl.length;i++) {
+    //     ctfZl[i].index = i;
+    //     // console.log(ctfZl.length);
         
-        $(ctfList[i]).on('click',function() {
+    //     $(ctfZl[i]).on('click',function() {
 
-            honerList.css('display','none');
-            // 小图src
-            var _targetSrc = $(ctfList[this.index]).find('.img-responsive').get(0).src;
-            // 大图src
-            // var _targetBigSrc = ctfBig.find('.img-responsive').get(0).src;
-            ctfBig.find('.img-responsive').get(0).src = _targetSrc;
+    //         honerList.css('display','none');
+    //         // 小图src
+    //         var _targetSrc = $(ctfZl[this.index]).find('.img-responsive').get(0).src;
+    //         // 大图src
+    //         // var _targetBigSrc = ctfBig.find('.img-responsive').get(0).src;
+    //         ctfBig.find('.img-responsive').get(0).src = _targetSrc;
+    //         ctfBig.find('p').html(ctfZlList[this.index]);
 
-            ctfBig.css('display','block');
-            console.log(this.index);
+    //         ctfBig.css('display','block');
+    //         // console.log(this.index);
             
-        });
-    };
+    //     });
+    // };
     // ctfBig.on('click',function() {
     //     ctfBig.css('display','none');
     //     honerList.css('display','block');
     // });
 
+    // ==========点击按钮显示对应部分============
     var honerBtn = $('.honer button');
     // console.log(honerList);
     for(var j=0;j<honerBtn.length;j++) {
@@ -294,4 +343,31 @@ function honerPart() {
 
 		});
 	}
+}
+
+
+
+function biggerCtf(tgtList,tgtNameList) {  
+
+    // ========点击放大证书=================
+    for(var i=0;i<tgtList.length;i++) {
+        tgtList[i].index = i;
+        // console.log(tgtList.length);
+        
+        $(tgtList[i]).on('click',function() {
+
+            honerList.css('display','none');
+            // 小图src
+            var _targetSrc = $(tgtList[this.index]).find('.img-responsive').get(0).src;
+            // 大图src
+            // var _targetBigSrc = ctfBig.find('.img-responsive').get(0).src;
+            ctfBig.find('.img-responsive').get(0).src = _targetSrc;
+            ctfBig.find('p').html(tgtNameList[this.index]);
+
+            ctfBig.css('display','block');
+            // console.log(this.index);
+            window.scrollTo(0,headerH);
+
+        });
+    };
 }

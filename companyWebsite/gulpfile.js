@@ -3,7 +3,7 @@ var config = {
   src: "src/Content/Company2", // 文件资源css,js,image等
   srcView: "src/View/Company2", // 文件资源html等
   server: "src", // 服务器根目录
-  target: "View/index.html", // 要监视(执行)的html文件
+  target: "View/Company2/index.html", // 要监视(执行)的html文件
   dest: "dev/Content/Company2", // 生产环境文件夹
   destView: "dev/View/Company2" // 生产环境文件夹
 };
@@ -99,7 +99,7 @@ gulp.task('mincss', [], function(cb) {
         gulp.src(config.src + '/scss/*.scss'),
         sass(),
         // concat('index.css'),  //合并后的文件名
-        rename({suffix: '.min'}),
+        // rename({suffix: '.min'}),
         changed(config.src, { extension: '.css'}),
         sourcemaps.init(),
         postcss( autoprefixer({
@@ -107,12 +107,12 @@ gulp.task('mincss', [], function(cb) {
             browsers: ['last 2 versions'],
             cascade: true
         }) ),
-        minifyCss(
-            {keepSpecialComments: '*'}
-            //保留所有特殊前缀 当你用autoprefixer生成的浏览器前缀，如果不加这个参数，有可能将会删除你的部分前缀        	
-        ),
+        // minifyCss(
+        //     {keepSpecialComments: '*'}
+        //     //保留所有特殊前缀 当你用autoprefixer生成的浏览器前缀，如果不加这个参数，有可能将会删除你的部分前缀        	
+        // ),
         sourcemaps.write('.'),
-        gulp.dest(config.dest + '/css/')
+        gulp.dest(config.src + '/css/')
     ], cb
     );
 });
@@ -206,11 +206,11 @@ gulp.task('watch', [], function(cb) {
 });
 
 // 开始打包全部文件
-gulp.task('default', function(cb) {
-    runSequence('clean', 'minImage', 'transLibs', 'transFont', 'minjs', 'mincss', 'minhtml', cb);
-});
+// gulp.task('default', function(cb) {
+//     runSequence('clean', 'minImage', 'transLibs', 'transFont', 'minjs', 'mincss', 'minhtml', cb);
+// });
 
 // 只执行编译sass和同步浏览器
-// gulp.task('default', function(cb) {
-//     runSequence('mincss','browser', 'watch', cb);
-// });
+gulp.task('default', function(cb) {
+    runSequence('mincss','browser', 'watch', cb);
+});
