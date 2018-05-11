@@ -4,6 +4,7 @@ const app = getApp()
 
 Page({
   data: {
+    id: 0,
     tag: '高新技术企业/互联网公司',
     title: '接入信息',
     logoSrc: '../../img/logo.png',

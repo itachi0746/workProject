@@ -8,6 +8,7 @@
     </block>
   </view> -->
   <view class="top-head">
+
     <text class="top-title">{{title}}</text>
     <image mode="aspectFit" class="logo" src="{{logoSrc}}"></image>
   </view>
@@ -15,7 +16,8 @@
     <text class="top-title">{{tag}}</text>
   </view>
   <view class="row">
-
+    <checkbox checked="{{true}}" />
+    <view id="item-{{id}}">aaa="item-{{id}}"</view>
   </view>
 
 </view>
