@@ -17,8 +17,42 @@ $(function () {
         }
     });
     honerPart();
+
+    $(".ewm .b1").hover(
+        function () {  
+            $(this).addClass('activeItem');
+            $(this).find('img').get(0).src = '../../Content/Company2/img/ewm_1_hover.png';
+        },
+        function () {  
+            $(this).removeClass('activeItem');
+            $(this).find('img').get(0).src = '../../Content/Company2/img/ewm_1.png';
+        }
+    );
+    $(".ewm .b2").hover(
+        function () {  
+            $(this).addClass('activeItem');
+            $(this).find('img').get(0).src = '../../Content/Company2/img/ewm_2_hover.png';
+
+        },
+        function () {  
+            $(this).removeClass('activeItem');
+            $(this).find('img').get(0).src = '../../Content/Company2/img/ewm_2.png';
+
+        }
+    );
+    $(".ewm .b3").hover(
+        function () {  
+            $(this).addClass('activeItem');
+        },
+        function () {  
+            $(this).removeClass('activeItem');
+        }
+    );
 }
 );
+
+
+// ============================================
 // 获取header高度
 var headerH = $('header').height();
 // 获取屏幕宽度
