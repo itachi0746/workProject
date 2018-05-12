@@ -2,7 +2,8 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/card/card"
+    "pages/card/card",
+    "pages/map/map"
     
   ],
   "window":{

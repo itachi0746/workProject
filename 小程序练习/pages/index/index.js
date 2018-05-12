@@ -4,10 +4,14 @@ const app = getApp()
 
 Page({
   data: {
-    id: 0,
     tag: '高新技术企业/互联网公司',
     title: '接入信息',
-    logoSrc: '../../img/logo.png',
+    logoSrc: '/img/logo.png',
+    photoSrc: '/img/logo.png',
+    adr: '广东省广州市天河区科韵路',
+    time: '09:00 - 18:00',
+    tel: '123456789',
+    photo: '公司照片',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -52,6 +56,18 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  // 地图
+  locate: function() {
+    wx.navigateTo({
+      url: '../map/map',
+    })
+  },
+  // 打电话
+  call: function() {
+    wx.makePhoneCall({
+      phoneNumber: '1234567890',
     })
   }
 })

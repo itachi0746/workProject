@@ -7,17 +7,39 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view> -->
-  <view class="top-head">
 
+  <!-- 顶部文字 -->
+  <view class="top-head">
     <text class="top-title">{{title}}</text>
     <image mode="aspectFit" class="logo" src="{{logoSrc}}"></image>
   </view>
   <view class="top">
     <text class="top-title">{{tag}}</text>
   </view>
-  <view class="row">
-    <checkbox checked="{{true}}" />
-    <view id="item-{{id}}">aaa="item-{{id}}"</view>
+  <!-- 公司信息 -->
+  <view class="row" bindtap="locate">
+    <icon class="fa fa-map-marker fa-lg rwo_fa1" />
+    <text>{{adr}}</text>
+    <icon class="fa fa-angle-right fa-lg rwo_fa2"></icon>
   </view>
 
+  <view class="row">
+    <icon class="fa fa-clock-o fa-lg rwo_fa1" />
+    <text>{{time}}</text>
+  </view>
+  <view class="row" bindtap="call">
+    <icon class="fa fa-phone fa-lg rwo_fa1" />
+    <text>{{tel}}</text>
+    <icon class="fa fa-angle-right fa-lg rwo_fa2"></icon>
+
+  </view>
+  <view class="row">
+    <icon class="fa fa-picture-o fa-lg rwo_fa1" />
+    <text>{{photo}}</text>
+  </view>
+  <!-- 照片 -->
+  <view class='pic_box'>
+    <image  mode="aspectFit" class="pic" src="{{logoSrc}}">
+</image>
+  </view>
 </view>

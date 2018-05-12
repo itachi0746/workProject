@@ -1,0 +1,9 @@
+<view>
+  <map 
+      longitude="{{lng}}" 
+      latitude="{{lat}}" 
+      markers="{{marker}}"
+  >
+  </map>
+  
+</view>
