@@ -8,9 +8,9 @@
 		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "1.6.6",
+	"libVersion": "1.9.9",
 	"appid": "wx42a9ca56a22c13d6",
-	"projectname": "tetst7",
+	"projectname": "8",
 	"condition": {
 		"search": {
 			"current": -1,

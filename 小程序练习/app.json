@@ -11,6 +11,7 @@
     "navigationBarBackgroundColor": "#000",
     "navigationBarTitleText": "接入信息科技有限公司",
     "navigationBarTextStyle":"white",
-    "backgroundColor": "lightblue"
+    "backgroundColor": "lightblue",
+    "navigationStyle": "custom"
   }
 }
