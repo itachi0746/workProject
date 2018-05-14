@@ -3,7 +3,14 @@
       longitude="{{lng}}" 
       latitude="{{lat}}" 
       markers="{{marker}}"
+      controls="{{controls}}"
+      show-location
   >
-  </map>
   
+  <view class='map-btm'>
+    <view class='map-font'>广州市接入信息有限公司</view>
+    <text>广州市天河区科韵路12号之一方圆E时光\n 28楼2813室</text>
+
+  </view>
+  </map>
 </view>

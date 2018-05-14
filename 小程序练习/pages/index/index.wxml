@@ -17,29 +17,45 @@
     <text class="top-title">{{tag}}</text>
   </view>
   <!-- 公司信息 -->
-  <view class="row" bindtap="locate">
-    <icon class="fa fa-map-marker fa-lg rwo_fa1" />
+  <view class="row" bindtap="locate" hover-class="other-button-hover">
+    <!-- <icon class="fa fa-map-marker fa-lg rwo_fa1" /> -->
+    <image mode="aspectFill" class="" src="{{img1}}"></image>
     <text>{{adr}}</text>
     <icon class="fa fa-angle-right fa-lg rwo_fa2"></icon>
   </view>
 
   <view class="row">
-    <icon class="fa fa-clock-o fa-lg rwo_fa1" />
+    <!-- <icon class="fa fa-clock-o fa-lg rwo_fa1" /> -->
+        <image mode="aspectFill" class="" src="{{img2}}"></image>
+
     <text>{{time}}</text>
   </view>
-  <view class="row" bindtap="call">
-    <icon class="fa fa-phone fa-lg rwo_fa1" />
+  <view class="row" bindtap="call" hover-class="other-button-hover">
+    <!-- <icon class="fa fa-phone fa-lg rwo_fa1" /> -->
+        <image mode="aspectFill" class="" src="{{img3}}"></image>
+
     <text>{{tel}}</text>
     <icon class="fa fa-angle-right fa-lg rwo_fa2"></icon>
 
   </view>
   <view class="row">
-    <icon class="fa fa-picture-o fa-lg rwo_fa1" />
+    <!-- <icon class="fa fa-picture-o fa-lg rwo_fa1" /> -->
+        <image mode="aspectFill" class="" src="{{img4}}"></image>
+
     <text>{{photo}}</text>
   </view>
   <!-- 照片 -->
   <view class='pic_box'>
-    <image  mode="aspectFit" class="pic" src="{{logoSrc}}">
-</image>
+    <block wx:for="{{arr}}">
+        <image  mode="aspectFit" class="pic" src="{{item}}"></image>
+    </block>
   </view>
+
+   <view class='pic_box'>
+    <block wx:for="{{arr2}}">
+        <image  mode="aspectFit" class="pic" src="{{item}}"></image>
+    </block>
+  </view> 
+
+
 </view>

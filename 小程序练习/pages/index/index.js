@@ -5,15 +5,22 @@ const app = getApp()
 Page({
   data: {
     tag: '高新技术企业/互联网公司',
-    title: '接入信息',
+    title: '接入信息有限公司',
     logoSrc: '/img/logo.png',
-    photoSrc: '/img/logo.png',
     adr: '广东省广州市天河区科韵路',
     time: '09:00 - 18:00',
-    tel: '123456789',
+    tel: '1234567890',
     photo: '公司照片',
     userInfo: {},
     hasUserInfo: false,
+    img1: '/img/1.png',
+    img2: '/img/2.png',
+    img3: '/img/3.png',
+    img4: '/img/4.png',
+
+    arr: ['/img/pic1.png', '/img/pic2.png', '/img/pic3.png'],
+    arr2: ['/img/pic4.png', '/img/pic5.png', '/img/pic6.png'],
+
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   //事件处理函数
@@ -58,16 +65,26 @@ Page({
       hasUserInfo: true
     })
   },
-  // 地图
+  // 接入腾讯地图
   locate: function() {
-    wx.navigateTo({
-      url: '../map/map',
+
+    wx.getLocation({
+      type: 'gcj02', // 默认为 wgs84 返回 gps 坐标，gcj02 返回可用于 wx.openLocation 的坐标
+      success: function (res) {
+        wx.openLocation({
+          name: "广州市接入信息有限公司",
+          address: '广州市天河区科韵路12号之一方圆E时光28楼2813室',
+          latitude: res.latitude, // 纬度，范围为-90~90，负数表示南纬
+          longitude: res.longitude, // 经度，范围为-180~180，负数表示西经
+          scale: 28, // 缩放比例
+        })
+      },
     })
   },
   // 打电话
   call: function() {
     wx.makePhoneCall({
-      phoneNumber: '1234567890',
+      phoneNumber: '13928914698',
     })
   }
 })
