@@ -6,7 +6,7 @@
   align-items: flex-start;
   justify-content: space-between;
   /* padding: 50rpx 50rpx; */
-  padding-top: 200rpx;
+  padding-top: 50rpx;
   box-sizing: border-box;
 } 
 

@@ -45,9 +45,9 @@ view {
   /* margin-bottom: 50rpx; */
 } 
 .row {
-  margin-top: 20rpx;
+  /* margin-top: 20rpx; */
   width: 100%;
-  padding: 15rpx 50rpx 20rpx;
+  padding: 25rpx 50rpx 30rpx;
   box-sizing: border-box;
 
 }
@@ -71,8 +71,8 @@ view {
 
 }
 .pic {
-  width: 6rem;
-  height: 5.2rem;
+  /* width: 210rpx; */
+  height: 194rpx;
   /* margin-right: 5px; */
 }
 .pic_box {

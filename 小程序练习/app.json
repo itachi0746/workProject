@@ -2,16 +2,13 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/card/card",
-    "pages/map/map"
+    "pages/card/card"
+
     
   ],
   "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#000",
-    "navigationBarTitleText": "接入信息科技有限公司",
-    "navigationBarTextStyle":"white",
-    "backgroundColor": "lightblue",
-    "navigationStyle": "custom"
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
   }
 }

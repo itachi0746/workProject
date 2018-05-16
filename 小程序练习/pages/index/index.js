@@ -76,7 +76,7 @@ Page({
           address: '广州市天河区科韵路12号之一方圆E时光28楼2813室',
           latitude: res.latitude, // 纬度，范围为-90~90，负数表示南纬
           longitude: res.longitude, // 经度，范围为-180~180，负数表示西经
-          scale: 28, // 缩放比例
+          scale: 15, // 缩放比例
         })
       },
     })
