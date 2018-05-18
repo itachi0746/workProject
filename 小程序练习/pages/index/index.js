@@ -86,5 +86,30 @@ Page({
     wx.makePhoneCall({
       phoneNumber: '13928914698',
     })
-  }
+    // wx.scanCode({
+    //   // onlyFromCamera: true,
+    //   success: (res) => {
+    //     console.log(res)
+    //   }
+    // })
+  },
+
+
+  // onShow: function () {
+  //   wx.onAccelerometerChange(function (e) {
+  //     console.log(e.x)
+  //     console.log(e.y)
+  //     console.log(e.z)
+  //     // if (e.x > 1 && e.y > 1) {
+  //     //   wx.showToast({
+  //     //     title: '摇一摇成功',
+  //     //     icon: 'success',
+  //     //     duration: 2000
+  //     //   })
+  //     //   wx.stopAccelerometer({})
+  //     // }
+  //   })
+  // }
+  
+
 })

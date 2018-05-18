@@ -10,38 +10,18 @@ App({
     // wx.setStorageSync('logs', logs)
 
     // 请求api数据
-    // wx.request({
-      
-    //   url: 'https://www.jierutek.com.cn/api/Ent/Info',
-    //   method: "POST",
-    //   data: {
-    //     AppId: "wx30b4a19af8d1f8fd",
-    //     EntId: "14",
-    //     OrgId: "sample string 15"
-    //   },
-    //   header: {
-    //     'content-type': 'application/json' // 默认值
-    //   },
-    //   success: function(res) {
-    //     // debugger
-    //     console.log(res.data)
-    //   },
-    //   fail: function(err) {
-    //     console.log(err)
-    //   }
-    // })
     wx.request({
       
-      url: 'https://kxgkakkx.qcloud.la/login',
+      url: 'https://www.jierutek.com',
       method: "GET",
-      data: {
-        // AppId: "wx30b4a19af8d1f8fd",
-        // EntId: "14",
-        // OrgId: "sample string 15"
-      },
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
+      // data: {
+      //   AppId: "wx30b4a19af8d1f8fd",
+      //   EntId: "14",
+      //   OrgId: "sample string 15"
+      // },
+      // header: {
+      //   'content-type': 'application/json' // 默认值
+      // },
       success: function(res) {
         // debugger
         console.log(res.data)
@@ -50,6 +30,26 @@ App({
         console.log(err)
       }
     })
+    // wx.request({
+      
+    //   url: 'https://kxgkakkx.qcloud.la/login',
+    //   method: "GET",
+    //   data: {
+    //     // AppId: "wx30b4a19af8d1f8fd",
+    //     // EntId: "14",
+    //     // OrgId: "sample string 15"
+    //   },
+    //   header: {
+    //     'content-type': 'application/json' // 默认值
+    //   },
+    //   success: function(res) {
+    //     // debugger
+    //     console.log(res)
+    //   },
+    //   fail: function(err) {
+    //     console.log(err)
+    //   }
+    // })
 
     // 登录
     wx.login({
