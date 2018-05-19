@@ -64,6 +64,8 @@ var headerH = $("header").height();
 // 获取屏幕宽度
 var W = $(window).width();
 var navLi = $(".nav-link");
+var navItem = $(".nav-item");
+var _vw = $(".vw");
 
 // 导航栏-资质荣誉
 var linkH = $('[href="#honer"]');
@@ -156,8 +158,7 @@ $(function() {
             $(notHoner[k]).css("display", "none");
           }
           isHoner.css("display", "block");
-        } 
-        else {
+        } else {
           // 其他的点击
           for (var k = 0; k < notHoner.length; k++) {
             $(notHoner[k]).css("display", "block");
@@ -315,7 +316,7 @@ for (var i = 0; i < ctfTwo.length; i++) {
 var ctfZlList = [
   "程序分布式运行方法、装置及系统",
   "分布式系统的资源操作方法及装置、分布式系统"
-];
+]
 
 var ctfRzList = [
   "接入信息义齿管理系统",
@@ -337,6 +338,7 @@ var honerList = $(".ctf-list");
 
 function honerPart() {
   var ctfListWp = $(".ctf-list-wp");
+  var ctfList = honerList.children();
 
   var ctfZl = $("#ctf-zl").children();
   var ctfRz = $("#ctf-rz").children();

@@ -64,6 +64,8 @@ var headerH = $("header").height();
 // 获取屏幕宽度
 var W = $(window).width();
 var navLi = $(".nav-link");
+var navItem = $(".nav-item");
+var _vw = $(".vw");
 
 // 导航栏-资质荣誉
 var linkH = $('[href="#honer"]');
@@ -156,8 +158,7 @@ $(function() {
             $(notHoner[k]).css("display", "none");
           }
           isHoner.css("display", "block");
-        } 
-        else {
+        } else {
           // 其他的点击
           for (var k = 0; k < notHoner.length; k++) {
             $(notHoner[k]).css("display", "block");
@@ -304,7 +305,7 @@ for (var i = 0; i < ctfTwo.length; i++) {
     ctfBig.find(".img-responsive").get(0).src = _targetSrc;
 
     ctfBig.css("display", "block");
-    window.scrollTo(0, headerH);
+    window.scrollTo(0, headerH)
   });
 
   //     ctfTwo[i].index = i;
@@ -337,6 +338,7 @@ var honerList = $(".ctf-list");
 
 function honerPart() {
   var ctfListWp = $(".ctf-list-wp");
+  var ctfList = honerList.children();
 
   var ctfZl = $("#ctf-zl").children();
   var ctfRz = $("#ctf-rz").children();

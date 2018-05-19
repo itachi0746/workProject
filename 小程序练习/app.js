@@ -14,14 +14,14 @@ App({
       
       url: 'https://www.jierutek.com',
       method: "GET",
-      // data: {
-      //   AppId: "wx30b4a19af8d1f8fd",
-      //   EntId: "14",
-      //   OrgId: "sample string 15"
-      // },
-      // header: {
-      //   'content-type': 'application/json' // 默认值
-      // },
+      data: {
+        // AppId: "wx30b4a19af8d1f8fd",
+        // EntId: "14",
+        // OrgId: "sample string 15"
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
       success: function(res) {
         // debugger
         console.log(res.data)

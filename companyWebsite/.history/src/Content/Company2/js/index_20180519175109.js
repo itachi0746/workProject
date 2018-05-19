@@ -64,6 +64,8 @@ var headerH = $("header").height();
 // 获取屏幕宽度
 var W = $(window).width();
 var navLi = $(".nav-link");
+var navItem = $(".nav-item");
+var _vw = $(".vw");
 
 // 导航栏-资质荣誉
 var linkH = $('[href="#honer"]');
@@ -337,6 +339,7 @@ var honerList = $(".ctf-list");
 
 function honerPart() {
   var ctfListWp = $(".ctf-list-wp");
+  var ctfList = honerList.children();
 
   var ctfZl = $("#ctf-zl").children();
   var ctfRz = $("#ctf-rz").children();
