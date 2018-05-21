@@ -71,9 +71,9 @@ view {
 
 }
 .pic {
-  /* width: 210rpx; */
+  width: 33%; 
   height: 194rpx;
-  /* margin-right: 5px; */
+  margin-bottom: 9rpx; 
 }
 .pic_box {
   margin-top: 10rpx;
@@ -83,8 +83,12 @@ view {
   flex-direction:row;
   align-items:flex-start;
   justify-content:space-between;
+  flex-wrap: wrap;
   box-sizing: border-box;
 }
 .other-button-hover {
   background-color: #ddd;
+}
+.top-name {
+  font-size: 43rpx;
 }

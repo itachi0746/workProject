@@ -1,26 +1,19 @@
 <!--index.wxml-->
 <view class="container">
-  <!-- <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view> -->
 
   <!-- 顶部文字 -->
   <view class="top-head">
-    <text class="top-title">{{title}}</text>
-    <image mode="aspectFit" class="logo" src="{{logoSrc}}"></image>
+    <text class="top-name">{{Name}}</text>
+    <image mode="aspectFit" class="logo" src="{{LogoUrl}}"></image>
   </view>
   <view class="top">
-    <text class="top-title">{{tag}}</text>
+    <text class="">{{EntLabel}}</text>
   </view>
   <!-- 公司信息 -->
   <view class="row" bindtap="locate" hover-class="other-button-hover">
     <!-- <icon class="fa fa-map-marker fa-lg rwo_fa1" /> -->
     <image mode="aspectFill" class="" src="{{img1}}"></image>
-    <text>{{adr}}</text>
+    <text>{{Address}}</text>
     <icon class="fa fa-angle-right fa-lg rwo_fa2"></icon>
   </view>
 
@@ -28,13 +21,13 @@
     <!-- <icon class="fa fa-clock-o fa-lg rwo_fa1" /> -->
         <image mode="aspectFill" class="" src="{{img2}}"></image>
 
-    <text>{{time}}</text>
+    <text>{{OnLineTime}}</text>
   </view>
   <view class="row" bindtap="call" hover-class="other-button-hover">
     <!-- <icon class="fa fa-phone fa-lg rwo_fa1" /> -->
         <image mode="aspectFill" class="" src="{{img3}}"></image>
 
-    <text>{{tel}}</text>
+    <text>{{Phone}}</text>
     <icon class="fa fa-angle-right fa-lg rwo_fa2"></icon>
 
   </view>
@@ -46,16 +39,11 @@
   </view>
   <!-- 照片 -->
   <view class='pic_box'>
-    <block wx:for="{{arr}}">
+    <block wx:for="{{CompanyImages}}">
         <image  mode="aspectFit" class="pic" src="{{item}}"></image>
     </block>
   </view>
 
-   <view class='pic_box'>
-    <block wx:for="{{arr2}}">
-        <image  mode="aspectFit" class="pic" src="{{item}}"></image>
-    </block>
-  </view> 
 
 
 </view>

@@ -5,31 +5,43 @@
 App({
   onLaunch: function () {
     // 展示本地存储能力
-    // var logs = wx.getStorageSync('logs') || []
-    // logs.unshift(Date.now())
-    // wx.setStorageSync('logs', logs)
-
+    var logs = wx.getStorageSync('logs') || []
+    logs.unshift(Date.now())
+    wx.setStorageSync('logs', logs)
     // 请求api数据
+    var that = this;
     wx.request({
-      
-      url: 'https://www.jierutek.com',
-      method: "GET",
+
+      url: 'http://api2.jierutek.com/api/Ent/Info',
+      method: "POST",
       data: {
-        // AppId: "wx30b4a19af8d1f8fd",
-        // EntId: "14",
-        // OrgId: "sample string 15"
+        AppId: "wx30b4a19af8d1f8fd",
+        EntId: "14",
+        OrgId: "sample string 15"
       },
       header: {
         'content-type': 'application/json' // 默认值
       },
-      success: function(res) {
+      success: function (res) {
         // debugger
-        console.log(res.data)
+        // 获取后台的数据
+        that.globalData.name = res.data.Data.Name
+        that.globalData.entLabel= res.data.Data.EntLabel,
+        that.globalData.logoUrl= res.data.Data.LogoUrl,
+        that.globalData.address= res.data.Data.Address,
+        that.globalData.onLineTime= res.data.Data.OnLineTime,
+        that.globalData.phone= res.data.Data.Phone,
+        that.globalData.companyImages= res.data.Data.CompanyImages
+        that.globalData.latitude= res.data.Data.Latitude
+        that.globalData.longitude = res.data.Data.longitude
+        that.globalData.orgId = res.data.Data.OrgId
+        that.globalData.entId = res.data.Data.EntId
       },
-      fail: function(err) {
+      fail: function (err) {
         console.log(err)
       }
     })
+
     // wx.request({
       
     //   url: 'https://kxgkakkx.qcloud.la/login',
@@ -123,8 +135,8 @@ App({
     companyImages:[],
     latitude: null,
     longitude: null,
-    LogoUrl:null,
-    EntId: null,
-    OrgId: null
+    logoUrl:null,
+    entId: null,
+    orgId: null
   }
 })
