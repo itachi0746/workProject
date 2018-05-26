@@ -961,37 +961,8 @@ header {
 	color: $main-color;
 	font-weight: bold;
 }
-.huaweiyun-pc {
-	display: none;
-}
-.huaweiyun-mobile {
-	display: none;
-}
-.huaweiyun-mobile {
-	.huaweiyun-box {
-		height: 212px;
-	}
-	.h-item {
-		padding-top: 15px;
-		padding-bottom: 15px;
-	}
-	.huaweiyun_ewm {
-		margin: 10px auto;
-	}
-	.huaweiyun_ewm + p {
-		font-size: 12px;
-	}
-}
 #huaweiyun {
-	@media (max-width: 768px) {
-		.huaweiyun-mobile {
-			display: block;
-		}
-	}
   @media (min-width: 768px) {
-		.huaweiyun-pc {
-			display: block;
-		}
     .col-sm-3 {
       width: 22%;
       float: left;
@@ -1071,5 +1042,5 @@ header {
     width: 56%;
     float: left;
   }
-	
+
 }
