@@ -879,9 +879,7 @@ header {
   #huaweiyun .huaweiyun_ewm {
     margin: 10px auto; }
   #huaweiyun .huaweiyun_ewm + p {
-    font-size: 12px; }
-  #huaweiyun .mb15 {
-    margin-bottom: 0; } }
+    font-size: 12px; } }
 
 @media (min-width: 992px) {
   #huaweiyun .col-md-3 {
@@ -896,7 +894,9 @@ header {
     padding-top: 15px;
     padding-bottom: 15px; }
   #huaweiyun .huaweiyun_ewm {
-    margin: 20px auto; } }
+    margin: 20px auto; }
+  #huaweiyun .mb15 {
+    margin-bottom: 10px; } }
 
 @media (min-width: 1200px) {
   #huaweiyun .col-lg-3 {
