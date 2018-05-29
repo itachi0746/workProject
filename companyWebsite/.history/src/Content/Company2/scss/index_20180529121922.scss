@@ -729,7 +729,6 @@ header {
   }
   .op-box {
     position: relative;
-    color: #000;
   }
 }
 // ===========合作伙伴=============
@@ -751,6 +750,7 @@ header {
 }
 .p-item {
   .media-body, .media-left, .media-right {
+    display: inline-block;
     float: left;
   }
 
@@ -787,6 +787,11 @@ header {
     }
   }
 
+  // @media (min-width: 768px) {
+  //   .media-body {
+  //     width: 175px;
+  //   }
+  // }
 }
 // ===========客户列表=============
 .c-item {

@@ -729,31 +729,25 @@ header {
   }
   .op-box {
     position: relative;
-    color: #000;
   }
 }
 // ===========合作伙伴=============
 .p-item {
   border: 1px solid #ddd;
-  padding: 50px 25px 50px;
+  padding: 60px 25px 50px;
   margin-bottom: 40px;
-  height: 150px;
+  height: 164px;
 }
 @media (min-width: 768px) and (max-width: 1200px) {
   .p-item {
-    padding: 50px 5px 50px;
-  }
-}
-@media (max-width: 768px) {
-  .p-item {
-    padding: 50px 15px 50px;
+    padding: 60px 8px 50px;
   }
 }
 .p-item {
-  .media-body, .media-left, .media-right {
-    float: left;
+  .media-object {
+    width: 78px;
+    height: 37px;
   }
-
   .media {
     position: relative;
   }
@@ -770,7 +764,6 @@ header {
   }
   .media-body {
     font-size: 14px;
-    width: 190px;
   }
   .media-heading {
     font-size: 17px;
@@ -780,13 +773,9 @@ header {
   }
   @media (min-width: 1200px) {
     .media-heading {
-      font-size: 19px;
-    }
-    .media-body {
-      width: 219px;
+      font-size: 20px;
     }
   }
-
 }
 // ===========客户列表=============
 .c-item {

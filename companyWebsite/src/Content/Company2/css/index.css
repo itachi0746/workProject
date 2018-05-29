@@ -661,13 +661,20 @@ header {
 
 .p-item {
   border: 1px solid #ddd;
-  padding: 60px 25px 50px;
+  padding: 50px 25px 50px;
   margin-bottom: 40px;
-  height: 164px; }
+  height: 150px; }
 
 @media (min-width: 768px) and (max-width: 1200px) {
   .p-item {
-    padding: 60px 8px 50px; } }
+    padding: 50px 5px 50px; } }
+
+@media (max-width: 768px) {
+  .p-item {
+    padding: 50px 15px 50px; } }
+
+.p-item .media-body, .p-item .media-left, .p-item .media-right {
+  float: left; }
 
 .p-item .media {
   position: relative; }
@@ -682,7 +689,8 @@ header {
   left: 5px; }
 
 .p-item .media-body {
-  font-size: 14px; }
+  font-size: 14px;
+  width: 190px; }
 
 .p-item .media-heading {
   font-size: 17px;
@@ -692,7 +700,9 @@ header {
 
 @media (min-width: 1200px) {
   .p-item .media-heading {
-    font-size: 20px; } }
+    font-size: 19px; }
+  .p-item .media-body {
+    width: 219px; } }
 
 .c-item {
   border: 1px solid #ddd;
