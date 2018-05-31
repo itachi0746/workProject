@@ -410,16 +410,17 @@ function biggerCtf(tgtList, tgtNameList) {
       var temp = $(tgtList[this.index]);
 
       // console.log(temp2.find(".img-responsive"));
-      temp = temp.find(".img-responsive").get(0) || temp.find(".bigger-img").get(0);
+      var _targetSrc = temp.find(".img-responsive").get(0) || temp.find(".bigger-img").get(0);
+      console.log(_targetSrc);
       
-      var _targetSrc = temp.src;
+      // var _targetSrc = temp.get(0).src;
       // 大图src
       // var _targetBigSrc = ctfBig.find('.img-responsive').get(0).src;
       ctfBig.find(".img-responsive").get(0).src = _targetSrc;
       ctfBig.find("p").html(tgtNameList[this.index]);
 
       ctfBig.css("display", "block");
-      console.log(headerH);
+      // console.log(this.index);
       window.scrollTo(0, headerH);
     });
   }

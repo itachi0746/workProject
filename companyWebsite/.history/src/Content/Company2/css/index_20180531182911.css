@@ -165,7 +165,6 @@ nav.navbar {
     width: auto; }
   .navbar-header {
     position: fixed;
-    z-index: 99999;
     top: -3px;
     right: 10px; }
   .navbar-collapse {

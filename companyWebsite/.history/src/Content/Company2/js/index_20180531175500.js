@@ -419,7 +419,7 @@ function biggerCtf(tgtList, tgtNameList) {
       ctfBig.find("p").html(tgtNameList[this.index]);
 
       ctfBig.css("display", "block");
-      console.log(headerH);
+      // console.log(this.index);
       window.scrollTo(0, headerH);
     });
   }

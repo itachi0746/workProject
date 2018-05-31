@@ -408,18 +408,17 @@ function biggerCtf(tgtList, tgtNameList) {
       honerList.css("display", "none");
       // 小图src
       var temp = $(tgtList[this.index]);
-
-      // console.log(temp2.find(".img-responsive"));
-      temp = temp.find(".img-responsive").get(0) || temp.find(".bigger-img").get(0);
+      temp = temp.find(".bigger-img") || temp.find(".img-responsive");
+      console.log(temp);
       
-      var _targetSrc = temp.src;
+      var _targetSrc = temp.get(0).src;
       // 大图src
       // var _targetBigSrc = ctfBig.find('.img-responsive').get(0).src;
       ctfBig.find(".img-responsive").get(0).src = _targetSrc;
       ctfBig.find("p").html(tgtNameList[this.index]);
 
       ctfBig.css("display", "block");
-      console.log(headerH);
+      // console.log(this.index);
       window.scrollTo(0, headerH);
     });
   }

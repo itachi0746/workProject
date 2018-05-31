@@ -411,6 +411,7 @@ function biggerCtf(tgtList, tgtNameList) {
 
       // console.log(temp2.find(".img-responsive"));
       temp = temp.find(".img-responsive").get(0) || temp.find(".bigger-img").get(0);
+      console.log(temp);
       
       var _targetSrc = temp.src;
       // 大图src
@@ -419,7 +420,7 @@ function biggerCtf(tgtList, tgtNameList) {
       ctfBig.find("p").html(tgtNameList[this.index]);
 
       ctfBig.css("display", "block");
-      console.log(headerH);
+      // console.log(this.index);
       window.scrollTo(0, headerH);
     });
   }
