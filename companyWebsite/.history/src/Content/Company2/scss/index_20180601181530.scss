@@ -727,6 +727,7 @@ header {
 .f-icon2-1 {
   background: url(../img/sa2_1.png) center no-repeat;
   display: none;
+  background-size: 72px 72px;
 
 }
 .f-icon3-1 {
@@ -769,7 +770,7 @@ header {
     font-weight: 400;
   }
   div {
-    margin-bottom: 5px;
+    // margin-bottom: 20px;
     height: 140px;
   }
   div:hover {

@@ -48,9 +48,6 @@
 .db {
   display: block !important;
 }
-.dn {
-  display: none !important;
-}
 
 // ===============头部,导航条================
 .activeItem {
@@ -190,19 +187,7 @@ header {
   background-color: rgba(41, 114, 216, 0.6);
   color: #fff;
   height: 60px;
-  // padding-top: 10px;
-}
-.cfun {
-  .row {
-    height: 100%;
-  }
-  .col-sm-5ths {
-    height: 100%;
-    padding: 10px;
-  }
-  .col-sm-5ths:hover {
-    background-color: #255f94;
-  } 
+  padding-top: 10px;
 }
 
 @media (min-width: 768px) {
@@ -720,43 +705,6 @@ header {
 .f-icon9 {
   background: url(../img/sa9.png) center no-repeat;
 }
-.f-icon1-1 {
-  background: url(../img/sa1_1.png) center no-repeat;
-  display: none;
-}
-.f-icon2-1 {
-  background: url(../img/sa2_1.png) center no-repeat;
-  display: none;
-
-}
-.f-icon3-1 {
-  background: url(../img/sa3_1.png) center no-repeat;
-  display: none;
-}
-.f-icon4-1 {
-  background: url(../img/sa4_1.png) center no-repeat;
-  display: none;
-}
-.f-icon5-1 {
-  background: url(../img/sa5_1.png) center no-repeat;
-  display: none;
-}
-.f-icon6-1 {
-  background: url(../img/sa6_1.png) center no-repeat;
-  display: none;
-}
-.f-icon7-1 {
-  background: url(../img/sa7_1.png) center no-repeat;
-  display: none;
-}
-.f-icon8-1 {
-  background: url(../img/sa8_1.png) center no-repeat;
-  display: none;
-}
-.f-icon9-1 {
-  background: url(../img/sa9_1.png) center no-repeat;
-  display: none;
-}
 
 .features {
   h4 {
@@ -769,16 +717,8 @@ header {
     font-weight: 400;
   }
   div {
-    margin-bottom: 5px;
+    // margin-bottom: 20px;
     height: 140px;
-  }
-  div:hover {
-    .f-icon9-1 {
-      display: block;
-    }
-    .f-icon9 {
-      display: none;
-    }
   }
 }
 @media (max-width: 768px) {
@@ -1187,4 +1127,3 @@ header {
   }
 	
 }
-// ==============各种hover效果======================

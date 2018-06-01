@@ -48,10 +48,6 @@
 .db {
   display: block !important;
 }
-.dn {
-  display: none !important;
-}
-
 // ===============头部,导航条================
 .activeItem {
   border-bottom: 3px solid #ff6a00 !important;
@@ -95,7 +91,7 @@ nav.navbar {
     z-index: 99999;
   }
   .navbar-collapse {
-    top: 0px;
+    top: 50px;
     position: fixed;
     overflow: hidden;
     left: 0;
@@ -146,7 +142,12 @@ nav.navbar {
   float: left;
   margin-top: 7px;
   margin-left: 7px;
-
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // z-index: 99;
+  // width: 100%;
+  // height: 40px;
 }
 .logo img{
   width: 250px;
@@ -163,7 +164,12 @@ nav.navbar {
     color: #000;
     text-align: left;
   }
-
+  .logo {
+    // position: fixed;
+    // top: 5px;
+    // left: 20px;
+    // background-color: #fff;
+  }
   .navbar-toggle {
     margin-top: 15px;
   }
@@ -190,21 +196,13 @@ header {
   background-color: rgba(41, 114, 216, 0.6);
   color: #fff;
   height: 60px;
-  // padding-top: 10px;
+  padding-top: 10px;
 }
-.cfun {
-  .row {
-    height: 100%;
-  }
-  .col-sm-5ths {
-    height: 100%;
-    padding: 10px;
-  }
-  .col-sm-5ths:hover {
-    background-color: #255f94;
-  } 
-}
-
+// .cfun {
+// 	span {
+// 		white-space: nowrap;
+// 	}
+// }
 @media (min-width: 768px) {
   .navbar-brand {
     // float: right;
@@ -340,7 +338,6 @@ header {
   }
   .navbar-nav {
     margin: 0;
-    margin-top: 50px;
   }
   .banner {
     // margin-top: 40px;
@@ -669,7 +666,8 @@ header {
 // 	color: #fff;
 // 	background-color: #ff6a00;
 // }
-.ctf-item:hover .ctf-mask {
+.ctf-item:hover .ctf-mask,
+.op-box:hover .ctf-mask {
   display: block;
 }
 // .icon-btn:hover,
@@ -690,8 +688,8 @@ header {
   width: 95px;
   height: 95px;
   float: left;
+  display: inline-block;
   margin-right: 10px;
-  margin-bottom: 18px;
 }
 .f-icon1 {
   background: url(../img/sa1.png) center no-repeat;
@@ -720,65 +718,19 @@ header {
 .f-icon9 {
   background: url(../img/sa9.png) center no-repeat;
 }
-.f-icon1-1 {
-  background: url(../img/sa1_1.png) center no-repeat;
-  display: none;
-}
-.f-icon2-1 {
-  background: url(../img/sa2_1.png) center no-repeat;
-  display: none;
-
-}
-.f-icon3-1 {
-  background: url(../img/sa3_1.png) center no-repeat;
-  display: none;
-}
-.f-icon4-1 {
-  background: url(../img/sa4_1.png) center no-repeat;
-  display: none;
-}
-.f-icon5-1 {
-  background: url(../img/sa5_1.png) center no-repeat;
-  display: none;
-}
-.f-icon6-1 {
-  background: url(../img/sa6_1.png) center no-repeat;
-  display: none;
-}
-.f-icon7-1 {
-  background: url(../img/sa7_1.png) center no-repeat;
-  display: none;
-}
-.f-icon8-1 {
-  background: url(../img/sa8_1.png) center no-repeat;
-  display: none;
-}
-.f-icon9-1 {
-  background: url(../img/sa9_1.png) center no-repeat;
-  display: none;
-}
 
 .features {
   h4 {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 600;
-    margin-bottom: 15px;
+    margin-bottom: 24px;
   }
   h5 {
     line-height: 23px;
     font-weight: 400;
   }
   div {
-    margin-bottom: 5px;
-    height: 140px;
-  }
-  div:hover {
-    .f-icon9-1 {
-      display: block;
-    }
-    .f-icon9 {
-      display: none;
-    }
+    margin-bottom: 40px;
   }
 }
 @media (max-width: 768px) {
@@ -809,22 +761,28 @@ header {
     margin-right: -5px;
   }
 
+  .op-more {
+    background-color: #c7defb;
+    border: 1px solid #2972d8;
+    padding: 18px 50px;
+    margin-top: 50px;
+  }
   .op-box {
     // position: relative;
     color: #666;
     border: 1px solid #ddd;
     background-color: #e7f0fe;
     padding: 30px;
-    height: 330px;
+    height: 350px;
   }
   .op-box h4 {
-    color: #7c7c7c;
+    color: #333;
     margin-top: 10px;
     margin-bottom: 20px;
-    font-weight: 600;
-
   }
   .op-box p {
+    // padding-left: 56px;
+    // margin-bottom: 20px;
     line-height: 28px;
   }
 }
@@ -963,11 +921,9 @@ header {
   }
 }
 // ===========联系我们页面=============
-.cu-head {
-	img {
-    width: 250px;
-  }
-}
+// .cu-head {
+// 	margin-bottom: 80px;
+// }
 // .cu-footer {
 // 	margin-top: 100px;
 
@@ -1187,4 +1143,3 @@ header {
   }
 	
 }
-// ==============各种hover效果======================

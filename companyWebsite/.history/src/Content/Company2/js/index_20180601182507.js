@@ -61,7 +61,7 @@ $(function() {
       $(this).find(".f-before").addClass("dn");
       $(this).find(".f-after").addClass("db");
       $(this).find("h4").css('color','#f88929');
-      $(this).css('box-shadow','0px 0px 10px #888888');
+      $(this).css('box-shadow','5px 5px 3px #888888');
     },
     function() {
       $(this).find(".f-before").removeClass("dn");

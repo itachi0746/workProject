@@ -61,13 +61,11 @@ $(function() {
       $(this).find(".f-before").addClass("dn");
       $(this).find(".f-after").addClass("db");
       $(this).find("h4").css('color','#f88929');
-      $(this).css('box-shadow','0px 0px 10px #888888');
     },
     function() {
       $(this).find(".f-before").removeClass("dn");
       $(this).find(".f-after").removeClass("db");
       $(this).find("h4").css('color','#7c7c7c');
-      $(this).css('box-shadow','none');
     }
   );
 
