@@ -139,9 +139,12 @@ section {
 .dn {
   display: none !important; }
 
+.dib {
+  display: inline-block !important; }
+
 .activeItem {
-  border-bottom: 3px solid #ff6a00 !important;
-  color: #ff6a00 !important; }
+  border-bottom: 3px solid #f88929 !important;
+  color: #f88929 !important; }
 
 .activeItem-m {
   color: #fff !important;
@@ -204,8 +207,8 @@ nav.navbar {
   border-bottom: 3px solid transparent; }
 
 .navbar .nav-link-hover {
-  border-bottom: 3px solid #ff6a00;
-  color: #ff6a00;
+  border-bottom: 3px solid #f88929;
+  color: #f88929;
   background-color: transparent !important; }
 
 .navbar-brand {
@@ -693,7 +696,8 @@ header {
 
 .features div {
   margin-bottom: 5px;
-  height: 140px; }
+  height: 140px;
+  padding-top: 15px; }
 
 .features div:hover .f-icon9-1 {
   display: block; }
@@ -722,27 +726,108 @@ header {
   margin-left: -5px;
   margin-right: -5px; }
 
+.OurProducts .op-icon {
+  width: 74px;
+  height: 74px;
+  display: inline-block; }
+
+.OurProducts .op-icon1 {
+  background: url(../img/chanpin1.png) center no-repeat; }
+
+.OurProducts .op-icon1-1 {
+  background: url(../img/chanpin1_1.png) center no-repeat;
+  display: none; }
+
+.OurProducts .op-icon2 {
+  background: url(../img/chanpin2.png) center no-repeat; }
+
+.OurProducts .op-icon2-1 {
+  background: url(../img/chanpin2_1.png) center no-repeat;
+  display: none; }
+
+.OurProducts .op-icon3 {
+  background: url(../img/chanpin3.png) center no-repeat; }
+
+.OurProducts .op-icon3-1 {
+  background: url(../img/chanpin3_1.png) center no-repeat;
+  display: none; }
+
+.OurProducts .op-icon4 {
+  background: url(../img/chanpin4.png) center no-repeat; }
+
+.OurProducts .op-icon4-1 {
+  background: url(../img/chanpin4_1.png) center no-repeat;
+  display: none; }
+
+.OurProducts .op-icon5 {
+  background: url(../img/chanpin5.png) center no-repeat; }
+
+.OurProducts .op-icon5-1 {
+  background: url(../img/chanpin5_1.png) center no-repeat;
+  display: none; }
+
+.OurProducts .op-icon6 {
+  background: url(../img/chanpin6.png) center no-repeat; }
+
+.OurProducts .op-icon6-1 {
+  background: url(../img/chanpin6_1.png) center no-repeat;
+  display: none; }
+
+.OurProducts .op-icon7 {
+  background: url(../img/chanpin7.png) center no-repeat; }
+
+.OurProducts .op-icon7-1 {
+  background: url(../img/chanpin7_1.png) center no-repeat;
+  display: none; }
+
+.OurProducts .op-icon8 {
+  background: url(../img/chanpin8.png) center no-repeat; }
+
+.OurProducts .op-icon8-1 {
+  background: url(../img/chanpin8_1.png) center no-repeat;
+  display: none; }
+
+.OurProducts .op-icon9 {
+  background: url(../img/chanpin9.png) center no-repeat; }
+
+.OurProducts .op-icon9-1 {
+  background: url(../img/chanpin9_1.png) center no-repeat;
+  display: none; }
+
 .OurProducts .op-box {
   color: #666;
   border: 1px solid #ddd;
   background-color: #e7f0fe;
   padding: 30px;
-  height: 330px; }
+  height: 330px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
 
-.OurProducts .op-box h4 {
+.OurProducts .op-box div h4 {
   color: #7c7c7c;
   margin-top: 10px;
   margin-bottom: 20px;
-  font-weight: 600; }
+  font-weight: 600;
+  font-size: 18px; }
 
 .OurProducts .op-box p {
   line-height: 28px; }
+
+.OurProducts .op-box div {
+  font-size: 0; }
 
 .p-item {
   border: 1px solid #ddd;
   padding: 50px 25px 50px;
   margin-bottom: 40px;
   height: 150px; }
+
+.p-item:hover {
+  box-shadow: 0px 0px 10px #888888;
+  -webkit-box-shadow: 0px 0px 10px #888888;
+  -moz-box-shadow: 0px 0px 10px #888888;
+  -o-box-shadow: 0px 0px 10px #888888;
+  -ms-box-shadow: 0px 0px 10px #888888; }
 
 @media (min-width: 768px) and (max-width: 1200px) {
   .p-item {
@@ -789,6 +874,13 @@ header {
   margin-bottom: 35px;
   height: 200px; }
 
+.c-item:hover {
+  box-shadow: 0px 0px 10px #888888;
+  -webkit-box-shadow: 0px 0px 10px #888888;
+  -moz-box-shadow: 0px 0px 10px #888888;
+  -o-box-shadow: 0px 0px 10px #888888;
+  -ms-box-shadow: 0px 0px 10px #888888; }
+
 .c-item p {
   font-size: 14px;
   margin-top: 10px; }
@@ -826,8 +918,8 @@ header {
   position: relative; }
 
 .ewm .btn-group-vertical .activeItem {
-  background-color: #ff6a00;
-  border-color: #ff6a00; }
+  background-color: #f88929;
+  border-color: #f88929; }
 
 .ewm .back-to-top {
   width: 100%;
@@ -921,7 +1013,87 @@ header {
 
 .h-item {
   padding-top: 30px;
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  position: relative;
+  font-size: 0; }
+
+.h-item p {
+  font-size: 14px; }
+
+.h-item .h-icon {
+  width: 52px;
+  height: 52px;
+  display: inline-block; }
+
+.h-item .h-icon1 {
+  background: url(../img/huawei_1.png) center no-repeat; }
+
+.h-item .h-icon1-1 {
+  background: url(../img/huawei1_1.png) center no-repeat;
+  display: none; }
+
+.h-item .h-icon2 {
+  background: url(../img/huawei_2.png) center no-repeat; }
+
+.h-item .h-icon2-1 {
+  background: url(../img/huawei2_1.png) center no-repeat;
+  display: none; }
+
+.h-item .h-icon3 {
+  background: url(../img/huawei_3.png) center no-repeat; }
+
+.h-item .h-icon3-1 {
+  background: url(../img/huawei3_1.png) center no-repeat;
+  display: none; }
+
+.h-item .h-icon4 {
+  background: url(../img/huawei_4.png) center no-repeat; }
+
+.h-item .h-icon4-1 {
+  background: url(../img/huawei4_1.png) center no-repeat;
+  display: none; }
+
+.h-item .h-icon5 {
+  background: url(../img/huawei_5.png) center no-repeat; }
+
+.h-item .h-icon5-1 {
+  background: url(../img/huawei5_1.png) center no-repeat;
+  display: none; }
+
+.h-item .h-icon6 {
+  background: url(../img/huawei_6.png) center no-repeat; }
+
+.h-item .h-icon6-1 {
+  background: url(../img/huawei6_1.png) center no-repeat;
+  display: none; }
+
+.h-item .h-icon7 {
+  background: url(../img/huawei_7.png) center no-repeat; }
+
+.h-item .h-icon7-1 {
+  background: url(../img/huawei7_1.png) center no-repeat;
+  display: none; }
+
+.h-item .h-icon8 {
+  background: url(../img/huawei_8.png) center no-repeat; }
+
+.h-item .h-icon8-1 {
+  background: url(../img/huawei8_1.png) center no-repeat;
+  display: none; }
+
+.h-item .h-icon9 {
+  background: url(../img/huawei_9.png) center no-repeat; }
+
+.h-item .h-icon9-1 {
+  background: url(../img/huawei9_1.png) center no-repeat;
+  display: none; }
+
+.h-item .h-icon10 {
+  background: url(../img/huawei_10.png) center no-repeat; }
+
+.h-item .h-icon10-1 {
+  background: url(../img/huawei10_1.png) center no-repeat;
+  display: none; }
 
 .huaweiyun_ewm {
   margin: 0px auto; }
