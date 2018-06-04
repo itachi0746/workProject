@@ -760,6 +760,7 @@ header {
   h5 {
     line-height: 23px;
     font-weight: 400;
+    padding-left: 105px;
   }
   div {
     margin-bottom: 5px;
@@ -780,7 +781,10 @@ header {
     h4 {
       font-size: 18px;
       font-weight: 600;
-      margin-bottom: 24px;
+      margin-bottom: 6px;
+    }
+    h5 {
+      font-size: 13px;
     }
   }
 }
@@ -1006,7 +1010,7 @@ header {
 .ewm {
   position: fixed;
   z-index: 9999;
-  right: 50px;
+  right: 45px;
   top: 50%;
   margin-top: -100px;
 }
