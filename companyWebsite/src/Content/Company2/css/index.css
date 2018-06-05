@@ -100,6 +100,286 @@ section {
   width: 20%;
   float: left; }
 
+.j-icon-chanpin1-1 {
+  background-image: url("../img/sprite.png");
+  background-position: 0px 0px; }
+
+.j-icon-chanpin1 {
+  background-image: url("../img/sprite.png");
+  background-position: -395px -395px; }
+
+.j-icon-chanpin2-1 {
+  background-image: url("../img/sprite.png");
+  background-position: 0px -79px; }
+
+.j-icon-chanpin2 {
+  background-image: url("../img/sprite.png");
+  background-position: -79px -79px; }
+
+.j-icon-chanpin3-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -158px 0px; }
+
+.j-icon-chanpin3 {
+  background-image: url("../img/sprite.png");
+  background-position: -158px -79px; }
+
+.j-icon-chanpin4-1 {
+  background-image: url("../img/sprite.png");
+  background-position: 0px -158px; }
+
+.j-icon-chanpin4 {
+  background-image: url("../img/sprite.png");
+  background-position: -79px -158px; }
+
+.j-icon-chanpin5-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -158px -158px; }
+
+.j-icon-chanpin5 {
+  background-image: url("../img/sprite.png");
+  background-position: -237px 0px; }
+
+.j-icon-chanpin6-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -237px -79px; }
+
+.j-icon-chanpin6 {
+  background-image: url("../img/sprite.png");
+  background-position: -237px -158px; }
+
+.j-icon-chanpin7-1 {
+  background-image: url("../img/sprite.png");
+  background-position: 0px -237px; }
+
+.j-icon-chanpin7 {
+  background-image: url("../img/sprite.png");
+  background-position: -79px -237px; }
+
+.j-icon-chanpin8-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -158px -237px; }
+
+.j-icon-chanpin8 {
+  background-image: url("../img/sprite.png");
+  background-position: -237px -237px; }
+
+.j-icon-chanpin9-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -316px 0px; }
+
+.j-icon-chanpin9 {
+  background-image: url("../img/sprite.png");
+  background-position: -316px -79px; }
+
+.j-icon-checked {
+  background-image: url("../img/sprite.png");
+  background-position: -76px -531px; }
+
+.j-icon-ewm-1-hover {
+  background-image: url("../img/sprite.png");
+  background-position: -531px -171px; }
+
+.j-icon-ewm-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -531px -217px; }
+
+.j-icon-ewm-2-hover {
+  background-image: url("../img/sprite.png");
+  background-position: 0px -531px; }
+
+.j-icon-ewm-2 {
+  background-image: url("../img/sprite.png");
+  background-position: -531px -488px; }
+
+.j-icon-ewm-3 {
+  background-image: url("../img/sprite.png");
+  background-position: -43px -531px; }
+
+.j-icon-ewm-4 {
+  background-image: url("../img/sprite.png");
+  background-position: -588px 0px; }
+
+.j-icon-ewm-5 {
+  background-image: url("../img/sprite.png");
+  background-position: -588px -22px; }
+
+.j-icon-ewm-6 {
+  background-image: url("../img/sprite.png");
+  background-position: -588px -40px; }
+
+.j-icon-head-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -531px -308px; }
+
+.j-icon-head-2 {
+  background-image: url("../img/sprite.png");
+  background-position: -531px -263px; }
+
+.j-icon-head-3 {
+  background-image: url("../img/sprite.png");
+  background-position: -531px -398px; }
+
+.j-icon-head-4 {
+  background-image: url("../img/sprite.png");
+  background-position: -531px -443px; }
+
+.j-icon-head-5 {
+  background-image: url("../img/sprite.png");
+  background-position: -531px -353px; }
+
+.j-icon-huawei1-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -531px -57px; }
+
+.j-icon-huawei1 {
+  background-image: url("../img/sprite.png");
+  background-position: -474px 0px; }
+
+.j-icon-huawei10-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -456px -474px; }
+
+.j-icon-huawei10 {
+  background-image: url("../img/sprite.png");
+  background-position: -531px -114px; }
+
+.j-icon-huawei2-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -474px -57px; }
+
+.j-icon-huawei2 {
+  background-image: url("../img/sprite.png");
+  background-position: -531px 0px; }
+
+.j-icon-huawei3-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -474px -114px; }
+
+.j-icon-huawei3 {
+  background-image: url("../img/sprite.png");
+  background-position: -474px -171px; }
+
+.j-icon-huawei4-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -474px -228px; }
+
+.j-icon-huawei4 {
+  background-image: url("../img/sprite.png");
+  background-position: -474px -285px; }
+
+.j-icon-huawei5-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -474px -342px; }
+
+.j-icon-huawei5 {
+  background-image: url("../img/sprite.png");
+  background-position: -474px -399px; }
+
+.j-icon-huawei6-1 {
+  background-image: url("../img/sprite.png");
+  background-position: 0px -474px; }
+
+.j-icon-huawei6 {
+  background-image: url("../img/sprite.png");
+  background-position: -57px -474px; }
+
+.j-icon-huawei7-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -114px -474px; }
+
+.j-icon-huawei7 {
+  background-image: url("../img/sprite.png");
+  background-position: -171px -474px; }
+
+.j-icon-huawei8-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -228px -474px; }
+
+.j-icon-huawei8 {
+  background-image: url("../img/sprite.png");
+  background-position: -285px -474px; }
+
+.j-icon-huawei9-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -342px -474px; }
+
+.j-icon-huawei9 {
+  background-image: url("../img/sprite.png");
+  background-position: -399px -474px; }
+
+.j-icon-sa1-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -316px -395px; }
+
+.j-icon-sa1 {
+  background-image: url("../img/sprite.png");
+  background-position: -237px -395px; }
+
+.j-icon-sa2-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -158px -395px; }
+
+.j-icon-sa2 {
+  background-image: url("../img/sprite.png");
+  background-position: -79px -395px; }
+
+.j-icon-sa3-1 {
+  background-image: url("../img/sprite.png");
+  background-position: 0px -395px; }
+
+.j-icon-sa3 {
+  background-image: url("../img/sprite.png");
+  background-position: -395px -316px; }
+
+.j-icon-sa4-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -395px -237px; }
+
+.j-icon-sa4 {
+  background-image: url("../img/sprite.png");
+  background-position: -395px -158px; }
+
+.j-icon-sa5-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -395px -79px; }
+
+.j-icon-sa5 {
+  background-image: url("../img/sprite.png");
+  background-position: -395px 0px; }
+
+.j-icon-sa6-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -316px -316px; }
+
+.j-icon-sa6 {
+  background-image: url("../img/sprite.png");
+  background-position: -237px -316px; }
+
+.j-icon-sa7-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -158px -316px; }
+
+.j-icon-sa7 {
+  background-image: url("../img/sprite.png");
+  background-position: -79px -316px; }
+
+.j-icon-sa8-1 {
+  background-image: url("../img/sprite.png");
+  background-position: 0px -316px; }
+
+.j-icon-sa8 {
+  background-image: url("../img/sprite.png");
+  background-position: -316px -237px; }
+
+.j-icon-sa9-1 {
+  background-image: url("../img/sprite.png");
+  background-position: -316px -158px; }
+
+.j-icon-sa9 {
+  background-image: url("../img/sprite.png");
+  background-position: -79px 0px; }
+
 .oh {
   overflow: hidden; }
 
@@ -266,7 +546,16 @@ header {
   padding: 10px; }
 
 .cfun .col-sm-5ths:hover {
-  background-color: #255f94; }
+  background-color: rgba(24, 77, 125, 0.6); }
+
+.cfun .j-icon-head {
+  width: 40px;
+  height: 40px;
+  display: inline-block; }
+
+.cfun .col-sm-5ths span {
+  bottom: 13px;
+  position: relative; }
 
 @media (min-width: 768px) {
   .navbar-brand {
@@ -389,8 +678,9 @@ header {
 @media (max-width: 1080px) {
   .cfun .col-sm-2 {
     font-size: 0.6em; }
-  .cfun img {
-    width: 30px; } }
+  .cfun .col-sm-5ths .j-icon-head {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75); } }
 
 @media (max-width: 768px) {
   .cfun {
@@ -615,74 +905,39 @@ header {
   .mt55 {
     margin-top: 30px; } }
 
-.f-icon {
-  width: 95px;
-  height: 95px;
+.j-icon-sa {
+  width: 74px;
+  height: 74px;
   float: left;
-  margin-right: 10px;
-  margin-bottom: 18px; }
+  margin: 15px;
+  margin-top: 5px;
+  margin-bottom: 25px; }
 
-.f-icon1 {
-  background: url(../img/sa1.png) center no-repeat; }
-
-.f-icon2 {
-  background: url(../img/sa2.png) center no-repeat; }
-
-.f-icon3 {
-  background: url(../img/sa3.png) center no-repeat; }
-
-.f-icon4 {
-  background: url(../img/sa4.png) center no-repeat; }
-
-.f-icon5 {
-  background: url(../img/sa5.png) center no-repeat; }
-
-.f-icon6 {
-  background: url(../img/sa6.png) center no-repeat; }
-
-.f-icon7 {
-  background: url(../img/sa7.png) center no-repeat; }
-
-.f-icon8 {
-  background: url(../img/sa8.png) center no-repeat; }
-
-.f-icon9 {
-  background: url(../img/sa9.png) center no-repeat; }
-
-.f-icon1-1 {
-  background: url(../img/sa1_1.png) center no-repeat;
+.j-icon-sa1-1 {
   display: none; }
 
-.f-icon2-1 {
-  background: url(../img/sa2_1.png) center no-repeat;
+.j-icon-sa2-1 {
   display: none; }
 
-.f-icon3-1 {
-  background: url(../img/sa3_1.png) center no-repeat;
+.j-icon-sa3-1 {
   display: none; }
 
-.f-icon4-1 {
-  background: url(../img/sa4_1.png) center no-repeat;
+.j-icon-sa4-1 {
   display: none; }
 
-.f-icon5-1 {
-  background: url(../img/sa5_1.png) center no-repeat;
+.j-icon-sa5-1 {
   display: none; }
 
-.f-icon6-1 {
-  background: url(../img/sa6_1.png) center no-repeat;
+.j-icon-sa6-1 {
   display: none; }
 
-.f-icon7-1 {
-  background: url(../img/sa7_1.png) center no-repeat;
+.j-icon-sa7-1 {
   display: none; }
 
-.f-icon8-1 {
-  background: url(../img/sa8_1.png) center no-repeat;
+.j-icon-sa8-1 {
   display: none; }
 
-.f-icon9-1 {
-  background: url(../img/sa9_1.png) center no-repeat;
+.j-icon-sa9-1 {
   display: none; }
 
 .features h4 {
@@ -692,24 +947,21 @@ header {
 
 .features h5 {
   line-height: 23px;
-  font-weight: 400; }
+  font-weight: 400;
+  padding-left: 105px; }
 
 .features div {
   margin-bottom: 5px;
   height: 140px;
   padding-top: 15px; }
 
-.features div:hover .f-icon9-1 {
-  display: block; }
-
-.features div:hover .f-icon9 {
-  display: none; }
-
 @media (max-width: 768px) {
   .features h4 {
     font-size: 18px;
     font-weight: 600;
-    margin-bottom: 24px; } }
+    margin-bottom: 6px; }
+  .features h5 {
+    font-size: 13px; } }
 
 .OurProducts {
   margin-top: 40px; }
@@ -726,72 +978,36 @@ header {
   margin-left: -5px;
   margin-right: -5px; }
 
-.OurProducts .op-icon {
+.OurProducts .j-icon-chanpin {
   width: 74px;
   height: 74px;
   display: inline-block; }
 
-.OurProducts .op-icon1 {
-  background: url(../img/chanpin1.png) center no-repeat; }
-
-.OurProducts .op-icon1-1 {
-  background: url(../img/chanpin1_1.png) center no-repeat;
+.OurProducts .j-icon-chanpin1-1 {
   display: none; }
 
-.OurProducts .op-icon2 {
-  background: url(../img/chanpin2.png) center no-repeat; }
-
-.OurProducts .op-icon2-1 {
-  background: url(../img/chanpin2_1.png) center no-repeat;
+.OurProducts .j-icon-chanpin2-1 {
   display: none; }
 
-.OurProducts .op-icon3 {
-  background: url(../img/chanpin3.png) center no-repeat; }
-
-.OurProducts .op-icon3-1 {
-  background: url(../img/chanpin3_1.png) center no-repeat;
+.OurProducts .j-icon-chanpin3-1 {
   display: none; }
 
-.OurProducts .op-icon4 {
-  background: url(../img/chanpin4.png) center no-repeat; }
-
-.OurProducts .op-icon4-1 {
-  background: url(../img/chanpin4_1.png) center no-repeat;
+.OurProducts .j-icon-chanpin4-1 {
   display: none; }
 
-.OurProducts .op-icon5 {
-  background: url(../img/chanpin5.png) center no-repeat; }
-
-.OurProducts .op-icon5-1 {
-  background: url(../img/chanpin5_1.png) center no-repeat;
+.OurProducts .j-icon-chanpin5-1 {
   display: none; }
 
-.OurProducts .op-icon6 {
-  background: url(../img/chanpin6.png) center no-repeat; }
-
-.OurProducts .op-icon6-1 {
-  background: url(../img/chanpin6_1.png) center no-repeat;
+.OurProducts .j-icon-chanpin6-1 {
   display: none; }
 
-.OurProducts .op-icon7 {
-  background: url(../img/chanpin7.png) center no-repeat; }
-
-.OurProducts .op-icon7-1 {
-  background: url(../img/chanpin7_1.png) center no-repeat;
+.OurProducts .j-icon-chanpin7-1 {
   display: none; }
 
-.OurProducts .op-icon8 {
-  background: url(../img/chanpin8.png) center no-repeat; }
-
-.OurProducts .op-icon8-1 {
-  background: url(../img/chanpin8_1.png) center no-repeat;
+.OurProducts .j-icon-chanpin8-1 {
   display: none; }
 
-.OurProducts .op-icon9 {
-  background: url(../img/chanpin9.png) center no-repeat; }
-
-.OurProducts .op-icon9-1 {
-  background: url(../img/chanpin9_1.png) center no-repeat;
+.OurProducts .j-icon-chanpin9-1 {
   display: none; }
 
 .OurProducts .op-box {
@@ -823,11 +1039,11 @@ header {
   height: 150px; }
 
 .p-item:hover {
-  box-shadow: 0px 0px 10px #888888;
-  -webkit-box-shadow: 0px 0px 10px #888888;
-  -moz-box-shadow: 0px 0px 10px #888888;
-  -o-box-shadow: 0px 0px 10px #888888;
-  -ms-box-shadow: 0px 0px 10px #888888; }
+  box-shadow: 0px 0px 10px 0px rgba(178, 187, 190, 0.85);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(178, 187, 190, 0.85);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(178, 187, 190, 0.85);
+  -o-box-shadow: 0px 0px 10px 0px rgba(178, 187, 190, 0.85);
+  -ms-box-shadow: 0px 0px 10px 0px rgba(178, 187, 190, 0.85); }
 
 @media (min-width: 768px) and (max-width: 1200px) {
   .p-item {
@@ -875,11 +1091,11 @@ header {
   height: 200px; }
 
 .c-item:hover {
-  box-shadow: 0px 0px 10px #888888;
-  -webkit-box-shadow: 0px 0px 10px #888888;
-  -moz-box-shadow: 0px 0px 10px #888888;
-  -o-box-shadow: 0px 0px 10px #888888;
-  -ms-box-shadow: 0px 0px 10px #888888; }
+  box-shadow: 0px 0px 10px 0px rgba(178, 187, 190, 0.85);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(178, 187, 190, 0.85);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(178, 187, 190, 0.85);
+  -o-box-shadow: 0px 0px 10px 0px rgba(178, 187, 190, 0.85);
+  -ms-box-shadow: 0px 0px 10px 0px rgba(178, 187, 190, 0.85); }
 
 .c-item p {
   font-size: 14px;
@@ -901,7 +1117,7 @@ header {
 .ewm {
   position: fixed;
   z-index: 9999;
-  right: 50px;
+  right: 45px;
   top: 50%;
   margin-top: -100px; }
 
@@ -1020,79 +1236,39 @@ header {
 .h-item p {
   font-size: 14px; }
 
-.h-item .h-icon {
+.h-item .j-icon-huawei {
   width: 52px;
   height: 52px;
   display: inline-block; }
 
-.h-item .h-icon1 {
-  background: url(../img/huawei_1.png) center no-repeat; }
-
-.h-item .h-icon1-1 {
-  background: url(../img/huawei1_1.png) center no-repeat;
+.h-item .j-icon-huawei1-1 {
   display: none; }
 
-.h-item .h-icon2 {
-  background: url(../img/huawei_2.png) center no-repeat; }
-
-.h-item .h-icon2-1 {
-  background: url(../img/huawei2_1.png) center no-repeat;
+.h-item .j-icon-huawei2-1 {
   display: none; }
 
-.h-item .h-icon3 {
-  background: url(../img/huawei_3.png) center no-repeat; }
-
-.h-item .h-icon3-1 {
-  background: url(../img/huawei3_1.png) center no-repeat;
+.h-item .j-icon-huawei3-1 {
   display: none; }
 
-.h-item .h-icon4 {
-  background: url(../img/huawei_4.png) center no-repeat; }
-
-.h-item .h-icon4-1 {
-  background: url(../img/huawei4_1.png) center no-repeat;
+.h-item .j-icon-huawei4-1 {
   display: none; }
 
-.h-item .h-icon5 {
-  background: url(../img/huawei_5.png) center no-repeat; }
-
-.h-item .h-icon5-1 {
-  background: url(../img/huawei5_1.png) center no-repeat;
+.h-item .j-icon-huawei5-1 {
   display: none; }
 
-.h-item .h-icon6 {
-  background: url(../img/huawei_6.png) center no-repeat; }
-
-.h-item .h-icon6-1 {
-  background: url(../img/huawei6_1.png) center no-repeat;
+.h-item .j-icon-huawei6-1 {
   display: none; }
 
-.h-item .h-icon7 {
-  background: url(../img/huawei_7.png) center no-repeat; }
-
-.h-item .h-icon7-1 {
-  background: url(../img/huawei7_1.png) center no-repeat;
+.h-item .j-icon-huawei7-1 {
   display: none; }
 
-.h-item .h-icon8 {
-  background: url(../img/huawei_8.png) center no-repeat; }
-
-.h-item .h-icon8-1 {
-  background: url(../img/huawei8_1.png) center no-repeat;
+.h-item .j-icon-huawei8-1 {
   display: none; }
 
-.h-item .h-icon9 {
-  background: url(../img/huawei_9.png) center no-repeat; }
-
-.h-item .h-icon9-1 {
-  background: url(../img/huawei9_1.png) center no-repeat;
+.h-item .j-icon-huawei9-1 {
   display: none; }
 
-.h-item .h-icon10 {
-  background: url(../img/huawei_10.png) center no-repeat; }
-
-.h-item .h-icon10-1 {
-  background: url(../img/huawei10_1.png) center no-repeat;
+.h-item .j-icon-huawei10-1 {
   display: none; }
 
 .huaweiyun_ewm {
