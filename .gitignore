@@ -11,6 +11,7 @@ buildNumber.properties
 .mvn/timing.properties  
   
 .idea/  
+node_modules/
   
 ## File-based project format:  
 *.iws  
