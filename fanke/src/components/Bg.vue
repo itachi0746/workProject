@@ -1,4 +1,4 @@
-<!--  -->
+<!-- 背景图  -->
 <template>
   <div :class="{bg1: isBg1, bg2: isBg2}"></div>
 </template>
@@ -16,7 +16,6 @@ export default {
 //
 //  computed: {},
 //
-//  mounted: {},
 //
 //  methods: {}
 }
