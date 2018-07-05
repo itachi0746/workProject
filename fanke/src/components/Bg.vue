@@ -1,16 +1,19 @@
 <!-- 背景图  -->
 <template>
-  <div :class="{bg1: isBg1, bg2: isBg2}"></div>
+  <div :class="{bg1: beforeStart, bg2: !beforeStart}"></div>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-      isBg1: true,
-      isBg2: false
-    }
+  props: {
+    beforeStart: Boolean
   },
+//  data:function () {
+//    return {
+//      isBg1: beforeStart,
+//      isBg2: !beforeStart
+//    }
+//  },
 //
 //  components: {},
 //

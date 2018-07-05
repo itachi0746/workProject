@@ -35,10 +35,10 @@
   <div id="app"></div>
 <script>
   (function (doc, win) {
-    var docEl = doc.documentElement,
+    let docEl = doc.documentElement,
       resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
       recalc = function () {
-        var clientWidth = docEl.clientWidth;
+        let clientWidth = docEl.clientWidth;
         if (!clientWidth) return;
         // 改变DOM根节点fontSize大小的值;
         // (屏幕宽度/设计图宽度) = 缩放或扩大的比例值;
@@ -47,7 +47,7 @@
     if (!doc.addEventListener) return;
     win.addEventListener(resizeEvt, recalc, false);
     doc.addEventListener('DOMContentLoaded', recalc, false);
-  })(document, window);   
+  })(document, window);
 </script>
   <!-- built files will be auto injected -->
 </body>

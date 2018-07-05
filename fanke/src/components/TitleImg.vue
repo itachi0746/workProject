@@ -33,7 +33,7 @@
     position: relative;
     top: 1.7rem;
   }
-  .title img {
+   img {
     width: 90%;
   }
 </style>
