@@ -1,7 +1,9 @@
 <template>
   <div class="bottom">
-    <img src="../assets/startBtn.png" @click="$emit('start')"/>
-     <p>
+    <router-link to="/gamePage">
+      <img src="../assets/startBtn.png"/>
+    </router-link>
+    <p>
        已有{{joinNum}}人参加活动
      </p>
   </div>

@@ -1,0 +1,115 @@
+<template>
+  <div class="Mask2" v-show="isShow">
+    <div class="actInfoHead">
+      <ul>
+        <router-link to="/home/actInfo/actDesc">
+          <li>活动说明</li>
+        </router-link>
+
+        <router-link to="/home/actInfo/actRank">
+          <li>排行榜</li>
+        </router-link>
+
+        <router-link to="/home/actInfo/ActAward">
+          <li>我的奖品</li>
+        </router-link>
+
+      </ul>
+
+      <img @click="hide" class="close" src="../assets/close.png"/>
+
+    </div>
+    <router-view></router-view>
+
+
+  </div>
+</template>
+
+<script>
+
+export default {
+  data: function () {
+    return {
+      isShow: true
+    }
+  },
+//
+//  components: {},
+//
+//  computed: {},
+//
+  methods: {
+    hide: function () {
+      this.isShow = !this.isShow
+    }
+  }
+//
+//  mounted: function() {},
+//
+//  beforeDestroy: function() {}
+}
+</script>
+
+<style>
+  .Mask2 {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+
+  }
+  .actInfoHead {
+    color: #ffffff;
+    font-size: 0.8rem;
+    margin: 2rem 1rem 0 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid #ffffff;
+    position: relative;
+  }
+  .actInfoHead ul {
+    /*overflow: hidden;*/
+  }
+  .actInfoHead li {
+    float: left;
+    width: 5rem;
+    color: #ffffff;
+    /*padding: 0.5rem 0;*/
+    text-align: center;
+  }
+  .actInfoHead li:nth-child(2) {
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+  }
+  .close {
+    width: 1.5rem;
+    position: relative;
+    top: -0.2rem;
+    /*float: right;*/
+  }
+  .poupSlideBar {
+    position: absolute;
+    /*left: 0;*/
+    width: 5rem;
+    top: 0;
+  }
+  .slideBarTip {
+    height: 3px;
+    max-width: 5rem;
+    background: #fff;
+  }
+  .slideBarTip::after {
+    content: '';
+    position: absolute;
+    left: 0rem;
+    bottom: 0;
+    border-left: .4rem solid transparent;
+    border-right: .4rem solid transparent;
+    border-bottom: .45rem solid #fff;
+    width: 0;
+    right: 0;
+    margin: auto;
+  }
+
+</style>
