@@ -29,7 +29,7 @@ export default new VueRouter({
             },
             {
               path: '',
-              component: ActDesc
+              redirect: 'actDesc'
             },
             {
               path: 'actRank',
@@ -45,7 +45,7 @@ export default new VueRouter({
     },
     {
       path: '/',
-      component: Home
+      redirect: '/home'
     },
     {
       path: '/gamePage',

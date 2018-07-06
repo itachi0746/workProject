@@ -35,9 +35,14 @@ export default {
 //
 //  methods: {}
 //
-//  mounted: function() {},
+//  mounted: function() {
+//    console.log('home mounted')
+//  },
+
+//  beforeDestroy: function() {
+//    console.log('home beforeDestroy')
 //
-//  beforeDestroy: function() {}
+//  }
 }
 </script>
 

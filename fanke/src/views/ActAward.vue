@@ -40,9 +40,14 @@ export default {
 //
 //  methods: {}
 //
-//  mounted: function() {},
+//  mounted: function() {
+//    console.log('award mounted')
+//  },
+
+//  beforeDestroy: function() {
+//    console.log('award beforeDestroy')
 //
-//  beforeDestroy: function() {}
+//  }
 }
 </script>
 
@@ -58,7 +63,6 @@ export default {
     overflow-y: auto;
     font-size: .6rem;
     margin-top: .2rem;
-    /*color: #ffffff;*/
   }
   .codeInfoBox {
     width: 13.3rem;
