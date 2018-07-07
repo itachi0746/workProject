@@ -1,22 +1,16 @@
 <template>
-  <div class="Mask2" v-show="isShow">
+  <div class="Mask2 actInfo">
     <div class="actInfoHead">
       <ul>
-        <router-link to="/home/actInfo/actDesc">
-          <li>活动说明</li>
-        </router-link>
+        <li @click="tabSwitch1">活动说明</li>
 
-        <router-link to="/home/actInfo/actRank">
-          <li>排行榜</li>
-        </router-link>
+        <li @click="tabSwitch2">排行榜</li>
 
-        <router-link to="/home/actInfo/ActAward">
-          <li>我的奖品</li>
-        </router-link>
+        <li @click="tabSwitch3">我的奖品</li>
 
       </ul>
 
-      <img @click="hide" class="close" src="../assets/close.png"/>
+      <img @click="goBack" class="close" src="../assets/close.png"/>
 
     </div>
     <router-view></router-view>
@@ -28,19 +22,28 @@
 <script>
 
 export default {
-  data: function () {
-    return {
-      isShow: true
-    }
-  },
+//  data: function () {
+//    return {
+//      isShow: true
+//    }
+//  },
 //
 //  components: {},
 //
 //  computed: {},
 //
   methods: {
-    hide: function () {
-      this.isShow = !this.isShow
+    goBack: function () {
+      this.$router.back(-1)
+    },
+    tabSwitch1: function () {  // replace() 不在浏览器留下历史记录
+      this.$router.replace('/home/actInfo/actDesc')
+    },
+    tabSwitch2: function () {
+      this.$router.replace('/home/actInfo/actRank')
+    },
+    tabSwitch3: function () {
+      this.$router.replace('/home/actInfo/actAward')
     }
   }
 //
@@ -59,6 +62,9 @@ export default {
     top: 0;
     left: 0;
 
+  }
+  .actInfo,.Mask2 {
+    z-index: 20;
   }
   .actInfoHead {
     color: #ffffff;

@@ -13,11 +13,16 @@
     <!--<div class="gameResultPart">-->
     <!--<GameResult></GameResult>-->
     <!--</div>-->
+    <!--<AwardDetail/>-->
+    <!--<Shake></Shake>-->
+    <!--<AwardResult></AwardResult>-->
   </div>
 </template>
 
 <script>
 //  import GameResult from './components/GameResult.vue'
+//  import AwardResult from './views/AwardResult.vue'
+//  import Shake from './components/Shake.vue'
 
 export default {
 //  data: function () {
@@ -29,6 +34,9 @@ export default {
 
   name: 'App',
   components: {
+//    AwardResult
+//    Shake
+//    AwardDetail
 //    Bg,
 //    RuleImg,
 //    TitleImg,

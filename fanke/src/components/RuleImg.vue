@@ -1,6 +1,9 @@
 <template>
   <div class="rule">
-    <img src="../assets/ruleImg.png" alt="ruleImg">
+    <router-link to="/home/actInfo">
+      <img src="../assets/ruleImg.png" alt="ruleImg">
+
+    </router-link>
   </div>
 </template>
 
@@ -30,6 +33,7 @@
     position: absolute;
     right: 0.5rem;
     top: 0;
+    z-index: 10;
 
   }
   .rule img {

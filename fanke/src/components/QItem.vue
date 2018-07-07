@@ -1,10 +1,13 @@
 <template>
   <div class="question">
-    <p class="questionNum">{{ question.QuestionId + '/' + questionsLength }}</p>
-    <p class="questionText">{{ question.QuestionDesc }}</p>
-    <img src="../assets/yu.jpg" alt="">
+    <div>
+      <p class="questionNum">{{ aa[0].QuestionId + '/' + questionsLength }}</p>
+      <p class="questionText">{{ aa[0].QuestionDesc }}</p>
+      <img src="../assets/yu.jpg" alt="">
+
+    </div>
     <div class="optionBox">
-      <div class="option" v-for="(item, index) in question.Items" :key="index">
+      <div class="option" v-for="(item, index) in aa[0].Items" :key="index">
         <p>{{item.ItemDesc}}</p>
       </div>
 
@@ -16,20 +19,20 @@
 
   export default {
     props: {
-      question: Object,
+      questions: Array,
       questionsLength: Number
     },
 //
-//    data: function () {
-//      return {
-//        items: []
-//      }
-//    },
+    data: function () {
+      return {
+        aa: []
+      }
+    },
 //
-//    mounted: function () {
-//      this.items = this.question.Items;
-//      console.log('question',this.items)
-//    }
+    mounted: function () {
+      this.aa = this.questions;
+      console.log('question',this.questions)
+    }
 //
 //  methods: {}
 //
@@ -65,10 +68,12 @@
     color: #ffffff;
   }
   .questionText {
+    font-size:0.8rem;
     color: rgb(112, 0, 252);
     text-shadow: rgb(255, 255, 255) -1px -1px 0px, rgb(255, 255, 255) 0px -1px 0px, rgb(255, 255, 255) 1px -1px 0px, rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 1px 1px 0px, rgb(255, 255, 255) 0px 1px 0px, rgb(255, 255, 255) -1px 1px 0px, rgb(255, 255, 255) -1px 0px 0px;
   }
   .questionNum {
+    font-size:0.9rem;
     color: #fe3311;
     text-shadow: -1px -1px 0 #fff, 0px -1px 0 #fff, 1px -1px 0 #fff, 1px 0 0 #fff, 1px 1px 0 #fff, 0px 1px 0 #fff, -1px 1px 0 #fff, -1px 0 0 #fff;
   }

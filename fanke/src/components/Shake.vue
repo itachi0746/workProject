@@ -1,6 +1,6 @@
 <template>
-  <div class="resultMask">
-    2222
+  <div class="Mask2 yao">
+    <img src="../assets/yao.png"/>
   </div>
 </template>
 
@@ -25,5 +25,13 @@ export default {
 </script>
 
 <style>
+.yao img {
+  width: 15rem;
+  position: absolute;
+  top: 5rem;
+  left: 50%;
+  margin-left:-7.5rem;
 
+
+}
 </style>
