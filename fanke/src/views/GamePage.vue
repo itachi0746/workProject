@@ -4,14 +4,15 @@
      <div class="bg2"></div>
      <UserImg></UserImg>
      <Music></Music>
-     <QList :questions="questions"></QList>
+     <!--<QList :questions="questions"></QList>-->
+     <router-view></router-view>
    </div>
 </template>
 
 <script>
   import UserImg from '../components/UserImg.vue'
   import Music from '../components/Music.vue'
-  import QList from '../components/QList.vue'
+//  import QList from '../components/QList.vue'
 
 export default {
   data: function () {
@@ -22,8 +23,8 @@ export default {
 //
   components: {
     UserImg,
-    Music,
-    QList
+    Music
+//    QList
   },
 //
 //  computed: {},
@@ -32,8 +33,9 @@ export default {
 //
   mounted: function() {
     this.questions = this.$route.params.questions;
+    const _id = this.questions[0].QuestionId;
 //    console.log(this.questions)
-
+    this.$router.push({ name: 'question', params: {questions: this.questions, id: _id}})
   },
 //
 //  beforeDestroy: function() {}

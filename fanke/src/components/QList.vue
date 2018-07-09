@@ -1,49 +1,53 @@
 <template>
   <!--问题-->
   <div class="QBox">
-    <!--<div class="question">-->
-      <!--<div :class="{ animated: true, slideOutUp: isSlide }" v-if="questions">-->
+    <div class="question">
+      <div :class="{ animated: true, slideOutUp: isSlide }" v-if="questions">
         <!--<p class="questionNum">{{ questions[Num].QuestionNo + '/' + questions.length }}</p>-->
-        <!--<p class="questionText">{{ questions[Num].QuestionDesc }}</p>-->
-        <!--<img :src="questions[Num].QuestionImage" alt="">-->
+        <p class="questionNum">{{ questions[Num].QuestionId + '/' + questions.length }}</p>
+        <p class="questionText">{{ questions[Num].QuestionDesc }}</p>
+        <img :src="questions[Num].QuestionImage" alt="">
 
-      <!--</div>-->
-      <!--<div :class="{ animated: true, optionBox: true, slideOutDown: isSlide }" v-if="questions">-->
-        <!--&lt;!&ndash;选项&ndash;&gt;-->
-        <!--<div :class="{option: true}" v-for="(item, index) in questions[Num].Items" :key="index">-->
-          <!--<p class="" @click="checkAnswer" :id="questions[Num].Items[index].ItemId">{{item.ItemDesc}}</p>-->
-        <!--</div>-->
+      </div>
+      <div :class="{ animated: true, optionBox: true, slideOutDown: isSlide }" v-if="questions">
+        <!--选项-->
+        <div :class="{option: true}" v-for="(item, index) in questions[Num].Items" :key="index">
+          <p class="" @click="checkAnswer" :id="questions[Num].Items[index].ItemId">{{item.ItemDesc}}</p>
+        </div>
 
-      <!--</div>-->
+      </div>
 
-    <!--</div>-->
-    <QItem></QItem>
+    </div>
+    <!--<QItem></QItem>-->
   </div>
 
 </template>
 
 <script>
-  import QItem from './QItem.vue'
+//  import QItem from './QItem.vue'
 
   export default {
-    props: {
-      questions: Array,
-
-    },
-//    data: function () {
-//      return {
-//        isSlide: false,  // 动画开关
-//        Num: 0,  // 第几条问题
-//      }
+//    props: {
+//      questions: Array,
+//
 //    },
-    components: {
-      QItem
+    data: function () {
+      return {
+        questions: [],
+        target: {},
+        isSlide: false,  // 动画开关
+        Num: 0,  // 第几条问题
+      }
+    },
+    computed: {
+      _id: function () {
+//        console.log(this.questions[this.Num].QuestionId)
+        return ++this.questions[this.Num].QuestionId
+      }
     },
 
-//
-//  computed: {},
-//
     mounted: function () {
+      this.questions = this.$route.params.questions;
       console.log('Qlist', this.questions);
 //      请求问题数据
 //      const url = 'api/exam/GetQuestions';
@@ -61,10 +65,15 @@
 //      })
     },
     methods: {
+      nextQ: function () {
+        //  切换去下一个问题,相同的路由, 只是id不同 显示不同的问题
+//        console.log(this._id)
+        this.$router.push({ name: 'question', params: {questions: this.questions, id: this._id}});
+      },
 
       checkAnswer: function () {
         // `event` 是原生 DOM 事件
-        this.event = event;
+        this._event = event;
 
         //请求问题答案
         const url = 'api/exam/CheckQuestion';
@@ -79,29 +88,48 @@
         }).then(res => {
           console.log(res.data.Data, '请求成功');
 //        this.questions = res.data.Data;
+//        正确答案
           const rightAnswer = res.data.Data.Items[0].ItemId;
-//          console.log(this.event.target.id)
+//          console.log(rightAnswer)
 //          alert(rightAnswer)
           if (event) {
 //            alert(event.target.id)
-//            回答正确
-            if(this.event.target.id === rightAnswer) {
-              this.event.target.style.background = 'url("/static/btnRight.png") 0% 0% / 100% 100% no-repeat';
-//            错误
+            if(this._event.target.id === rightAnswer) {
+              // 回答正确
+              this._event.target.style.background = 'url("/static/btnRight.png") 0% 0% / 100% 100% no-repeat';
             } else {
-              this.event.target.style.background = 'url("/static/btnWrong.png") 0% 0% / 100% 100% no-repeat';
-              this.event.target.classList.add('shakeLR');
+              // 错误
+              this._event.target.style.background = 'url("/static/btnWrong.png") 0% 0% / 100% 100% no-repeat';
+              this._event.target.classList.add('shakeLR');
 
             }
             this.isSlide = true;
+            if(this._id <= this.questions.length) {   // 题目还未答完
+
+              setTimeout( ()=> {
+                this.nextQ();
+              },1400)
+
+            } else {  // 题目答完
+              // TODO
+            }
 
           }
 
 
-
         }).catch(err => {
-          console.log(err.data.Data, '请求错误');
+          console.log(err, '请求错误');
         })
+      }
+    },
+    watch: {
+      // 检测动态路由来回切换 并修改数据
+      $route (to, from) {
+        this.isSlide = false;
+        this.Num++;
+        this._event.target.style.background = '';
+        this._event.target.classList.remove('shakeLR');
+
       }
     }
   }

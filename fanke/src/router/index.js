@@ -10,6 +10,7 @@ import ActInfo from '../views/ActInfo.vue'
 import ActDesc from '../views/ActDesc.vue'
 import ActRank from '../views/ActRank.vue'
 import ActAward from '../views/ActAward.vue'
+import QList from '../components/QList.vue'
 
 Vue.use(VueRouter)
 
@@ -48,7 +49,8 @@ export default new VueRouter({
           children: [
             {
               path: '/home/gamePage/question/:id',
-              component: QItem
+              name: 'question',
+              component: QList
             }
           ]
         }
