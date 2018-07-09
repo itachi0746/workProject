@@ -1,17 +1,20 @@
 <template>
   <div class="question">
-    <div>
-      <p class="questionNum">{{ aa[0].QuestionId + '/' + questionsLength }}</p>
-      <p class="questionText">{{ aa[0].QuestionDesc }}</p>
-      <img src="../assets/yu.jpg" alt="">
+
+    <div :class="{ animated: true, slideOutUp: isSlide }" v-if="questions">
+      <p class="questionNum">{{ questions[Num].QuestionNo + '/' + questions.length }}</p>
+      <p class="questionText">{{ questions[Num].QuestionDesc }}</p>
+      <img :src="questions[Num].QuestionImage" alt="">
 
     </div>
-    <div class="optionBox">
-      <div class="option" v-for="(item, index) in aa[0].Items" :key="index">
-        <p>{{item.ItemDesc}}</p>
+    <div :class="{ animated: true, optionBox: true, slideOutDown: isSlide }" v-if="questions">
+      <!--选项-->
+      <div :class="{option: true}" v-for="(item, index) in questions[Num].Items" :key="index">
+        <p class="" @click="checkAnswer" :id="questions[Num].Items[index].ItemId">{{item.ItemDesc}}</p>
       </div>
 
     </div>
+
   </div>
 </template>
 
@@ -20,21 +23,58 @@
   export default {
     props: {
       questions: Array,
-      questionsLength: Number
+      questionsLength: Number,
+      questionId: 1,
+      itemId: ''
     },
 //
-    data: function () {
-      return {
-        aa: []
-      }
-    },
+//    data: function () {
+//      return {
+//        aa: this.questions
+//      }
+//    },
 //
+//    beforeCreate: function () {
+//      this.aa = this.questions;
+//      console.log('beforeCreate',this.questions)
+//    },
     mounted: function () {
-      this.aa = this.questions;
-      console.log('question',this.questions)
-    }
+//      this.aa = this.questions;
+      console.log('Qitem',this.questions[0].Items[0].ItemId)
+    },
+//    watch: {
+//      questions: function () {
+//        console.log('watch',this.questions)
+//      }
+//    }
+
+
+
 //
-//  methods: {}
+  methods: {
+//    getOptionData: function () {
+//
+//    },
+    checkAnswer: function () {
+      //请求问题答案
+      const url = 'api/exam/CheckQuestion';
+      this.$http({
+        url: url,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
+        method: 'post',//请求方式
+//        data: {
+//          QuestionId: this.questionId
+//          ItemId: itemId
+//        }
+        //这里可以添加axios文档中的各种配置
+      }).then(res => {
+        console.log(res.data, '请求成功');
+//        this.questions = res.data.Data;
+
+      }).catch(err => {
+        console.log(err.data, '请求错误');
+      })
+    }
+  }
 //
 //  mounted: function() {},
 //

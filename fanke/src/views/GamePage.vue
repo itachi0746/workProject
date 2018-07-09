@@ -4,7 +4,7 @@
      <div class="bg2"></div>
      <UserImg></UserImg>
      <Music></Music>
-     <QList></QList>
+     <QList :questions="questions"></QList>
    </div>
 </template>
 
@@ -14,10 +14,11 @@
   import QList from '../components/QList.vue'
 
 export default {
-//  data: function () {
-//    return {
-//    }
-//  },
+  data: function () {
+    return {
+      questions: []
+    }
+  },
 //
   components: {
     UserImg,
@@ -29,7 +30,11 @@ export default {
 //
 //  methods: {}
 //
-//  mounted: function() {},
+  mounted: function() {
+    this.questions = this.$route.params.questions;
+//    console.log(this.questions)
+
+  },
 //
 //  beforeDestroy: function() {}
 }
@@ -39,7 +44,9 @@ export default {
   .gamePart {
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     z-index: 10;
     /*display: none;*/
   }

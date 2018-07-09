@@ -40,16 +40,23 @@ export default new VueRouter({
               component: ActAward
             }
           ]
+        },
+        {
+          path: 'gamePage',
+          name: 'gamePage',
+          component: GamePage,
+          children: [
+            {
+              path: '/home/gamePage/question/:id',
+              component: QItem
+            }
+          ]
         }
       ]
     },
     {
       path: '/',
       redirect: '/home'
-    },
-    {
-      path: '/gamePage',
-      component: GamePage
     }
   ]
 })
