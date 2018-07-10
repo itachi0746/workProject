@@ -36,8 +36,18 @@ export default {
 //
 //  methods: {}
 //
-
-
+//  mounted () {
+//    const url = 'www.baidu.com';
+//    this.$http({
+//      url: url,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
+//      method: 'get',//请求方式
+//      //这里可以添加axios文档中的各种配置
+//    }).then(res => {
+//      console.log(res.data, '请求成功');
+//    }).catch(err => {
+//      console.log(err, '请求错误');
+//    })
+//  }
 
 //  beforeDestroy: function() {
 //    console.log('home beforeDestroy')
