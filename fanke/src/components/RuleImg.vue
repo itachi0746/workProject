@@ -1,7 +1,7 @@
 <template>
   <div class="rule">
     <router-link to="/home/actInfo">
-      <img src="../assets/ruleImg.png" alt="ruleImg">
+      <img src="../assets/ruleImg.png" alt="ruleImg" class="animated pulse infinite">
 
     </router-link>
   </div>
@@ -32,7 +32,7 @@
   .rule {
     position: absolute;
     right: 0.5rem;
-    top: 0;
+    top: 0.5rem;
     z-index: 10;
 
   }

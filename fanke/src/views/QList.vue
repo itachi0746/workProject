@@ -40,9 +40,12 @@
       }
     },
     computed: {
+      // 下一题的id
       _id: function () {
-//        console.log(this.questions[this.Num].QuestionNo)
-        return ++this.questions[this.Num].QuestionNo
+//      console.log(this.questions[this.Num].QuestionNo)
+        let temp = this.questions[this.Num].QuestionNo;
+        temp++;
+        return temp
       }
     },
 
@@ -105,13 +108,18 @@
             }
             this.isSlide = true;
             if(this._id <= this.questions.length) {   // 题目还未答完
-
+              console.log(1)
               setTimeout( ()=> {
                 this.nextQ();
               },1400)
 
             } else {  // 题目答完 转去答题结果页
-              // TODO
+//              console.log('this._id:',this._id)
+              console.log(2)
+              setTimeout( ()=> {
+                this.$router.push('/home/gamePage/gameResult')
+              },1400)
+//              this.$router.push({ name: 'question', params: {questions: this.questions, id: this._id}});
 
             }
 
@@ -126,6 +134,7 @@
     watch: {
       // 检测动态路由来回切换 并修改数据
       $route (to, from) {
+        console.log('Qlist watch');
         this.isSlide = false;
         this.Num++;
         this._event.target.style.background = '';

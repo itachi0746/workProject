@@ -8,7 +8,7 @@
     </div>
     <div id="awardDetailScrollBox">
       <div id="awardDeailBg" class="bgfix hide"></div>
-      <div class="awardCloseIcon" onclick="hg.fire('scrollEvent',true);"></div>
+      <div class="awardCloseIcon" @click="_goBack"></div>
       <div class="awardDetail">
         <div class="hostName"
              style="padding: 0.7rem 2.2rem 1rem 0.7rem; text-align: left; color: rgb(255, 255, 255); word-break: break-word; text-decoration: none;">
@@ -175,7 +175,11 @@ export default {
 //
 //  computed: {},
 //
-//  methods: {}
+  methods: {
+    _goBack: function () {
+      this.$router.go(-1);
+    }
+  }
 //
 //  mounted: function() {},
 //

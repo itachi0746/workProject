@@ -15,7 +15,6 @@
     </div>
     <router-view></router-view>
 
-
   </div>
 </template>
 
@@ -37,13 +36,16 @@ export default {
       this.$router.back(-1)
     },
     tabSwitch1: function () {  // replace() 不在浏览器留下历史记录
-      this.$router.replace('/home/actInfo/actDesc')
+//      this.$router.replace('/home/actInfo/actDesc')
+      this.$router.replace('actDesc')
     },
     tabSwitch2: function () {
-      this.$router.replace('/home/actInfo/actRank')
+//      this.$router.replace('/home/actInfo/actRank')
+      this.$router.replace('actRank')
     },
     tabSwitch3: function () {
-      this.$router.replace('/home/actInfo/actAward')
+//      this.$router.replace('/home/actInfo/actAward')
+      this.$router.replace('actAward')
     }
   }
 //
@@ -57,14 +59,14 @@ export default {
   .Mask2 {
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.7);
     position: absolute;
     top: 0;
     left: 0;
 
   }
   .actInfo,.Mask2 {
-    z-index: 20;
+    z-index: 40;
   }
   .actInfoHead {
     color: #ffffff;

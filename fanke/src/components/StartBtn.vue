@@ -11,9 +11,7 @@
 
 <script>
   export default {
-    props: {
-      beforeStart: Boolean
-    },
+
     data: function () {
       return {
         joinNum: null,
@@ -46,7 +44,7 @@
 //      this.questionsLength = this.questions.length;
         console.log('Home',this.questions)
       }).catch(err => {
-        console.log(err.data, '请求错误');
+        console.log(err, '请求错误');
       })
     },
 //
@@ -63,7 +61,7 @@
     text-align: center;
     font-size: 0.8rem;
   }
-   img {
+  .bottom img {
     width: 10rem;
   }
   .bottom p {

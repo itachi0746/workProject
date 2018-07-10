@@ -10,9 +10,13 @@ import ActInfo from '../views/ActInfo.vue'
 import ActDesc from '../views/ActDesc.vue'
 import ActRank from '../views/ActRank.vue'
 import ActAward from '../views/ActAward.vue'
-import QList from '../components/QList.vue'
+import QList from '../views/QList.vue'
+import GameResult from '../views/GameResult.vue'
+import Shake from '../views/Shake.vue'
+import AwardResult from '../views/AwardResult.vue'
+import AwardDetail from '../views/AwardDetail.vue'
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 export default new VueRouter({
   routes: [
@@ -38,7 +42,13 @@ export default new VueRouter({
             },
             {
               path: 'actAward',
-              component: ActAward
+              component: ActAward,
+              children: [
+                {
+                  path: 'awardDetail',
+                  component: AwardDetail
+                }
+              ]
             }
           ]
         },
@@ -51,7 +61,47 @@ export default new VueRouter({
               path: '/home/gamePage/question/:id',
               name: 'question',
               component: QList
+            },
+            {
+              path: '/home/gamePage/gameResult',
+              name: 'gameResult',
+              component: GameResult,
+              children: [
+                {
+                  path: '/home/gamePage/gameResult/actInfo',
+                  component: ActInfo,
+                  children: [
+                    {
+                      path: 'actDesc',
+                      component: ActDesc
+                    },
+                    {
+                      path: '',
+                      redirect: 'actDesc'
+                    },
+                    {
+                      path: 'actRank',
+                      component: ActRank
+                    },
+                    {
+                      path: 'actAward',
+                      component: ActAward
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              path: '/home/gamePage/shake',
+              name: 'shake',
+              component: Shake
+            },
+            {
+              path: '/home/gamePage/awardResult',
+              name: 'awardResult',
+              component: AwardResult
             }
+
           ]
         }
       ]

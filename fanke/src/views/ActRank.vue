@@ -19,13 +19,24 @@
       <div id="rankHeight">
         <table id="rankInfoBox" class="rankTable" cellspacing="0" cellpadding="0" style="margin-top: 0;">
           <tbody>
-          <tr class="rankInfo">
-            <td>No.1</td>
+          <tr class="rankInfo" v-for="(user, index) in Users" :key="index">
+            <td>No.{{user.Rank}}</td>
             <td>
-              <div class="userImg manImg"></div>
+              <div v-if="Logo">
+                <div class="userImg manImg">
+                  <img :src="user.Logo" alt="">
+                </div>
+
+              </div>
+              <div v-else>
+                <div class="userImg manImg">
+                  <img src="../assets/manImg.jpg" alt="">
+                </div>
+
+              </div>
             </td>
-            <td class="userName">magazine</td>
-            <td>999<span class="scoreUnit">分</span></td>
+            <td class="userName">{{user.Name}}</td>
+            <td>{{user.Score}}<span class="scoreUnit">分</span></td>
           </tr>
           </tbody>
         </table>
@@ -44,10 +55,15 @@
 <script>
 
 export default {
-//  data: function () {
-//    return {
-//    }
-//  },
+  data: function () {
+    return {
+      Users: [],
+//      Logo: '',
+//      Name: '',
+//      Rank: 0,
+//      Score: 0
+    }
+  },
 //
 //  components: {},
 //
@@ -55,7 +71,26 @@ export default {
 //
 //  methods: {}
 //
-//  mounted: function() {},
+  mounted: function() {  // 请求排名
+
+    const url = 'api/exam/Rank';
+    this.$http({
+      url: url,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
+      method: 'post',//请求方式
+      //这里可以添加axios文档中的各种配置
+    }).then(res => {
+      console.log(res.data, '请求成功');
+      this.Users = res.data.Data;
+//      this.Logo = data.Logo;
+//      this.Name = data.Name;
+//      this.Rank = data.Rank;
+//      this.Score = data.Score;
+
+    }).catch(err => {
+      console.log(err, '请求错误');
+    })
+
+  },
 //
 //  beforeDestroy: function() {}
 }
@@ -103,9 +138,11 @@ export default {
     table-layout: fixed;
     font-size: .7rem;
     color: #FFF;
+    border-collapse: collapse;
   }
   .rankInfo {
     line-height: 2.75rem;
+    border-bottom: 1px solid #ffffff;
   }
   .rankTable .userImg {
     width: 2rem;
@@ -113,6 +150,16 @@ export default {
     margin: 0 auto;
     border-radius: 999px;
   }
+  .userImg img {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+  }
+
   .rankTable .userName {
     overflow: hidden;
     text-overflow: ellipsis;

@@ -4,9 +4,9 @@
       <div class="poupLine">
         <div class="mainTitle">活动奖品</div>
         <div>
-          <p>一等奖：价值100的礼包</p>
-          <p>一等奖：价值100的礼包</p>
-          <p>一等奖：价值100的礼包</p>
+          <p>一等奖：价值100元的礼包</p>
+          <p>二等奖：价值50元的礼包</p>
+          <p>三等奖：价值10元的礼包</p>
         </div>
       </div>
       <div class="poupLine">
@@ -18,7 +18,7 @@
       <div class="poupLine">
         <div class="mainTitle">主办单位</div>
         <div>
-          <p>本次活动主办单位为 - </p>
+          <p>本次活动主办单位为 - {{HostUnit}}</p>
         </div>
       </div>
       <div class="poupLine">
@@ -26,7 +26,7 @@
         <div>
           <p>
             页面技术由
-            <a class="skillName" onclick="return false" href="">凡科互动</a>
+            <a class="skillName" onclick="return false" href="">{{TechnicalSupport}}</a>
             提供，技术支持方仅提供页面技术，不承担由活动引起的相关法律责任
           </p>
         </div>
@@ -35,7 +35,7 @@
         <div class="mainTitle">活动说明</div>
         <div>
           <p>
-            达到80分领取奖品，礼品先到先得，送完即止。
+            达到{{point}}分领取奖品，礼品先到先得，送完即止。
           </p>
           <p>
             根据题目以及图片提示，选择正确的答案。每次参与时，从题库中随机抽出相应的题目。
@@ -56,10 +56,13 @@
 <script>
 
 export default {
-//  data: function () {
-//    return {
-//    }
-//  },
+  data: function () {
+    return {
+      HostUnit: '接入信息',
+      TechnicalSupport: '接入信息',
+      point: 80
+    }
+  },
 //
 //  components: {},
 //

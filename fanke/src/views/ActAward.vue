@@ -3,7 +3,7 @@
     <div class="poupMainInfo">
       <div id="awardInfoBox">
         <div id="awardInfo">
-          <div id="codeInfo0" class="codeInfoBox">
+          <div id="codeInfo0" class="codeInfoBox" @click="toAwardDetail">
             <div class="goDetailIcon"></div>
             <div class="djqImgBox"></div>
             <div class="isEmptyAward ellipsis" style="width: 11rem;margin-left:0.6rem;font-size:0.7rem;"><span
@@ -22,6 +22,8 @@
     <div class="poupSlideBar">
       <div class="slideBarTip"></div>
     </div>
+
+    <router-view></router-view>
   </div>
 
 </template>
@@ -38,7 +40,11 @@ export default {
 //
 //  computed: {},
 //
-//  methods: {}
+  methods: {
+    toAwardDetail: function () {
+      this.$router.push('/home/actInfo/actAward/awardDetail')
+    }
+  }
 //
 //  mounted: function() {
 //    console.log('award mounted')
