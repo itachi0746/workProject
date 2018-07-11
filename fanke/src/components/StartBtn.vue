@@ -1,7 +1,7 @@
 <template>
   <div class="bottom">
     <router-link :to="{name: 'gamePage', params: {questions: questions}}">
-      <img src="../assets/startBtn.png"/>
+      <img class="animated tada" src="../assets/startBtn.png"/>
     </router-link>
     <p>
        已有{{joinNum}}人参加活动
@@ -24,25 +24,47 @@
 //    computed: {},
 //
 //    methods: {
-//      start: function () {
-//        this.beforeStart = false
-//        console.log('btn',this.beforeStart)
+//      gameStart: function () {
+////      请求问题数据
+//        const url = 'api/exam/GetQuestions';
+//        this.$http({
+//          url: url,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
+//          method: 'post',//请求方式
+//          //这里可以添加axios文档中的各种配置
+//        }).then(res => {
+//          console.log(res.data, '请求成功');
+//          this.questions = res.data.Data;
+////        console.log('Home',this.questions)
+//        }).catch(err => {
+//          console.log(err, '请求错误');
+//        })
 //      }
 //    },
 //
     mounted: function () {
-//      console.log(this.test);
-//      请求问题数据
-      const url = 'api/exam/GetQuestions';
+//      请求活动数据
+      const url = 'api/exam/ActivityInfo';
       this.$http({
         url: url,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
         method: 'post',//请求方式
         //这里可以添加axios文档中的各种配置
       }).then(res => {
-        console.log(res.data, '请求成功');
+        console.log(res.data, '请求活动数据成功');
+        this.joinNum = res.data.Data.ParticipantsCount;
+      }).catch(err => {
+        console.log(err, '请求错误');
+      });
+
+      // 请求问题数据
+      const url2 = 'api/exam/GetQuestions';
+      this.$http({
+        url: url2,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
+        method: 'post',//请求方式
+        //这里可以添加axios文档中的各种配置
+      }).then(res => {
+        console.log(res.data, '请求问题数据成功');
         this.questions = res.data.Data;
-//      this.questionsLength = this.questions.length;
-        console.log('Home',this.questions)
+//        console.log('Home',this.questions)
       }).catch(err => {
         console.log(err, '请求错误');
       })
@@ -53,6 +75,10 @@
 </script>
 
 <style>
+  .bottom .animated {
+    animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;
+  }
   .bottom {
     position: absolute;
     bottom: 1rem;
@@ -61,9 +87,11 @@
     text-align: center;
     font-size: 0.8rem;
   }
+
   .bottom img {
     width: 10rem;
   }
+
   .bottom p {
     color: #fff;
     text-shadow: rgb(125, 73, 25) -1px -1px 0px, rgb(125, 73, 25) 0px -1px 0px, rgb(125, 73, 25) 1px -1px 0px, rgb(125, 73, 25) 1px 0px 0px, rgb(125, 73, 25) 1px 1px 0px, rgb(125, 73, 25) 0px 1px 0px, rgb(125, 73, 25) -1px 1px 0px, rgb(125, 73, 25) -1px 0px 0px;

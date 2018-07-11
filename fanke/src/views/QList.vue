@@ -11,8 +11,22 @@
       </div>
       <div :class="{ animated: true, optionBox: true, slideOutDown: isSlide }" v-if="questions">
         <!--选项-->
-        <div :class="{option: true}" v-for="(item, index) in questions[Num].Items" :key="index">
-          <p class="" @click="checkAnswer" :id="questions[Num].Items[index].ItemId">{{item.ItemDesc}}</p>
+        <div class="option" v-for="(item, index) in questions[Num].Items" :key="index">
+          <p class="normalP" @click="flag && checkAnswer()" :id="questions[Num].Items[index].ItemId">{{item.ItemDesc}}</p>
+
+          <!--<div v-if="!hasAnswer">-->
+            <!--<p class="normalP" @click="checkAnswer" :id="questions[Num].Items[index].ItemId">{{item.ItemDesc}}</p>-->
+
+          <!--</div>-->
+          <!--<div v-else>-->
+            <!--<div v-if="isRight">-->
+              <!--<p class="rightP" @click="checkAnswer" :id="questions[Num].Items[index].ItemId">{{item.ItemDesc}}</p>-->
+            <!--</div>-->
+            <!--<div v-else>-->
+              <!--<p class="wrongP" @click="checkAnswer" :id="questions[Num].Items[index].ItemId">{{item.ItemDesc}}</p>-->
+            <!--</div>-->
+
+          <!--</div>-->
         </div>
 
       </div>
@@ -37,6 +51,9 @@
         target: {},
         isSlide: false,  // 动画开关
         Num: 0,  // 第几条问题
+        flag: true  // 点击开关
+//        hasAnswer: false,
+//        isRight: false
       }
     },
     computed: {
@@ -51,7 +68,6 @@
 
     mounted: function () {
       this.questions = this.$route.params.questions;
-      console.log('Qlist', this.questions);
 //      请求问题数据
 //      const url = 'api/exam/GetQuestions';
 //      this.$http({
@@ -75,8 +91,12 @@
       },
 
       checkAnswer: function () {
+
+        console.log('checkAnswer')
+        this.flag = false;
         // `event` 是原生 DOM 事件
         this._event = event;
+//        this.hasAnswer = true;
 
         //请求问题答案
         const url = 'api/exam/CheckQuestion';
@@ -90,52 +110,54 @@
           //这里可以添加axios文档中的各种配置
         }).then(res => {
           console.log(res.data.Data, '请求成功');
-//        this.questions = res.data.Data;
 //        正确答案
           const rightAnswer = res.data.Data.Items[0].ItemId;
-//          console.log(rightAnswer)
-//          alert(rightAnswer)
           if (event) {
-//            alert(event.target.id)
-            if(this._event.target.id === rightAnswer) {
-              // 回答正确
+            if(this._event.target.id === rightAnswer) {  // 回答正确
+//              this.isRight = true;
+
+//              this._event.target.style.background = 'url("/content/fanke/static/btnRight.png") 0% 0% / 100% 100% no-repeat';
               this._event.target.style.background = 'url("/static/btnRight.png") 0% 0% / 100% 100% no-repeat';
-            } else {
-              // 错误
+
+            } else {  // 错误
+
+//              this._event.target.style.background = 'url("/content/fanke/static/btnWrong.png") 0% 0% / 100% 100% no-repeat';
               this._event.target.style.background = 'url("/static/btnWrong.png") 0% 0% / 100% 100% no-repeat';
               this._event.target.classList.add('shakeLR');
 
             }
             this.isSlide = true;
             if(this._id <= this.questions.length) {   // 题目还未答完
-              console.log(1)
+              console.log(1);
               setTimeout( ()=> {
                 this.nextQ();
               },1400)
 
             } else {  // 题目答完 转去答题结果页
 //              console.log('this._id:',this._id)
-              console.log(2)
+              console.log(2);
               setTimeout( ()=> {
                 this.$router.push('/home/gamePage/gameResult')
               },1400)
 //              this.$router.push({ name: 'question', params: {questions: this.questions, id: this._id}});
-
             }
 
           }
 
-
         }).catch(err => {
           console.log(err, '请求错误');
-        })
+        });
       }
+
+
     },
     watch: {
       // 检测动态路由来回切换 并修改数据
       $route (to, from) {
-        console.log('Qlist watch');
         this.isSlide = false;
+        this.flag = true;
+        console.log('flag:', this.flag);
+
         this.Num++;
         this._event.target.style.background = '';
         this._event.target.classList.remove('shakeLR');
@@ -146,18 +168,13 @@
 </script>
 
 <style>
-  .animated {
+  .QBox .animated {
     -webkit-animation-delay: 0.7s;
     animation-delay: 0.7s;
   }
-  /*.optionBox .animated {*/
-    /*-webkit-animation-delay: 0s;*/
-    /*animation-delay: 0s;*/
-  /*}*/
+
   .QBox {
-    /*-webkit-box-sizing: border-box;*/
-    /*-box-sizing: border-box;*/
-    /*padding: 5rem 4rem;*/
+
     position: relative;
     width: 100%;
     height: 100%;
@@ -183,7 +200,7 @@
     /*background: url("../assets/btnDefault.png") no-repeat;*/
     /*background-size: 100% 100%;*/
   }
-  .option p {
+  .option .rightP, .option .wrongP, .option .normalP {
     font-size: 0.8rem;
     /*padding: .2rem 1rem;*/
     padding-left: 1rem;
@@ -191,11 +208,27 @@
     width: 9.75rem;
     height: 1.75rem;
     line-height: 1.70rem;
-    background: url("../assets/btnDefault.png") no-repeat;
-    background-size: 100% 100%;
     display: inline-block;
     position: relative;
     left: 0;
+
+  }
+  .option .normalP {
+    background: url("../assets/btnDefault.png") no-repeat;
+    background-size: 100% 100%;
+
+
+  }
+  .option .rightP {
+    background: url("../assets/btnRight.png") no-repeat;
+    background-size: 100% 100%;
+
+
+  }
+  .option .wrongP {
+    background: url("../assets/btnWrong.png") no-repeat;
+    background-size: 100% 100%;
+
 
   }
   .questionText {

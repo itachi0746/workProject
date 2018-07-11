@@ -1,7 +1,7 @@
 <template>
   <div class="Mask gameResult">
     <!--挑战成功-->
-    <div class="resultBox isSuccess" v-if="isSuccess">
+    <div class="resultBox isSuccess" v-if="isSuccess" v-cloak="true">
       <div class="successBg"></div>
       <div class="optContainer">
         <img class="manImg" src="../assets/manImg.jpg"/>
@@ -33,7 +33,7 @@
       </div>
     </div>
     <!--挑战失败-->
-    <div class="resultBox isFail" v-else>
+    <div class="resultBox isFail" v-else v-cloak="true">
       <div class="failBg"></div>
       <div class="optContainer">
         <img class="manImg" src="../assets/manImg.jpg"/>

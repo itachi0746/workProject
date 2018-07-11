@@ -4,9 +4,7 @@
    <!--首页-->
    <div class="homePage">
      <div class="bg1"></div>
-     <!--<router-link to="/home/actInfo">-->
-        <RuleImg></RuleImg>
-     <!--</router-link>-->
+     <RuleImg></RuleImg>
      <TitleImg></TitleImg>
      <StartBtn></StartBtn>
      <router-view></router-view>
@@ -71,7 +69,7 @@ export default {
     left: 0;
     z-index: -99;
     background: url('../assets/bg1.png') no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
   }
 
 </style>

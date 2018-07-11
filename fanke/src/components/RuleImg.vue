@@ -29,6 +29,10 @@
 
 
 <style scoped>
+  .rule .animated {
+    animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;
+  }
   .rule {
     position: absolute;
     right: 0.5rem;

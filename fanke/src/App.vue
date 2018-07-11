@@ -80,5 +80,8 @@ export default {
     z-index: 20;
 
   }
+  [v-cloak] {
+    display: none;
+  }
 
 </style>

@@ -22,7 +22,7 @@
           <tr class="rankInfo" v-for="(user, index) in Users" :key="index">
             <td>No.{{user.Rank}}</td>
             <td>
-              <div v-if="Logo">
+              <div v-if="!Users.length===0">
                 <div class="userImg manImg">
                   <img :src="user.Logo" alt="">
                 </div>
@@ -58,10 +58,7 @@ export default {
   data: function () {
     return {
       Users: [],
-//      Logo: '',
-//      Name: '',
-//      Rank: 0,
-//      Score: 0
+
     }
   },
 //
@@ -81,10 +78,7 @@ export default {
     }).then(res => {
       console.log(res.data, '请求成功');
       this.Users = res.data.Data;
-//      this.Logo = data.Logo;
-//      this.Name = data.Name;
-//      this.Rank = data.Rank;
-//      this.Score = data.Score;
+
 
     }).catch(err => {
       console.log(err, '请求错误');

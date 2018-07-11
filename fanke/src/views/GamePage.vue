@@ -81,6 +81,6 @@ export default {
     left: 0;
     z-index: -99;
     background: url('../assets/bg2.png') no-repeat;
-    background-size: contain;
+    background-size: 100% 100%;
   }
 </style>

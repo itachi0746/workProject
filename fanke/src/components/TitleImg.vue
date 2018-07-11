@@ -6,7 +6,7 @@
 </template>
 
 <script>
-  import animate from 'animate.css'
+//  import animate from 'animate.css'
   export default {
 //  data () {
 //    return {
@@ -31,7 +31,11 @@
     width: 100%;
     text-align: center;
     position: relative;
-    top: 1.7rem;
+    top: 2.5rem;
+  }
+  .title,.animated {
+    animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
   }
    img {
     width: 90%;
