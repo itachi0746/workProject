@@ -1,6 +1,6 @@
 <template>
   <div class="bottom">
-    <router-link :to="{name: 'gamePage', params: {questions: questions}}">
+    <router-link :to="{name: 'gamePage', params: {questions: questions}}" replace>
       <img class="animated tada" src="../assets/startBtn.png"/>
     </router-link>
     <p>

@@ -6,7 +6,7 @@
         <!--<p class="questionNum">{{ questions[Num].QuestionNo + '/' + questions.length }}</p>-->
         <p class="questionNum">{{ questions[Num].QuestionNo + '/' + questions.length }}</p>
         <p class="questionText">{{ questions[Num].QuestionDesc }}</p>
-        <img :src="questions[Num].QuestionImage" alt="">
+        <img :src="questions[Num].QuestionImage" alt="题目图片" @click.stop="imgClick($event)">
 
       </div>
       <div :class="{ animated: true, optionBox: true, slideOutDown: isSlide }" v-if="questions">
@@ -84,10 +84,13 @@
 //      })
     },
     methods: {
+      imgClick(e) {
+        e.preventDefault()
+      },
       nextQ: function () {
         //  切换去下一个问题,相同的路由, 只是id不同 显示不同的问题
 //        console.log(this._id)
-        this.$router.push({ name: 'question', params: {questions: this.questions, id: this._id}});
+        this.$router.replace({ name: 'question', params: {questions: this.questions, id: this._id}});
       },
 
       checkAnswer: function () {
@@ -249,6 +252,15 @@
     75% {left: 1rem;}
     100% {left: 0rem;}
   }
+  @keyframes shakeLR
+  {
+    0% {left: 0rem;}
+    25% {left: -1rem;}
+    50% {left: 0rem;}
+    75% {left: 1rem;}
+    100% {left: 0rem;}
+  }
+
   .shakeLR {
     -webkit-animation: shakeLR linear 0.7s;
     -o-animation: shakeLR linear 0.7s;

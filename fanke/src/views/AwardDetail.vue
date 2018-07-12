@@ -1,30 +1,30 @@
 <template>
   <div id="awardDetailBox" class="poupMain bg hide isAngular" style="display: block;">
-    <div id="forJZCouponBg" style="display: none;">
-      <div class="tipsBox">
-        <div class="contain">建站商城优惠券无奖品详情页<br><a href="javascript:;"
-                                                 onclick="window.open('http://hd.fkw.com/news/11181')">了解更多</a></div>
-      </div>
-    </div>
+    <!--<div id="forJZCouponBg" style="display: none;">-->
+      <!--<div class="tipsBox">-->
+        <!--<div class="contain">建站商城优惠券无奖品详情页<br><a href="javascript:;"-->
+                                                 <!--onclick="window.open('http://hd.fkw.com/news/11181')">了解更多</a></div>-->
+      <!--</div>-->
+    <!--</div>-->
     <div id="awardDetailScrollBox">
-      <div id="awardDeailBg" class="bgfix hide"></div>
+      <!--<div id="awardDeailBg" class="bgfix hide"></div>-->
       <div class="awardCloseIcon" @click="_goBack"></div>
       <div class="awardDetail">
         <div class="hostName"
              style="padding: 0.7rem 2.2rem 1rem 0.7rem; text-align: left; color: rgb(255, 255, 255); word-break: break-word; text-decoration: none;">
-          -
+
         </div>
-        <div class="awardName layerId-22 defBgColor" title="点击后编辑" style="cursor: pointer; position: relative;">
+        <div class="awardName layerId-22 defBgColor" title="" style="cursor: pointer; position: relative;">
           价值100元礼品
         </div>
-        <div class="awardSubTitle layerId-23 defBgColor" title="点击后编辑"></div>
-        <div class="awardCodeTime codeTimeFixedRange layerId-1 defBgColor" title="点击后编辑"
+        <div class="awardSubTitle layerId-23 defBgColor" title=""></div>
+        <div class="awardCodeTime codeTimeFixedRange layerId-1 defBgColor" title=""
              style="cursor: pointer; position: relative;"><em>兑奖期限</em>：<span class="codeBgTime">2018.06.27</span>
           - <span class="codeEndTime">2018.07.04</span></div>
-        <div class="codeTimeFixedTerm hide layerId-2 defBgColor" title="点击后编辑" style="display: none;">中奖后<span
+        <div class="codeTimeFixedTerm hide layerId-2 defBgColor" title="" style="display: none;">中奖后<span
           class="codeBgTime">当</span>天生效，有效天数<span class="codeEndTime">30</span>天
         </div>
-        <div id="awardCollectionBtn" ontouchend="HdGame.favorite();">收藏兑奖券</div>
+        <div id="awardCollectionBtn">收藏兑奖券</div>
         <div class="awardDetailWarp"></div>
       </div>
       <div class="codeImgBox">
@@ -41,7 +41,7 @@
           <div class="codeLine"><span id="codeName">兑奖码</span>：<span
             style=" max-width: 8.7rem;word-wrap: break-word;display: inline-block; vertical-align: middle;"
             class="code selectText">888888</span><span class="copy">复制券码</span></div>
-          <div class="codeOptInfo layerId-29 defBgColor" title="点击后编辑" style="cursor: pointer; position: relative;">
+          <div class="codeOptInfo layerId-29 defBgColor" title="" style="cursor: pointer; position: relative;">
             凭券联系现场工作人员兑奖
           </div>
           <div class="codeOptInfo_Gift" style="display: none;">凭券联系现场工作人员兑奖</div>
@@ -56,38 +56,38 @@
         <div id="ticketDetailBox">
           <p class="ticketitle"><span class="text">兑奖券详情</span></p>
           <div class="ticketInfo">
-            <div class="itemList dateLine codeTimeFixedRange layerId-3 defBgColor" title="点击后编辑"
+            <div class="itemList dateLine codeTimeFixedRange layerId-3 defBgColor" title=""
                  style="cursor: pointer; position: relative;">
               <div class="title">有效日期</div>
-              <div class="box">
+              <div class="abox">
                 <span class="beginTime">2018-06-27</span>至<span class="endTime">2018-07-04</span>
               </div>
             </div>
-            <div class="itemList dateLine codeTimeFixedTerm hide layerId-4 defBgColor" title="点击后编辑"
+            <div class="itemList dateLine codeTimeFixedTerm hide layerId-4 defBgColor" title=""
                  style="display: none;">
               <div class="title">有效日期</div>
-              <div class="box">
+              <div class="abox">
                 中奖后<span class="codeBgTime">当</span>天生效，有效天数<span class="codeEndTime">30</span>天
               </div>
             </div>
-            <div class="itemList timelimitLine layerId-24 defBgColor" title="点击后编辑"
+            <div class="itemList timelimitLine layerId-24 defBgColor" title=""
                  style="cursor: pointer; position: relative;">
               <div class="title">可用时段</div>
-              <div class="box">
+              <div class="abox">
                 <div class="timelimit">周一至周日</div>
               </div>
             </div>
-            <div class="itemList addressLine layerId-25 defBgColor" title="点击后编辑"
+            <div class="itemList addressLine layerId-25 defBgColor" title=""
                  style="cursor: pointer; position: relative;">
               <div class="title titleAdress">兑奖地址</div>
-              <div class="box">
+              <div class="abox">
                 <div class="address">方圆E时光</div>
               </div>
             </div>
-            <div class="itemList noticeLine layerId-26 defBgColor" title="点击后编辑"
+            <div class="itemList noticeLine layerId-26 defBgColor" title=""
                  style="cursor: pointer; position: relative; z-index: auto;">
               <div class="title titleNotice">兑奖须知</div>
-              <div class="box">
+              <div class="abox">
                 <div class="notice">
                   <pre style="word-wrap: break-word;"><span style="color: #999;">不填写则不显示</span></pre>
                 </div>
@@ -112,7 +112,7 @@
         </div>
         <div style="height:0.4rem;"></div>
         <a style="text-decoration:none;">
-          <div class="servicePhone awardDetailBtn layerId-30 defBgColor" title="点击后编辑"
+          <div class="servicePhone awardDetailBtn layerId-30 defBgColor" title=""
                style="cursor: pointer; position: relative; z-index: 700;"><span class="text">客服电话（未开启）</span><span
             class="phoneIcon"></span><span class="phoneText"></span>
             <div id="layerId-30moveFrameLeft" class="moveFrame"
@@ -130,7 +130,7 @@
         </a>
         <a id="awardCusBtnInfo" href="javascript:;" style="text-decoration:none;">
           <div class="awardCusBtn awardDetailBtn weui-cell__bd layerId-27 defBgColor"
-               style="border-top: none; cursor: pointer; position: relative; z-index: auto;" title="点击后编辑"><span
+               style="border-top: none; cursor: pointer; position: relative; z-index: auto;" title=""><span
             class="text" style="display: none;">了解更多</span><span class="textDef hide" style="display: inline;">自定义按钮（未开启）</span>
             <div class="cell__ft"></div>
           </div>
@@ -333,7 +333,7 @@ export default {
     float: left;
     color: #666;
   }
-  #ticketDetailBox .itemList .box {
+  #ticketDetailBox .itemList .abox {
     width: auto;
     margin-left: 3.52rem;
   }
@@ -341,7 +341,7 @@ export default {
     font-size: .6rem;
     padding: .3rem 0;
   }
-  #ticketDetailBox .itemList .box div {
+  #ticketDetailBox .itemList .abox div {
     width: 100%;
   }
   #ticketDetailBox .itemList {
