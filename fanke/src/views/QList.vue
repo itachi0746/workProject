@@ -6,7 +6,7 @@
         <!--<p class="questionNum">{{ questions[Num].QuestionNo + '/' + questions.length }}</p>-->
         <p class="questionNum">{{ questions[Num].QuestionNo + '/' + questions.length }}</p>
         <p class="questionText">{{ questions[Num].QuestionDesc }}</p>
-        <img :src="questions[Num].QuestionImage" alt="题目图片" @click.stop="imgClick($event)">
+        <img v-lazy="questions[Num].QuestionImage" alt="题目图片" @click.stop="imgClick($event)">
 
       </div>
       <div :class="{ animated: true, optionBox: true, slideOutDown: isSlide }" v-if="questions">
@@ -47,6 +47,7 @@
 //    },
     data: function () {
       return {
+        loadingSrc: '',
         questions: [],
         target: {},
         isSlide: false,  // 动画开关

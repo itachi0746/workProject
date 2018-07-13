@@ -1,21 +1,7 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <!--背景-->
-    <!--<Bg :beforeStart="beforeStart"></Bg>-->
-    <!--游戏过程页-->
-    <!--<div class="gamePart">-->
-      <!--<UserImg></UserImg>-->
-      <!--<Music></Music>-->
-      <!--<QList></QList>-->
-    <!--</div>-->
-    <!--&lt;!&ndash;游戏结果页&ndash;&gt;-->
-    <!--<div class="gameResultPart">-->
-    <!--<GameResult></GameResult>-->
-    <!--</div>-->
-    <!--<AwardDetail/>-->
-    <!--<Shake></Shake>-->
-    <!--<AwardResult></AwardResult>-->
+
   </div>
 </template>
 

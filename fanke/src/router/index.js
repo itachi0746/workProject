@@ -15,6 +15,7 @@ import GameResult from '../views/GameResult.vue'
 import Shake from '../views/Shake.vue'
 import AwardResult from '../views/AwardResult.vue'
 import AwardDetail from '../views/AwardDetail.vue'
+import LoadingPage from '../views/LoadingPage.vue'
 
 Vue.use(VueRouter);
 
@@ -107,8 +108,12 @@ export default new VueRouter({
       ]
     },
     {
+      path: '/loading',
+      component: LoadingPage
+    },
+    {
       path: '/',
-      redirect: '/home'
+      redirect: '/loading'
     }
   ]
 })
