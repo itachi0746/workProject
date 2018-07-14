@@ -47,14 +47,14 @@
 //    },
     data: function () {
       return {
-        loadingSrc: '',
         questions: [],
         target: {},
         isSlide: false,  // 动画开关
         Num: 0,  // 第几条问题
-        flag: true  // 点击开关
-//        hasAnswer: false,
-//        isRight: false
+        flag: true,  // 点击开关
+        btnRight: require('../assets/btnRight.png'),
+        btnWrong: require('../assets/btnWrong.png')
+
       }
     },
     computed: {
@@ -118,15 +118,12 @@
           const rightAnswer = res.data.Data.Items[0].ItemId;
           if (event) {
             if(this._event.target.id === rightAnswer) {  // 回答正确
-//              this.isRight = true;
 
-//              this._event.target.style.background = 'url("/content/fanke/static/btnRight.png") 0% 0% / 100% 100% no-repeat';
-              this._event.target.style.background = 'url("/static/btnRight.png") 0% 0% / 100% 100% no-repeat';
+              this._event.target.style.background = 'url('+ this.btnRight +') 0% 0% / 100% 100% no-repeat';
 
             } else {  // 错误
 
-//              this._event.target.style.background = 'url("/content/fanke/static/btnWrong.png") 0% 0% / 100% 100% no-repeat';
-              this._event.target.style.background = 'url("/static/btnWrong.png") 0% 0% / 100% 100% no-repeat';
+              this._event.target.style.background = 'url('+ this.btnWrong +') 0% 0% / 100% 100% no-repeat';
               this._event.target.classList.add('shakeLR');
 
             }

@@ -9,8 +9,9 @@ import animate from 'animate.css'
 
 const err = require('./assets/error.png');
 const ld = require('./assets/loading.gif');
+console.log(typeof ld)
 
-Vue.use(VueLazyload);
+// Vue.use(VueLazyload);
 // 或者添加VueLazyload 选项
 Vue.use(VueLazyload, {
   preLoad: 1,
