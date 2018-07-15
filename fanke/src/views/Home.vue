@@ -3,12 +3,12 @@
 
    <!--首页-->
    <div class="homePage">
-     <!--<div class="bg1"></div>-->
-     <!--<RuleImg></RuleImg>-->
-     <!--<TitleImg></TitleImg>-->
-     <!--<StartBtn></StartBtn>-->
-     <!--<router-view></router-view>-->
-     <img v-lazy="src" alt="">
+     <div class="bg1"></div>
+     <RuleImg></RuleImg>
+     <TitleImg></TitleImg>
+     <StartBtn></StartBtn>
+     <router-view></router-view>
+     <!--<img v-lazy="src" alt="">-->
    </div>
 
 </template>
@@ -21,7 +21,7 @@
 export default {
   data: function () {
     return {
-      src: require('../assets/22222.png')
+//      src: require('../assets/22222.png')
     }
   },
 //
