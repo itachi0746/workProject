@@ -8,22 +8,18 @@ import VueLazyload from 'vue-lazyload'
 import animate from 'animate.css'
 
 const err = require('./assets/error.png');
-const ld = require('./assets/loading.gif');
-// console.log(typeof ld)
+const ld = require('./assets/loading2.gif');
 
-// Vue.use(VueLazyload);
-// 或者添加VueLazyload 选项
+// 添加VueLazyload 选项
 Vue.use(VueLazyload, {
-  preLoad: 1,
+  preLoad: 1.3,
   error: err,
-  // error: '/static/img/error.png',
   loading: ld,
-  // loading: '/static/img/loading.gif',
   attempt: 1
 });
 
 Vue.config.productionTip = false;
-axios.defaults.baseURL = process.env.BASE_URL;
+// axios.defaults.baseURL = process.env.BASE_URL;
 // axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded'
 Vue.prototype.$http = axios;
 

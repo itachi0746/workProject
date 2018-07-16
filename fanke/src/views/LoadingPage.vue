@@ -3,7 +3,6 @@
 
     <img src="../assets/loading.gif" alt="loading">
     <div id="process">{{ per }}</div>
-    <!--<img :src="_src" v-show="false">-->
   </div>
 </template>
 
@@ -12,7 +11,6 @@
   export default {
     data: function () {
       return {
-        _src: require('../assets/bg1.png'),
         count: 0,
         per: '',
 //        imgArr2: ['../assets/222222.png', '../assets/bg1.png', '../assets/bg2.png', '../assets/bg3.png',
@@ -45,7 +43,6 @@
 //        let temp = require(item);
 //        console.log(temp)
         img.src = item;
-//        this._src = item;
 
         img.onerror = () => {
           console.log('图片chucuo');
