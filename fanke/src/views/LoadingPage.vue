@@ -24,10 +24,10 @@
 //        test: function () {
 //          return require(this.imgArr2[0])
 //        }
-//        imgArr: ['/static/img/bg1.png', '/static/img/bg2.png', '/static/img/faiImg2-2.png',
-//          '/static/img/gift.png', '/static/img/light.png', '/static/img/title.png', '/static/img/yao.png'],
-        imgArr: ['/dist/static/img/bg1.png', '/dist/static/img/bg2.png', '/dist/static/img/faiImg2-2.png',
-          '/dist/static/img/gift.png', '/dist/static/img/light.png', '/dist/static/img/title.png', '/dist/static/img/yao.png'],
+        imgArr: ['/static/img/bg1.png', '/static/img/bg2.png', '/static/img/faiImg2-2.png',
+          '/static/img/gift.png', '/static/img/light.png', '/static/img/title.png', '/static/img/yao.png'],
+//        imgArr: ['/dist/static/img/bg1.png', '/dist/static/img/bg2.png', '/dist/static/img/faiImg2-2.png',
+//          '/dist/static/img/gift.png', '/dist/static/img/light.png', '/dist/static/img/title.png', '/dist/static/img/yao.png'],
       }
     },
 
