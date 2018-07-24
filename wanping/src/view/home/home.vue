@@ -234,7 +234,9 @@ export default {
           el: '.swiper-pagination'
         },
         loop: true,
-        autoplay: true,//可选选项，自动滑动
+        autoplay: {
+          disableOnInteraction: false,
+        },
       });
 
 
