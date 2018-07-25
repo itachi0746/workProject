@@ -72,7 +72,7 @@ $fc:#fff;
 
 %_cu ,%_hui{
   @include sc(.7rem ,#fff);
-  @include wh(.9rem, 1rem);
+  @include wh(1rem, 1rem);
   @include borderRadius(2px);
   display: inline-block;
   text-align: center;

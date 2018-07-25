@@ -16,6 +16,58 @@
       </div>
 
     </div>
+    <!--选地区-->
+    <div class="filter-container">
+      <div class="filter-head">
+        <div>
+          <span>地区</span>
+        </div>
+        <div>
+          <span>地点</span>
+        </div>
+      </div>
+      <div class="category-container">
+        <div class="wrapper category-left" ref="wrapper" id="category-left"  style="touch-action:none;">
+          <div class="content">
+            <ul>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+              <li class="category-left-li">11</li>
+            </ul>
+          </div>
+        </div>
+        <div class="wrapper category-right" ref="wrapper">
+          <div class="content">
+            <ul>
+              <li>11</li>
+              <li>11</li>
+              <li>11</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!--遮罩层-->
+    <div class="back-cover"></div>
     <!--轮播图-->
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -86,144 +138,19 @@
       </div>
 
     </div>
-    <!--商家列表-->
-    <div class="shoplist-container">
-      <div class="shoplist-item">
-        <p class="shop-name">
-          商家名字1111
-          <span class="right">
-            人流量: 1000/h
-          </span>
-        </p>
-        <div class="oh">
-          <div class="left shop-price">
-            <span>¥</span>
-            <span>1000</span>
-            <span>起</span>
-          </div>
-          <div class="left screen-param">
-            <span>屏幕参数:</span>
-            <span>100*100</span>
-          </div>
-
-        </div>
-        <div class="discount">
-          <div>
-            <span class="_cu">促</span>
-            <span>促销描述</span>
-          </div>
-          <div>
-            <span class="_hui">惠</span>
-            <span>优惠描述</span>
-          </div>
-
-        </div>
-      </div>
-      <div class="shoplist-item">
-        <p class="shop-name">
-          商家名字1111
-          <span class="right">
-            人流量: 1000/h
-          </span>
-        </p>
-        <div class="oh">
-          <div class="left shop-price">
-            <span>¥</span>
-            <span>1000</span>
-            <span>起</span>
-          </div>
-          <div class="left screen-param">
-            <span>屏幕参数:</span>
-            <span>100*100</span>
-          </div>
-
-        </div>
-        <div class="discount">
-          <div>
-            <span class="_cu">促</span>
-            <span>促销描述</span>
-          </div>
-          <div>
-            <span class="_hui">惠</span>
-            <span>优惠描述</span>
-          </div>
-
-        </div>
-      </div>
-      <div class="shoplist-item">
-        <p class="shop-name">
-          商家名字1111
-          <span class="right">
-            人流量: 1000/h
-          </span>
-        </p>
-        <div class="oh">
-          <div class="left shop-price">
-            <span>¥</span>
-            <span>1000</span>
-            <span>起</span>
-          </div>
-          <div class="left screen-param">
-            <span>屏幕参数:</span>
-            <span>100*100</span>
-          </div>
-
-        </div>
-        <div class="discount">
-          <div>
-            <span class="_cu">促</span>
-            <span>促销描述</span>
-          </div>
-          <div>
-            <span class="_hui">惠</span>
-            <span>优惠描述</span>
-          </div>
-
-        </div>
-      </div>
-      <div class="shoplist-item">
-        <p class="shop-name">
-          商家名字1111
-          <span class="right">
-            人流量: 1000/h
-          </span>
-        </p>
-        <div class="oh">
-          <div class="left shop-price">
-            <span>¥</span>
-            <span>1000</span>
-            <span>起</span>
-          </div>
-          <div class="left screen-param">
-            <span>屏幕参数:</span>
-            <span>100*100</span>
-          </div>
-
-        </div>
-        <div class="discount">
-          <div>
-            <span class="_cu">促</span>
-            <span>促销描述</span>
-          </div>
-          <div>
-            <span class="_hui">惠</span>
-            <span>优惠描述</span>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-    <p class="empty_data">没有更多了</p>
+    <!--分割条-->
+    <div class="division"></div>
+    <!--<shopList></shopList>-->
   </div>
 
 
 </template>
 
 <script>
-  import '../../style/swiper.min.css'
-//  import Swiper from  '../../plugins/swiper.min.js'
+  import '@/style/swiper.min.css'
   import Swiper from '../../../static/swiper.min'
+  import shopList from '@/components/common/shoplist'
+  import BScroll from 'better-scroll'
 
 export default {
 
@@ -239,19 +166,34 @@ export default {
         },
       });
 
+    //即定时器 20ms
+    this.$nextTick(() => {
+      //$refs绑定元素
+      if(!this.scroll){
+        console.log(this.$refs.wrapper)
+        this.scroll = new BScroll('#category-left', {
+          //开启点击事件 默认为false
+          click:true
+        })
+        // console.log(this.scroll)
+      }
+    })
 
   },
+  components: {
+    shopList
+  }
 
 //  beforeDestroy: function() {}
 }
 </script>
 
 <style lang="scss" scoped>
-  @import "../../style/mixin";
+  @import "src/style/mixin";
 
   .sort-container {
     background-color: #fff;
-    /*border-bottom: .025rem solid #f1f1f1;*/
+    border-bottom: 1px solid #ececec;
     position: fixed;
     top: 0rem;
     right: 0;
@@ -261,24 +203,34 @@ export default {
     z-index: 13;
   }
   .sort-item {
-    /*padding: .5rem 0;*/
+    margin: .2rem 0;
     font-size: .7rem;
     color: #ddd;
     width: 33.3%;
-    height: 1.6rem;
+    height: 1.2rem;
+    line-height:1.2rem;
     text-align: center;
-    line-height: 1.6rem;
+    border-right: 1px solid #ececec;
+
+    span {
+      padding-right: .7rem;
+    }
+    span,i {
+      position: relative;
+      left: .5rem;
+    }
   }
   .swiper-container {
-    margin-top: 1.6rem;
+    /*margin-top: 1.6rem;*/
     width: 100%;
+    position: relative;
+    top: 1.6rem;
     height: 5rem;
   }
   .recommend-container {
     width: 100%;
     height: 11rem;
     overflow: hidden;
-
   }
   .recommend-item-container {
     overflow-x: scroll;
@@ -305,51 +257,102 @@ export default {
       padding-left: .2rem;
     }
   }
-  .shoplist-item {
+  .division {
     width: 100%;
-    border-top: 1px solid $bc;
-    padding: .5rem;
+    height: .5rem;
+    background-color: #e2e2e2;
   }
-  .shop-name {
-    font-size: .9rem;
+  /*地点筛选*/
+  .filter-container {
+    width: 100%;
+    height: 1.6rem;
+    position: fixed;
+    z-index: 11;
+    top: 1.65rem;
+    background-color: #fff;
+    font-size: .7rem;
+    line-height: 1.6rem;
 
+  }
+  .filter-head {
+    text-align: center;
+    overflow: hidden;
+
+    div {
+      float: left;
+      width: 50%;
+    }
     span {
-      /*font-size: .7rem;*/
-      @include sc(.7rem , #666);
+      display: inline-block;
+      width: 4rem;
+      /*height: 90%;*/
+      border-bottom: 2px solid blue;
     }
   }
-  .shop-price  {
-    span {
-      @include sc(.7rem , $blue);
+  .category-container {
+    width: 100%;
+    position: fixed;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    z-index: 10;
+    top: 3.3rem;
+    left: 0;
+    border-top: 0.025rem solid #e4e4e4;
+    background-color: #fff;
+
+    .content{
+      height:100%;
     }
-    span:nth-child(2) {
-      font-size: 1rem;
+  }
+  .wrapper,.category-left {
+    width: 100%;
+    position:absolute;
+    top: 0px;
+    bottom: 50px;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  .category-left {
+    -webkit-box-flex: 2;
+    -webkit-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    background-color: #f1f1f1;
+    height: 16rem;
+    /*overflow-y: auto;*/
+
+    .category-left-li {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 0 0.5rem;
     }
-
   }
-  .screen-param  {
-    padding-left: 1rem;
-
-    span {
-      @include sc(.7rem , #ffa351);
-
-    }
+  .category-right {
+    -webkit-box-flex: 3;
+    -webkit-flex: 3;
+    -ms-flex: 3;
+    flex: 3;
+    background-color: #fff;
+    padding-left: 0.5rem;
+    height: 16rem;
+    /*overflow-y: auto;*/
   }
-  .discount span {
-    @include sc(.7rem , #666);
-
+  .back-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
   }
-  .discount ._cu {
-    @extend %_cu;
-  }
-  .discount ._hui {
-    @extend %_hui;
-  }
-
-.empty_data {
-  font-size: 0.6rem;
-  color: #666;
-  text-align: center;
-  line-height: 2rem;
-}
 </style>

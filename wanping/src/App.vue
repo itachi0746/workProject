@@ -12,6 +12,6 @@
 </script>
 
 <style lang="scss">
-  @import './style/common';
+  @import 'src/style/common';
 
 </style>
