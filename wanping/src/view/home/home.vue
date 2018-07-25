@@ -27,42 +27,40 @@
         </div>
       </div>
       <div class="category-container">
-        <div class="wrapper category-left" ref="wrapper" id="category-left"  style="touch-action:none;">
-          <div class="content">
-            <ul>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-              <li class="category-left-li">11</li>
-            </ul>
-          </div>
+        <div class="wrapper category-left" ref="wrapper" id="category-left">
+          <ul class="content">
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+            <li class="category-left-li">11</li>
+          </ul>
         </div>
-        <div class="wrapper category-right" ref="wrapper">
-          <div class="content">
-            <ul>
-              <li>11</li>
-              <li>11</li>
-              <li>11</li>
-            </ul>
-          </div>
-        </div>
+        <!--<div class="wrapper category-right" ref="wrapper">-->
+          <!--<div class="content">-->
+            <!--<ul>-->
+              <!--<li>11</li>-->
+              <!--<li>11</li>-->
+              <!--<li>11</li>-->
+            <!--</ul>-->
+          <!--</div>-->
+        <!--</div>-->
 
       </div>
     </div>
@@ -170,7 +168,7 @@ export default {
     this.$nextTick(() => {
       //$refs绑定元素
       if(!this.scroll){
-        console.log(this.$refs.wrapper)
+//        console.log(this.$refs.wrapper)
         this.scroll = new BScroll('#category-left', {
           //开启点击事件 默认为false
           click:true
@@ -302,15 +300,11 @@ export default {
     border-top: 0.025rem solid #e4e4e4;
     background-color: #fff;
 
-    .content{
-      height:100%;
-    }
   }
   .wrapper,.category-left {
     width: 100%;
-    position:absolute;
+    position: relative;
     top: 0px;
-    bottom: 50px;
     overflow: hidden;
     z-index: 1;
   }
@@ -322,7 +316,6 @@ export default {
     flex: 2;
     background-color: #f1f1f1;
     height: 16rem;
-    /*overflow-y: auto;*/
 
     .category-left-li {
       display: -webkit-box;
