@@ -13,37 +13,29 @@
       return {
         count: 0,
         per: '',
-//        imgArr2: ['../assets/222222.png', '../assets/bg1.png', '../assets/bg2.png', '../assets/bg3.png',
-//          '../assets/bird.png', '../assets/btnDefault.png', '../assets/btnRight.png',
-//          '../assets/btnWrong.png', '../assets/close.png', '../assets/djq.png', '../assets/error.png',
-//          '../assets/faiImg2-2.png', '../assets/fail.png', '../assets/gift.png', '../assets/hpoc.png',
-//          '../assets/kqbd.png', '../assets/kqjt.png', '../assets/light.png', '../assets/loading.gif',
-//          '../assets/logo.jpg', '../assets/lots1.png', '../assets/manImg.jpg', '../assets/musicOff.png',
-//          '../assets/musicOn.png', '../assets/ruleImg.png', '../assets/startBtn.png',
-//          '../assets/success.png', '../assets/title.png', '../assets/title_pc.png', '../assets/yao.png'],
-//        test: function () {
-//          return require(this.imgArr2[0])
-//        }
-//        imgArr: ['/static/img/bg1.png', '/static/img/bg2.png', '/static/img/faiImg2-2.png',
-//          '/static/img/gift.png', '/static/img/light.png', '/static/img/title.png', '/static/img/yao.png'],
+
+        imgArr: ['/static/img/bg1.png', '/static/img/bg2.png', '/static/img/faiImg2-2.png',
+          '/static/img/gift.png', '/static/img/light.png', '/static/img/title.png', '/static/img/yao.png'],
 //        imgArr: ['/fanke/static/img/bg1.png', '/fanke/static/img/bg2.png', '/fanke/static/img/faiImg2-2.png',
 //          '/fanke/static/img/gift.png', '/fanke/static/img/light.png', '/fanke/static/img/title.png', '/fanke/static/img/yao.png'],
-        imgArr: ['/fanke/static/img/bg1.png', '/fanke/static/img/bg2.png', '/fanke/static/img/faiImg2-2.png',
-          '/fanke/static/img/gift.png', '/fanke/static/img/light.png', '/fanke/static/img/title.png', '/fanke/static/img/yao.png'],
+//        imgArr: ['/fanke/static/img/bg1.png', '/fanke/static/img/bg2.png', '/fanke/static/img/faiImg2-2.png',
+//          '/fanke/static/img/gift.png', '/fanke/static/img/light.png', '/fanke/static/img/title.png', '/fanke/static/img/yao.png'],
       }
     },
 
 
     mounted: function () {
       const len = this.imgArr.length;
+      const tmp = '/fanke';
 
       console.log('图片加载中');
       Array.from(this.imgArr).forEach((item) => {
         console.log('图片加载中2');
 
         let img = new Image();
-//        let temp = require(item);
-//        console.log(temp)
+        // 开发环境不用修改路径, 生产环境要改变路径
+        item = (process.env.NODE_ENV === 'development')?item:tmp+item;
+
         img.src = item;
 
         img.onerror = () => {
@@ -64,7 +56,6 @@
 //          console.log(this.per);
 
           if(this.count>=len){
-            console.log(22222222222)
             setTimeout(()=> {
               this.$router.replace('/home')
             },500)

@@ -70,7 +70,8 @@ export default {
 //
   mounted: function() {  // 请求排名
 
-    const url = 'api/exam/Rank';
+//    const url = '/api/exam/Rank';
+    const url = '/exam/Rank';
     this.$http({
       url: url,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
       method: 'post',//请求方式

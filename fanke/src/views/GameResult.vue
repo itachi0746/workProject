@@ -91,7 +91,8 @@
 //  methods: {}
 //
   mounted: function() {
-    const url = 'api/exam/ExamResult';
+//    const url = '/api/exam/ExamResult';
+    const url = '/exam/ExamResult';
 
     this.$http({
       method: 'post',

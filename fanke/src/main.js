@@ -19,7 +19,9 @@ Vue.use(VueLazyload, {
 });
 
 Vue.config.productionTip = false;
-axios.defaults.baseURL = process.env.BASE_URL;
+
+axios.defaults.baseURL = process.env.BASE_URL;  // 请求的默认URL
+
 // axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded'
 Vue.prototype.$http = axios;
 
@@ -58,9 +60,9 @@ window.addEventListener("popstate", function(e){
     window.opener=null;window.open('about:blank','_self','').close();
     console.log(222)
   }else {
-    window.opener = null;
-    window.open("about:blank", "_self");
-    window.close();
+    // window.opener = null;
+    // window.open("about:blank", "_self");
+    // window.close();
     console.log(333)
   }
 

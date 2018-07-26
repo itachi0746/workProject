@@ -43,7 +43,8 @@
 //
     mounted: function () {
 //      请求活动数据
-      const url = '/api/exam/ActivityInfo';
+//      const url = '/api/exam/ActivityInfo';
+      const url = '/exam/ActivityInfo';
       this.$http({
         url: url,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
         method: 'post',//请求方式
@@ -56,7 +57,8 @@
       });
 
       // 请求问题数据
-      const url2 = '/api/exam/GetQuestions';
+//      const url2 = '/api/exam/GetQuestions';
+      const url2 = '/exam/GetQuestions';
       this.$http({
         url: url2,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
         method: 'post',//请求方式
