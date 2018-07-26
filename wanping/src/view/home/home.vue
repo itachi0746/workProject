@@ -1,7 +1,7 @@
 <template>
   <div>
     <!--筛选条件-->
-    <div class="sort-container">
+    <div class="sort-container hide">
       <div class="sort-item">
         <span>城市</span>
         <i class="fa fa-caret-down"></i>
@@ -17,7 +17,7 @@
 
     </div>
     <!--选地区-->
-    <div class="filter-container">
+    <div class="filter-container hide">
       <div class="filter-head">
         <div>
           <span>地区</span>
@@ -29,43 +29,209 @@
       <div class="category-container">
         <div class="wrapper category-left" ref="wrapper" id="category-left">
           <ul class="content">
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
-            <li class="category-left-li">11</li>
+            <li class="category-left-li category_active">
+              <div>
+                <span>番禺区</span>
+              </div>
+              <div>
+                <span class="category_count">20</span>
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </li>
+            <li class="category-left-li">
+              <div>
+                <span>番禺区</span>
+              </div>
+              <div>
+                <span class="category_count">20</span>
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </li>
+            <li class="category-left-li">
+              <div>
+                <span>番禺区</span>
+              </div>
+              <div>
+                <span class="category_count">20</span>
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </li>
+            <li class="category-left-li">
+              <div>
+                <span>番禺区</span>
+              </div>
+              <div>
+                <span class="category_count">20</span>
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </li>
+            <li class="category-left-li">
+              <div>
+                <span>番禺区</span>
+              </div>
+              <div>
+                <span class="category_count">20</span>
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </li>
+            <li class="category-left-li">
+              <div>
+                <span>番禺区</span>
+              </div>
+              <div>
+                <span class="category_count">20</span>
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </li>
+            <li class="category-left-li">
+              <div>
+                <span>番禺区</span>
+              </div>
+              <div>
+                <span class="category_count">20</span>
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </li>
+            <li class="category-left-li">
+              <div>
+                <span>番禺区</span>
+              </div>
+              <div>
+                <span class="category_count">20</span>
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </li>
+            <li class="category-left-li">
+              <div>
+                <span>番禺区</span>
+              </div>
+              <div>
+                <span class="category_count">20</span>
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </li>
+            <li class="category-left-li">
+              <div>
+                <span>番禺区</span>
+              </div>
+              <div>
+                <span class="category_count">20</span>
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </li>
+            <li class="category-left-li">
+              <div>
+                <span>番禺区</span>
+              </div>
+              <div>
+                <span class="category_count">20</span>
+                <i class="fa fa-angle-right"></i>
+              </div>
+            </li>
+
+
           </ul>
         </div>
-        <!--<div class="wrapper category-right" ref="wrapper">-->
-          <!--<div class="content">-->
-            <!--<ul>-->
-              <!--<li>11</li>-->
-              <!--<li>11</li>-->
-              <!--<li>11</li>-->
-            <!--</ul>-->
-          <!--</div>-->
-        <!--</div>-->
+        <div class="wrapper category-right" ref="wrapper" id="category-right">
+
+          <ul class="content">
+            <li class="category-right-li">
+              <div>
+                <span>市桥</span>
+              </div>
+              <div>
+                <span class="category_count">5</span>
+              </div>
+            </li>
+            <li class="category-right-li">
+              <div>
+                <span>市桥</span>
+              </div>
+              <div>
+                <span class="category_count">5</span>
+              </div>
+            </li>
+            <li class="category-right-li">
+              <div>
+                <span>市桥</span>
+              </div>
+              <div>
+                <span class="category_count">5</span>
+              </div>
+            </li>
+            <li class="category-right-li">
+              <div>
+                <span>市桥</span>
+              </div>
+              <div>
+                <span class="category_count">5</span>
+              </div>
+            </li>
+            <li class="category-right-li">
+              <div>
+                <span>市桥</span>
+              </div>
+              <div>
+                <span class="category_count">5</span>
+              </div>
+            </li>
+            <li class="category-right-li">
+              <div>
+                <span>市桥</span>
+              </div>
+              <div>
+                <span class="category_count">5</span>
+              </div>
+            </li>
+            <li class="category-right-li">
+              <div>
+                <span>市桥</span>
+              </div>
+              <div>
+                <span class="category_count">5</span>
+              </div>
+            </li>
+            <li class="category-right-li">
+              <div>
+                <span>市桥</span>
+              </div>
+              <div>
+                <span class="category_count">5</span>
+              </div>
+            </li>
+            <li class="category-right-li">
+              <div>
+                <span>市桥</span>
+              </div>
+              <div>
+                <span class="category_count">5</span>
+              </div>
+            </li>
+            <li class="category-right-li">
+              <div>
+                <span>市桥</span>
+              </div>
+              <div>
+                <span class="category_count">5</span>
+              </div>
+            </li>
+            <li class="category-right-li">
+              <div>
+                <span>市桥</span>
+              </div>
+              <div>
+                <span class="category_count">5</span>
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
 
       </div>
     </div>
     <!--遮罩层-->
-    <div class="back-cover"></div>
+    <div class="back-cover hide" @touchmove.prevent></div>
     <!--轮播图-->
     <div class="swiper-container">
       <div class="swiper-wrapper">
@@ -86,7 +252,7 @@
         <div class="recommend-item-wrap">
           <div class="recommend-item">
             <div>
-              <img src="../../assets/recommend.png" alt="">
+              <img src="@/assets/recommend.png" alt="">
             </div>
             <p>
               我不是妖神
@@ -94,7 +260,7 @@
           </div>
           <div class="recommend-item">
             <div>
-              <img src="../../assets/recommend.png" alt="">
+              <img src="@/assets/recommend.png" alt="">
             </div>
             <p>
               我不是妖神
@@ -102,7 +268,7 @@
           </div>
           <div class="recommend-item">
             <div>
-              <img src="../../assets/recommend.png" alt="">
+              <img src="@/assets/recommend.png" alt="">
             </div>
             <p>
               我不是妖神
@@ -110,7 +276,7 @@
           </div>
           <div class="recommend-item">
             <div>
-              <img src="../../assets/recommend.png" alt="">
+              <img src="@/assets/recommend.png" alt="">
             </div>
             <p>
               我不是妖神
@@ -118,7 +284,7 @@
           </div>
           <div class="recommend-item">
             <div>
-              <img src="../../assets/recommend.png" alt="">
+              <img src="@/assets/recommend.png" alt="">
             </div>
             <p>
               我不是妖神
@@ -126,7 +292,7 @@
           </div>
           <div class="recommend-item">
             <div>
-              <img src="../../assets/recommend.png" alt="">
+              <img src="@/assets/recommend.png" alt="">
             </div>
             <p>
               我不是妖神
@@ -138,7 +304,8 @@
     </div>
     <!--分割条-->
     <div class="division"></div>
-    <!--<shopList></shopList>-->
+    <ShopList></ShopList>
+    <Footer></Footer>
   </div>
 
 
@@ -147,7 +314,8 @@
 <script>
   import '@/style/swiper.min.css'
   import Swiper from '../../../static/swiper.min'
-  import shopList from '@/components/common/shoplist'
+  import ShopList from '@/components/common/shopList'
+  import Footer from '@/components/footer/footer'
   import BScroll from 'better-scroll'
 
 export default {
@@ -168,18 +336,22 @@ export default {
     this.$nextTick(() => {
       //$refs绑定元素
       if(!this.scroll){
-//        console.log(this.$refs.wrapper)
         this.scroll = new BScroll('#category-left', {
           //开启点击事件 默认为false
           click:true
+        });
+
+        this.scroll2 = new BScroll('#category-right', {
+          //开启点击事件 默认为false
+          click:true
         })
-        // console.log(this.scroll)
       }
     })
 
   },
   components: {
-    shopList
+    ShopList,
+    Footer
   }
 
 //  beforeDestroy: function() {}
@@ -308,6 +480,13 @@ export default {
     overflow: hidden;
     z-index: 1;
   }
+  .wrapper,.category-right {
+    width: 100%;
+    position: relative;
+    top: 0px;
+    overflow: hidden;
+    z-index: 1;
+  }
 
   .category-left {
     -webkit-box-flex: 2;
@@ -318,15 +497,15 @@ export default {
     height: 16rem;
 
     .category-left-li {
-      display: -webkit-box;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      padding: 0 0.5rem;
+      @include fj;
+      padding: 0.2rem 0.5rem;
+    }
+    .category_active {
+      background-color: #fff;
+    }
+    .fa {
+      padding-left: .2rem;
+      color: #878787;
     }
   }
   .category-right {
@@ -337,7 +516,14 @@ export default {
     background-color: #fff;
     padding-left: 0.5rem;
     height: 16rem;
-    /*overflow-y: auto;*/
+
+    .category-right-li {
+      @include fj;
+      padding: 0.2rem 0.8rem;
+    }
+  }
+  .category_count {
+    color: #878787;
   }
   .back-cover {
     position: fixed;

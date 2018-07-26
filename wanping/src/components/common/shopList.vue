@@ -156,6 +156,7 @@ export default {
   @import "src/style/mixin";
 
   /*商家列表*/
+
   .shoplist-item {
     width: 100%;
     border-top: 1px solid $bc;
@@ -202,6 +203,8 @@ export default {
     color: #666;
     text-align: center;
     line-height: 2rem;
+    margin-bottom: 2.3rem;
+
   }
 
 </style>

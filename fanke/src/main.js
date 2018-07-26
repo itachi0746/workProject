@@ -19,7 +19,7 @@ Vue.use(VueLazyload, {
 });
 
 Vue.config.productionTip = false;
-// axios.defaults.baseURL = process.env.BASE_URL;
+axios.defaults.baseURL = process.env.BASE_URL;
 // axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded'
 Vue.prototype.$http = axios;
 
