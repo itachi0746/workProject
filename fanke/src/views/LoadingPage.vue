@@ -26,6 +26,8 @@
 //        }
 //        imgArr: ['/static/img/bg1.png', '/static/img/bg2.png', '/static/img/faiImg2-2.png',
 //          '/static/img/gift.png', '/static/img/light.png', '/static/img/title.png', '/static/img/yao.png'],
+//        imgArr: ['/fanke/static/img/bg1.png', '/fanke/static/img/bg2.png', '/fanke/static/img/faiImg2-2.png',
+//          '/fanke/static/img/gift.png', '/fanke/static/img/light.png', '/fanke/static/img/title.png', '/fanke/static/img/yao.png'],
         imgArr: ['/fanke/static/img/bg1.png', '/fanke/static/img/bg2.png', '/fanke/static/img/faiImg2-2.png',
           '/fanke/static/img/gift.png', '/fanke/static/img/light.png', '/fanke/static/img/title.png', '/fanke/static/img/yao.png'],
       }
