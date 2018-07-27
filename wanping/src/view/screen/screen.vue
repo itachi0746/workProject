@@ -8,6 +8,27 @@
       <Calendar v-on:choseDay="clickDay"
                 v-on:changeMonth="changeDate"></Calendar>
     </div>
+    <div class="data-container">
+      <div class="chosen-day-data">
+        <p>
+          <span>X月X日  剩余广告位: </span>
+          <span class="AD-num">10</span> 个
+        </p>
+
+
+      </div>
+
+      <div class="user-order-data">
+        <p class="">
+          <span>您已订购的广告位:</span>
+
+        </p>
+        <p>
+          屏幕名字: 时段信息
+        </p>
+      </div>
+
+    </div>
   </div>
 </template>
 
@@ -56,6 +77,23 @@
   .screen-desc {
     @include sc(.6rem, #666);
   }
+  .data-container {
+    margin-top: 1rem;
+    padding: .5rem;
 
+  }
+  .chosen-day-data {
+    padding-left: 1rem;
+    font-size: .8rem;
+  }
+  .user-order-data {
+    margin-top: .5rem;
+    padding-left: 1rem;
+    font-size: .8rem;
+
+  }
+  .AD-num {
+    @include sc(1rem, $blue)
+  }
 
 </style>
