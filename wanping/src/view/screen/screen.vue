@@ -11,7 +11,11 @@
     <div class="data-container">
       <div class="chosen-day-data">
         <p>
-          <span>X月X日  剩余广告位: </span>
+          <i class="data-spot"></i>
+          <span class="data-tag-font">X月 X日 :  </span>
+        </p>
+        <p>
+          <span>剩余广告位: </span>
           <span class="AD-num">10</span> 个
         </p>
 
@@ -20,7 +24,8 @@
 
       <div class="user-order-data">
         <p class="">
-          <span>您已订购的广告位:</span>
+          <i class="data-spot"></i>
+          <span class="data-tag-font">您已订购的广告位 :</span>
 
         </p>
         <p>
@@ -71,7 +76,7 @@
 
   .screen-data {
     padding: .5rem;
-    border-bottom: .5rem solid #7c7c7c;
+    /*border-bottom: .5rem solid #7c7c7c;*/
   }
 
   .screen-desc {
@@ -80,11 +85,15 @@
   .data-container {
     margin-top: 1rem;
     padding: .5rem;
-
+    p {
+      position: relative;
+      height: 1.3rem;
+    }
   }
   .chosen-day-data {
     padding-left: 1rem;
     font-size: .8rem;
+
   }
   .user-order-data {
     margin-top: .5rem;
@@ -95,5 +104,21 @@
   .AD-num {
     @include sc(1rem, $blue)
   }
+  .calendar {
+    border-top: 1px solid $blue;
+    border-bottom: 1px solid $blue;
+  }
+  .data-tag-font {
+    @include sc(.7rem,#7c7c7c);
+  }
+  .data-spot {
+    width: 5px;
+    height: 5px;
+    background-color: $blue;
+    position: absolute;
+    left: -.75rem;
+    top: .5rem;
+  }
+
 
 </style>
