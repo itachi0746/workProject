@@ -1,8 +1,14 @@
 <template>
   <div class="bottom">
-    <router-link :to="{name: 'gamePage', params: {questions: questions}}" replace>
+    <div v-if="success">
+      <router-link :to="{name: 'gamePage', params: {questions: questions}}" replace>
+        <img class="animated tada" src="../assets/startBtn.png"/>
+      </router-link>
+    </div>
+    <div v-else>
       <img class="animated tada" src="../assets/startBtn.png"/>
-    </router-link>
+    </div>
+
     <p>
        已有{{joinNum}}人参加活动
      </p>
@@ -15,35 +21,13 @@
     data: function () {
       return {
         joinNum: null,
-        questions: []
+        questions: [],
+        success: false
       }
     },
-//
-//    components: {},
-//
-//    computed: {},
-//
-//    methods: {
-//      gameStart: function () {
-////      请求问题数据
-//        const url = 'api/exam/GetQuestions';
-//        this.$http({
-//          url: url,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
-//          method: 'post',//请求方式
-//          //这里可以添加axios文档中的各种配置
-//        }).then(res => {
-//          console.log(res.data, '请求成功');
-//          this.questions = res.data.Data;
-////        console.log('Home',this.questions)
-//        }).catch(err => {
-//          console.log(err, '请求错误');
-//        })
-//      }
-//    },
-//
+
     mounted: function () {
-//      请求活动数据
-//      const url = '/api/exam/ActivityInfo';
+      //      请求活动数据
       const url = '/exam/ActivityInfo';
       this.$http({
         url: url,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
@@ -51,13 +35,14 @@
         //这里可以添加axios文档中的各种配置
       }).then(res => {
         console.log(res.data, '请求活动数据成功');
+        this.success = res.Success;
         this.joinNum = res.data.Data.ParticipantsCount;
+//          console.log()
       }).catch(err => {
         console.log(err, '请求错误');
       });
 
       // 请求问题数据
-//      const url2 = '/api/exam/GetQuestions';
       const url2 = '/exam/GetQuestions';
       this.$http({
         url: url2,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
@@ -70,6 +55,16 @@
       }).catch(err => {
         console.log(err, '请求错误');
       })
+
+//     活动过期
+      if(!this.success) {
+        setTimeout(()=> {
+          alert('活动已过期')
+
+        },1000)
+
+      }
+
     },
 //
 //    beforeDestroy:function () {}

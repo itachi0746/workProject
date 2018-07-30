@@ -115,7 +115,7 @@ wh_content_item_tag {
 .wh_content_item > .wh_isMark {
   margin: auto;
   border-radius: 100px;
-  background: blue;
+  background: #85b525;
   z-index: 2;
 }
 .wh_content_item .wh_other_dayhide {
@@ -132,6 +132,7 @@ wh_content_item_tag {
   background: #3297f5;
   border-radius: 100px;
 }
+
 </style>
 <template>
   <section class="wh_container">
@@ -145,7 +146,7 @@ wh_content_item_tag {
           <div class="wh_jiantou2"></div>
         </li>
       </div>
-      <!--一到日-->
+      <!--星期一到日-->
       <div class="wh_content">
         <div class="wh_content_item" v-for="tag in textTop">
           <div class="wh_top_tag">
@@ -153,12 +154,15 @@ wh_content_item_tag {
           </div>
         </div>
       </div>
-      <!--日子-->
+      <!--天数-->
       <div class="wh_content">
-        <div class="wh_content_item" v-for="(item,index) in list" @click="clickDay(item,index)">
-          <div class="wh_item_date" v-bind:class="[{ wh_isMark: item.isMark},{wh_other_dayhide:item.otherMonth!=='nowMonth'},{wh_want_dayhide:item.dayHide},{wh_isToday:item.isToday},{wh_chose_day:item.chooseDay},setClass(item)]">
-            {{item.id}}
-          </div>
+        <div class="wh_content_item" v-for="(item,index) in list" :key="index" :_id="index">
+
+            <div class="wh_item_date" v-bind:class="[{ wh_isMark: item.isMark},{wh_other_dayhide:item.otherMonth!=='nowMonth'},
+                {wh_want_dayhide:item.dayHide},{wh_isToday:item.isToday},{wh_chose_day:item.chooseDay},setClass(item),]" @click="clickDay(item,index)">
+              {{item.id}}
+            </div>
+
         </div>
       </div>
     </div>
@@ -167,18 +171,6 @@ wh_content_item_tag {
 <script>
 import timeUtil from './calendar';
 export default {
-  data() {
-    return {
-      textTop: ['一', '二', '三', '四', '五', '六', '日'],
-      myDate: [],
-      list: [],
-      historyChose: [],
-      dateTop: '',
-      AdData: [
-        
-      ]
-    };
-  },
   props: {
     markDate: {
       type: Array,
@@ -195,10 +187,24 @@ export default {
     agoDayHide: { type: String, default: `0` },
     futureDayHide: { type: String, default: `2554387200` }
   },
+  data() {
+    return {
+      textTop: ['一', '二', '三', '四', '五', '六', '日'],
+      myDate: [],
+      list: [],
+      historyChose: [],
+      dateTop: '',
+      AdData: [
+
+      ],
+      _agoDayHide: ''
+
+    };
+  },
+
   created() {
     this.intStart();
     this.myDate = new Date();
-//    console.log(111)
   },
   methods: {
     intStart() {
@@ -218,10 +224,10 @@ export default {
       if (item.otherMonth === 'nowMonth' && !item.dayHide) {
         this.getList(this.myDate, item.date);
       }
-      if (item.otherMonth !== 'nowMonth') {
-//        item.otherMonth === 'preMonth'
-//          ? this.PreMonth(item.date)
-//          : this.NextMonth(item.date);
+      if (item.otherMonth !== 'nowMonth') {  // 不是当月的天
+        item.otherMonth === 'preMonth'
+          ? this.PreMonth(item.date)
+          : this.NextMonth(item.date);
       }
     },
     ChoseMonth: function (date, isChosedDay = true) {
@@ -268,16 +274,21 @@ export default {
     },
     getList: function (date, chooseDay, isChosedDay = true) {
       const [markDate, markDateMore] = this.forMatArgs();
+//      console.log([markDate, markDateMore] )
       this.dateTop = `${date.getFullYear()}年${date.getMonth() + 1}月`;
       let arr = timeUtil.getMonthList(this.myDate);
+//      console.log(arr[0]);
+
       for (let i = 0; i < arr.length; i++) {
         let markClassName = '';
         let k = arr[i];
+//        console.log(k)
         k.chooseDay = false;
         const nowTime = k.date;
         const t = new Date(nowTime).getTime() / 1000;
         //看每一天的class
         for (const c of markDateMore) {
+          console.log('c',c)
           if (c.date === nowTime) {
             markClassName = c.className || '';
           }
@@ -286,9 +297,11 @@ export default {
         k.markClassName = markClassName;
         k.isMark = markDate.indexOf(nowTime) > -1;
         //无法选中某天
-        k.dayHide = t < this.agoDayHide || t > this.futureDayHide;
+        console.log('this._agoDayHide',this._agoDayHide)
+        k.dayHide = t < this._agoDayHide || t > this.futureDayHide;
         if (k.isToday) {
           this.$emit('isToday', nowTime);
+          console.log(nowTime)
         }
         let flag = !k.dayHide && k.otherMonth === 'nowMonth';
         if (chooseDay && chooseDay === nowTime && flag) {
@@ -301,11 +314,13 @@ export default {
           k.chooseDay = true;
         }
       }
+
       this.list = arr;
     }
   },
   mounted() {
     this.getList(this.myDate);
+//    console.log(this._agoDayHide,this.agoDayHide)
   },
   watch: {
     markDate(val, oldVal) {
@@ -315,7 +330,9 @@ export default {
       this.getList(this.myDate);
     },
     agoDayHide(val, oldVal) {
-      this.agoDayHide = parseInt(val);
+      this._agoDayHide = this.agoDayHide;
+      this._agoDayHide = parseInt(val);
+      console.log(this._agoDayHide)
       this.getList(this.myDate);
     },
     futureDayHide(val, oldVal) {
@@ -326,6 +343,7 @@ export default {
       this.intStart();
       this.getList(this.myDate);
     }
-  }
+  },
+
 };
 </script>

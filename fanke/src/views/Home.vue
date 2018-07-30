@@ -8,7 +8,6 @@
      <TitleImg></TitleImg>
      <StartBtn></StartBtn>
      <router-view></router-view>
-     <!--<img v-lazy="src" alt="">-->
    </div>
 
 </template>
