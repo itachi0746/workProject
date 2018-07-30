@@ -19,7 +19,6 @@
           <span class="AD-num">10</span> 个
         </p>
 
-
       </div>
 
       <div class="data-box">
@@ -153,19 +152,19 @@
     top: .5rem;
   }
   .number {
-    @include wh(5rem,100%);
+    @include wh(7rem,100%);
     border-radius: 3px;
     float: right;
 
     input[type=number] {
-      line-height: 24px;
-      height: 24px;
-      width: 2rem;
+      line-height: 1.2rem;
+      height: 1.5rem;
+      width: 3rem;
       text-align: center;
       font-size: .7rem;
-      /*font-weight: 700;*/
-      border: 1px solid #cfcfcf;
-      background-color: #cfcfcf;
+      font-weight: 700;
+      border: 1px solid #e3e3e3;
+      background-color: #e3e3e3;
       -webkit-appearance: none;
       -moz-appearance: none;
       -o-appearance: none;
@@ -176,20 +175,25 @@
 
     button {
       outline: 0;
-      line-height: 24px;
-      height: 24px;
-      width: 1.5rem;
-      font-size: .7rem;
-      border: 1px solid #cfcfcf;
-      background-color: #cfcfcf;
+      line-height: 1.2rem;
+      height: 1.5rem;
+      width: 2rem;
+      font-size: 1rem;
+      font-weight: 700;
+
+      border: 1px solid #e3e3e3;
+      background-color: #e3e3e3;
       float: left;
 
     }
     .decrease {
-      border-right: 1px solid #fff;
+      border-right: 2px solid #fff;
     }
     .increase {
-      border-left: 1px solid #fff;
+      border-left: 2px solid #fff;
+    }
+    .disabled {
+      color: #bbbbbb;
     }
 
   }
