@@ -39,7 +39,7 @@
           <span class="number">
 
             <button class="decrease disabled">-</button>
-            <input id="number" type="number" value="1">
+            <input id="number" type="number" value="1" readonly="readonly">
             <button class="increase">+</button>
           </span>
 
