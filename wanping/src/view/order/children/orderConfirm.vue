@@ -1,19 +1,8 @@
 <template>
   <!--订单 开始-->
   <div class="order">
-    <section class="head">
-      <header>
-        <div class="back">
+    <Header :headName="headName"></Header>
 
-          <i class="fa fa-angle-left left"></i>
-        </div>
-        <div class="head-font">
-
-          <span>确认订单</span>
-        </div>
-
-      </header>
-    </section>
     <section class="order-data">
       <header>
         订单信息
@@ -46,13 +35,18 @@
 </template>
 
 <script>
+  import Header from '@/components/header/header.vue'
 
   export default {
     data() {
-      return {}
+      return {
+        headName: '确认订单'
+      }
     },
 
-    components: {},
+    components: {
+      Header
+    },
 
     computed: {},
 
@@ -74,32 +68,6 @@
     /*background-color: #fff;*/
   }
 
-  .head {
-
-    width: 100%;
-
-    header {
-      width: 100%;
-      padding: .3rem .5rem;
-      border-bottom: 0.05rem solid #f5f5f5;
-      display: flex;
-      background-color: #fff;
-
-      .back {
-        flex: 2;
-      }
-      .head-font {
-        flex: 3;
-        text-align: left;
-
-      }
-    }
-
-    .fa {
-      font-size: 1.5em;
-      /*width: 1rem;*/
-    }
-  }
 
   .order-data {
     margin-top: .5rem;

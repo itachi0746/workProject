@@ -399,7 +399,8 @@ export default {
   }
   .recommend-container {
     width: 100%;
-    height: 11rem;
+    margin-top: 1.5rem;
+    height: 10rem;
     overflow: hidden;
   }
   .recommend-item-container {

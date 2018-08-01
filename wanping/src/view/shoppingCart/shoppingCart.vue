@@ -1,19 +1,7 @@
 <template>
   <!--购物车 开始-->
   <div class="shopping-cart">
-    <section class="head">
-      <header>
-        <div class="back">
-
-          <i class="fa fa-angle-left left"></i>
-        </div>
-        <div class="head-font">
-
-          <span>购物车</span>
-        </div>
-
-      </header>
-    </section>
+    <Header :headName="headName"></Header>
 
     <section class="items">
       <div class="item">
@@ -88,13 +76,20 @@
 </template>
 
 <script>
+  import Header from '../../components/header/header.vue'
+
 
   export default {
     data() {
-      return {}
+      return {
+        headName: '购物车'
+
+      }
     },
 
-    components: {},
+    components: {
+      Header
+    },
 
     computed: {},
 
@@ -111,31 +106,6 @@
 <style lang='scss' scoped>
   @import "src/style/mixin";
 
-  .head {
-    width: 100%;
-
-    header {
-      width: 100%;
-      padding: .3rem .5rem;
-      border-bottom: 0.05rem solid #f5f5f5;
-      display: flex;
-      background-color: #fff;
-
-      .back {
-        flex: 2;
-      }
-      .head-font {
-        flex: 3;
-        text-align: left;
-
-      }
-    }
-
-    .fa {
-      font-size: 1.5em;
-      /*width: 1rem;*/
-    }
-  }
 
   .item {
     margin-top: .5rem;
