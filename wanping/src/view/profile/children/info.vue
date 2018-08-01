@@ -144,6 +144,8 @@
     .headportraitwo {
       margin-top: 0;
       padding: .5rem;
+      border-bottom: 1px solid #ddd;
+
       .headportrait-div {
         @include fj(left)
         p {

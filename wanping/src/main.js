@@ -5,9 +5,13 @@ import App from './App'
 import 'font-awesome/css/font-awesome.min.css'
 import './config/rem'
 import router from './router'
+import axios from 'axios'
 
 
 Vue.config.productionTip = false
+axios.defaults.baseURL = process.env.BASE_URL;  // 请求的默认URL
+Vue.prototype.$http = axios;
+
 
 /* eslint-disable no-new */
 new Vue({

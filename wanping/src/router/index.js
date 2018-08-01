@@ -19,7 +19,7 @@ export default new Router({
     {
       path: '/',
       name: 'Search',
-      component: Info
+      component: Profile
     }
   ]
 })

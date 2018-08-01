@@ -28,12 +28,23 @@
       </div>
     </section>
     <section class="profile-1reTe">
-      <a href="#" class="myOrder">
+      <a href="#" class="myItem">
         <aside>
           <i class="fa fa-list-ul"></i>
         </aside>
-        <div class="myOrder-div">
+        <div class="myItem-div">
           <span>我的订单</span>
+          <span>
+            <i class="fa fa-angle-right"></i>
+          </span>
+        </div>
+      </a>
+      <a href="#" class="myItem">
+        <aside>
+          <i class="fa fa-file-video-o"></i>
+        </aside>
+        <div class="myItem-div">
+          <span>我的视频</span>
           <span>
             <i class="fa fa-angle-right"></i>
           </span>
@@ -159,10 +170,11 @@
     margin-top: .4rem;
     background: #fff;
 
-    .myOrder {
+    .myItem {
       padding-left: 1.5rem;
       display: flex;
       align-items: center;
+      border-bottom: 1px solid #f1f1f1;
 
       aside {
         display: flex;
@@ -173,7 +185,7 @@
         margin-right: .266667rem;
       }
 
-      .myOrder-div {
+      .myItem-div {
         display: flex;
         justify-content: space-between;
         width: 100%;
