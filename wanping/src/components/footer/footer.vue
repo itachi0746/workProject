@@ -14,7 +14,7 @@
           <img src="../../assets/ordered-list.png" alt="">
           <span>订单</span>
         </li>
-        <li class="foot-guide-li">
+        <li class="foot-guide-li" @click="toProfile">
           <img src="../../assets/user.png" alt="">
           <span>我的</span>
         </li>
@@ -36,7 +36,11 @@ export default {
 
   computed: {},
 
-  methods: {},
+  methods: {
+    toProfile() {
+      window.location.href = 'profile.html'
+    }
+  },
 
   mounted() {},
 
