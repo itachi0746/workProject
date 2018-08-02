@@ -37,7 +37,15 @@
         console.log(res.data, '请求活动数据成功');
         this.success = res.Success;
         this.joinNum = res.data.Data.ParticipantsCount;
-//          console.log()
+
+        //     活动过期
+        if(!this.success) {
+          setTimeout(()=> {
+            alert('活动已过期')
+
+          },1000)
+
+        }
       }).catch(err => {
         console.log(err, '请求错误');
       });
@@ -56,14 +64,7 @@
         console.log(err, '请求错误');
       })
 
-//     活动过期
-      if(!this.success) {
-        setTimeout(()=> {
-          alert('活动已过期')
 
-        },1000)
-
-      }
 
     },
 //

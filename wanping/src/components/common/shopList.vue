@@ -204,7 +204,7 @@ export default {
     text-align: center;
     line-height: 2rem;
     margin-bottom: 2.3rem;
-
+    background-color: #fff;
   }
 
 </style>

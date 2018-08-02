@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="">
     <!--筛选条件-->
     <div class="sort-container hide">
       <div class="sort-item">
@@ -304,6 +304,7 @@
     </div>
     <!--分割条-->
     <div class="division"></div>
+    <a href="profile/chd/ttt.html" target="_blank">Core Docs</a>
     <ShopList></ShopList>
     <Footer></Footer>
   </div>
@@ -313,12 +314,13 @@
 
 <script>
   import '@/style/swiper.min.css'
-  import Swiper from '../../../static/swiper.min'
+  import Swiper from '../../../../static/swiper.min'
   import ShopList from '@/components/common/shopList'
   import Footer from '@/components/footer/footer'
   import BScroll from 'better-scroll'
 
 export default {
+  name: 'Home',
 
   mounted() {
 
