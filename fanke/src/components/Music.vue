@@ -1,37 +1,46 @@
 <template>
- <div class="musicBox">
-   <div v-if="music">
-    <img @click="musicON" src="../assets/musicOn.png"/>
-   </div>
-   <div v-else>
-     <img @click="musicON" src="../assets/musicOff.png"/>
-   </div>
- </div>
+  <div class="musicBox">
+    <audio id="music" :src="BGMsrc" loop="loop" autoplay="autoplay"></audio>
+
+    <div v-if="music">
+      <img @click="musicControl" src="../assets/musicOn.png"/>
+    </div>
+    <div v-else>
+      <img @click="musicControl" src="../assets/musicOff.png"/>
+    </div>
+  </div>
 </template>
 
 <script>
+  import {EventBus} from '../eventBus/eventBus';
 
-export default {
-  data: function () {
-    return {
-      music: true
-    }
-  },
+  export default {
+    data: function () {
+      return {
+        music: true,
+        BGMsrc: '',
+        BGM: document.querySelector("#music")
+      }
+    },
 
 //  components: {},
 
 //  computed: {},
 
-  methods: {
-    musicON: function () {
-      this.music = !this.music
-    }
-  }
+    methods: {
+      musicControl: function () {
+        this.music = !this.music;
+        console.log(this.BGM)
+        this.music ? this.BGM.play() : this.BGM.pause()
+      }
+    },
 
-//  mounted: function() {},
+    mounted() {
+      this.BGM = EventBus.music
+    },
 
 //  beforeDestroy: function() {}
-}
+  }
 </script>
 
 <style>
@@ -41,6 +50,7 @@ export default {
     right: 1rem;
     z-index: 5;
   }
+
   .musicBox img {
     width: 2rem;
 

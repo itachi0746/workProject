@@ -16,6 +16,8 @@
 </template>
 
 <script>
+  import { EventBus } from '../eventBus/eventBus';
+
   export default {
 
     data: function () {
@@ -27,7 +29,7 @@
     },
 
     mounted: function () {
-      //      请求活动数据
+      // 请求活动数据
       const url = '/exam/ActivityInfo';
       this.$http({
         url: url,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
@@ -35,7 +37,11 @@
         //这里可以添加axios文档中的各种配置
       }).then(res => {
         console.log(res.data, '请求活动数据成功');
-        this.success = res.Success;
+
+        EventBus.music = res.data.Data.Music;
+//        this.success = res.data.Success;
+        this.success = true;
+        console.log('this.success',this.success)
         this.joinNum = res.data.Data.ParticipantsCount;
 
         //     活动过期

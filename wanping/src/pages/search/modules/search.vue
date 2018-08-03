@@ -17,19 +17,22 @@
       </ul>
       <footer class="clear-history">清空历史记录</footer>
     </section>
+
+    <Footer :page="page"></Footer>
   </div>
   <!--搜索  结束-->
 </template>
 
 <script>
-  import Footer from '../../components/footer/footer.vue'
-  import Header from '../../components/header/header.vue'
+  import Footer from '../../../components/footer/footer.vue'
+  import Header from '../../../components/header/header.vue'
 
 
   export default {
     data() {
       return {
-        headName: '搜索'
+        headName: '搜索',
+        page: 'Search'
 
       }
     },

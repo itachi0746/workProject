@@ -27,7 +27,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     filename: utils.assetsPath('js/[name].[chunkhash].js'),
     chunkFilename: utils.assetsPath('js/[id].[chunkhash].js'),
     // publicPath: '/fanke/'  // 打包时 文件的引入路径
-    publicPath: '/Content/fanke/'  // 打包时 文件的引入路径(服务器的路径要求)
+    // publicPath: '/Content/fanke/'  // 打包时 文件的引入路径(服务器的路径要求)
   },
   plugins: [
     // http://vuejs.github.io/vue-loader/en/workflow/production.html

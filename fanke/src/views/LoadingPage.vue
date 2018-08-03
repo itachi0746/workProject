@@ -32,14 +32,14 @@
 
       console.log('图片加载中');
       Array.from(this.imgObj).forEach((item) => {
-        console.log('图片加载中2');
+//        console.log('图片加载中2');
 
         let img = new Image();
         // 开发环境不用修改路径, 生产环境要改变路径
 //        item = (process.env.NODE_ENV === 'development') ? item : tmp + item;
 
         img.src = item.src;
-        console.log('item.src',item.src);
+//        console.log('item.src',item.src);
 
         console.log('img.src',img.src);
 
@@ -50,7 +50,7 @@
         };
 
         img.onload = () => {
-          console.log('图片加载中3');
+//          console.log('图片加载中3');
 
           this.count++;
 
@@ -61,6 +61,8 @@
 //          console.log(this.per);
 
           if (this.count >= len) {
+            console.log('图片加载完毕');
+
             setTimeout(() => {
               this.$router.replace('/home')
             }, 500)

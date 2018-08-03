@@ -305,7 +305,8 @@
     <!--分割条-->
     <div class="division"></div>
     <ShopList></ShopList>
-    <Footer></Footer>
+    <Footer :page="page"></Footer>
+
   </div>
 
 
@@ -318,10 +319,16 @@
   import Footer from 'components/footer/footer'
   import BScroll from 'better-scroll'
 
-export default {
-  name: 'Home',
+  export default {
+    name: 'Home',
+    data() {
+      return {
+        page: 'Home'
 
-  mounted() {
+      }
+    },
+
+    mounted() {
 
       new Swiper('.swiper-container', {
         pagination: {
@@ -333,30 +340,30 @@ export default {
         },
       });
 
-    //即定时器 20ms
-    this.$nextTick(() => {
-      //$refs绑定元素
-      if(!this.scroll){
-        this.scroll = new BScroll('#category-left', {
-          //开启点击事件 默认为false
-          click:true
-        });
+      //即定时器 20ms
+      this.$nextTick(() => {
+        //$refs绑定元素
+        if (!this.scroll) {
+          this.scroll = new BScroll('#category-left', {
+            //开启点击事件 默认为false
+            click: true
+          });
 
-        this.scroll2 = new BScroll('#category-right', {
-          //开启点击事件 默认为false
-          click:true
-        })
-      }
-    })
+          this.scroll2 = new BScroll('#category-right', {
+            //开启点击事件 默认为false
+            click: true
+          })
+        }
+      })
 
-  },
-  components: {
-    ShopList,
-    Footer
-  }
+    },
+    components: {
+      ShopList,
+      Footer
+    }
 
 //  beforeDestroy: function() {}
-}
+  }
 </script>
 
 <style lang="scss" scoped>
@@ -373,24 +380,26 @@ export default {
     display: flex;
     z-index: 13;
   }
+
   .sort-item {
     margin: .2rem 0;
     font-size: .7rem;
     color: #ddd;
     width: 33.3%;
     height: 1.2rem;
-    line-height:1.2rem;
+    line-height: 1.2rem;
     text-align: center;
     border-right: 1px solid #ececec;
 
     span {
       padding-right: .7rem;
     }
-    span,i {
+    span, i {
       position: relative;
       left: .5rem;
     }
   }
+
   .swiper-container {
     /*margin-top: 1.6rem;*/
     width: 100%;
@@ -398,30 +407,35 @@ export default {
     top: 1.6rem;
     height: 5rem;
   }
+
   .recommend-container {
     width: 100%;
     margin-top: 1.5rem;
     height: 10rem;
     overflow: hidden;
   }
+
   .recommend-item-container {
     overflow-x: scroll;
 
   }
+
   .recommend-title {
     font-size: .75rem;
     padding-left: .8rem;
     padding-bottom: .3rem;
   }
+
   .recommend-item-wrap {
     width: 35rem;
     /*width: auto;*/
 
   }
+
   .recommend-item {
-    padding-left:  0.5rem;
+    padding-left: 0.5rem;
     display: inline-block;
-    img,div {
+    img, div {
       width: 5rem;
     }
     p {
@@ -429,11 +443,13 @@ export default {
       padding-left: .2rem;
     }
   }
+
   .division {
     width: 100%;
     height: .5rem;
     background-color: #e2e2e2;
   }
+
   /*地点筛选*/
   .filter-container {
     width: 100%;
@@ -446,6 +462,7 @@ export default {
     line-height: 1.6rem;
 
   }
+
   .filter-head {
     text-align: center;
     overflow: hidden;
@@ -461,6 +478,7 @@ export default {
       border-bottom: 2px solid blue;
     }
   }
+
   .category-container {
     width: 100%;
     position: fixed;
@@ -475,14 +493,16 @@ export default {
     background-color: #fff;
 
   }
-  .wrapper,.category-left {
+
+  .wrapper, .category-left {
     width: 100%;
     position: relative;
     top: 0px;
     overflow: hidden;
     z-index: 1;
   }
-  .wrapper,.category-right {
+
+  .wrapper, .category-right {
     width: 100%;
     position: relative;
     top: 0px;
@@ -510,6 +530,7 @@ export default {
       color: #878787;
     }
   }
+
   .category-right {
     -webkit-box-flex: 3;
     -webkit-flex: 3;
@@ -524,9 +545,11 @@ export default {
       padding: 0.2rem 0.8rem;
     }
   }
+
   .category_count {
     color: #878787;
   }
+
   .back-cover {
     position: fixed;
     top: 0;

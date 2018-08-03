@@ -43,7 +43,6 @@ export default {
       console.log(to.name, from.name);
       if(to.name==='gamePage') {
         //      请求问题数据
-//        const url = '/api/exam/GetQuestions';
         const url = '/exam/GetQuestions';
         this.$http({
           url: url,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
@@ -55,7 +54,7 @@ export default {
           const _id = this.questions[0].QuestionId;
           this.$router.push({ name: 'question', params: {questions: this.questions, id: _id}});
 
-          console.log('再来一次游戏:',this.questions)
+          console.log('再来一次游戏')
         }).catch(err => {
           console.log(err, '请求错误');
         })

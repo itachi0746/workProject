@@ -43,7 +43,7 @@
         <p>最佳成绩为: {{BestScore}}分</p>
         <p>最佳排名为: NO.{{Rank}}</p>
         <router-link to="/home/gamePage">
-          <div class="result-button main-btn">
+          <div class="result-button main-btn" @click="playAgain">
             再玩一次
           </div>
         </router-link>
@@ -75,7 +75,7 @@
   export default {
   data: function () {
     return {
-      isSuccess: false,
+      isSuccess: true,  // 是否挑战成功
       BestScore : 0,
       Desc : "",
       PrizeChance : 0,
@@ -88,10 +88,13 @@
 //
 //  computed: {},
 //
-//  methods: {}
+  methods: {
+    playAgain() {  // 再玩一次
+
+    }
+  },
 //
   mounted: function() {
-//    const url = '/api/exam/ExamResult';
     const url = '/exam/ExamResult';
 
     this.$http({

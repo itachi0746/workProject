@@ -6,33 +6,13 @@
 </template>
 
 <script>
-//  import GameResult from './components/GameResult.vue'
-//  import AwardResult from './views/AwardResult.vue'
-//  import Shake from './components/Shake.vue'
+
 
 export default {
-//  data: function () {
-//    return {
-//      // 是否是 游戏开始前
-//      beforeStart: false
-//    }
-//  },
+
 
   name: 'App',
-  components: {
-//    AwardResult
-//    Shake
-//    AwardDetail
-//    Bg,
-//    RuleImg,
-//    TitleImg,
-//    StartBtn,
-//    UserImg,
-//    Music,
-//    QList,
-//    GameResult,
-//    Shake
-  },
+
 
 }
 

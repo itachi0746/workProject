@@ -3,128 +3,140 @@
     <!--商家列表-->
     <div class="shoplist-container">
       <div class="shoplist-item">
-        <p class="shop-name">
-          商家名字1111
-          <span class="right">
+        <a href="shop.html">
+          <p class="shop-name">
+            商家名字1111
+            <span class="right">
             人流量: 1000/h
           </span>
-        </p>
-        <div class="oh">
-          <div class="left shop-price">
-            <span>¥</span>
-            <span>1000</span>
-            <span>起</span>
+          </p>
+          <div class="oh">
+            <div class="left shop-price">
+              <span>¥</span>
+              <span>1000</span>
+              <span>起</span>
+            </div>
+            <div class="left screen-param">
+              <span>屏幕参数:</span>
+              <span>100*100</span>
+            </div>
+
           </div>
-          <div class="left screen-param">
-            <span>屏幕参数:</span>
-            <span>100*100</span>
+          <div class="discount">
+            <div>
+              <span class="_cu">促</span>
+              <span>促销描述</span>
+            </div>
+            <div>
+              <span class="_hui">惠</span>
+              <span>优惠描述</span>
+            </div>
+
           </div>
 
-        </div>
-        <div class="discount">
-          <div>
-            <span class="_cu">促</span>
-            <span>促销描述</span>
-          </div>
-          <div>
-            <span class="_hui">惠</span>
-            <span>优惠描述</span>
-          </div>
-
-        </div>
+        </a>
       </div>
       <div class="shoplist-item">
-        <p class="shop-name">
-          商家名字1111
-          <span class="right">
+        <a href="#">
+          <p class="shop-name">
+            商家名字1111
+            <span class="right">
             人流量: 1000/h
           </span>
-        </p>
-        <div class="oh">
-          <div class="left shop-price">
-            <span>¥</span>
-            <span>1000</span>
-            <span>起</span>
+          </p>
+          <div class="oh">
+            <div class="left shop-price">
+              <span>¥</span>
+              <span>1000</span>
+              <span>起</span>
+            </div>
+            <div class="left screen-param">
+              <span>屏幕参数:</span>
+              <span>100*100</span>
+            </div>
+
           </div>
-          <div class="left screen-param">
-            <span>屏幕参数:</span>
-            <span>100*100</span>
+          <div class="discount">
+            <div>
+              <span class="_cu">促</span>
+              <span>促销描述</span>
+            </div>
+            <div>
+              <span class="_hui">惠</span>
+              <span>优惠描述</span>
+            </div>
+
           </div>
 
-        </div>
-        <div class="discount">
-          <div>
-            <span class="_cu">促</span>
-            <span>促销描述</span>
-          </div>
-          <div>
-            <span class="_hui">惠</span>
-            <span>优惠描述</span>
-          </div>
-
-        </div>
+        </a>
       </div>
       <div class="shoplist-item">
-        <p class="shop-name">
-          商家名字1111
-          <span class="right">
+        <a href="#">
+          <p class="shop-name">
+            商家名字1111
+            <span class="right">
             人流量: 1000/h
           </span>
-        </p>
-        <div class="oh">
-          <div class="left shop-price">
-            <span>¥</span>
-            <span>1000</span>
-            <span>起</span>
+          </p>
+          <div class="oh">
+            <div class="left shop-price">
+              <span>¥</span>
+              <span>1000</span>
+              <span>起</span>
+            </div>
+            <div class="left screen-param">
+              <span>屏幕参数:</span>
+              <span>100*100</span>
+            </div>
+
           </div>
-          <div class="left screen-param">
-            <span>屏幕参数:</span>
-            <span>100*100</span>
+          <div class="discount">
+            <div>
+              <span class="_cu">促</span>
+              <span>促销描述</span>
+            </div>
+            <div>
+              <span class="_hui">惠</span>
+              <span>优惠描述</span>
+            </div>
+
           </div>
 
-        </div>
-        <div class="discount">
-          <div>
-            <span class="_cu">促</span>
-            <span>促销描述</span>
-          </div>
-          <div>
-            <span class="_hui">惠</span>
-            <span>优惠描述</span>
-          </div>
-
-        </div>
+        </a>
       </div>
       <div class="shoplist-item">
-        <p class="shop-name">
-          商家名字1111
-          <span class="right">
+        <a href="#">
+          <p class="shop-name">
+            商家名字1111
+            <span class="right">
             人流量: 1000/h
           </span>
-        </p>
-        <div class="oh">
-          <div class="left shop-price">
-            <span>¥</span>
-            <span>1000</span>
-            <span>起</span>
+          </p>
+          <div class="oh">
+            <div class="left shop-price">
+              <span>¥</span>
+              <span>1000</span>
+              <span>起</span>
+            </div>
+            <div class="left screen-param">
+              <span>屏幕参数:</span>
+              <span>100*100</span>
+            </div>
+
           </div>
-          <div class="left screen-param">
-            <span>屏幕参数:</span>
-            <span>100*100</span>
+          <div class="discount">
+            <div>
+              <span class="_cu">促</span>
+              <span>促销描述</span>
+            </div>
+            <div>
+              <span class="_hui">惠</span>
+              <span>优惠描述</span>
+            </div>
+
           </div>
 
-        </div>
-        <div class="discount">
-          <div>
-            <span class="_cu">促</span>
-            <span>促销描述</span>
-          </div>
-          <div>
-            <span class="_hui">惠</span>
-            <span>优惠描述</span>
-          </div>
-
-        </div>
+        </a>
       </div>
 
     </div>

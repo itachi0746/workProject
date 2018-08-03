@@ -53,7 +53,7 @@
     </section>
 
 
-    <Footer></Footer>
+    <Footer :page="page"></Footer>
   </div>
   <!--我的资料  结束-->
 </template>
@@ -65,7 +65,8 @@
   export default {
     data() {
       return {
-        headName: '我的'
+        headName: '我的',
+        page: 'Profile'
       }
     },
 
@@ -75,9 +76,19 @@
 
     computed: {},
 
-    methods: {},
+    methods: {
+
+
+    },
 
     mounted() {
+//      this.$router.beforeEach((to, from, aaa) => {
+//        // ...
+//        console.log(to);
+//        console.log(from);
+//        this.aaa()
+//
+//      })
     },
 
     beforeDestroy() {
