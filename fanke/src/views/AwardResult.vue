@@ -1,7 +1,7 @@
 <template>
-  <div class="Mask2 awardResult">
+  <div class="Mask2 awardResult" v-cloak="false">
     <!--中奖-->
-    <div class="result-gift">
+    <div class="result-gift" v-if="winPrize">
       <div class="successBg"></div>
       <h3>恭喜你获得了</h3>
       <div class="giftImg">
@@ -10,51 +10,79 @@
       </div>
       <p style="font-size: .95rem;
     line-height: 1.65rem;
-    color: #ffdb12;">一等奖</p>
-      <h3>价值100元礼品</h3>
+    color: #ffdb12;">{{ prizeData.PrizeName }}</p>
+      <h3>{{ prizeData.PrizeDesc }}</h3>
 
       <div class="resule-gift-buttonMenu">
 
         <div class="giftBtnBox lookDetail">
-          <a class="seeAwardDetail buttonContent">查看奖品详情</a>
+          <router-link to="/home/gamePage/awardResult/actInfo" class="seeAwardDetail buttonContent">
+            查看奖品详情
+          </router-link>
         </div>
+
+        <router-link to="/home">
+          <div class="menuBack">
+            返回首页
+          </div>
+        </router-link>
 
       </div>
     </div>
+
     <!--没中奖-->
-    <div class="result-nogift">
+    <div class="result-nogift" v-else>
       <div class="nogiftImg">
         <img src="../assets/faiImg2-2.png"/>
       </div>
 
       <div class="resule-gift-buttonMenu">
+        <router-link to="/home/gamePage/shake">
+          <div class="repeatDraw">
+            继续抽奖
+          </div>
+        </router-link>
+        <br>
+        <router-link to="/home">
+          <div class="menuBack">返回首页</div>
+        </router-link>
 
-        <div class="repeatDraw">继续抽奖</div>
-        <div class="menuBack">返回首页</div>
-        <div>
-          <a class="followBtn">关注我们</a>
-        </div>
+        <!--<div>-->
+          <!--<a class="followBtn">关注我们</a>-->
+        <!--</div>-->
       </div>
 
     </div>
+
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 
   export default {
-//  data: function () {
-//    return {
-//    }
-//  },
+    data: function () {
+      return {
+        winPrize: false,
+        prizeData : {}
+      }
+    },
 //
 //  components: {},
 //
 //  computed: {},
 //
 //  methods: {}
-//
-//  mounted: function() {},
+
+    beforeCreate() {
+//      this.winPrize = this.$router.params.winPrize;
+//      this.prizeData = this.$router.params.prizeData;
+    },
+
+    mounted() {
+      this.winPrize = this.$router.params.winPrize;
+      this.prizeData = this.$router.params.prizeData;
+    }
 //
 //  beforeDestroy: function() {}
   }
@@ -74,26 +102,26 @@
   .result-gift {
     padding-top: 4rem;
     position: relative;
-    z-index: 300;
+    z-index: 30;
     text-align: center;
     color: #ffffff;
 
   }
+
   .result-nogift {
     padding-top: 2rem;
     position: relative;
     z-index: 300;
     text-align: center;
     color: #ffffff;
-    display: none;
-
+    /*display: none;*/
 
   }
+
   .result-nogift img {
     width: 15rem;
 
   }
-
 
   .successBg {
     top: -3rem;
@@ -111,6 +139,10 @@
     animation: bgRotate 5s linear infinite;
   }
 
+  .awardResult {
+    display: block;
+  }
+
   .awardResult .successBg {
     top: 3rem;
 
@@ -122,6 +154,7 @@
     margin-bottom: 2rem;
     z-index: 20;
   }
+
   .nogiftImg {
     position: relative;
     margin-top: 2rem;
@@ -136,6 +169,13 @@
   .resule-gift-buttonMenu {
     margin-top: 3rem;
     color: #fff;
+    position: relative;
+    z-index: 20;
+  }
+
+  .resule-gift-buttonMenu .menuBack {
+    width: 10rem;
+    height: 2rem;
   }
 
   .giftBtnBox {
@@ -168,32 +208,36 @@
     line-height: 2rem;
     font-size: 0.8rem;
   }
+
   .repeatDraw {
-    font-size:0.8rem;
-    display: inline-block;
+    font-size: 0.8rem;
+    /*display: inline-block;*/
     background: #fe8208;
-    left: 3rem;
-    right: auto;
-    width: 5rem;
+    /*left: 3rem;*/
+    /*right: auto;*/
+    width: 10rem;
     line-height: 2rem;
     height: 2rem;
+    margin: 0 auto;
     -webkit-border-radius: 0.2rem;
     -moz-border-radius: 0.2rem;
     border-radius: 0.2rem;
-    margin-bottom: .5rem;
-
+    /*margin-bottom: .5rem;*/
+    color: #fff;
   }
+
   .menuBack {
-    font-size:0.8rem;
+    font-size: 0.8rem;
     display: inline-block;
     width: 5rem;
     height: 2rem;
-    line-height: 2rem!important;
+    line-height: 2rem !important;
     background: #41bd43;
     border-radius: .2rem;
     margin-bottom: .5rem;
-
+    color: #fff;
   }
+
   .followBtn {
     display: inline-block;
     width: 10.2rem;
@@ -202,7 +246,7 @@
 
     background: #41bd43;
     border-radius: .2rem;
-    font-size:0.8rem;
+    font-size: 0.8rem;
 
   }
 

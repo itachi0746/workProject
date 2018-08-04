@@ -100,7 +100,31 @@ export default new VueRouter({
             {
               path: '/home/gamePage/awardResult',
               name: 'awardResult',
-              component: AwardResult
+              component: AwardResult,
+              children: [
+                {
+                  path: '/home/gamePage/awardResult/actInfo',
+                  component: ActInfo,
+                  children: [
+                    {
+                      path: 'actDesc',
+                      component: ActDesc
+                    },
+                    {
+                      path: '',
+                      redirect: 'actAward'
+                    },
+                    {
+                      path: 'actRank',
+                      component: ActRank
+                    },
+                    {
+                      path: 'actAward',
+                      component: ActAward
+                    }
+                  ]
+                }
+              ]
             }
 
           ]

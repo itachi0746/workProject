@@ -4,21 +4,25 @@
       <div class="poupLine">
         <div class="mainTitle">活动奖品</div>
         <div>
-          <p>一等奖：价值100元的礼包</p>
-          <p>二等奖：价值50元的礼包</p>
-          <p>三等奖：价值10元的礼包</p>
+          <!--<p>一等奖：价值100元的礼包</p>-->
+          <!--<p>二等奖：价值50元的礼包</p>-->
+          <!--<p>三等奖：价值10元的礼包</p>-->
+
+            {{ activityData.PrizeDesc }}
+
         </div>
       </div>
       <div class="poupLine">
         <div class="mainTitle">活动时间</div>
         <div>
-          <p>2018年6月27日 17:00 - 2018年7月4日 17:00</p>
+          <!--<p>2018年6月27日 17:00 - 2018年7月4日 17:00</p>-->
+          {{ activityData.TimeDesc }}
         </div>
       </div>
       <div class="poupLine">
         <div class="mainTitle">主办单位</div>
         <div>
-          <p>本次活动主办单位为 - {{HostUnit}}</p>
+          <p>本次活动主办单位为 - {{ activityData.SponsorDesc }}</p>
         </div>
       </div>
       <div class="poupLine">
@@ -34,12 +38,13 @@
       <div class="poupLine">
         <div class="mainTitle">活动说明</div>
         <div>
-          <p>
-            达到{{point}}分领取奖品，礼品先到先得，送完即止。
-          </p>
-          <p>
-            根据题目以及图片提示，选择正确的答案。每次参与时，从题库中随机抽出相应的题目。
-          </p>
+          <!--<p>-->
+            <!--达到{{point}}分领取奖品，礼品先到先得，送完即止。-->
+          <!--</p>-->
+          <!--<p>-->
+            <!--根据题目以及图片提示，选择正确的答案。每次参与时，从题库中随机抽出相应的题目。-->
+          <!--</p>-->
+          {{ activityData.Desc }}
         </div>
       </div>
 
@@ -58,9 +63,9 @@
 export default {
   data: function () {
     return {
-      HostUnit: '接入信息',
       TechnicalSupport: '接入信息',
-      point: 80
+      point: 80,
+      activityData: {}
     }
   },
 //
@@ -70,7 +75,21 @@ export default {
 //
 //  methods: {}
 //
-//  mounted: function() {},
+  mounted() {
+    // 请求活动描述
+    const url = '/exam/ActivityDetail';
+    this.$http({
+      url: url,
+      method: 'post',//请求方式
+      //这里可以添加axios文档中的各种配置
+    }).then(res => {
+//      console.log('活动描述',res.data)
+      this.activityData = res.data.Data;
+      console.log('this.activityData',this.activityData)
+    }).catch(err => {
+      console.log(err, '请求错误');
+    })
+  },
 //
 //  beforeDestroy: function() {}
 }

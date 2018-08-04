@@ -3,10 +3,10 @@
   <div class="QBox">
     <div class="question">
       <div :class="{ animated: true, slideOutUp: isSlide }" v-if="questions">
-        <!--<p class="questionNum">{{ questions[Num].QuestionNo + '/' + questions.length }}</p>-->
         <p class="questionNum">{{ questions[Num].QuestionNo + '/' + questions.length }}</p>
         <p class="questionText">{{ questions[Num].QuestionDesc }}</p>
-        <img v-lazy="questions[Num].QuestionImage" alt="题目图片" @click.stop="imgClick($event)">
+        <img v-lazy="questions[Num].QuestionImage" alt="题目图片"
+             @click.stop="imgClick($event)" :key="questions[Num].QuestionImage">
 
       </div>
       <div :class="{ animated: true, optionBox: true, slideOutDown: isSlide }" v-if="questions">
@@ -78,10 +78,10 @@
 //      console.log('beforeMount:',this.$route.params.questions,'and',this.questions)
 //    },
 //
-//    mounted: function () {
+    mounted () {
 //      console.log('mounted:',this.$route.params.questions,'and',this.questions)
-//
-//    },
+
+    },
     methods: {
       imgClick(e) {
         e.preventDefault()
@@ -89,6 +89,9 @@
       nextQ: function () {
         //  切换去下一个问题,相同的路由, 只是id不同 显示不同的问题
 //        console.log(this._id)
+        console.log('aa',this.questions[this.Num],this.questions[this.Num].QuestionImage)
+
+        clearTimeout(this.timer);
         this.$router.replace({name: 'question', params: {questions: this.questions, id: this._id}});
       },
 
@@ -132,14 +135,14 @@
             }
             this.isSlide = true;
             if (this._id <= this.questions.length) {   // 题目还未答完
-              console.log(1);
-              setTimeout(() => {
+//              console.log(1);
+              this.timer = setTimeout(() => {
                 this.nextQ();
               }, 1400)
 
             } else {  // 题目答完 转去答题结果页
 //              console.log('this._id:',this._id)
-              console.log(2);
+//              console.log(2);
               setTimeout(() => {
                 this.$router.push('/home/gamePage/gameResult')
               }, 1400)
@@ -186,16 +189,19 @@
 
   .question {
     position: absolute;
-    top: 5rem;
-    left: 4rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 11rem;
   }
 
   .question img {
     width: 10.75rem;
+    height: 8rem;
   }
 
   .optionBox {
-    margin-top: 3rem;
+    margin-top: 1rem;
 
   }
 
@@ -203,9 +209,6 @@
     margin-bottom: 1rem;
     width: 10.75rem;
     height: 1.75rem;
-
-    /*background: url("../assets/btnDefault.png") no-repeat;*/
-    /*background-size: 100% 100%;*/
   }
 
   .option .rightP, .option .wrongP, .option .normalP {
@@ -241,6 +244,7 @@
   }
 
   .questionText {
+    word-wrap : break-word;
     font-size: 0.8rem;
     color: rgb(112, 0, 252);
     text-shadow: rgb(255, 255, 255) -1px -1px 0px, rgb(255, 255, 255) 0px -1px 0px, rgb(255, 255, 255) 1px -1px 0px, rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 1px 1px 0px, rgb(255, 255, 255) 0px 1px 0px, rgb(255, 255, 255) -1px 1px 0px, rgb(255, 255, 255) -1px 0px 0px;

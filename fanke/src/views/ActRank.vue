@@ -22,7 +22,7 @@
           <tr class="rankInfo" v-for="(user, index) in Users" :key="index">
             <td>No.{{user.Rank}}</td>
             <td>
-              <div v-if="!Users.length===0">
+              <div v-if="Users.length!==0">
                 <div class="userImg manImg">
                   <img :src="user.Logo" alt="">
                 </div>
@@ -70,17 +70,15 @@ export default {
 //
   mounted: function() {  // 请求排名
 
-//    const url = '/api/exam/Rank';
     const url = '/exam/Rank';
     this.$http({
       url: url,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
       method: 'post',//请求方式
       //这里可以添加axios文档中的各种配置
     }).then(res => {
-      console.log(res.data, '请求成功');
+//      console.log(res.data, '请求成功');
       this.Users = res.data.Data;
-
-
+      console.log('this.Users',this.Users)
     }).catch(err => {
       console.log(err, '请求错误');
     })

@@ -1,7 +1,10 @@
 <template>
   <div class="bottom">
     <div v-if="success">
-      <router-link :to="{name: 'gamePage', params: {questions: questions}}" replace>
+      <!--<router-link :to="{name: 'gamePage', params: {questions: questions}}" replace>-->
+        <!--<img class="animated tada" src="../assets/startBtn.png"/>-->
+      <!--</router-link>-->
+      <router-link :to="{name: 'gamePage'}" replace>
         <img class="animated tada" src="../assets/startBtn.png"/>
       </router-link>
     </div>
@@ -23,7 +26,7 @@
     data: function () {
       return {
         joinNum: null,
-        questions: [],
+//        questions: [],
         success: false
       }
     },
@@ -39,8 +42,8 @@
         console.log(res.data, '请求活动数据成功');
 
         EventBus.music = res.data.Data.Music;
-//        this.success = res.data.Success;
-        this.success = true;
+        this.success = res.data.Success;
+//        this.success = true;  // 测试
         console.log('this.success',this.success)
         this.joinNum = res.data.Data.ParticipantsCount;
 
@@ -57,24 +60,21 @@
       });
 
       // 请求问题数据
-      const url2 = '/exam/GetQuestions';
-      this.$http({
-        url: url2,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
-        method: 'post',//请求方式
-        //这里可以添加axios文档中的各种配置
-      }).then(res => {
-        console.log(res.data, '请求问题数据成功');
-        this.questions = res.data.Data;
-//        console.log('Home',this.questions)
-      }).catch(err => {
-        console.log(err, '请求错误');
-      })
-
+//      const url2 = '/exam/GetQuestions';
+//      this.$http({
+//        url: url2,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
+//        method: 'post',//请求方式
+//        //这里可以添加axios文档中的各种配置
+//      }).then(res => {
+//        console.log(res.data, '请求问题数据成功');
+//        this.questions = res.data.Data;
+////        console.log('Home',this.questions)
+//      }).catch(err => {
+//        console.log(err, '请求错误');
+//      })
 
 
     },
-//
-//    beforeDestroy:function () {}
   }
 </script>
 
