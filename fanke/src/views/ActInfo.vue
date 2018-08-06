@@ -15,7 +15,10 @@
         <img @click="goBack" class="close" src="../assets/close.png"/>
 
       </div>
-      <router-view></router-view>
+      <keep-alive>     <!--使用keep-alive会将页面缓存-->
+        <router-view v-if="$route.meta.keepAlive"></router-view>
+      </keep-alive>
+      <router-view v-if="!$route.meta.keepAlive"></router-view>
 
     </div>
   <!--</div>-->

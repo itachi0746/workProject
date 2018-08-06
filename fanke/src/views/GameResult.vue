@@ -11,19 +11,19 @@
         <p>最佳成绩为: {{BestScore}}分</p>
         <p>最佳排名为: NO.{{Rank}}</p>
         <p>今天还有 {{PrizeChance}} 次抽奖机会</p>
-        <router-link to="/home/gamePage/shake">
+        <router-link to="/gamePage/shake">
           <div class="result-button main-btn">
             赶紧去抽奖
           </div>
         </router-link>
 
         <div class="buttonBox">
-          <router-link to="/home/gamePage/gameResult/actInfo/actRank">
+          <router-link to="/gamePage/gameResult/actInfo/actRank">
             <div class="result-button rank-btn" @click="">
               排行榜
             </div>
           </router-link>
-          <router-link to="/home/gamePage">
+          <router-link :to="{name: 'gamePage'}">
             <div class="result-button home-btn">
               再玩一次
             </div>
@@ -42,13 +42,13 @@
         <p>{{Desc}}</p>
         <p>最佳成绩为: {{BestScore}}分</p>
         <p>最佳排名为: NO.{{Rank}}</p>
-        <router-link to="/home/gamePage">
+        <router-link to="/gamePage">
           <div class="result-button main-btn" @click="">
             再玩一次
           </div>
         </router-link>
         <div class="buttonBox">
-          <router-link to="/home/gamePage/gameResult/actInfo/actRank">
+          <router-link to="/gamePage/gameResult/actInfo/actRank">
             <div class="result-button rank-btn" @click="">
               排行榜
             </div>
@@ -70,7 +70,7 @@
 </template>
 
 <script>
-//  import {EventBus} from '../eventBus/eventBus'
+  //  import {EventBus} from '../eventBus/eventBus'
 
 
   export default {
@@ -90,10 +90,7 @@
 //
 //  computed: {},
 //
-    methods: {
-
-
-    },
+    methods: {},
 //    created() {
 //
 //    },
@@ -138,6 +135,7 @@
     top: 0;
     left: 0;
   }
+
   .hide {
     display: none;
   }

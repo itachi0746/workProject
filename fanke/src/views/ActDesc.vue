@@ -90,6 +90,13 @@ export default {
       console.log(err, '请求错误');
     })
   },
+
+  activated: function () {
+    console.log(3)
+  },
+  deactivated: function () {
+    console.log(4)
+  }
 //
 //  beforeDestroy: function() {}
 }

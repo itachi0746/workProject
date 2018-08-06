@@ -47,9 +47,9 @@
 //  computed: {},
 //
     methods: {
-      toAwardDetail: function () {
-        this.$router.push('/home/actInfo/actAward/awardDetail')
-      }
+//      toAwardDetail: function () {
+//        this.$router.push('/home/actInfo/actAward/awardDetail')
+//      }
     },
 //
     mounted() {

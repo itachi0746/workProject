@@ -55,12 +55,12 @@ export default {
   watch: {
     // 检测动态路由来回切换 并修改数据
     $route (to, from) {
-//      console.log(to.name, from.name);
+      console.log('to',to.name, 'from',from.name);
       if(to.name==='gamePage') {
         //      请求问题数据
         const url = '/exam/GetQuestions';
         this.$http({
-          url: url,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
+          url: url,
           method: 'post',//请求方式
           //这里可以添加axios文档中的各种配置
         }).then(res => {

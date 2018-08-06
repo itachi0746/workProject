@@ -22,7 +22,6 @@
   export default {
     data: function () {
       return {
-//      src: require('../assets/22222.png')
       }
     },
 //

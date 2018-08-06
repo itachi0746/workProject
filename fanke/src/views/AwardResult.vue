@@ -1,11 +1,11 @@
 <template>
   <div class="Mask2 awardResult">
     <!--中奖-->
-    <div class="result-gift" v-if="winPrize">
+    <div class="result-gift" v-if="true">
       <div class="successBg"></div>
       <h3>恭喜你获得了</h3>
       <div class="giftImg">
-        <img src="../assets/gift.png"/>
+        <img v-lazy="img2"/>
 
       </div>
       <p style="font-size: .95rem;
@@ -16,7 +16,7 @@
       <div class="resule-gift-buttonMenu">
 
         <div class="giftBtnBox lookDetail">
-          <router-link to="/home/gamePage/awardResult/actInfo" class="seeAwardDetail buttonContent">
+          <router-link to="/gamePage/awardResult/actInfo" class="seeAwardDetail buttonContent">
             查看奖品详情
           </router-link>
         </div>
@@ -32,12 +32,12 @@
 
     <!--没中奖-->
     <div class="result-nogift" v-else>
-      <div class="nogiftImg" v-lazy-container="{ selector: 'img' }">
-        <img src="../assets/faiImg2-2.png" data-src="../assets/faiImg2-2.png"/>
+      <div class="nogiftImg">
+        <img v-lazy="img1"/>
       </div>
 
       <div class="resule-gift-buttonMenu">
-        <router-link to="/home/gamePage/shake">
+        <router-link to="/gamePage/shake">
           <div class="repeatDraw">
             继续抽奖
           </div>
@@ -64,7 +64,10 @@
     data: function () {
       return {
         winPrize: false,
-        prizeData : {}
+        prizeData : {},
+        img1: require('../assets/faiImg2-2.png'),
+        img2: require('../assets/gift.png')
+
       }
     },
 //

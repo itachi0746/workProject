@@ -4,8 +4,8 @@
       <!--<router-link :to="{name: 'gamePage', params: {questions: questions}}" replace>-->
         <!--<img class="animated tada" src="../assets/startBtn.png"/>-->
       <!--</router-link>-->
-      <router-link :to="{name: 'gamePage'}" replace>
-        <img class="animated tada" src="../assets/startBtn.png" @click="aaa"/>
+      <router-link :to="{name: 'gamePage'}">
+        <img class="animated tada" src="../assets/startBtn.png" @click=""/>
       </router-link>
     </div>
     <div v-else>
@@ -76,9 +76,7 @@
 
     },
     methods: {
-      aaa() {
-        EventBus.$isActInfo = true
-      }
+
     }
   }
 </script>

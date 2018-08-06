@@ -31,7 +31,11 @@ export default new VueRouter({
           children: [
             {
               path: 'actDesc',
-              component: ActDesc
+              name: 'actDesc',
+              component: ActDesc,
+              meta: {
+                keepAlive: true
+              }
             },
             {
               path: '',
@@ -44,91 +48,10 @@ export default new VueRouter({
             {
               path: 'actAward',
               component: ActAward,
-              children: [
-                {
-                  path: 'awardDetail',
-                  component: AwardDetail
-                }
-              ]
+
             }
           ]
         },
-        {
-          path: 'gamePage',
-          name: 'gamePage',
-          component: GamePage,
-          children: [
-            {
-              path: '/home/gamePage/question/:id',
-              name: 'question',
-              component: QList
-            },
-            {
-              path: '/home/gamePage/gameResult',
-              name: 'gameResult',
-              component: GameResult,
-              children: [
-                {
-                  path: '/home/gamePage/gameResult/actInfo',
-                  component: ActInfo,
-                  children: [
-                    {
-                      path: 'actDesc',
-                      component: ActDesc
-                    },
-                    {
-                      path: '',
-                      redirect: 'actDesc'
-                    },
-                    {
-                      path: 'actRank',
-                      component: ActRank
-                    },
-                    {
-                      path: 'actAward',
-                      component: ActAward
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              path: '/home/gamePage/shake',
-              name: 'shake',
-              component: Shake
-            },
-            {
-              path: '/home/gamePage/awardResult',
-              name: 'awardResult',
-              component: AwardResult,
-              children: [
-                {
-                  path: '/home/gamePage/awardResult/actInfo',
-                  component: ActInfo,
-                  children: [
-                    {
-                      path: 'actDesc',
-                      component: ActDesc
-                    },
-                    {
-                      path: '',
-                      redirect: 'actAward'
-                    },
-                    {
-                      path: 'actRank',
-                      component: ActRank
-                    },
-                    {
-                      path: 'actAward',
-                      component: ActAward
-                    }
-                  ]
-                }
-              ]
-            }
-
-          ]
-        }
       ]
     },
     {
@@ -138,6 +61,90 @@ export default new VueRouter({
     {
       path: '/',
       redirect: '/loading'
+    },
+    {
+      path: 'gamePage',
+      name: 'gamePage',
+      component: GamePage,
+      children: [
+        {
+          path: '/gamePage/question/:id',
+          name: 'question',
+          component: QList
+        },
+        {
+          path: '/gamePage/gameResult',
+          name: 'gameResult',
+          component: GameResult,
+          children: [
+            {
+              path: '/gamePage/gameResult/actInfo',
+              component: ActInfo,
+              children: [
+                {
+                  path: 'actDesc',
+                  name: 'actDesc',
+                  component: ActDesc,
+                  meta: {
+                    keepAlive: true
+                  }
+                },
+                {
+                  path: '',
+                  redirect: 'actDesc'
+                },
+                {
+                  path: 'actRank',
+                  component: ActRank
+                },
+                {
+                  path: 'actAward',
+                  component: ActAward
+                }
+              ]
+            }
+          ]
+        },
+        {
+          path: '/gamePage/shake',
+          name: 'shake',
+          component: Shake
+        },
+        {
+          path: '/gamePage/awardResult',
+          name: 'awardResult',
+          component: AwardResult,
+          children: [
+            {
+              path: '/gamePage/awardResult/actInfo',
+              component: ActInfo,
+              children: [
+                {
+                  path: 'actDesc',
+                  name: 'actDesc',
+                  component: ActDesc,
+                  meta: {
+                    keepAlive: true
+                  }
+                },
+                {
+                  path: '',
+                  redirect: 'actAward'
+                },
+                {
+                  path: 'actRank',
+                  component: ActRank
+                },
+                {
+                  path: 'actAward',
+                  component: ActAward
+                }
+              ]
+            }
+          ]
+        }
+
+      ]
     }
   ]
 })

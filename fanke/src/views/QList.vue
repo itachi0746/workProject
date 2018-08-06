@@ -15,19 +15,6 @@
           <p class="normalP" @click="flag && checkAnswer()" :id="questions[Num].Items[index].ItemId">
             {{item.ItemDesc}}</p>
 
-          <!--<div v-if="!hasAnswer">-->
-          <!--<p class="normalP" @click="checkAnswer" :id="questions[Num].Items[index].ItemId">{{item.ItemDesc}}</p>-->
-
-          <!--</div>-->
-          <!--<div v-else>-->
-          <!--<div v-if="isRight">-->
-          <!--<p class="rightP" @click="checkAnswer" :id="questions[Num].Items[index].ItemId">{{item.ItemDesc}}</p>-->
-          <!--</div>-->
-          <!--<div v-else>-->
-          <!--<p class="wrongP" @click="checkAnswer" :id="questions[Num].Items[index].ItemId">{{item.ItemDesc}}</p>-->
-          <!--</div>-->
-
-          <!--</div>-->
         </div>
 
       </div>
@@ -89,7 +76,7 @@
       nextQ: function () {
         //  切换去下一个问题,相同的路由, 只是id不同 显示不同的问题
 //        console.log(this._id)
-        console.log('aa',this.questions[this.Num],this.questions[this.Num].QuestionImage)
+//        console.log('aa',this.questions[this.Num],this.questions[this.Num].QuestionImage)
 
         clearTimeout(this.timer);
         this.$router.replace({name: 'question', params: {questions: this.questions, id: this._id}});
@@ -108,7 +95,7 @@
         console.log(questionId, itemId);
 
         //请求问题答案
-//        const url = '/api/exam/CheckQuestion';
+
         const url = '/exam/CheckQuestion';
         this.$http({
           url: url,//api 代理到json文件地址，后面的后缀是文件中的对象或者是数组
@@ -144,7 +131,7 @@
 //              console.log('this._id:',this._id)
 //              console.log(2);
               setTimeout(() => {
-                this.$router.push('/home/gamePage/gameResult')
+                this.$router.push('/gamePage/gameResult')
               }, 1400)
 //              this.$router.push({ name: 'question', params: {questions: this.questions, id: this._id}});
             }
