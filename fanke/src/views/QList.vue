@@ -70,7 +70,7 @@
 //
 //    },
     created() {
-      console.log('created:', this.$route.params.questions, 'and', this.questions)
+//      console.log('created:', this.$route.params.questions, 'and', this.questions)
       this.questions = this.$route.params.questions;
 
     },
@@ -97,7 +97,7 @@
 
       checkAnswer: function () {
         console.log('this.questions', this.questions);
-        console.log('checkAnswer');
+//        console.log('checkAnswer');
 
         this.flag = false;
         // `event` 是原生 DOM 事件
@@ -119,7 +119,7 @@
           },
           //这里可以添加axios文档中的各种配置
         }).then(res => {
-          console.log(res.data.Data, '请求成功');
+//          console.log(res.data.Data, '请求成功');
 //        正确答案
           const rightAnswer = res.data.Data.Items[0].ItemId;
           if (event) {

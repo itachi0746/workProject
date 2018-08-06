@@ -1,11 +1,11 @@
 <template>
   <div class="bottom">
-    <div v-if="success">
+    <div v-if="true">
       <!--<router-link :to="{name: 'gamePage', params: {questions: questions}}" replace>-->
         <!--<img class="animated tada" src="../assets/startBtn.png"/>-->
       <!--</router-link>-->
       <router-link :to="{name: 'gamePage'}" replace>
-        <img class="animated tada" src="../assets/startBtn.png"/>
+        <img class="animated tada" src="../assets/startBtn.png" @click="aaa"/>
       </router-link>
     </div>
     <div v-else>
@@ -75,6 +75,11 @@
 
 
     },
+    methods: {
+      aaa() {
+        EventBus.$isActInfo = true
+      }
+    }
   }
 </script>
 

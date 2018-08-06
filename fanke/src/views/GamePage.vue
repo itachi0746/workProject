@@ -55,7 +55,7 @@ export default {
   watch: {
     // 检测动态路由来回切换 并修改数据
     $route (to, from) {
-      console.log(to.name, from.name);
+//      console.log(to.name, from.name);
       if(to.name==='gamePage') {
         //      请求问题数据
         const url = '/exam/GetQuestions';

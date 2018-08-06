@@ -1,5 +1,5 @@
 <template>
-  <div class="Mask2 awardResult" v-cloak="false">
+  <div class="Mask2 awardResult">
     <!--中奖-->
     <div class="result-gift" v-if="winPrize">
       <div class="successBg"></div>
@@ -32,8 +32,8 @@
 
     <!--没中奖-->
     <div class="result-nogift" v-else>
-      <div class="nogiftImg">
-        <img src="../assets/faiImg2-2.png"/>
+      <div class="nogiftImg" v-lazy-container="{ selector: 'img' }">
+        <img src="../assets/faiImg2-2.png" data-src="../assets/faiImg2-2.png"/>
       </div>
 
       <div class="resule-gift-buttonMenu">
@@ -79,7 +79,7 @@
 //      this.prizeData = this.$router.params.prizeData;
     },
 
-    mounted() {
+    created() {
       this.winPrize = this.$router.params.winPrize;
       this.prizeData = this.$router.params.prizeData;
     }

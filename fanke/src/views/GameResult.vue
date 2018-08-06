@@ -1,7 +1,7 @@
 <template>
-  <div class="Mask gameResult">
+  <div :class="{Mask:true, gameResult:true, hide:isHide}">
     <!--挑战成功-->
-    <div class="resultBox isSuccess" v-if="isSuccess" v-cloak>
+    <div class="resultBox isSuccess" v-if="isSuccess">
       <div class="successBg"></div>
       <div class="optContainer">
         <img class="manImg" src="../assets/manImg.jpg"/>
@@ -19,7 +19,7 @@
 
         <div class="buttonBox">
           <router-link to="/home/gamePage/gameResult/actInfo/actRank">
-            <div class="result-button rank-btn">
+            <div class="result-button rank-btn" @click="">
               排行榜
             </div>
           </router-link>
@@ -33,7 +33,7 @@
       </div>
     </div>
     <!--挑战失败-->
-    <div class="resultBox isFail" v-else v-cloak>
+    <div class="resultBox isFail" v-else>
       <div class="failBg"></div>
       <div class="optContainer">
         <img class="manImg" src="../assets/manImg.jpg"/>
@@ -43,13 +43,13 @@
         <p>最佳成绩为: {{BestScore}}分</p>
         <p>最佳排名为: NO.{{Rank}}</p>
         <router-link to="/home/gamePage">
-          <div class="result-button main-btn" @click="playAgain">
+          <div class="result-button main-btn" @click="">
             再玩一次
           </div>
         </router-link>
         <div class="buttonBox">
           <router-link to="/home/gamePage/gameResult/actInfo/actRank">
-            <div class="result-button rank-btn">
+            <div class="result-button rank-btn" @click="">
               排行榜
             </div>
           </router-link>
@@ -70,6 +70,7 @@
 </template>
 
 <script>
+//  import {EventBus} from '../eventBus/eventBus'
 
 
   export default {
@@ -80,7 +81,8 @@
         Desc: "",
         PrizeChance: 0,
         Rank: 0,
-        Score: 0
+        Score: 0,
+        isHide: true
       }
     },
 //
@@ -89,12 +91,14 @@
 //  computed: {},
 //
     methods: {
-      playAgain() {  // 再玩一次
 
-      }
+
     },
+//    created() {
 //
-    mounted: function () {
+//    },
+//
+    created: function () {
       const url = '/exam/ExamResult';
 
       this.$http({
@@ -113,9 +117,9 @@
         this.PrizeChance = data.PrizeChance;
         this.Rank = data.Rank;
         this.Score = data.Score;
-//        console.log('this.Score',typeof this.Score);
-        this.Score >= 80 ? this.isSuccess = true : this.isSuccess = false
+        this.Score >= 80 ? this.isSuccess = true : this.isSuccess = false;
 
+        this.isHide = false;
       }).catch(err => {
         console.log(err, '请求错误');
       })
@@ -133,6 +137,9 @@
     position: absolute;
     top: 0;
     left: 0;
+  }
+  .hide {
+    display: none;
   }
 
   .resultBox {

@@ -88,10 +88,9 @@
           console.log(err, '请求错误');
           this.winPrize = false
 
-
         });
 
-//        this.test();
+        this.test();
 
       }
 

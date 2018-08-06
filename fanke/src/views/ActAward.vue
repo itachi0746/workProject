@@ -6,10 +6,11 @@
         <div id="awardInfo" v-for="(prize, index) in prizeData" :key="index">
           <div id="codeInfo0" class="codeInfoBox" @click="">
             <!--<div class="goDetailIcon"></div>-->
-            <div class="djqImgBox"></div>
+            <!--<div class="djqImgBox"></div>-->
             <div class="isEmptyAward ellipsis" style="width: 11rem;margin-left:0.6rem;font-size:0.7rem;">
-              <span class="awardStyle">{{ prize.PrizeName }}</span>：<br>
-              <span class="awardName">{{ prize.PrizeDesc }}</span>
+              <p class="awardStyle">{{ prize.PrizeName }}：</p>
+              <p class="awardName">{{ prize.PrizeDesc }}</p>
+              <p class="awardTime">{{ prize.PrizeDate }}</p>
             </div>
             <!--<div class="noPartnersBox ">-->
               <!--<div class="codeperiod" style="margin: 0.25rem 0.6rem;line-height:1.4rem;"><span-->
@@ -129,6 +130,9 @@
   .actAward .poupSlideBar {
     left: 11rem;
 
+  }
+  .awardTime {
+    margin-top: .5rem;
   }
 
 </style>

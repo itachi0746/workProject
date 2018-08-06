@@ -1,31 +1,35 @@
 <template>
-  <div class="Mask2 actInfo">
-    <div class="actInfoHead">
-      <ul>
-        <li @click="tabSwitch1">活动说明</li>
+  <!--<div :class="{hide: isHide}" id="actInfo">-->
 
-        <li @click="tabSwitch2">排行榜</li>
+    <div class="Mask2 actInfo">
+      <div class="actInfoHead">
+        <ul>
+          <li @click="tabSwitch1">活动说明</li>
 
-        <li @click="tabSwitch3">我的奖品</li>
+          <li @click="tabSwitch2">排行榜</li>
 
-      </ul>
+          <li @click="tabSwitch3">我的奖品</li>
 
-      <img @click="goBack" class="close" src="../assets/close.png"/>
+        </ul>
+
+        <img @click="goBack" class="close" src="../assets/close.png"/>
+
+      </div>
+      <router-view></router-view>
 
     </div>
-    <router-view></router-view>
-
-  </div>
+  <!--</div>-->
 </template>
 
 <script>
+  import {EventBus} from '../eventBus/eventBus'
 
-export default {
-//  data: function () {
-//    return {
-//      isShow: true
-//    }
-//  },
+  export default {
+  data: function () {
+    return {
+//      isHide: true
+    }
+  },
 //
 //  components: {},
 //
@@ -33,18 +37,17 @@ export default {
 //
   methods: {
     goBack: function () {
-      this.$router.back(-1)
+      this.$router.go(-1);
+      EventBus.$isActInfo = false;
+//      console.log('actinfo')
     },
     tabSwitch1: function () {  // replace() 不在浏览器留下历史记录
-//      this.$router.replace('/home/actInfo/actDesc')
       this.$router.replace('actDesc')
     },
     tabSwitch2: function () {
-//      this.$router.replace('/home/actInfo/actRank')
       this.$router.replace('actRank')
     },
     tabSwitch3: function () {
-//      this.$router.replace('/home/actInfo/actAward')
       this.$router.replace('actAward')
     }
   }
