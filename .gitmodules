@@ -1,0 +1,3 @@
+[submodule "web"]
+	path = web
+	url = http://139.159.250.79:9999/web.git
