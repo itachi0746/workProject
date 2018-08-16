@@ -1,10 +1,10 @@
 
 var config = {
-  src: "src/Content/Company2", // 文件资源css,js,image等
+  src: "src/assets", // 文件资源css,js,image等
   srcView: "src/View/Company2", // 文件资源html等
   server: "src", // 服务器根目录
   target: "View/Company2/index.html", // 要监视(执行)的html文件
-  dest: "dev/Content/Company2", // 生产环境文件夹
+  dest: "dev/assets", // 生产环境文件夹
   destView: "dev/View/Company2" // 生产环境文件夹
 };
 
@@ -66,7 +66,7 @@ gulp.task('browser', function () {
 });
 // 压缩图片
 gulp.task('minImage', function () {
-    gulp.src(config.src+'/img/*.{png,jpg,gif,ico}')
+    gulp.src(config.src+'/*.{png,jpg,gif,ico}')
         .pipe(cache(imagemin({ //只压缩修改的图片
             progressive: true, //无损压缩jpg图片
             svgoPlugins: [{removeViewBox: false}], //不要移除svg的viewbox属性
@@ -215,5 +215,5 @@ gulp.task('watch', [], function(cb) {
 
 // 只执行编译sass和同步浏览器
 gulp.task('default', function(cb) {
-    runSequence('mincss', 'browser', 'watch', cb);
+    runSequence('mincss', cb);
 });
